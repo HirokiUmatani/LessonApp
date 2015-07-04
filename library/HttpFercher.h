@@ -24,6 +24,9 @@ typedef void (^FetchFailed)(NSError *error);
 @interface HttpFercher : NSObject
 
 #pragma mark Method
+- (void)startSyncFetchingWithUrlString:(NSString *)urlString
+                           success:(FetchSuccess)success
+                            failed:(FetchFailed)failed;
 /**
  * HTTP GET非同期通信
  * @param urlString 通信を行うURL

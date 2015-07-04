@@ -13,7 +13,38 @@
 static NSString * HTTP_GET      = @"GET";
 static NSString * HTTP_POST     = @"POST";
 static NSInteger HTTP_TIME_OUT  = 20;
+- (void)startSyncFetchingWithUrlString:(NSString *)urlString
+                               success:(FetchSuccess)success
+                                failed:(FetchFailed)failed
+{
+    NSMutableURLRequest *request = NSMutableURLRequest.new;
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    request.URL             = url;
+    request.HTTPMethod      = HTTP_GET;
+    request.timeoutInterval = HTTP_TIME_OUT;
+    
+    UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
+    UIApplication.sharedApplication.networkActivityIndicatorVisible = YES;
+    
+    NSURLResponse *response;
+    NSError *error;
 
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request
+                                                 returningResponse:&response
+                                                             error:&error];
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    if (error)
+    {
+        failed(error);
+    }
+    else
+    {
+        success(responseData);
+    }
+    
+}
 - (void)startFetchingWithUrlString:(NSString *)urlString
                            success:(FetchSuccess)success
                             failed:(FetchFailed)failed

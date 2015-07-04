@@ -11,7 +11,6 @@
 @implementation UIView(extention)
 - (id)initWithXibName:(NSString *)xibName
 {
-    
     return [[NSBundle.mainBundle loadNibNamed:xibName
                                         owner:nil
                                       options:0] firstObject];
