@@ -1,0 +1,29 @@
+//
+//  LessonAppPrefixHeader.pch
+//  LessonApp
+//
+//  Created by hirokiumatani on 2015/06/25.
+//  Copyright (c) 2015年 hirokiumatani. All rights reserved.
+//
+
+#ifndef LessonApp_LessonAppPrefixHeader_pch
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "AnimationView.h"
+#import "AutoLayout.h"
+#import "Const.h"
+#import "HttpFercher.h"
+#import "LocalServer.h"
+#import "LocationFetcher.h"
+#import "Notification.h"
+
+#import "UIView+extention.h"
+#import "UICollectionViewCell+extention.h"
+#import "UITableViewCell+extention.h"
+#import "NSString+Device.h"
+#import "NSJSONSerialization+Serialize.h"
+#define LessonApp_LessonAppPrefixHeader_pch
+
+#endif
+
