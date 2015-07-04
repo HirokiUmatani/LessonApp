@@ -6,6 +6,7 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 #import "TopViewController.h"
+#import "DetailViewController.h"
 @interface TopViewController ()
 
 // Enum
@@ -20,14 +21,13 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 @property (nonatomic,strong) OpenWeatherMapViewController  *weatherViewController;
 @property (nonatomic,strong) MenuTableViewController       *menuViewController;
 @property (nonatomic,strong) SignupTableViewController     *signupViewController;
-@property (nonatomic,strong) DetailViewController          *detailViewController;
+@property (nonatomic,strong) DetailViewController *detailViewController;
 
 // AutoLayout
 @property (nonatomic,strong) AutoLayout *itemViewAutoLayout;
 @property (nonatomic,strong) AutoLayout *signupViewAutoLayout;
 @property (nonatomic,strong) AutoLayout *weatherViewAutoLayout;
 @property (nonatomic,strong) AutoLayout *menuViewAutoLayout;
-@property (nonatomic,strong) AutoLayout *detailViewAutoLayout;
 
 
 // BOOL
@@ -38,7 +38,6 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 @property IBOutlet UIView *mainLayoutView;
 @property IBOutlet UIView *weatherLayoutView;
 @property IBOutlet UIView *menuLayoutView;
-@property IBOutlet UIView *detailLayoutView;
 
 // IBAction
 - (IBAction)tapSideMenuButton:(UIBarButtonItem *)sender;
@@ -59,7 +58,6 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     [self setMenuTableViewAutoLayout];
     [self setItemCollectionViewAutoLayout];
 
-    [_detailLayoutView removeFromSuperview];
     [[LocalServer sharedInstance] start];
 }
 
@@ -149,7 +147,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 #pragma mark - ItemCollectionViewControllerDelegate
 - (void)didSelectItemCollectionViewIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [self performSegueWithIdentifier:@"DetailViewController" sender:self];
 }
 #pragma mark SignupTableViewControllerDelegate
 - (void)keyboardWillShow:(NSNotification *)notification
@@ -265,15 +263,6 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     }
     [_mainLayoutView addSubview:_signupViewController.contentView];
 }
-- (void)setDetailViewController
-{
-    if (!_detailViewController)
-    {
-        _detailViewController = [DetailViewController new];
-        [_detailViewController loadView];
-    }
-    [_detailLayoutView addSubview:_detailViewController.contentView];
-}
 
 #pragma mark - Set Auto Layout
 
@@ -311,14 +300,14 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     [_mainLayoutView addConstraints:_signupViewAutoLayout.constraints];
 }
 
-- (void)setDetailViewAutoLayout
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if (!_detailViewAutoLayout)
+    if ([[segue identifier] isEqualToString:@"DetailViewController"])
     {
-        _detailViewAutoLayout = [[AutoLayout alloc]initWithAddView:_detailViewController.contentView baseView:_detailLayoutView];
+        
     }
-    [_detailLayoutView addConstraints:_detailViewAutoLayout.constraints];
 }
+
 #pragma mark - Dealloc
 - (void)deallocObject
 {
@@ -327,12 +316,11 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     _weatherViewController  = nil;
     _menuViewController     = nil;
     _signupViewController   = nil;
-    _detailViewController   = nil;
+    
     // AutoLayout
     _itemViewAutoLayout     = nil;
     _signupViewAutoLayout   = nil;
     _weatherViewAutoLayout  = nil;
     _menuViewAutoLayout     = nil;
-    _detailViewAutoLayout   = nil;
 }
 @end

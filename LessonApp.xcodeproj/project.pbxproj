@@ -51,6 +51,7 @@
 		F46854111B3AF69D00AF461D /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854071B3AF69D00AF461D /* Notification.m */; };
 		F489F81B1B1EA1860077BCFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489F81A1B1EA1860077BCFB /* CoreLocation.framework */; };
 		F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B1A5BD1B47BCC20000CC47 /* Thread.m */; };
+		F4C81B771B480A1800337B31 /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C81B761B480A1800337B31 /* CustomSegue.m */; };
 		F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */; };
 		F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */; };
 		F4DA030B1B40269200E11F93 /* UIView+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA030A1B40269200E11F93 /* UIView+extention.m */; };
@@ -135,6 +136,8 @@
 		F489F81A1B1EA1860077BCFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F4B1A5BC1B47BCC20000CC47 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
 		F4B1A5BD1B47BCC20000CC47 /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thread.m; sourceTree = "<group>"; };
+		F4C81B751B480A1800337B31 /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
+		F4C81B761B480A1800337B31 /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
 		F4DA03031B40247E00E11F93 /* UITableViewCell+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+extention.h"; sourceTree = "<group>"; };
 		F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+extention.m"; sourceTree = "<group>"; };
 		F4DA03061B4025FF00E11F93 /* UICollectionViewCell+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+extention.h"; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 				F46853D91B3AF62E00AF461D /* TopViewController.m */,
 				F45915341B3E80C20041AAF9 /* MoviewViewController.h */,
 				F45915351B3E80C20041AAF9 /* MoviewViewController.m */,
+				F4C81B751B480A1800337B31 /* CustomSegue.h */,
+				F4C81B761B480A1800337B31 /* CustomSegue.m */,
 			);
 			name = ViewController;
 			path = LessonApp/ViewController;
@@ -440,6 +445,7 @@
 				F468540B1B3AF69D00AF461D /* AutoLayout.m in Sources */,
 				F468540E1B3AF69D00AF461D /* NSJSONSerialization+Serialize.m in Sources */,
 				F468540A1B3AF69D00AF461D /* AnimationView.m in Sources */,
+				F4C81B771B480A1800337B31 /* CustomSegue.m in Sources */,
 				F46853E81B3AF62E00AF461D /* ItemCollectionViewCell.m in Sources */,
 				F459624B1B3E5A3B00BFFFD2 /* DetailView.m in Sources */,
 				F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */,

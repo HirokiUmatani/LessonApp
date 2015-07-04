@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 
 @interface DetailViewController ()
+@property (weak, nonatomic) IBOutlet UIView *detailView;
 
 @end
 
@@ -17,6 +18,7 @@
 {
     [super loadView];
     [self initDetailView];
+    [_detailView addSubview:_contentView];
 }
 - (void)initDetailView
 {

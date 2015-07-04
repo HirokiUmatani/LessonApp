@@ -10,7 +10,7 @@
 #import "OpenWeatherMapViewController.h"
 #import "MenuTableViewController.h"
 #import "SignupTableViewController.h"
-#import "DetailViewController.h"
+
 @interface TopViewController : UIViewController
 <
 MenuTableViewControllerDelegate,

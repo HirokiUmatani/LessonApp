@@ -36,12 +36,13 @@ static dispatch_once_t _onceToken;
 
 - (void)asyncThread:(ThreadBlocks)blocks
 {
-threadMethodStart:
-    if ((_sharedInstance.threadCount >= _sharedInstance.maxThread)
+START_FLAG:
+    if ((_sharedInstance.threadCount >=
+         _sharedInstance.maxThread)
         &&
         (_sharedInstance.maxThread !=0))
     {
-        goto threadMethodStart;
+        goto START_FLAG;
     }
     _sharedInstance.threadCount ++;
     dispatch_async([_sharedInstance queue],^

@@ -57,7 +57,7 @@ static NSString *CONST_VIEW_CLASS_NAME = @"ItemCollectionView";
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [self.delegate didSelectItemCollectionViewIndexPath:indexPath];
 }
 #pragma mark - private
 - (void)setCellLists
