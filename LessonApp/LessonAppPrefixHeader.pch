@@ -17,6 +17,7 @@
 #import "LocalServer.h"
 #import "LocationFetcher.h"
 #import "Notification.h"
+#import "Thread.h"
 
 #import "UIView+extention.h"
 #import "UICollectionViewCell+extention.h"

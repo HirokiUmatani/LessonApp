@@ -50,6 +50,7 @@
 		F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854051B3AF69D00AF461D /* LocationFetcher.m */; };
 		F46854111B3AF69D00AF461D /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854071B3AF69D00AF461D /* Notification.m */; };
 		F489F81B1B1EA1860077BCFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489F81A1B1EA1860077BCFB /* CoreLocation.framework */; };
+		F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B1A5BD1B47BCC20000CC47 /* Thread.m */; };
 		F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */; };
 		F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */; };
 		F4DA030B1B40269200E11F93 /* UIView+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA030A1B40269200E11F93 /* UIView+extention.m */; };
@@ -132,6 +133,8 @@
 		F46854071B3AF69D00AF461D /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 		F46854161B3C1FBE00AF461D /* LessonAppPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LessonAppPrefixHeader.pch; path = LessonApp/LessonAppPrefixHeader.pch; sourceTree = "<group>"; };
 		F489F81A1B1EA1860077BCFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F4B1A5BC1B47BCC20000CC47 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
+		F4B1A5BD1B47BCC20000CC47 /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thread.m; sourceTree = "<group>"; };
 		F4DA03031B40247E00E11F93 /* UITableViewCell+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+extention.h"; sourceTree = "<group>"; };
 		F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+extention.m"; sourceTree = "<group>"; };
 		F4DA03061B4025FF00E11F93 /* UICollectionViewCell+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+extention.h"; sourceTree = "<group>"; };
@@ -269,6 +272,8 @@
 				F46854051B3AF69D00AF461D /* LocationFetcher.m */,
 				F46854061B3AF69D00AF461D /* Notification.h */,
 				F46854071B3AF69D00AF461D /* Notification.m */,
+				F4B1A5BC1B47BCC20000CC47 /* Thread.h */,
+				F4B1A5BD1B47BCC20000CC47 /* Thread.m */,
 			);
 			path = library;
 			sourceTree = "<group>";
@@ -445,6 +450,7 @@
 				F46853E31B3AF62E00AF461D /* OpenWeatherMapFetcher.m in Sources */,
 				F46853F41B3AF62E00AF461D /* OpenWeatherMapViewController.m in Sources */,
 				F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */,
+				F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */,
 				F46853EE1B3AF62E00AF461D /* SignupButtonTableViewCell.m in Sources */,
 				F45915361B3E80C20041AAF9 /* MoviewViewController.m in Sources */,
 				F46853E21B3AF62E00AF461D /* OpenWeatherMapEntity.m in Sources */,
