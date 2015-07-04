@@ -52,6 +52,7 @@
 		F489F81B1B1EA1860077BCFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489F81A1B1EA1860077BCFB /* CoreLocation.framework */; };
 		F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B1A5BD1B47BCC20000CC47 /* Thread.m */; };
 		F4C81B771B480A1800337B31 /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C81B761B480A1800337B31 /* CustomSegue.m */; };
+		F4C81B7A1B482A2F00337B31 /* UIViewController+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C81B791B482A2F00337B31 /* UIViewController+extention.m */; };
 		F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */; };
 		F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */; };
 		F4DA030B1B40269200E11F93 /* UIView+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA030A1B40269200E11F93 /* UIView+extention.m */; };
@@ -138,6 +139,8 @@
 		F4B1A5BD1B47BCC20000CC47 /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thread.m; sourceTree = "<group>"; };
 		F4C81B751B480A1800337B31 /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
 		F4C81B761B480A1800337B31 /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
+		F4C81B781B482A2F00337B31 /* UIViewController+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+extention.h"; sourceTree = "<group>"; };
+		F4C81B791B482A2F00337B31 /* UIViewController+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+extention.m"; sourceTree = "<group>"; };
 		F4DA03031B40247E00E11F93 /* UITableViewCell+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+extention.h"; sourceTree = "<group>"; };
 		F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+extention.m"; sourceTree = "<group>"; };
 		F4DA03061B4025FF00E11F93 /* UICollectionViewCell+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+extention.h"; sourceTree = "<group>"; };
@@ -253,6 +256,8 @@
 				F45915351B3E80C20041AAF9 /* MoviewViewController.m */,
 				F4C81B751B480A1800337B31 /* CustomSegue.h */,
 				F4C81B761B480A1800337B31 /* CustomSegue.m */,
+				F4C81B781B482A2F00337B31 /* UIViewController+extention.h */,
+				F4C81B791B482A2F00337B31 /* UIViewController+extention.m */,
 			);
 			name = ViewController;
 			path = LessonApp/ViewController;
@@ -451,6 +456,7 @@
 				F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */,
 				F46853EC1B3AF62E00AF461D /* OpenWeatherMapView.m in Sources */,
 				F46853F61B3AF62E00AF461D /* TopViewController.m in Sources */,
+				F4C81B7A1B482A2F00337B31 /* UIViewController+extention.m in Sources */,
 				F46853DF1B3AF62E00AF461D /* main.m in Sources */,
 				F46853EA1B3AF62E00AF461D /* MenuTableViewCell.m in Sources */,
 				F46853E31B3AF62E00AF461D /* OpenWeatherMapFetcher.m in Sources */,

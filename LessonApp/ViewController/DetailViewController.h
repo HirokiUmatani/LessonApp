@@ -6,8 +6,6 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "DetailView.h"
 @interface DetailViewController : UIViewController
-@property (nonatomic, strong) DetailView *contentView;
+
 @end

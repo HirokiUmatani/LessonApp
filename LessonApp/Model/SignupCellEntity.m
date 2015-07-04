@@ -13,9 +13,9 @@
 {
     NSMutableArray *tempList =@[].mutableCopy;
     SignupCellEntity *entity;
-    entity = SignupCellEntity.new;
-    entity.cellType = blankCellType;
-    [tempList addObject:entity];
+//    entity = SignupCellEntity.new;
+//    entity.cellType = blankCellType;
+//    [tempList addObject:entity];
     
     entity = SignupCellEntity.new;
     entity.cellType = titleAndTextFieldCellType;

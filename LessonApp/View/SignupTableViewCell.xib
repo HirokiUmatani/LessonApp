@@ -24,6 +24,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title : " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="96" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-p4-uRV">
                                 <rect key="frame" x="32" y="14" width="96" height="15"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -57,6 +58,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="rNw-OB-MA9" secondAttribute="trailing" id="0sX-x3-ngD"/>
                     <constraint firstAttribute="bottom" secondItem="rNw-OB-MA9" secondAttribute="bottom" id="3T0-h9-R0y"/>
@@ -64,6 +66,7 @@
                     <constraint firstItem="rNw-OB-MA9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="une-Ex-kLm"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="textField" destination="iLs-eu-vKG" id="y4B-hs-fDE"/>
                 <outlet property="titleLabel" destination="IWU-p4-uRV" id="xVy-rP-tFY"/>

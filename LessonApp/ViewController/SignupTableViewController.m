@@ -49,8 +49,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *resultCell = UITableViewCell.new;
-    SignupCellEntity *signupCellEntity = SignupCellEntity.new;
+    UITableViewCell *resultCell = [UITableViewCell new];
+    resultCell.backgroundColor = [UIColor clearColor];
+    SignupCellEntity *signupCellEntity = [SignupCellEntity new];
     signupCellEntity = _signupCellLists[indexPath.row];
     switch (signupCellEntity.cellType)
     {
@@ -106,12 +107,13 @@
 #pragma mark - Private
 - (void)setCellLists
 {
-    _signupCellLists = SignupCellEntity.setCellLists.mutableCopy;
+    _signupCellLists = [SignupCellEntity setCellLists].mutableCopy;
 }
 
 - (void)setTableView
 {
     _contentView = [UITableView new];
+    _contentView.backgroundColor = [UIColor clearColor];
     _contentView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _contentView.dataSource = self;
     _contentView.delegate = self;

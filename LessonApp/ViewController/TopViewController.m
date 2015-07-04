@@ -49,7 +49,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self setBackGroundImage:@"subtle_stripes"];
     [self setOpenWeatherMapViewController];
     [self setMenuTableViewController];
     [self setItemCollectionViewController];
@@ -57,7 +57,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     [self setWeatherViewAutoLayout];
     [self setMenuTableViewAutoLayout];
     [self setItemCollectionViewAutoLayout];
-
+    
     [[LocalServer sharedInstance] start];
 }
 
@@ -91,6 +91,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
                  [_itemViewController.contentView removeFromSuperview];
                  [self setSignupTableViewController];
                  [self setSignupTableViewAutoLayout];
+                 self.navigationItem.title = @"Signup";
                  [AnimationView transformAlpha:_signupViewController.contentView
                                          alpha:1.0f
                                     completion:^(BOOL finished){}];
@@ -108,6 +109,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
                  [_signupViewController.contentView removeFromSuperview];
                  [self setItemCollectionViewController];
                  [self setItemCollectionViewAutoLayout];
+                 self.navigationItem.title = @"Home";
                  [AnimationView transformAlpha:_itemViewController.contentView
                                          alpha:1.0f
                                     completion:^(BOOL finished){}];
@@ -239,7 +241,9 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
         [_menuViewController loadView];
  
     }
+    _menuLayoutView.alpha = 0.0f;
     [_menuLayoutView addSubview:_menuViewController.contentView];
+    
 }
 
 - (void)setItemCollectionViewController

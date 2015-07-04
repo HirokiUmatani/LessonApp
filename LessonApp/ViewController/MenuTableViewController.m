@@ -83,6 +83,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)setTableView
 {
     _contentView = [UITableView new];
+    _contentView.backgroundColor = [UIColor clearColor];
+    _contentView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _contentView.dataSource = self;
     _contentView.delegate = self;
 }

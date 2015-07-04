@@ -13,7 +13,7 @@
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="k4p-PG-Auf">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cZQ-Nj-xr2">
                         <size key="itemSize" width="145" height="150"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -22,7 +22,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="k4p-PG-Auf" secondAttribute="trailing" id="6Jy-YA-iT6"/>
                 <constraint firstItem="k4p-PG-Auf" firstAttribute="leading" secondItem="vMn-Az-dQf" secondAttribute="leading" id="dIY-F7-yow"/>
