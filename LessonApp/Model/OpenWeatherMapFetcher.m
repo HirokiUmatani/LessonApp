@@ -45,6 +45,7 @@
 {
     [self stopIconImageFetching];
     _httpIconImageFetcher = HttpFercher.new;
+    
     [_httpIconImageFetcher startFetchingWithUrlString:[NSString stringWithFormat:
                                               CONST_OPEN_WEATHER_MAP_ICON_URL,
                                               icon]
