@@ -7,6 +7,7 @@
 //
 #import "TopViewController.h"
 #import "DetailViewController.h"
+#import "UserCoreDataManager.h"
 @interface TopViewController ()
 
 // Enum
@@ -58,8 +59,45 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     [self setMenuTableViewAutoLayout];
     [self setItemCollectionViewAutoLayout];
     
-    [[LocalServer sharedInstance] start];
 }
+
+#warning [TryCode] delete after finish
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+ 
+    [[LocalServer sharedInstance] start];
+    
+    UserCoreDataManager *test = [UserCoreDataManager new];
+    //insert check
+    [[Thread sharedInstance]asyncThread:^
+     {
+         [test insertEntityWithName:[NSString stringWithFormat:@"%d",rand()]
+                               mail:[NSString stringWithFormat:@"%d",rand()]];
+         
+         // fetch check
+         [[Thread sharedInstance]asyncThread:^
+          {
+              NSArray *entityList =[test fetchEntityListWithPredicate:nil];
+              for (int i=0; i<entityList.count; i++)
+              {
+                  User *entity = entityList[i];
+                  NSString * name = entity.name;
+                  NSString * mail = entity.mail;
+                  NSLog(@"name = %@",name);
+                  NSLog(@"mail = %@",mail);
+              }
+              
+          }];
+     }];
+}
+#warning [TryCode] delete after finish
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [[LocalServer sharedInstance] stop];
+    [super viewWillDisappear:animated];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

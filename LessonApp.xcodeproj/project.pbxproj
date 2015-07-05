@@ -49,6 +49,11 @@
 		F468540F1B3AF69D00AF461D /* LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854031B3AF69D00AF461D /* LocalServer.m */; };
 		F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854051B3AF69D00AF461D /* LocationFetcher.m */; };
 		F46854111B3AF69D00AF461D /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854071B3AF69D00AF461D /* Notification.m */; };
+		F46B37811B48AC0E0051EB8E /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B37801B48AC0E0051EB8E /* CoreDataManager.m */; };
+		F46B37861B48B2C40051EB8E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46B37851B48B2C40051EB8E /* CoreData.framework */; };
+		F46B37931B48F35E0051EB8E /* LessonApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F46B37911B48F35E0051EB8E /* LessonApp.xcdatamodeld */; };
+		F46B37961B48F72A0051EB8E /* UserCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B37951B48F72A0051EB8E /* UserCoreDataManager.m */; };
+		F46B37991B48F79C0051EB8E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B37981B48F79C0051EB8E /* User.m */; };
 		F489F81B1B1EA1860077BCFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489F81A1B1EA1860077BCFB /* CoreLocation.framework */; };
 		F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B1A5BD1B47BCC20000CC47 /* Thread.m */; };
 		F4C81B771B480A1800337B31 /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C81B761B480A1800337B31 /* CustomSegue.m */; };
@@ -134,6 +139,14 @@
 		F46854061B3AF69D00AF461D /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
 		F46854071B3AF69D00AF461D /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 		F46854161B3C1FBE00AF461D /* LessonAppPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LessonAppPrefixHeader.pch; path = LessonApp/LessonAppPrefixHeader.pch; sourceTree = "<group>"; };
+		F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		F46B37801B48AC0E0051EB8E /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		F46B37851B48B2C40051EB8E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F46B37921B48F35E0051EB8E /* LessonApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LessonApp.xcdatamodel; sourceTree = "<group>"; };
+		F46B37941B48F72A0051EB8E /* UserCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCoreDataManager.h; sourceTree = "<group>"; };
+		F46B37951B48F72A0051EB8E /* UserCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCoreDataManager.m; sourceTree = "<group>"; };
+		F46B37971B48F79C0051EB8E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F46B37981B48F79C0051EB8E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		F489F81A1B1EA1860077BCFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F4B1A5BC1B47BCC20000CC47 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
 		F4B1A5BD1B47BCC20000CC47 /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thread.m; sourceTree = "<group>"; };
@@ -147,7 +160,7 @@
 		F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+extention.m"; sourceTree = "<group>"; };
 		F4DA03091B40269200E11F93 /* UIView+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+extention.h"; sourceTree = "<group>"; };
 		F4DA030A1B40269200E11F93 /* UIView+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+extention.m"; sourceTree = "<group>"; };
-		F4F366F01B3AE886007AA63E /* LessonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4F366F01B3AE886007AA63E /* LessonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = LessonApp.app; path = "/Users/hirokiumatani/workspace/ios/LessonApp/build/Debug-iphoneos/LessonApp.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46B37861B48B2C40051EB8E /* CoreData.framework in Frameworks */,
 				F489F81B1B1EA1860077BCFB /* CoreLocation.framework in Frameworks */,
 				073552FB7613ED4EC433BE4A /* libPods.a in Frameworks */,
 			);
@@ -185,6 +199,7 @@
 		F46853AF1B3AF62E00AF461D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F46B378D1B48C0E20051EB8E /* CoreData */,
 				F46853B01B3AF62E00AF461D /* Const.h */,
 				F46853B11B3AF62E00AF461D /* Const.m */,
 				F46853B21B3AF62E00AF461D /* MenuCellEntity.h */,
@@ -288,6 +303,20 @@
 			path = library;
 			sourceTree = "<group>";
 		};
+		F46B378D1B48C0E20051EB8E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F46B37971B48F79C0051EB8E /* User.h */,
+				F46B37981B48F79C0051EB8E /* User.m */,
+				F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */,
+				F46B37801B48AC0E0051EB8E /* CoreDataManager.m */,
+				F46B37911B48F35E0051EB8E /* LessonApp.xcdatamodeld */,
+				F46B37941B48F72A0051EB8E /* UserCoreDataManager.h */,
+				F46B37951B48F72A0051EB8E /* UserCoreDataManager.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		F489F7D61B1D4EF60077BCFB = {
 			isa = PBXGroup;
 			children = (
@@ -297,7 +326,6 @@
 				F46853AD1B3AF62E00AF461D /* Info.plist */,
 				F46853AE1B3AF62E00AF461D /* main.m */,
 				F46854161B3C1FBE00AF461D /* LessonAppPrefixHeader.pch */,
-				F4F366F01B3AE886007AA63E /* LessonApp.app */,
 				F46853AC1B3AF62E00AF461D /* Images.xcassets */,
 				F46853F71B3AF69D00AF461D /* library */,
 				F46853A71B3AF62E00AF461D /* Base.lproj */,
@@ -312,6 +340,7 @@
 		F6C816BAB14CA12561B0581E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F46B37851B48B2C40051EB8E /* CoreData.framework */,
 				F489F81A1B1EA1860077BCFB /* CoreLocation.framework */,
 				1B2EF1F18A8D2AF9FD8F8D1B /* libPods.a */,
 			);
@@ -431,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46B37991B48F79C0051EB8E /* User.m in Sources */,
 				F46853F31B3AF62E00AF461D /* MenuTableViewController.m in Sources */,
 				F46853E51B3AF62E00AF461D /* SignupCellEntity.m in Sources */,
 				F46853E01B3AF62E00AF461D /* Const.m in Sources */,
@@ -441,6 +471,7 @@
 				F468540F1B3AF69D00AF461D /* LocalServer.m in Sources */,
 				F46853E11B3AF62E00AF461D /* MenuCellEntity.m in Sources */,
 				F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */,
+				F46B37961B48F72A0051EB8E /* UserCoreDataManager.m in Sources */,
 				F4DA030B1B40269200E11F93 /* UIView+extention.m in Sources */,
 				F46853E61B3AF62E00AF461D /* ItemCollectionView.m in Sources */,
 				F46853F21B3AF62E00AF461D /* ItemCollectionViewController.m in Sources */,
@@ -462,11 +493,13 @@
 				F46853E31B3AF62E00AF461D /* OpenWeatherMapFetcher.m in Sources */,
 				F46853F41B3AF62E00AF461D /* OpenWeatherMapViewController.m in Sources */,
 				F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */,
+				F46B37931B48F35E0051EB8E /* LessonApp.xcdatamodeld in Sources */,
 				F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */,
 				F46853EE1B3AF62E00AF461D /* SignupButtonTableViewCell.m in Sources */,
 				F45915361B3E80C20041AAF9 /* MoviewViewController.m in Sources */,
 				F46853E21B3AF62E00AF461D /* OpenWeatherMapEntity.m in Sources */,
 				F46853DA1B3AF62E00AF461D /* AppDelegate.m in Sources */,
+				F46B37811B48AC0E0051EB8E /* CoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +665,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F46B37911B48F35E0051EB8E /* LessonApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F46B37921B48F35E0051EB8E /* LessonApp.xcdatamodel */,
+			);
+			currentVersion = F46B37921B48F35E0051EB8E /* LessonApp.xcdatamodel */;
+			path = LessonApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F489F7D71B1D4EF60077BCFB /* Project object */;
 }

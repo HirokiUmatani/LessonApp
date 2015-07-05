@@ -18,7 +18,7 @@
 #import "LocationFetcher.h"
 #import "Notification.h"
 #import "Thread.h"
-
+#import "CoreDataManager.h"
 #import "UIViewController+extention.h"
 #import "UIView+extention.h"
 #import "UICollectionViewCell+extention.h"
