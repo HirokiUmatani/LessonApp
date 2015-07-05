@@ -11,4 +11,6 @@
 + (CGRect)screenRect;
 + (CGFloat)screenWidth;
 + (CGFloat)screenHeight;
++ (NSString *)stringFromDate:(NSDate *)date;
++ (NSDate *)dateFromString:(NSString *)string;
 @end

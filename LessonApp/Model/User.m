@@ -13,5 +13,6 @@
 
 @dynamic name;
 @dynamic mail;
-
+@dynamic create;
+@dynamic update;
 @end

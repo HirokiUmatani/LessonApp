@@ -23,9 +23,9 @@ static dispatch_once_t _onceToken;
         return _sharedInstance;
     
     dispatch_once(&_onceToken, ^
-                  {
-                      _sharedInstance = [Thread new];
-                  });
+    {
+        _sharedInstance = [Thread new];
+    });
     return _sharedInstance;
 }
 

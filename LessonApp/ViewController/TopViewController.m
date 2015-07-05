@@ -61,7 +61,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     
 }
 
-#warning [TryCode] delete after finish
+#warning [TryCode] delete after finish START
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -70,34 +70,50 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     
     UserCoreDataManager *test = [UserCoreDataManager new];
     //insert check
-    [[Thread sharedInstance]asyncThread:^
-     {
-         [test insertEntityWithName:[NSString stringWithFormat:@"%d",rand()]
-                               mail:[NSString stringWithFormat:@"%d",rand()]];
+    NSString *dateString = [NSString stringFromDate:[NSDate date]];
+    
+    [test insertEntityWithName:[NSString stringWithFormat:@"%d",rand()]
+                          mail:[NSString stringWithFormat:@"%d",rand()]
+                        create:dateString
+                        update:dateString
+                        finish:^(BOOL finished)
+    {
+        
+    }];
          
-         // fetch check
-         [[Thread sharedInstance]asyncThread:^
-          {
-              NSArray *entityList =[test fetchEntityListWithPredicate:nil];
-              for (int i=0; i<entityList.count; i++)
-              {
-                  User *entity = entityList[i];
-                  NSString * name = entity.name;
-                  NSString * mail = entity.mail;
-                  NSLog(@"name = %@",name);
-                  NSLog(@"mail = %@",mail);
-              }
-              
-          }];
-     }];
+    // fetch check
+    [test fetchEntityListWithPredicate:nil
+                            fetchLists:^(NSArray *fetchDataLists)
+    {
+        for (User *userEntity in fetchDataLists)
+        {
+            NSString * name = userEntity.name;
+            NSString * mail = userEntity.mail;
+            NSString * update = userEntity.update;
+            NSString * create = userEntity.create;
+            NSLog(@"name = %@",name);
+            NSLog(@"mail = %@",mail);
+            NSLog(@"create = %@",create);
+            NSLog(@"update = %@",update);
+        }
+
+    }
+                            fetchError:^(NSError *error)
+    {
+        
+    }];
+    
+    
+    
+    
 }
-#warning [TryCode] delete after finish
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [[LocalServer sharedInstance] stop];
     [super viewWillDisappear:animated];
 }
-
+#warning [TryCode] delete after finish END
 
 - (void)didReceiveMemoryWarning
 {

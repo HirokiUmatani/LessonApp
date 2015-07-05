@@ -14,5 +14,6 @@
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * mail;
-
+@property (nonatomic, retain) NSString * create;
+@property (nonatomic, retain) NSString * update;
 @end
