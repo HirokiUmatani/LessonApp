@@ -61,9 +61,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         case titleCellType:
         {
             MenuTableViewCell *cell = [[MenuTableViewCell alloc]initWithTableView:tableView
-                                                                             xibName:CONST_MENU_CELL_IDENTIFIRE
+                                                                          xibName:CONST_MENU_CELL_IDENTIFIRE
                                                                       cellIdentifire:CONST_MENU_CELL_IDENTIFIRE
-                                                                           indexPath:indexPath];
+                                                                        indexPath:indexPath];
             
             [cell setView:_menuCellLists indexPath:indexPath];
             resultCell = cell;

@@ -8,6 +8,7 @@
 #import "TopViewController.h"
 #import "DetailViewController.h"
 #import "UserCoreDataManager.h"
+
 @interface TopViewController ()
 
 // Enum
@@ -15,6 +16,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 {
     MenuSelectSignup,
     MenuSelectHome,
+    MenuSelectLicenses
 };
 
 // Controller
@@ -70,7 +72,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     
     UserCoreDataManager *test = [UserCoreDataManager new];
     //insert check
-    NSString *dateString = [NSString stringFromDate:[NSDate date]];
+    NSString *dateString = [NSObject stringFromDate:[NSDate date]];
     
     [test insertEntityWithName:[NSString stringWithFormat:@"%d",rand()]
                           mail:[NSString stringWithFormat:@"%d",rand()]
@@ -91,10 +93,6 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
             NSString * mail = userEntity.mail;
             NSString * update = userEntity.update;
             NSString * create = userEntity.create;
-            NSLog(@"name = %@",name);
-            NSLog(@"mail = %@",mail);
-            NSLog(@"create = %@",create);
-            NSLog(@"update = %@",update);
         }
 
     }
@@ -150,7 +148,6 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
                                          alpha:1.0f
                                     completion:^(BOOL finished){}];
              }];
-            
             return;
         }
         case MenuSelectHome:
@@ -170,6 +167,11 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
              }];
             return;
         }
+        case MenuSelectLicenses:
+        {
+            
+        }
+            return;
         default:
             return;
     }

@@ -24,6 +24,11 @@
     entity.title = @"Home";
     [tempList addObject:entity];
     
+    entity = MenuCellEntity.new;
+    entity.cellType = titleCellType;
+    entity.title = @"License";
+    [tempList addObject:entity];
+    
     return tempList;
 }
 @end
