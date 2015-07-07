@@ -9,58 +9,11 @@
 #import "LocalServer.h"
 
 @implementation LocalServer
-static const NSInteger CONST_PORT_NUMBER = 59123;
-static LocalServer * _sharedInstance = nil;
-static dispatch_once_t _onceToken;
-#pragma mark - Life Cycle
-+ (LocalServer *)sharedInstance
+- (void)test
 {
-    if (_sharedInstance)
-        return _sharedInstance;
-
-    dispatch_once(&_onceToken, ^
-    {
-        _sharedInstance = [LocalServer new];
-        
-        [_sharedInstance createLocalServer];
-        [_sharedInstance setPort:CONST_PORT_NUMBER];
-        [_sharedInstance setDocumentRoot:NSHomeDirectory()];
-       
-    });
-    return _sharedInstance;
+    _webServer = [[GCDWebServer alloc] init];
+    
+    [_webServer startWithPort:8080 bonjourName:nil];
+    NSLog(@"%@", _webServer.serverURL);
 }
-
-#pragma mark - Action
-- (BOOL)start
-{
-    NSError *error;
-    return [_sharedInstance.httpServer start:&error];
-}
-- (void)stop
-{
-    [_sharedInstance.httpServer stop];
-}
-
-#pragma mark - Setting
-- (void)setDocumentRoot:(NSString *)documentRoot
-{
-    _sharedInstance.httpServer.documentRoot = documentRoot;
-}
-
-- (void)setPort:(NSInteger)port
-{
-    _sharedInstance.httpServer.port = port;
-}
-
-- (void)setMimeType:(NSDictionary *)mimeTypes
-{
-    [_sharedInstance.httpServer setMIMETypes:mimeTypes];
-}
-
-#pragma mark - Create
-- (void)createLocalServer
-{
-    _sharedInstance.httpServer = [RoutingHTTPServer new];
-}
-
 @end

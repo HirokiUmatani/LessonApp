@@ -1,27 +1,12 @@
 PODS:
-  - CocoaAsyncSocket (7.4.1)
-  - CocoaHTTPServer (2.3):
-    - CocoaAsyncSocket
-    - CocoaLumberjack
-  - CocoaLumberjack (2.0.1):
-    - CocoaLumberjack/Default (= 2.0.1)
-    - CocoaLumberjack/Extensions (= 2.0.1)
-  - CocoaLumberjack/Core (2.0.1)
-  - CocoaLumberjack/Default (2.0.1):
-    - CocoaLumberjack/Core
-  - CocoaLumberjack/Extensions (2.0.1):
-    - CocoaLumberjack/Default
-  - RoutingHTTPServer (1.0.0):
-    - CocoaHTTPServer (~> 2.3)
+  - GCDWebServer/Core (3.2.5)
+  - GCDWebServer/WebDAV (3.2.5):
+    - GCDWebServer/Core
 
 DEPENDENCIES:
-  - CocoaHTTPServer (~> 2.3)
-  - RoutingHTTPServer (~> 1.0)
+  - GCDWebServer/WebDAV (~> 3.0)
 
 SPEC CHECKSUMS:
-  CocoaAsyncSocket: 7cbf214b27f8e7f7574db6a3fd96352ffaed433d
-  CocoaHTTPServer: 5624681fc3473d43b18202f635f9b3abb013b530
-  CocoaLumberjack: 019d1361244274a6138c788c6cb80baabc13fb8f
-  RoutingHTTPServer: fab8b13e725f26720500c146d43c98c11ebc4d47
+  GCDWebServer: d0e1b23785e3dfd6c87601323d0f7cae059aab18
 
 COCOAPODS: 0.38.0.beta.1
