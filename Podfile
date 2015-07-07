@@ -1,3 +1,2 @@
-platform :ios,'6.0'
-pod 'CocoaHTTPServer', '~> 2.3'
-pod 'RoutingHTTPServer', '~> 1.0'
+platform :ios,'7.0'
+pod "GCDWebServer/WebDAV", "~> 3.0"
