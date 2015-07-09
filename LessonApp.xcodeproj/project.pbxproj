@@ -153,6 +153,7 @@
 		F489F81A1B1EA1860077BCFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F4B1A5BC1B47BCC20000CC47 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
 		F4B1A5BD1B47BCC20000CC47 /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thread.m; sourceTree = "<group>"; };
+		F4B6D0631B4C04C300F1D4DC /* LessonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C81B751B480A1800337B31 /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
 		F4C81B761B480A1800337B31 /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
 		F4C81B781B482A2F00337B31 /* UIViewController+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+extention.h"; sourceTree = "<group>"; };
@@ -337,7 +338,7 @@
 				F46853CF1B3AF62E00AF461D /* ViewController */,
 				F6C816BAB14CA12561B0581E /* Frameworks */,
 				990C654DDF764BA12CE3D0EB /* Pods */,
-				F476A1901B49722E0062A64C /* LessonApp.app */,
+				F4B6D0631B4C04C300F1D4DC /* LessonApp.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -370,7 +371,7 @@
 			);
 			name = LessonApp;
 			productName = MarketApp;
-			productReference = F476A1901B49722E0062A64C /* LessonApp.app */;
+			productReference = F4B6D0631B4C04C300F1D4DC /* LessonApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -624,6 +625,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/LessonApp",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = LessonApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -26,6 +26,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 @property (nonatomic,strong) SignupTableViewController     *signupViewController;
 @property (nonatomic,strong) DetailViewController *detailViewController;
 
+@property (nonatomic,strong) LocalServer *localServer;
 // AutoLayout
 @property (nonatomic,strong) AutoLayout *itemViewAutoLayout;
 @property (nonatomic,strong) AutoLayout *signupViewAutoLayout;
@@ -62,14 +63,15 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     [self setItemCollectionViewAutoLayout];
     
 }
-
-#warning [TryCode] delete after finish START
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
- 
-    [[LocalServer sharedInstance] start];
+    /***** local server*****/
+    _localServer = [LocalServer new];
+    [_localServer test];
     
+    
+    /***** core data *****/
     UserCoreDataManager *test = [UserCoreDataManager new];
     //insert check
     NSString *dateString = [NSObject stringFromDate:[NSDate date]];
@@ -87,14 +89,6 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     [test fetchEntityListWithPredicate:nil
                             fetchLists:^(NSArray *fetchDataLists)
     {
-        for (User *userEntity in fetchDataLists)
-        {
-            NSString * name = userEntity.name;
-            NSString * mail = userEntity.mail;
-            NSString * update = userEntity.update;
-            NSString * create = userEntity.create;
-        }
-
     }
                             fetchError:^(NSError *error)
     {
@@ -108,10 +102,9 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [[LocalServer sharedInstance] stop];
+    _localServer = nil;
     [super viewWillDisappear:animated];
 }
-#warning [TryCode] delete after finish END
 
 - (void)didReceiveMemoryWarning
 {
