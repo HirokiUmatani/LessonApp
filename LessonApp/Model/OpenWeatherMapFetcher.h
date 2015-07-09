@@ -12,7 +12,7 @@ typedef void (^OpenWeatherMapFetchSuccess)(OpenWeatherMapEntity *entity);
 typedef void (^OpenWeatherMapIconImageFetchSuccess)(UIImage *imageIcon);
 typedef void (^OpenWeatherMapFetchFailed)(NSError *error);
 
-@interface OpenWeatherMapFetcher : HttpFercher
+@interface OpenWeatherMapFetcher : HttpFetcher
 
 - (void)startFetchingWithLatitude:(NSString *)latitude
                         longitude:(NSString *)longitude

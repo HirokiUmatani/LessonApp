@@ -12,8 +12,11 @@
 - (void)test
 {
     _webServer = [[GCDWebServer alloc] init];
-    
     [_webServer startWithPort:8080 bonjourName:nil];
-    NSLog(@"%@", _webServer.serverURL);
+    [Logger debugLogWithCategory:CONST_DEBUG
+                         message:_webServer.serverURL
+                        Function:__PRETTY_FUNCTION__
+                            line:__LINE__];
+    
 }
 @end
