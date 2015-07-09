@@ -22,6 +22,7 @@ NSString * const CONST_TODO             = @"TODO";
 
 {
     #ifdef DEBUG
+    
     if (!category && !message)
     {
         NSLog(@"\n%s[L:%zd]\n[---]\n\n", function, line);
