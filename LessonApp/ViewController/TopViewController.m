@@ -89,20 +89,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     [test fetchEntityListWithPredicate:nil
                             fetchLists:^(NSArray *fetchDataLists)
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        for (User *userEntity in fetchDataLists)
-        {
-            NSString * name = userEntity.name;
-            NSString * mail = userEntity.mail;
-            NSString * update = userEntity.update;
-            NSString * create = userEntity.create;
-        }
-=======
->>>>>>> feature/issue14_enhance_local_server
 
->>>>>>> d8d1e245b6a6cfceb8d33b822ec44dc2d5571fe4
     }
                             fetchError:^(NSError *error)
     {

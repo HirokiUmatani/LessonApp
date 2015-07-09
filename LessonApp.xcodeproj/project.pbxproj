@@ -342,15 +342,7 @@
 				F46853CF1B3AF62E00AF461D /* ViewController */,
 				F6C816BAB14CA12561B0581E /* Frameworks */,
 				990C654DDF764BA12CE3D0EB /* Pods */,
-<<<<<<< HEAD
 				F4B6D0631B4C04C300F1D4DC /* LessonApp.app */,
-=======
-<<<<<<< HEAD
-				F476A1901B49722E0062A64C /* LessonApp.app */,
-=======
-				F4B6D0631B4C04C300F1D4DC /* LessonApp.app */,
->>>>>>> feature/issue14_enhance_local_server
->>>>>>> d8d1e245b6a6cfceb8d33b822ec44dc2d5571fe4
 			);
 			sourceTree = "<group>";
 		};
@@ -383,15 +375,7 @@
 			);
 			name = LessonApp;
 			productName = MarketApp;
-<<<<<<< HEAD
 			productReference = F4B6D0631B4C04C300F1D4DC /* LessonApp.app */;
-=======
-<<<<<<< HEAD
-			productReference = F476A1901B49722E0062A64C /* LessonApp.app */;
-=======
-			productReference = F4B6D0631B4C04C300F1D4DC /* LessonApp.app */;
->>>>>>> feature/issue14_enhance_local_server
->>>>>>> d8d1e245b6a6cfceb8d33b822ec44dc2d5571fe4
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
