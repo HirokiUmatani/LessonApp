@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		073552FB7613ED4EC433BE4A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2EF1F18A8D2AF9FD8F8D1B /* libPods.a */; };
 		F40560731B3C2F24000B595A /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = F40560721B3C2F24000B595A /* podfile */; };
+		F42719031B4E9E1400B6521A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = F42719021B4E9E1400B6521A /* Logger.m */; };
 		F45915361B3E80C20041AAF9 /* MoviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45915351B3E80C20041AAF9 /* MoviewViewController.m */; };
 		F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45962471B3E539900BFFFD2 /* DetailViewController.m */; };
 		F459624B1B3E5A3B00BFFFD2 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F459624A1B3E5A3B00BFFFD2 /* DetailView.m */; };
@@ -44,7 +45,7 @@
 		F468540A1B3AF69D00AF461D /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853F91B3AF69D00AF461D /* AnimationView.m */; };
 		F468540B1B3AF69D00AF461D /* AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853FB1B3AF69D00AF461D /* AutoLayout.m */; };
 		F468540C1B3AF69D00AF461D /* NSString+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853FD1B3AF69D00AF461D /* NSString+Device.m */; };
-		F468540D1B3AF69D00AF461D /* HttpFercher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853FF1B3AF69D00AF461D /* HttpFercher.m */; };
+		F468540D1B3AF69D00AF461D /* HttpFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853FF1B3AF69D00AF461D /* HttpFetcher.m */; };
 		F468540E1B3AF69D00AF461D /* NSJSONSerialization+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854011B3AF69D00AF461D /* NSJSONSerialization+Serialize.m */; };
 		F468540F1B3AF69D00AF461D /* LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854031B3AF69D00AF461D /* LocalServer.m */; };
 		F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854051B3AF69D00AF461D /* LocationFetcher.m */; };
@@ -69,6 +70,8 @@
 		605C897D4917DA12EE58A282 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AFAFD21AE9F87D19562F14C9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F40560721B3C2F24000B595A /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F42719011B4E9E1400B6521A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		F42719021B4E9E1400B6521A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		F45915341B3E80C20041AAF9 /* MoviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviewViewController.h; sourceTree = "<group>"; };
 		F45915351B3E80C20041AAF9 /* MoviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviewViewController.m; sourceTree = "<group>"; };
 		F45962461B3E539900BFFFD2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -129,8 +132,8 @@
 		F46853FB1B3AF69D00AF461D /* AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayout.m; sourceTree = "<group>"; };
 		F46853FC1B3AF69D00AF461D /* NSString+Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Device.h"; sourceTree = "<group>"; };
 		F46853FD1B3AF69D00AF461D /* NSString+Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Device.m"; sourceTree = "<group>"; };
-		F46853FE1B3AF69D00AF461D /* HttpFercher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpFercher.h; sourceTree = "<group>"; };
-		F46853FF1B3AF69D00AF461D /* HttpFercher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpFercher.m; sourceTree = "<group>"; };
+		F46853FE1B3AF69D00AF461D /* HttpFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpFetcher.h; sourceTree = "<group>"; };
+		F46853FF1B3AF69D00AF461D /* HttpFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpFetcher.m; sourceTree = "<group>"; };
 		F46854001B3AF69D00AF461D /* NSJSONSerialization+Serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+Serialize.h"; sourceTree = "<group>"; };
 		F46854011B3AF69D00AF461D /* NSJSONSerialization+Serialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+Serialize.m"; sourceTree = "<group>"; };
 		F46854021B3AF69D00AF461D /* LocalServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalServer.h; sourceTree = "<group>"; };
@@ -148,7 +151,6 @@
 		F46B37951B48F72A0051EB8E /* UserCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCoreDataManager.m; sourceTree = "<group>"; };
 		F46B37971B48F79C0051EB8E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		F46B37981B48F79C0051EB8E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		F476A1901B49722E0062A64C /* LessonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F476A1911B4974370062A64C /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Pods/Target Support Files/Pods/Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		F489F81A1B1EA1860077BCFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F4B1A5BC1B47BCC20000CC47 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
@@ -290,8 +292,8 @@
 				F46853FB1B3AF69D00AF461D /* AutoLayout.m */,
 				F46853FC1B3AF69D00AF461D /* NSString+Device.h */,
 				F46853FD1B3AF69D00AF461D /* NSString+Device.m */,
-				F46853FE1B3AF69D00AF461D /* HttpFercher.h */,
-				F46853FF1B3AF69D00AF461D /* HttpFercher.m */,
+				F46853FE1B3AF69D00AF461D /* HttpFetcher.h */,
+				F46853FF1B3AF69D00AF461D /* HttpFetcher.m */,
 				F46854001B3AF69D00AF461D /* NSJSONSerialization+Serialize.h */,
 				F46854011B3AF69D00AF461D /* NSJSONSerialization+Serialize.m */,
 				F46854021B3AF69D00AF461D /* LocalServer.h */,
@@ -302,6 +304,8 @@
 				F46854071B3AF69D00AF461D /* Notification.m */,
 				F4B1A5BC1B47BCC20000CC47 /* Thread.h */,
 				F4B1A5BD1B47BCC20000CC47 /* Thread.m */,
+				F42719011B4E9E1400B6521A /* Logger.h */,
+				F42719021B4E9E1400B6521A /* Logger.m */,
 			);
 			path = library;
 			sourceTree = "<group>";
@@ -472,7 +476,7 @@
 				F46853E01B3AF62E00AF461D /* Const.m in Sources */,
 				F46854111B3AF69D00AF461D /* Notification.m in Sources */,
 				F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */,
-				F468540D1B3AF69D00AF461D /* HttpFercher.m in Sources */,
+				F468540D1B3AF69D00AF461D /* HttpFetcher.m in Sources */,
 				F46853F51B3AF62E00AF461D /* SignupTableViewController.m in Sources */,
 				F468540F1B3AF69D00AF461D /* LocalServer.m in Sources */,
 				F46853E11B3AF62E00AF461D /* MenuCellEntity.m in Sources */,
@@ -481,6 +485,7 @@
 				F4DA030B1B40269200E11F93 /* UIView+extention.m in Sources */,
 				F46853E61B3AF62E00AF461D /* ItemCollectionView.m in Sources */,
 				F46853F21B3AF62E00AF461D /* ItemCollectionViewController.m in Sources */,
+				F42719031B4E9E1400B6521A /* Logger.m in Sources */,
 				F468540C1B3AF69D00AF461D /* NSString+Device.m in Sources */,
 				F46853E41B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m in Sources */,
 				F46853F01B3AF62E00AF461D /* SignupTableViewCell.m in Sources */,

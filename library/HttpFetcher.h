@@ -21,7 +21,7 @@ typedef void (^FetchFailed)(NSError *error);
 /**
  * @class HTTP通信を担当するClass
  */
-@interface HttpFercher : NSObject
+@interface HttpFetcher : NSObject
 
 #pragma mark Method
 /**

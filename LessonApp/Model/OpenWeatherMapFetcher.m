@@ -9,8 +9,8 @@
 #import "OpenWeatherMapFetcher.h"
 
 @interface OpenWeatherMapFetcher()
-@property HttpFercher *httpFetcher;
-@property HttpFercher *httpIconImageFetcher;
+@property HttpFetcher *httpFetcher;
+@property HttpFetcher *httpIconImageFetcher;
 @end
 
 @implementation OpenWeatherMapFetcher
@@ -20,7 +20,7 @@
                           failed:(OpenWeatherMapFetchFailed)failed
 {
     [self stopFetching];
-    _httpFetcher = HttpFercher.new;
+    _httpFetcher = [HttpFetcher new];
     [_httpFetcher startFetchingWithUrlString:[NSString stringWithFormat:
                                               CONST_OPEN_WEATHER_MAP_URL,
                                               latitude,
@@ -44,7 +44,7 @@
                                   failed:(OpenWeatherMapFetchFailed)failed
 {
     [self stopIconImageFetching];
-    _httpIconImageFetcher = HttpFercher.new;
+    _httpIconImageFetcher = [HttpFetcher new];
     
     [_httpIconImageFetcher startFetchingWithUrlString:[NSString stringWithFormat:
                                               CONST_OPEN_WEATHER_MAP_ICON_URL,

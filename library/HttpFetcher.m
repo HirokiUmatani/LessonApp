@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "HttpFercher.h"
+#import "HttpFetcher.h"
 
-@implementation HttpFercher
+@implementation HttpFetcher
 
 static NSString * HTTP_GET      = @"GET";
 static NSString * HTTP_POST     = @"POST";
@@ -37,6 +37,10 @@ static NSInteger HTTP_TIME_OUT  = 20;
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     if (error)
     {
+        [Logger debugLogWithCategory:CONST_CONNECT_ERROR
+                             message:error
+                            Function:__PRETTY_FUNCTION__
+                                line:__LINE__];
         failed(error);
     }
     else
@@ -66,10 +70,18 @@ static NSInteger HTTP_TIME_OUT  = 20;
      {
          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
          if (error)
+         {
+             [Logger debugLogWithCategory:CONST_CONNECT_ERROR
+                                  message:error
+                                 Function:__PRETTY_FUNCTION__
+                                     line:__LINE__];
              failed(error);
-         
+         }
          else
+         {
              success(data);
+         }
+         
      }];
 }
 
@@ -98,10 +110,17 @@ static NSInteger HTTP_TIME_OUT  = 20;
      {
          UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
          if (error)
+         {
+             [Logger debugLogWithCategory:CONST_CONNECT_ERROR
+                                  message:error
+                                 Function:__PRETTY_FUNCTION__
+                                     line:__LINE__];
              failed(error);
-         
+         }
          else
+         {
              success(data);
+         }
      }];
 }
 
