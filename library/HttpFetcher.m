@@ -12,29 +12,25 @@
 
 static NSString * HTTP_GET      = @"GET";
 static NSString * HTTP_POST     = @"POST";
-static NSInteger HTTP_TIME_OUT  = 20;
+static NSInteger  HTTP_TIME_OUT = 15;
+
 - (void)startSyncFetchingWithUrlString:(NSString *)urlString
                                success:(FetchSuccess)success
                                 failed:(FetchFailed)failed
 {
-    NSMutableURLRequest *request = NSMutableURLRequest.new;
-    NSURL *url = [NSURL URLWithString:urlString];
+    NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
+                                                        method:HTTP_GET];
     
-    request.URL             = url;
-    request.HTTPMethod      = HTTP_GET;
-    request.timeoutInterval = HTTP_TIME_OUT;
-    
-    UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
-    UIApplication.sharedApplication.networkActivityIndicatorVisible = YES;
+    [self restartNetworkIndicator];
     
     NSURLResponse *response;
     NSError *error;
-
+    
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request
                                                  returningResponse:&response
                                                              error:&error];
     
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [self stopNetworkIndicator];
     if (error)
     {
         [Logger debugLogWithCategory:CONST_CONNECT_ERROR
@@ -53,22 +49,17 @@ static NSInteger HTTP_TIME_OUT  = 20;
                            success:(FetchSuccess)success
                             failed:(FetchFailed)failed
 {
-    NSMutableURLRequest *request = NSMutableURLRequest.new;
-    NSURL *url = [NSURL URLWithString:urlString];
-    
-    request.URL             = url;
-    request.HTTPMethod      = HTTP_GET;
-    request.timeoutInterval = HTTP_TIME_OUT;
+    NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
+                                                        method:HTTP_GET];
 
-    UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
-    UIApplication.sharedApplication.networkActivityIndicatorVisible = YES;
+    [self restartNetworkIndicator];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response,
-                                               NSData *data,
+                                               NSData *responceData,
                                                NSError *error)
      {
-         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+         [self stopNetworkIndicator];
          if (error)
          {
              [Logger debugLogWithCategory:CONST_CONNECT_ERROR
@@ -79,7 +70,7 @@ static NSInteger HTTP_TIME_OUT  = 20;
          }
          else
          {
-             success(data);
+             success(responceData);
          }
          
      }];
@@ -90,25 +81,19 @@ static NSInteger HTTP_TIME_OUT  = 20;
                            success:(FetchSuccess)success
                             failed:(FetchFailed)failed
 {
-    NSMutableURLRequest *request = NSMutableURLRequest.new;
-    NSURL *url = [NSURL URLWithString:urlString];
+    NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
+                                                        method:HTTP_POST];
+    request.HTTPBody = paramData;
     
-    request.URL             = url;
-    request.HTTPMethod      = HTTP_POST;
-    request.timeoutInterval = HTTP_TIME_OUT;
-    request.HTTPBody        = paramData;
-    
-    
-    UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
-    UIApplication.sharedApplication.networkActivityIndicatorVisible = YES;
+    [self restartNetworkIndicator];
     
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response,
-                                               NSData *data,
+                                               NSData *responceData,
                                                NSError *error)
      {
-         UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
+         [self stopNetworkIndicator];
          if (error)
          {
              [Logger debugLogWithCategory:CONST_CONNECT_ERROR
@@ -119,7 +104,7 @@ static NSInteger HTTP_TIME_OUT  = 20;
          }
          else
          {
-             success(data);
+             success(responceData);
          }
      }];
 }
@@ -153,5 +138,26 @@ static NSInteger HTTP_TIME_OUT  = 20;
     [newContentString appendString:@"\""];
     NSData *result = [newContentString dataUsingEncoding:NSUTF8StringEncoding];
     return result;
+}
+
+- (NSMutableURLRequest *)setHttpRequestWithURL:(NSString *)urlString method:(NSString *)method
+{
+    NSMutableURLRequest *request = NSMutableURLRequest.new;
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    request.URL             = url;
+    request.HTTPMethod      = method;
+    request.timeoutInterval = HTTP_TIME_OUT;
+
+    return request;
+}
+- (void)restartNetworkIndicator
+{
+    UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
+    UIApplication.sharedApplication.networkActivityIndicatorVisible = YES;
+}
+- (void)stopNetworkIndicator
+{
+    UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;
 }
 @end
