@@ -20,7 +20,6 @@ static CoreDataManager * _sharedInstance = nil;
     dispatch_once(&_onceToken, ^
     {
         _sharedInstance = [CoreDataManager new];
-        [_sharedInstance managedObjectContext];
     });
     return _sharedInstance;
 }
@@ -70,7 +69,11 @@ static CoreDataManager * _sharedInstance = nil;
 }
 - (NSURL *)applicationLibraryDirectory
 {
-    NSString *directory = NSHomeDirectory();
-    return [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@",directory,@"Library"]];
+    NSString *coreDataDirectoryPath = [NSString stringWithFormat:@"CoreDataDirectoryPath : %@/Library",NSHomeDirectory()];
+    [Logger debugLogWithCategory:CONST_DEBUG message:coreDataDirectoryPath
+                        Function:__PRETTY_FUNCTION__
+                            line:__LINE__];
+    
+    return [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@",NSHomeDirectory(),@"Library"]];
 }
 @end

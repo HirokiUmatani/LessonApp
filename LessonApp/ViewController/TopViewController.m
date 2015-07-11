@@ -66,39 +66,52 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    /***** local server*****/
+    /***** local server test*****/
     _localServer = [LocalServer new];
     [_localServer test];
     
     
-    /***** core data *****/
+    /***** core data test*****/
+    NSString *tmpName = @"1144108930";
+    NSString *tmpMail = @"xxxx";
+    
     UserCoreDataManager *test = [UserCoreDataManager new];
     //insert check
-    NSString *dateString = [NSObject stringFromDate:[NSDate date]];
-    
-    [test insertEntityWithName:[NSString stringWithFormat:@"%d",rand()]
-                          mail:[NSString stringWithFormat:@"%d",rand()]
-                        create:dateString
-                        update:dateString
+    [test insertEntityWithName:tmpName
+                          mail:nil
                         finish:^(BOOL finished)
     {
-        
+        // fetch check
+        NSPredicate *predicate = [test setPredicateWithSearchKey:@"name" searchValue:tmpName];
+        [test fetchEntityListWithPredicate:predicate
+                                fetchLists:^(NSArray *fetchDataLists)
+         {
+             // update
+             [test updateWithPredicate:predicate
+                                  name:nil
+                                  mail:tmpMail
+                                finish:^(BOOL finished)
+              {
+                  // delete
+                  [test deleteEntityWithPredicate:predicate
+                                           finish:^(BOOL finished)
+                   {
+                       
+                   }];
+              }];
+         }
+                                fetchError:^(NSError *error)
+         {
+             
+         }];
     }];
-         
-    // fetch check
-    [test fetchEntityListWithPredicate:nil
-                            fetchLists:^(NSArray *fetchDataLists)
-    {
 
-    }
-                            fetchError:^(NSError *error)
-    {
-        
-    }];
     
     
     
     
+    
+   
 }
 
 - (void)viewWillDisappear:(BOOL)animated

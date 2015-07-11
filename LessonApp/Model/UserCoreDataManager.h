@@ -19,7 +19,17 @@ typedef void (^CoreDataFetchFailed)(NSError *error);
 
 - (void)insertEntityWithName:(NSString *)name
                         mail:(NSString *)mail
-                      create:(NSString *)create
-                      update:(NSString *)update
                       finish:(CoreDataFinished)finished;
+
+- (void)updateWithPredicate:(NSPredicate *)predicate
+                       name:(NSString *)name
+                       mail:(NSString *)mail
+                     finish:(CoreDataFinished)finished;
+
+- (void)deleteEntityWithPredicate:(NSPredicate *)predicate
+                           finish:(CoreDataFinished)finished;
+
+- (NSPredicate *)setPredicateWithSearchKey:(NSString *)searchkey
+                               searchValue:(id)searchValue;
+
 @end
