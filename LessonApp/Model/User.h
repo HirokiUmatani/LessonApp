@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+extern NSString * const CONST_CORE_DATA_ENTITY_USER_NAME;
+extern NSString * const CONST_CORE_DATA_ENTITY_USER_MAIL;
+extern NSString * const CONST_CORE_DATA_ENTITY_USER_CREATE;
+extern NSString * const CONST_CORE_DATA_ENTITY_USER_UPDATE;
 
 @interface User : NSManagedObject
 

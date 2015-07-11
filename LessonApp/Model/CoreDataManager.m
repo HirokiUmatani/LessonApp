@@ -8,6 +8,14 @@
 
 #import "CoreDataManager.h"
 
+NSString * const CONST_CORE_DATA_ERROR = @"CoreData error";
+NSString * const CONST_CORE_DATA_SAVE_ERROR = @"CoreData save failed";
+NSString * const CONST_CORE_DATA_NO_DATA = @"CoreData no data";
+NSString * const CONST_CORE_DATA_SEARCH = @"%K=%@";
+NSString * const CONST_CORE_DATA_MANAGED_OBJECT_MODEL = @"LessonApp";
+NSString * const CONST_CORE_DATA_MANAGED_OBJECT_MODEL_EXTENTION = @"momd";
+NSString * const CONST_CORE_DATA_SQLITE = @"LessonApp.sqlite";
+
 @implementation CoreDataManager
 #pragma mark -Life Cycle
 static dispatch_once_t _onceToken;
@@ -45,7 +53,7 @@ static CoreDataManager * _sharedInstance = nil;
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"LessonApp" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:CONST_CORE_DATA_MANAGED_OBJECT_MODEL withExtension:CONST_CORE_DATA_MANAGED_OBJECT_MODEL_EXTENTION];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -56,7 +64,7 @@ static CoreDataManager * _sharedInstance = nil;
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationLibraryDirectory] URLByAppendingPathComponent:@"LessonApp.sqlite"];
+    NSURL *storeURL = [[self applicationLibraryDirectory] URLByAppendingPathComponent:CONST_CORE_DATA_SQLITE];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

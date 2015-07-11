@@ -7,7 +7,9 @@
 //
 
 #import "UserCoreDataManager.h"
+
 @implementation UserCoreDataManager
+#pragma mark - Life Cycle
 - (id)init
 {
     if (self = [super init])
@@ -17,9 +19,10 @@
     return self;
 }
 
-- (void)fetchEntityListWithPredicate:(NSPredicate *)predicate
-                          fetchLists:(CoreDataFetchSuccess)fetchLists
-                          fetchError:(CoreDataFetchFailed)fetchError
+#pragma mark - Fetch
+- (void)fetchWithPredicate:(NSPredicate *)predicate
+                   success:(CoreDataFetchSuccess)success
+                     error:(CoreDataFailed)error
 {
     NSFetchRequest *request = [NSFetchRequest new];
     
@@ -34,31 +37,41 @@
     }
     
     /*** Sort ***/
-    NSSortDescriptor *updateSort = [NSSortDescriptor sortDescriptorWithKey:@"update"
+    NSSortDescriptor *updateSort = [NSSortDescriptor sortDescriptorWithKey:CONST_CORE_DATA_ENTITY_USER_UPDATE
                                                                  ascending:NO] ;
     NSArray *sortDescriptors = [NSArray arrayWithObjects:updateSort,nil];
     [request setSortDescriptors:sortDescriptors];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^
     {
-        NSError *error = nil;
-        NSArray * dataLists = [self.managedObjectContext executeFetchRequest:request error:&error];
-        if (!error)
+        NSError *_fetchError = nil;
+        NSArray * dataLists = [self.managedObjectContext executeFetchRequest:request error:&_fetchError];
+        
+        if (_fetchError)
         {
-            fetchLists(dataLists);
+            [self fetchError:_fetchError];
+            error(_fetchError);
         }
         else
         {
-            fetchError(error);
+            if (dataLists.count == 0)
+            {
+                error([self dataError]);
+            }
+            else
+            {
+                success(dataLists);
+            }
         }
     });
 }
 
-- (void)insertEntityWithName:(NSString *)name
-                        mail:(NSString *)mail
-                      finish:(CoreDataFinished)finished
+#pragma mark - Insert
+- (void)insertWithName:(NSString *)name
+                  mail:(NSString *)mail
+               success:(CoreDataInsertSuccess)success
+                 error:(CoreDataFailed)error
 {
-    
     User* entity = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([User class])
                                                  inManagedObjectContext:self.managedObjectContext];
     NSString *update = [NSObject stringFromDate:[NSDate date]];
@@ -66,93 +79,166 @@
     entity.mail     = mail;
     entity.create   = update;
     entity.update   = update;
-
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^
     {
-        NSError *error = nil;
-        BOOL boolean = [self.managedObjectContext save:&error];
-        finished(boolean);
-    });
-}
-
-- (void)updateWithPredicate:(NSPredicate *)predicate
-                       name:(NSString *)name
-                       mail:(NSString *)mail
-                     finish:(CoreDataFinished)finished
-{
-    [self fetchEntityListWithPredicate:predicate
-                            fetchLists:^(NSArray *fetchdataLists)
-     {
-         if (fetchdataLists.count == 0)
-         {
-             finished(NO);
-         }
-         else
-         {
-             NSString *update = [NSObject stringFromDate:[NSDate date]];
-             for (User *entity in fetchdataLists)
-             {
-                 if (name)
-                 {
-                     entity.name = name;
-                 }
-                 if (mail)
-                 {
-                     entity.mail = mail;
-                 }
-                 
-                 entity.update = update;
-             }
-             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^
-             {
-                 NSError *error = nil;
-                 BOOL boolean = [self.managedObjectContext save:&error];
-                 finished(boolean);
-             });
-         }
-         
-     }
-                            fetchError:^(NSError *error)
-     {
-         
-     }];
-}
-
-- (void)deleteEntityWithPredicate:(NSPredicate *)predicate
-                           finish:(CoreDataFinished)finished
-{
-    [self fetchEntityListWithPredicate:predicate
-                            fetchLists:^(NSArray *fetchdataLists)
-    {
-        if (fetchdataLists.count == 0)
+        NSError *_saveError = nil;
+        BOOL boolean = [self.managedObjectContext save:&_saveError];
+        if (!boolean)
         {
-            finished(NO);
+            error([self saveError]);
         }
         else
         {
-            for (User *entity in fetchdataLists)
-            {
-                [self.managedObjectContext deleteObject:entity];
-            }
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^
-            {
-                NSError *error = nil;
-                BOOL boolean = [self.managedObjectContext save:&error];
-                finished(boolean);
-            });
+            success();
         }
+    });
+}
 
-    }
-                            fetchError:^(NSError *error)
+#pragma mark - Update
+- (void)updateWithPredicate:(NSPredicate *)predicate
+                       name:(NSString *)name
+                       mail:(NSString *)mail
+                    success:(CoreDataUpdateSuccess)success
+                      error:(CoreDataFailed)error
+{
+    [self fetchWithPredicate:predicate
+                     success:^(NSArray *fetchdataLists)
+     {
+         NSString *update = [NSObject stringFromDate:[NSDate date]];
+         for (User *entity in fetchdataLists)
+         {
+             if (name)
+             {
+                 entity.name = name;
+             }
+             if (mail)
+             {
+                 entity.mail = mail;
+             }
+             entity.update = update;
+         }
+         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^
+         {
+             NSError *_saveError = nil;
+             BOOL boolean = [self.managedObjectContext save:&_saveError];
+             if (!boolean)
+             {
+                 error([self saveError]);
+             }
+             else
+             {
+                 success();
+             }
+         });
+         
+     }
+                       error:^(NSError *_fetchError)
+     {
+         error(_fetchError);
+     }];
+}
+
+#pragma mark - Delete
+- (void)deleteWithPredicate:(NSPredicate *)predicate
+                    success:(CoreDataDeleteSuccess)success
+                      error:(CoreDataFailed)error
+{
+    [self fetchWithPredicate:predicate
+                     success:^(NSArray *fetchdataLists)
     {
+        for (User *entity in fetchdataLists)
+        {
+            [self.managedObjectContext deleteObject:entity];
+        }
         
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^
+        {
+            NSError *_saveError = nil;
+            BOOL boolean = [self.managedObjectContext save:&_saveError];
+            if (!boolean)
+            {
+                error([self saveError]);
+            }
+            else
+            {
+                success();
+            }
+        });
+    }
+                       error:^(NSError *_fetchError)
+    {
+        error(_fetchError);
     }];
     
 }
+
+#pragma mark -Predicate
 - (NSPredicate *)setPredicateWithSearchKey:(NSString *)searchkey
                                searchValue:(id)searchValue
 {
-    return [NSPredicate predicateWithFormat:@"%K=%@",searchkey,searchValue];
+    return [NSPredicate predicateWithFormat:CONST_CORE_DATA_SEARCH,searchkey,searchValue];
 }
 
+#pragma mark - Error
+- (NSError *)fetchError:(NSError *)fetchError
+{
+    [Logger debugLogWithCategory:CONST_WARNING
+                         message:fetchError
+                        Function:__PRETTY_FUNCTION__
+                            line:__LINE__];
+    return fetchError;
+}
+- (NSError *)saveError
+{
+    NSError *saveError = nil;
+    saveError = @{CONST_CORE_DATA_ERROR:CONST_CORE_DATA_SAVE_ERROR}.copy;
+    [Logger debugLogWithCategory:CONST_WARNING
+                         message:CONST_CORE_DATA_SAVE_ERROR
+                        Function:__PRETTY_FUNCTION__
+                            line:__LINE__];
+    return saveError;
+}
+- (NSError *)dataError
+{
+    NSError *dataError = nil;
+    dataError = @{CONST_CORE_DATA_ERROR:CONST_CORE_DATA_NO_DATA}.copy;
+    [Logger debugLogWithCategory:CONST_DEBUG
+                         message:CONST_CORE_DATA_NO_DATA
+                        Function:__PRETTY_FUNCTION__
+                            line:__LINE__];
+    return dataError;
+}
+
+#pragma mark -Log
+- (void)coreDataLog:(NSArray *)fetchdataLists
+{
+    
+    NSMutableArray * logLists = @[].mutableCopy;
+    for (User *user in fetchdataLists)
+    {
+        NSMutableDictionary *logDictionary = @{}.mutableCopy;
+        if (user.name)
+        {
+            [logDictionary setObject:user.name    forKey:CONST_CORE_DATA_ENTITY_USER_NAME];
+        }
+        if (user.mail)
+        {
+            [logDictionary setObject:user.mail    forKey:CONST_CORE_DATA_ENTITY_USER_MAIL];
+        }
+        if (user.create)
+        {
+            [logDictionary setObject:user.create  forKey:CONST_CORE_DATA_ENTITY_USER_CREATE];
+        }
+        if (user.update)
+        {
+            [logDictionary setObject:user.update  forKey:CONST_CORE_DATA_ENTITY_USER_UPDATE];
+        }
+        [logLists addObject:logDictionary];
+    }
+    [Logger debugLogWithCategory:CONST_DEBUG message:logLists
+                        Function:__PRETTY_FUNCTION__
+                            line:__LINE__];
+
+    
+}
 @end

@@ -7,6 +7,7 @@
 //
 #import "TopViewController.h"
 #import "DetailViewController.h"
+#import "OpenWeatherMapViewController.h"
 #import "UserCoreDataManager.h"
 
 @interface TopViewController ()
@@ -27,12 +28,13 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 @property (nonatomic,strong) DetailViewController *detailViewController;
 
 @property (nonatomic,strong) LocalServer *localServer;
+@property (nonatomic,strong) UserCoreDataManager *userCoreDataManager;
+
 // AutoLayout
 @property (nonatomic,strong) AutoLayout *itemViewAutoLayout;
 @property (nonatomic,strong) AutoLayout *signupViewAutoLayout;
 @property (nonatomic,strong) AutoLayout *weatherViewAutoLayout;
 @property (nonatomic,strong) AutoLayout *menuViewAutoLayout;
-
 
 // BOOL
 @property BOOL isSideMenu;
@@ -45,6 +47,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 
 // IBAction
 - (IBAction)tapSideMenuButton:(UIBarButtonItem *)sender;
+
 @end
 
 @implementation TopViewController
@@ -66,52 +69,8 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    /***** local server test*****/
-    _localServer = [LocalServer new];
-    [_localServer test];
-    
-    
-    /***** core data test*****/
-    NSString *tmpName = @"1144108930";
-    NSString *tmpMail = @"xxxx";
-    
-    UserCoreDataManager *test = [UserCoreDataManager new];
-    //insert check
-    [test insertEntityWithName:tmpName
-                          mail:nil
-                        finish:^(BOOL finished)
-    {
-        // fetch check
-        NSPredicate *predicate = [test setPredicateWithSearchKey:@"name" searchValue:tmpName];
-        [test fetchEntityListWithPredicate:predicate
-                                fetchLists:^(NSArray *fetchDataLists)
-         {
-             // update
-             [test updateWithPredicate:predicate
-                                  name:nil
-                                  mail:tmpMail
-                                finish:^(BOOL finished)
-              {
-                  // delete
-                  [test deleteEntityWithPredicate:predicate
-                                           finish:^(BOOL finished)
-                   {
-                       
-                   }];
-              }];
-         }
-                                fetchError:^(NSError *error)
-         {
-             
-         }];
-    }];
-
-    
-    
-    
-    
-    
-   
+    [self testLocalServer];
+    [self testCoreData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -389,5 +348,53 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     _signupViewAutoLayout   = nil;
     _weatherViewAutoLayout  = nil;
     _menuViewAutoLayout     = nil;
+}
+
+#pragma mark -TEST
+- (void)testLocalServer
+{
+    /***** local server test*****/
+    _localServer = [LocalServer new];
+    [_localServer test];
+}
+- (void)testCoreData
+{
+    /***** test core data *****/
+    
+    // test data
+    NSString *tmpName = @"yyyy";
+    NSString *tmpMail = @"xxxx";
+    NSPredicate *predicate = [_userCoreDataManager setPredicateWithSearchKey:CONST_CORE_DATA_ENTITY_USER_NAME searchValue:tmpName];
+    
+    _userCoreDataManager = [UserCoreDataManager new];
+    
+    // fetch check
+    [_userCoreDataManager fetchWithPredicate:predicate
+                                     success:^(NSArray *fetchdataLists)
+    {
+        [_userCoreDataManager coreDataLog:fetchdataLists];
+    }
+                                       error:^(NSError *error){}];
+    
+    //insert check
+    [_userCoreDataManager insertWithName:tmpName
+                                    mail:nil
+                                 success:^()
+    {
+        // update
+        [_userCoreDataManager updateWithPredicate:predicate
+                                             name:nil
+                                             mail:tmpMail
+                                          success:^()
+         {
+             // delete
+             [_userCoreDataManager deleteWithPredicate:predicate
+                                               success:^(){}
+                                                 error:^(NSError *error){}];
+         }
+         
+                                            error:^(NSError *error){}];
+    }
+                                   error:^(NSError *error){}];
 }
 @end

@@ -8,28 +8,36 @@
 
 #import "CoreDataManager.h"
 #import "User.h"
+
 @interface UserCoreDataManager : CoreDataManager
-typedef void (^CoreDataFinished)(BOOL finished);
+
 typedef void (^CoreDataFetchSuccess)(NSArray *fetchdataLists);
-typedef void (^CoreDataFetchFailed)(NSError *error);
+typedef void (^CoreDataInsertSuccess)(void);
+typedef void (^CoreDataUpdateSuccess)(void);
+typedef void (^CoreDataDeleteSuccess)(void);
+typedef void (^CoreDataFailed)(NSError *error);
 
-- (void)fetchEntityListWithPredicate:(NSPredicate *)predicate
-                          fetchLists:(CoreDataFetchSuccess)fetchLists
-                          fetchError:(CoreDataFetchFailed)fetchError;
+- (void)fetchWithPredicate:(NSPredicate *)predicate
+                   success:(CoreDataFetchSuccess)success
+                     error:(CoreDataFailed)error;
 
-- (void)insertEntityWithName:(NSString *)name
-                        mail:(NSString *)mail
-                      finish:(CoreDataFinished)finished;
+- (void)insertWithName:(NSString *)name
+                  mail:(NSString *)mail
+               success:(CoreDataInsertSuccess)success
+                 error:(CoreDataFailed)error;
 
 - (void)updateWithPredicate:(NSPredicate *)predicate
                        name:(NSString *)name
                        mail:(NSString *)mail
-                     finish:(CoreDataFinished)finished;
+                    success:(CoreDataUpdateSuccess)success
+                      error:(CoreDataFailed)error;
 
-- (void)deleteEntityWithPredicate:(NSPredicate *)predicate
-                           finish:(CoreDataFinished)finished;
+- (void)deleteWithPredicate:(NSPredicate *)predicate
+                    success:(CoreDataDeleteSuccess)success
+                      error:(CoreDataFailed)error;
 
 - (NSPredicate *)setPredicateWithSearchKey:(NSString *)searchkey
                                searchValue:(id)searchValue;
 
+- (void)coreDataLog:(NSArray *)fetchdataLists;
 @end

@@ -8,6 +8,10 @@
 
 #import "User.h"
 
+NSString * const CONST_CORE_DATA_ENTITY_USER_NAME = @"name";
+NSString * const CONST_CORE_DATA_ENTITY_USER_MAIL = @"mail";
+NSString * const CONST_CORE_DATA_ENTITY_USER_CREATE = @"create";
+NSString * const CONST_CORE_DATA_ENTITY_USER_UPDATE = @"update";
 
 @implementation User
 

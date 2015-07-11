@@ -7,14 +7,9 @@
 //
 
 #import "ItemCollectionViewController.h"
-#import "OpenWeatherMapViewController.h"
 #import "MenuTableViewController.h"
 #import "SignupTableViewController.h"
 
-@interface TopViewController : UIViewController
-<
-MenuTableViewControllerDelegate,
-ItemCollectionViewControllerDelegate,
-SignupTableViewControllerDelegate
+@interface TopViewController : UIViewController<MenuTableViewControllerDelegate,ItemCollectionViewControllerDelegate,SignupTableViewControllerDelegate
 >
 @end
