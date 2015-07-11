@@ -246,12 +246,6 @@
 				F45962491B3E5A3B00BFFFD2 /* DetailView.h */,
 				F459624A1B3E5A3B00BFFFD2 /* DetailView.m */,
 				F459624C1B3E5A7F00BFFFD2 /* DetailView.xib */,
-				F4DA03031B40247E00E11F93 /* UITableViewCell+extention.h */,
-				F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */,
-				F4DA03061B4025FF00E11F93 /* UICollectionViewCell+extention.h */,
-				F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */,
-				F4DA03091B40269200E11F93 /* UIView+extention.h */,
-				F4DA030A1B40269200E11F93 /* UIView+extention.m */,
 			);
 			name = View;
 			path = LessonApp/View;
@@ -306,6 +300,12 @@
 				F4B1A5BD1B47BCC20000CC47 /* Thread.m */,
 				F42719011B4E9E1400B6521A /* Logger.h */,
 				F42719021B4E9E1400B6521A /* Logger.m */,
+				F4DA03031B40247E00E11F93 /* UITableViewCell+extention.h */,
+				F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */,
+				F4DA03061B4025FF00E11F93 /* UICollectionViewCell+extention.h */,
+				F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */,
+				F4DA03091B40269200E11F93 /* UIView+extention.h */,
+				F4DA030A1B40269200E11F93 /* UIView+extention.m */,
 			);
 			path = library;
 			sourceTree = "<group>";
