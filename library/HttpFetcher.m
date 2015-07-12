@@ -10,16 +10,17 @@
 
 @implementation HttpFetcher
 
-static NSString * HTTP_GET      = @"GET";
-static NSString * HTTP_POST     = @"POST";
-static NSInteger  HTTP_TIME_OUT = 15;
+NSString * const CONST_HTTP_GET  = @"GET";
+NSString * const CONST_HTTP_POST = @"POST";
 
+static NSInteger  HTTP_TIME_OUT = 15;
+#pragma mark - Get Sync
 - (void)startSyncFetchingWithUrlString:(NSString *)urlString
                                success:(FetchSuccess)success
                                 failed:(FetchFailed)failed
 {
     NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
-                                                        method:HTTP_GET];
+                                                        method:CONST_HTTP_GET];
     
     [self restartNetworkIndicator];
     
@@ -33,11 +34,7 @@ static NSInteger  HTTP_TIME_OUT = 15;
     [self stopNetworkIndicator];
     if (error)
     {
-        [Logger debugLogWithCategory:CONST_CONNECT_ERROR
-                             message:error
-                            Function:__PRETTY_FUNCTION__
-                                line:__LINE__];
-        failed(error);
+        failed([self connectError:error]);
     }
     else
     {
@@ -45,12 +42,14 @@ static NSInteger  HTTP_TIME_OUT = 15;
     }
     
 }
+
+#pragma mark - Get ASync
 - (void)startFetchingWithUrlString:(NSString *)urlString
                            success:(FetchSuccess)success
                             failed:(FetchFailed)failed
 {
     NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
-                                                        method:HTTP_GET];
+                                                        method:CONST_HTTP_GET];
 
     [self restartNetworkIndicator];
     [NSURLConnection sendAsynchronousRequest:request
@@ -62,11 +61,7 @@ static NSInteger  HTTP_TIME_OUT = 15;
          [self stopNetworkIndicator];
          if (error)
          {
-             [Logger debugLogWithCategory:CONST_CONNECT_ERROR
-                                  message:error
-                                 Function:__PRETTY_FUNCTION__
-                                     line:__LINE__];
-             failed(error);
+             failed([self connectError:error]);
          }
          else
          {
@@ -76,13 +71,14 @@ static NSInteger  HTTP_TIME_OUT = 15;
      }];
 }
 
+#pragma mark - Post Sync
 - (void)startFetchingWithUrlString:(NSString *)urlString
                          paramData:(NSData *)paramData
                            success:(FetchSuccess)success
                             failed:(FetchFailed)failed
 {
     NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
-                                                        method:HTTP_POST];
+                                                        method:CONST_HTTP_POST];
     request.HTTPBody = paramData;
     
     [self restartNetworkIndicator];
@@ -96,11 +92,7 @@ static NSInteger  HTTP_TIME_OUT = 15;
          [self stopNetworkIndicator];
          if (error)
          {
-             [Logger debugLogWithCategory:CONST_CONNECT_ERROR
-                                  message:error
-                                 Function:__PRETTY_FUNCTION__
-                                     line:__LINE__];
-             failed(error);
+             failed([self connectError:error]);
          }
          else
          {
@@ -109,6 +101,7 @@ static NSInteger  HTTP_TIME_OUT = 15;
      }];
 }
 
+#pragma mark - Set Post Parameter -
 - (NSData *)setStringParameter:(NSString *)paramString, ...NS_REQUIRES_NIL_TERMINATION
 {
     NSMutableArray *contentLists = @[].mutableCopy;
@@ -140,6 +133,7 @@ static NSInteger  HTTP_TIME_OUT = 15;
     return result;
 }
 
+#pragma mark - Set Request Parameter
 - (NSMutableURLRequest *)setHttpRequestWithURL:(NSString *)urlString method:(NSString *)method
 {
     NSMutableURLRequest *request = NSMutableURLRequest.new;
@@ -151,6 +145,18 @@ static NSInteger  HTTP_TIME_OUT = 15;
 
     return request;
 }
+
+#pragma mark - Error
+- (NSError *)connectError:(NSError *)error
+{
+    [Logger debugLogWithCategory:CONST_CONNECT_ERROR
+                         message:error
+                        Function:__PRETTY_FUNCTION__
+                            line:__LINE__];
+    return error;
+}
+
+#pragma mark - Indicator
 - (void)restartNetworkIndicator
 {
     UIApplication.sharedApplication.networkActivityIndicatorVisible = NO;

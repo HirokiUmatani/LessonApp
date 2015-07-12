@@ -202,17 +202,16 @@
 {
     NSError *dataError = nil;
     dataError = @{CONST_CORE_DATA_ERROR:CONST_CORE_DATA_NO_DATA}.copy;
-    [Logger debugLogWithCategory:CONST_DEBUG
+    [Logger debugLogWithCategory:CONST_WARNING
                          message:CONST_CORE_DATA_NO_DATA
                         Function:__PRETTY_FUNCTION__
                             line:__LINE__];
     return dataError;
 }
 
-#pragma mark -Log
+#pragma mark - Log
 - (void)coreDataLog:(NSArray *)fetchdataLists
 {
-    
     NSMutableArray * logLists = @[].mutableCopy;
     for (User *user in fetchdataLists)
     {
@@ -238,7 +237,5 @@
     [Logger debugLogWithCategory:CONST_DEBUG message:logLists
                         Function:__PRETTY_FUNCTION__
                             line:__LINE__];
-
-    
 }
 @end

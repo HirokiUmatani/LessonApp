@@ -22,6 +22,4 @@ typedef void (^OpenWeatherMapFetchFailed)(NSError *error);
 - (void)startFetchingIconImageWithIconCd:(NSString *)icon
                                  success:(OpenWeatherMapIconImageFetchSuccess)success
                                   failed:(OpenWeatherMapFetchFailed)failed;
-- (void)stopFetching;
-- (void)stopIconImageFetching;
 @end

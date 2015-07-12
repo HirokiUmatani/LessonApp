@@ -6,6 +6,8 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
+extern NSString * const CONST_HTTP_GET;
+extern NSString * const CONST_HTTP_POST;
 /**
  * 通信成功時のBlocks
  * @param data httpレスポンスデータ

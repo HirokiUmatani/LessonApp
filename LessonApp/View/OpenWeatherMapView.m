@@ -23,9 +23,11 @@
     {
         _iconImage.image = image;
         _tempLabel.text = [NSString stringWithFormat:CONST_DEGRESS_CENTIGRADE,openWeatherMapEntity.temp];
+        _iconFetcher = nil;
     }
                                            failed:^(NSError *error)
     {
+        _iconFetcher = nil;
     }];
 }
 @end

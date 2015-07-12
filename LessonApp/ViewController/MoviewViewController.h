@@ -9,7 +9,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface MoviewViewController : UIViewController
-@property (strong, nonatomic) MPMoviePlayerController *moviePlayerController;
+@property (strong, nonatomic) MPMoviePlayerController *player;
 - (void)setMovieURLString:(NSString *)urlString;
 - (void)start;
 - (void)stop;

@@ -26,6 +26,7 @@
 #import "UITableViewCell+extention.h"
 #import "NSString+Device.h"
 #import "NSJSONSerialization+Serialize.h"
+#import "RegularExpression.h"
 #define LessonApp_LessonAppPrefixHeader_pch
 
 #endif

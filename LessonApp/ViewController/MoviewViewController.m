@@ -14,20 +14,21 @@
     if (self != [super init])
         return self;
     
-    _moviePlayerController = [MPMoviePlayerController new];
+    _player = [MPMoviePlayerController new];
     return self;
 }
 - (void)setMovieURLString:(NSString *)urlString
 {
     NSURL *url = [NSURL URLWithString:urlString];
-    [_moviePlayerController setContentURL:url];
+    [_player setContentURL:url];
 }
 - (void)start
 {
-    [_moviePlayerController prepareToPlay];
+    [_player prepareToPlay];
+    [_player play];
 }
 - (void)stop
 {
-    [_moviePlayerController stop];
+    [_player stop];
 }
 @end

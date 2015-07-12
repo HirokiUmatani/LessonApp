@@ -27,7 +27,6 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 @property (nonatomic,strong) SignupTableViewController     *signupViewController;
 @property (nonatomic,strong) DetailViewController *detailViewController;
 
-@property (nonatomic,strong) LocalServer *localServer;
 @property (nonatomic,strong) UserCoreDataManager *userCoreDataManager;
 
 // AutoLayout
@@ -69,13 +68,12 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self testLocalServer];
     [self testCoreData];
+    [self testRegularExpression];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    _localServer = nil;
     [super viewWillDisappear:animated];
 }
 
@@ -351,12 +349,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 }
 
 #pragma mark -TEST
-- (void)testLocalServer
-{
-    /***** local server test*****/
-    _localServer = [LocalServer new];
-    [_localServer test];
-}
+
 - (void)testCoreData
 {
     /***** test core data *****/
@@ -396,5 +389,22 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
                                             error:^(NSError *error){}];
     }
                                    error:^(NSError *error){}];
+}
+- (void)testRegularExpression
+{
+    NSString *pattern = @"#EXTINF:([0-9]+),([a-zA-Z0-9 ]+)- ([a-zA-Z0-9 .'_]+)";
+    NSString *searchValue = @"#EXTM3U #EXTINF:419,Alice In Chains - Rotten Apple Alice In Chains_Jar Of Flies_01_Rotten Apple.mp3#EXTINF:260,Alice In Chains - Nutshell Alice In Chains_Jar Of Flies_02_Nutshell.mp3 #EXTINF:255,Alice In Chains - I Stay Away Alice In Chains_Jar Of Flies_03_I Stay Away.mp3 #EXTINF:256,Alice In Chains - No Excuses Alice In Chains_Jar Of Flies_04_No Excuses.mp3 #EXTINF:157,Alice In Chains - Whale And Wasp Alice In Chains_Jar Of Flies_05_Whale And Wasp.mp3 #EXTINF:263,Alice In Chains - Don't Follow Alice In Chains_Jar Of Flies_06_Don't Follow.mp3 #EXTINF:245,Alice In Chains - Swing On This Alice In Chains_Jar Of Flies_07_Swing On This.mp3";
+    NSArray *result = [RegularExpression searchReqularExpressinWithPattern:pattern
+                                                               searchValue:searchValue];
+    NSMutableArray *results = @[].mutableCopy;
+    for (NSTextCheckingResult *match in result)
+    {
+        NSMutableDictionary *tmpDictionary = @{}.mutableCopy;
+        [tmpDictionary setObject:[searchValue substringWithRange:[match rangeAtIndex:1]] forKey:@"No"];
+        [tmpDictionary setObject:[searchValue substringWithRange:[match rangeAtIndex:2]] forKey:@"Artist"];
+        [tmpDictionary setObject:[searchValue substringWithRange:[match rangeAtIndex:3]] forKey:@"Title"];
+        [results addObject:tmpDictionary];
+    }
+    
 }
 @end

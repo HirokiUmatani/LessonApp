@@ -10,6 +10,7 @@
 		073552FB7613ED4EC433BE4A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2EF1F18A8D2AF9FD8F8D1B /* libPods.a */; };
 		F40560731B3C2F24000B595A /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = F40560721B3C2F24000B595A /* podfile */; };
 		F42719031B4E9E1400B6521A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = F42719021B4E9E1400B6521A /* Logger.m */; };
+		F42775381B5204D2008082F8 /* RegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = F42775371B5204D2008082F8 /* RegularExpression.m */; };
 		F45915361B3E80C20041AAF9 /* MoviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45915351B3E80C20041AAF9 /* MoviewViewController.m */; };
 		F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45962471B3E539900BFFFD2 /* DetailViewController.m */; };
 		F459624B1B3E5A3B00BFFFD2 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F459624A1B3E5A3B00BFFFD2 /* DetailView.m */; };
@@ -72,6 +73,8 @@
 		F40560721B3C2F24000B595A /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F42719011B4E9E1400B6521A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		F42719021B4E9E1400B6521A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		F42775361B5204D2008082F8 /* RegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularExpression.h; sourceTree = "<group>"; };
+		F42775371B5204D2008082F8 /* RegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularExpression.m; sourceTree = "<group>"; };
 		F45915341B3E80C20041AAF9 /* MoviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviewViewController.h; sourceTree = "<group>"; };
 		F45915351B3E80C20041AAF9 /* MoviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviewViewController.m; sourceTree = "<group>"; };
 		F45962461B3E539900BFFFD2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -306,6 +309,8 @@
 				F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */,
 				F4DA03091B40269200E11F93 /* UIView+extention.h */,
 				F4DA030A1B40269200E11F93 /* UIView+extention.m */,
+				F42775361B5204D2008082F8 /* RegularExpression.h */,
+				F42775371B5204D2008082F8 /* RegularExpression.m */,
 			);
 			path = library;
 			sourceTree = "<group>";
@@ -500,6 +505,7 @@
 				F46853F61B3AF62E00AF461D /* TopViewController.m in Sources */,
 				F4C81B7A1B482A2F00337B31 /* UIViewController+extention.m in Sources */,
 				F46853DF1B3AF62E00AF461D /* main.m in Sources */,
+				F42775381B5204D2008082F8 /* RegularExpression.m in Sources */,
 				F46853EA1B3AF62E00AF461D /* MenuTableViewCell.m in Sources */,
 				F46853E31B3AF62E00AF461D /* OpenWeatherMapFetcher.m in Sources */,
 				F46853F41B3AF62E00AF461D /* OpenWeatherMapViewController.m in Sources */,
