@@ -16,7 +16,7 @@ NSString * const CONST_TS_MIME_TYPE     = @"video/MP2T";
 - (void)start
 {
     // TODO あとで作成
-    return;
+//    return;
     
     _webServer = [GCDWebServer new];
     

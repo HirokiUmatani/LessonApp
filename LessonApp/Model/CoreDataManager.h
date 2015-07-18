@@ -8,6 +8,7 @@
 #import <CoreData/CoreData.h>
 
 extern NSString * const CONST_CORE_DATA_ERROR;
+extern NSString * const CONST_CORE_DATA_FETCH_ERROR;
 extern NSString * const CONST_CORE_DATA_SAVE_ERROR;
 extern NSString * const CONST_CORE_DATA_NO_DATA;
 extern NSString * const CONST_CORE_DATA_SEARCH;

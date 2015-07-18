@@ -8,18 +8,14 @@
 
 #import "OpenWeatherMapEntity.h"
 
-typedef void (^OpenWeatherMapFetchSuccess)(OpenWeatherMapEntity *entity);
-typedef void (^OpenWeatherMapIconImageFetchSuccess)(UIImage *imageIcon);
-typedef void (^OpenWeatherMapFetchFailed)(NSError *error);
-
 @interface OpenWeatherMapFetcher : HttpFetcher
 
-- (void)startFetchingWithLatitude:(NSString *)latitude
-                        longitude:(NSString *)longitude
-                          success:(OpenWeatherMapFetchSuccess)success
-                           failed:(OpenWeatherMapFetchFailed)failed;
+- (void)startAsyncFetchingWithLatitude:(NSString *)latitude
+                             longitude:(NSString *)longitude
+                               success:(FetchSuccess)success
+                                failed:(FetchFailed)failed;
 
-- (void)startFetchingIconImageWithIconCd:(NSString *)icon
-                                 success:(OpenWeatherMapIconImageFetchSuccess)success
-                                  failed:(OpenWeatherMapFetchFailed)failed;
+- (void)startAsyncFetchingIconImageWithIconCd:(NSString *)icon
+                                      success:(FetchSuccess)success
+                                       failed:(FetchFailed)failed;
 @end

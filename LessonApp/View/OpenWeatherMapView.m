@@ -18,14 +18,14 @@
 - (void)setView:(OpenWeatherMapEntity *)openWeatherMapEntity
 {
     _iconFetcher = [OpenWeatherMapFetcher new];
-    [_iconFetcher startFetchingIconImageWithIconCd:openWeatherMapEntity.weather.icon
-                                          success:^(UIImage * image)
+    [_iconFetcher startAsyncFetchingIconImageWithIconCd:openWeatherMapEntity.weather.icon
+                                                success:^(UIImage * iconImage)
     {
-        _iconImage.image = image;
+        _iconImage.image = iconImage;
         _tempLabel.text = [NSString stringWithFormat:CONST_DEGRESS_CENTIGRADE,openWeatherMapEntity.temp];
         _iconFetcher = nil;
     }
-                                           failed:^(NSError *error)
+                                                 failed:^(NSError *error)
     {
         _iconFetcher = nil;
     }];

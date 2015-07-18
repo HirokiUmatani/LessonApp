@@ -9,6 +9,7 @@
 #import "CoreDataManager.h"
 
 NSString * const CONST_CORE_DATA_ERROR = @"CoreData error";
+NSString * const CONST_CORE_DATA_FETCH_ERROR = @"CoreData fetch failed";
 NSString * const CONST_CORE_DATA_SAVE_ERROR = @"CoreData save failed";
 NSString * const CONST_CORE_DATA_NO_DATA = @"CoreData no data";
 NSString * const CONST_CORE_DATA_SEARCH = @"%K=%@";

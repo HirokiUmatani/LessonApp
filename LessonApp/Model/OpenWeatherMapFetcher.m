@@ -10,41 +10,39 @@
 
 
 @implementation OpenWeatherMapFetcher
-- (void)startFetchingWithLatitude:(NSString *)latitude
-                        longitude:(NSString *)longitude
-                          success:(OpenWeatherMapFetchSuccess)success
-                          failed:(OpenWeatherMapFetchFailed)failed
+- (void)startAsyncFetchingWithLatitude:(NSString *)latitude
+                             longitude:(NSString *)longitude
+                               success:(FetchSuccess)success
+                                failed:(FetchFailed)failed
 {
-    [self startFetchingWithUrlString:[NSString stringWithFormat:
-                                      CONST_OPEN_WEATHER_MAP_URL,
-                                      latitude,
-                                      longitude]
-     
-                                     success:^(NSData *responceData)
+    NSString *urlString = [NSString stringWithFormat:
+                           CONST_OPEN_WEATHER_MAP_URL,
+                           latitude,
+                           longitude];
+    [self startAsyncFetchingWithUrlString:urlString
+                                  success:^(NSData *responceData)
     {
         NSDictionary *jsonObject = [NSJSONSerialization dictionaryFromJsonData:responceData];
         success([OpenWeatherMapEntity convertEntityFromDictionary:jsonObject]);
     }
-                                      failed:^(NSError *error)
+                                   failed:^(NSError *error)
     {
         failed(error);
     }];
 }
 
-- (void)startFetchingIconImageWithIconCd:(NSString *)icon
-                                 success:(OpenWeatherMapIconImageFetchSuccess)success
-                                  failed:(OpenWeatherMapFetchFailed)failed
+- (void)startAsyncFetchingIconImageWithIconCd:(NSString *)icon
+                                      success:(FetchSuccess)success
+                                       failed:(FetchFailed)failed
 {
-    [self startFetchingWithUrlString:[NSString stringWithFormat:
-                                      CONST_OPEN_WEATHER_MAP_ICON_URL,
-                                      icon]
-     
-                                              success:^(NSData *responceData)
+    NSString *urlString = [NSString stringWithFormat:CONST_OPEN_WEATHER_MAP_ICON_URL,icon];
+    [self startAsyncFetchingWithUrlString:urlString
+                                  success:^(NSData *responceData)
      {
          UIImage *imageIcon = [UIImage imageWithData:responceData];
          success(imageIcon);
      }
-                                               failed:^(NSError *error)
+                                   failed:^(NSError *error)
      {
          failed(error);
      }];

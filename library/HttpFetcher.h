@@ -12,13 +12,13 @@ extern NSString * const CONST_HTTP_POST;
  * 通信成功時のBlocks
  * @param data httpレスポンスデータ
  */
-typedef void (^FetchSuccess)(NSData *data);
+typedef void (^FetchSuccess)();
 
 /**
  * 通信失敗時のBlocks
  * @param error Httpエラー
  */
-typedef void (^FetchFailed)(NSError *error);
+typedef void (^FetchFailed)();
 
 /**
  * @class HTTP通信を担当するClass
@@ -41,9 +41,9 @@ typedef void (^FetchFailed)(NSError *error);
  * @param success 通信成功時のブロックス処理
  * @param failed 通信失敗時のブロックス処理
  */
-- (void)startFetchingWithUrlString:(NSString *)urlString
-                           success:(FetchSuccess)success
-                            failed:(FetchFailed)failed;
+- (void)startAsyncFetchingWithUrlString:(NSString *)urlString
+                                success:(FetchSuccess)success
+                                 failed:(FetchFailed)failed;
 
 /**
  * HTTP POST非同期通信

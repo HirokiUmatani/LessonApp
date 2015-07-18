@@ -11,33 +11,22 @@
 
 @interface UserCoreDataManager : CoreDataManager
 
-typedef void (^CoreDataFetchSuccess)(NSArray *fetchdataLists);
-typedef void (^CoreDataInsertSuccess)(void);
-typedef void (^CoreDataUpdateSuccess)(void);
-typedef void (^CoreDataDeleteSuccess)(void);
-typedef void (^CoreDataFailed)(NSError *error);
+typedef void (^CoreDataSuccess)();
+typedef void (^CoreDataFailed)();
 
-- (void)fetchWithPredicate:(NSPredicate *)predicate
-                   success:(CoreDataFetchSuccess)success
-                     error:(CoreDataFailed)error;
-
-- (void)insertWithName:(NSString *)name
-                  mail:(NSString *)mail
-               success:(CoreDataInsertSuccess)success
-                 error:(CoreDataFailed)error;
+- (void)insertWithPredicate:(NSPredicate *)predicate
+                       name:(NSString *)name
+                       mail:(NSString *)mail;
 
 - (void)updateWithPredicate:(NSPredicate *)predicate
                        name:(NSString *)name
-                       mail:(NSString *)mail
-                    success:(CoreDataUpdateSuccess)success
-                      error:(CoreDataFailed)error;
+                       mail:(NSString *)mail;
 
-- (void)deleteWithPredicate:(NSPredicate *)predicate
-                    success:(CoreDataDeleteSuccess)success
-                      error:(CoreDataFailed)error;
+- (void)deleteWithPredicate:(NSPredicate *)predicate;
+
+- (NSArray *)fetchWithPredicate:(NSPredicate *)predicate;
 
 - (NSPredicate *)setPredicateWithSearchKey:(NSString *)searchkey
                                searchValue:(id)searchValue;
 
-- (void)coreDataLog:(NSArray *)fetchdataLists;
 @end

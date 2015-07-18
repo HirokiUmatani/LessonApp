@@ -20,7 +20,7 @@ static NSString * CONST_FORTH_DECIMAL = @"%f04";
 - (void)startLocation
 {
     [self stopLocation];
-    _locationManager = CLLocationManager.new;
+    _locationManager = [CLLocationManager new];
     _locationManager.delegate = self;
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     _locationManager.distanceFilter = kCLDistanceFilterNone;

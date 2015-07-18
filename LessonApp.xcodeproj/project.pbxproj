@@ -207,17 +207,12 @@
 		F46853AF1B3AF62E00AF461D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F469ED331B5A106E00CD78C6 /* WebAPI */,
 				F46B378D1B48C0E20051EB8E /* CoreData */,
 				F46853B01B3AF62E00AF461D /* Const.h */,
 				F46853B11B3AF62E00AF461D /* Const.m */,
 				F46853B21B3AF62E00AF461D /* MenuCellEntity.h */,
 				F46853B31B3AF62E00AF461D /* MenuCellEntity.m */,
-				F46853B41B3AF62E00AF461D /* OpenWeatherMapEntity.h */,
-				F46853B51B3AF62E00AF461D /* OpenWeatherMapEntity.m */,
-				F46853B61B3AF62E00AF461D /* OpenWeatherMapFetcher.h */,
-				F46853B71B3AF62E00AF461D /* OpenWeatherMapFetcher.m */,
-				F46853B81B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.h */,
-				F46853B91B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m */,
 				F46853BA1B3AF62E00AF461D /* SignupCellEntity.h */,
 				F46853BB1B3AF62E00AF461D /* SignupCellEntity.m */,
 			);
@@ -315,16 +310,61 @@
 			path = library;
 			sourceTree = "<group>";
 		};
-		F46B378D1B48C0E20051EB8E /* CoreData */ = {
+		F469ED331B5A106E00CD78C6 /* WebAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F469ED371B5A10EA00CD78C6 /* Model */,
+				F469ED361B5A10E300CD78C6 /* Controller */,
+			);
+			name = WebAPI;
+			sourceTree = "<group>";
+		};
+		F469ED341B5A10B100CD78C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */,
+				F46B37801B48AC0E0051EB8E /* CoreDataManager.m */,
+				F46B37941B48F72A0051EB8E /* UserCoreDataManager.h */,
+				F46B37951B48F72A0051EB8E /* UserCoreDataManager.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F469ED351B5A10C500CD78C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F46B37971B48F79C0051EB8E /* User.h */,
 				F46B37981B48F79C0051EB8E /* User.m */,
-				F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */,
-				F46B37801B48AC0E0051EB8E /* CoreDataManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F469ED361B5A10E300CD78C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F46853B61B3AF62E00AF461D /* OpenWeatherMapFetcher.h */,
+				F46853B71B3AF62E00AF461D /* OpenWeatherMapFetcher.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F469ED371B5A10EA00CD78C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F46853B41B3AF62E00AF461D /* OpenWeatherMapEntity.h */,
+				F46853B51B3AF62E00AF461D /* OpenWeatherMapEntity.m */,
+				F46853B81B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.h */,
+				F46853B91B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F46B378D1B48C0E20051EB8E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F469ED351B5A10C500CD78C6 /* Model */,
+				F469ED341B5A10B100CD78C6 /* Controller */,
 				F46B37911B48F35E0051EB8E /* LessonApp.xcdatamodeld */,
-				F46B37941B48F72A0051EB8E /* UserCoreDataManager.h */,
-				F46B37951B48F72A0051EB8E /* UserCoreDataManager.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";

@@ -57,9 +57,9 @@ static NSString *CONST_VIEW_CLASS_NAME = @"OpenWeatherMapView";
 - (void)fetchWeather
 {
     _openWeatherMapFetcher = [OpenWeatherMapFetcher new];
-    [_openWeatherMapFetcher startFetchingWithLatitude:_locationFetcher.latitude
-                                            longitude:_locationFetcher.longitude
-                                              success:^(OpenWeatherMapEntity *openWeatherMapEntity)
+    [_openWeatherMapFetcher startAsyncFetchingWithLatitude:_locationFetcher.latitude
+                                                 longitude:_locationFetcher.longitude
+                                                   success:^(OpenWeatherMapEntity *openWeatherMapEntity)
      {
          [_contentView setView:openWeatherMapEntity];
          _openWeatherMapFetcher = nil;

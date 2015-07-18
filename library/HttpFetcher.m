@@ -21,7 +21,6 @@ static NSInteger  HTTP_TIME_OUT = 15;
 {
     NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
                                                         method:CONST_HTTP_GET];
-    
     [self restartNetworkIndicator];
     
     NSURLResponse *response;
@@ -44,9 +43,9 @@ static NSInteger  HTTP_TIME_OUT = 15;
 }
 
 #pragma mark - Get ASync
-- (void)startFetchingWithUrlString:(NSString *)urlString
-                           success:(FetchSuccess)success
-                            failed:(FetchFailed)failed
+- (void)startAsyncFetchingWithUrlString:(NSString *)urlString
+                                success:(FetchSuccess)success
+                                 failed:(FetchFailed)failed
 {
     NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
                                                         method:CONST_HTTP_GET];
@@ -71,7 +70,7 @@ static NSInteger  HTTP_TIME_OUT = 15;
      }];
 }
 
-#pragma mark - Post Sync
+#pragma mark - Post ASync
 - (void)startFetchingWithUrlString:(NSString *)urlString
                          paramData:(NSData *)paramData
                            success:(FetchSuccess)success
@@ -80,9 +79,7 @@ static NSInteger  HTTP_TIME_OUT = 15;
     NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
                                                         method:CONST_HTTP_POST];
     request.HTTPBody = paramData;
-    
     [self restartNetworkIndicator];
-    
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response,

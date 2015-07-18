@@ -14,9 +14,7 @@
 @property (nonatomic, strong) MoviewViewController * movieViewController;
 @property (nonatomic, strong) AutoLayout *detailViewAutoLayout;
 @property (nonatomic, strong) AutoLayout *movieViewAutoLayout;
-
 @property (nonatomic,strong) LocalServer *localServer;
-
 @property (weak, nonatomic) IBOutlet UIView *detailView;
 
 @end
@@ -32,6 +30,7 @@
     [self initDetailViewAutoLayout];
     [self initMovieViewAutoLayout];
     
+    
 }
 
 - (void)initDetailView
@@ -45,7 +44,7 @@
 - (void)initMoviePlayerView
 {
     _movieViewController =[MoviewViewController new];
-    [_movieViewController setMovieURLString:@"http://127.0.0.1:8080/mario/high_15.m3u8"];//
+    [_movieViewController setMovieURLString:@"http://127.0.0.1:8080/mario/high_15.m3u8"];
     [_movieViewController start];
     [_contentView.movieView addSubview:_movieViewController.player.view];
 }

@@ -70,6 +70,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     [super viewWillAppear:animated];
     [self testCoreData];
     [self testRegularExpression];
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -148,9 +149,9 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     [_weatherLayoutView addConstraints:_weatherViewAutoLayout.constraints];
     [AnimationView transformInit:_weatherLayoutView
                       completion:^(BOOL finished)
-     {
-         
-     }];
+    {
+        
+    }];
     [_weatherViewController startLocation];
 }
 - (void)hideWetherView
@@ -353,45 +354,31 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 - (void)testCoreData
 {
     /***** test core data *****/
-    
+    _userCoreDataManager = [UserCoreDataManager new];
     // test data
     NSString *tmpName = @"yyyy";
     NSString *tmpMail = @"xxxx";
     NSPredicate *predicate = [_userCoreDataManager setPredicateWithSearchKey:CONST_CORE_DATA_ENTITY_USER_NAME searchValue:tmpName];
     
-    _userCoreDataManager = [UserCoreDataManager new];
+    __ASYNC_SERIAL_START__
+    // delete
+    [_userCoreDataManager deleteWithPredicate:predicate];
     
-    // fetch check
-    [_userCoreDataManager fetchWithPredicate:predicate
-                                     success:^(NSArray *fetchdataLists)
-    {
-        [_userCoreDataManager coreDataLog:fetchdataLists];
-    }
-                                       error:^(NSError *error){}];
-    
-    //insert check
-    [_userCoreDataManager insertWithName:tmpName
-                                    mail:nil
-                                 success:^()
-    {
-        // update
-        [_userCoreDataManager updateWithPredicate:predicate
-                                             name:nil
-                                             mail:tmpMail
-                                          success:^()
-         {
-             // delete
-             [_userCoreDataManager deleteWithPredicate:predicate
-                                               success:^(){}
-                                                 error:^(NSError *error){}];
-         }
-         
-                                            error:^(NSError *error){}];
-    }
-                                   error:^(NSError *error){}];
+    //insert
+    [_userCoreDataManager insertWithPredicate:predicate
+                                         name:tmpName
+                                         mail:nil];
+    // update
+    [_userCoreDataManager updateWithPredicate:predicate
+                                         name:nil
+                                         mail:tmpMail];
+    // fetch
+    [_userCoreDataManager fetchWithPredicate:predicate];
+    __ASYNC_END__
 }
 - (void)testRegularExpression
 {
+    __ASYNC_PARALLEL_START__
     NSString *pattern = @"#EXTINF:([0-9]+),([a-zA-Z0-9 ]+)- ([a-zA-Z0-9 .'_]+)";
     NSString *searchValue = @"#EXTM3U #EXTINF:419,Alice In Chains - Rotten Apple Alice In Chains_Jar Of Flies_01_Rotten Apple.mp3#EXTINF:260,Alice In Chains - Nutshell Alice In Chains_Jar Of Flies_02_Nutshell.mp3 #EXTINF:255,Alice In Chains - I Stay Away Alice In Chains_Jar Of Flies_03_I Stay Away.mp3 #EXTINF:256,Alice In Chains - No Excuses Alice In Chains_Jar Of Flies_04_No Excuses.mp3 #EXTINF:157,Alice In Chains - Whale And Wasp Alice In Chains_Jar Of Flies_05_Whale And Wasp.mp3 #EXTINF:263,Alice In Chains - Don't Follow Alice In Chains_Jar Of Flies_06_Don't Follow.mp3 #EXTINF:245,Alice In Chains - Swing On This Alice In Chains_Jar Of Flies_07_Swing On This.mp3";
     NSArray *result = [RegularExpression searchReqularExpressinWithPattern:pattern
@@ -405,6 +392,6 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
         [tmpDictionary setObject:[searchValue substringWithRange:[match rangeAtIndex:3]] forKey:@"Title"];
         [results addObject:tmpDictionary];
     }
-    
+    __ASYNC_END__
 }
 @end
