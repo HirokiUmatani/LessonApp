@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+extern NSString * const CONST_CORE_DATA_ENTITY_DEVICE_ID;
 extern NSString * const CONST_CORE_DATA_ENTITY_USER_NAME;
 extern NSString * const CONST_CORE_DATA_ENTITY_USER_MAIL;
 extern NSString * const CONST_CORE_DATA_ENTITY_USER_CREATE;
 extern NSString * const CONST_CORE_DATA_ENTITY_USER_UPDATE;
 
 @interface User : NSManagedObject
-
+@property (nonatomic, retain) NSString * device_id;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * mail;
 @property (nonatomic, retain) NSString * create;

@@ -9,6 +9,8 @@
 @class OpenWeatherMapEntity;
 @interface OpenWeatherMapView : UIView
 
+extern NSString * const CONST_DEGRESS_CENTIGRADE;
+
 @property (weak, nonatomic) IBOutlet UILabel *tempLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 

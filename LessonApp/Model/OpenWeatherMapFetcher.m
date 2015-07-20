@@ -16,7 +16,7 @@
                                 failed:(FetchFailed)failed
 {
     NSString *urlString = [NSString stringWithFormat:
-                           CONST_OPEN_WEATHER_MAP_URL,
+                           CONST_OPEN_WEATHER_MAP_DATA_API,
                            latitude,
                            longitude];
     [self startAsyncFetchingWithUrlString:urlString
@@ -35,7 +35,7 @@
                                       success:(FetchSuccess)success
                                        failed:(FetchFailed)failed
 {
-    NSString *urlString = [NSString stringWithFormat:CONST_OPEN_WEATHER_MAP_ICON_URL,icon];
+    NSString *urlString = [NSString stringWithFormat:CONST_OPEN_WEATHER_MAP_ICON_IMAGE_API,icon];
     [self startAsyncFetchingWithUrlString:urlString
                                   success:^(NSData *responceData)
      {

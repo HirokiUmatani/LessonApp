@@ -7,6 +7,9 @@
 //
 
 @interface MenuTableViewCell : UITableViewCell
+
+extern NSString * const CONST_MENU_CELL_IDENTIFIRE;
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 - (void)setView:(NSArray *)cellLists

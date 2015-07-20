@@ -9,5 +9,5 @@
 #import "ItemCollectionViewCell.h"
 
 @implementation ItemCollectionViewCell
-
+NSString * const CONST_ITEM_CELL_IDENTIFIRE = @"ItemCollectionViewCell";
 @end

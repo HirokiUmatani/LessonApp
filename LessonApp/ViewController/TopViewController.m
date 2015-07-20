@@ -9,7 +9,7 @@
 #import "DetailViewController.h"
 #import "OpenWeatherMapViewController.h"
 #import "UserCoreDataManager.h"
-
+#import "MovieDownloadFetcher.h"
 @interface TopViewController ()
 
 // Enum
@@ -69,8 +69,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 {
     [super viewWillAppear:animated];
     [self testCoreData];
-    [self testRegularExpression];
-    
+    [self testDownload];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -353,14 +352,13 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 
 - (void)testCoreData
 {
+    __SERIAL_THREAD_START__
     /***** test core data *****/
     _userCoreDataManager = [UserCoreDataManager new];
     // test data
-    NSString *tmpName = @"yyyy";
+    NSString *tmpName = [KeyChainData getUUID];
     NSString *tmpMail = @"xxxx";
     NSPredicate *predicate = [_userCoreDataManager setPredicateWithSearchKey:CONST_CORE_DATA_ENTITY_USER_NAME searchValue:tmpName];
-    
-    __ASYNC_SERIAL_START__
     // delete
     [_userCoreDataManager deleteWithPredicate:predicate];
     
@@ -374,24 +372,89 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
                                          mail:tmpMail];
     // fetch
     [_userCoreDataManager fetchWithPredicate:predicate];
-    __ASYNC_END__
+    
+    __THREAD_END__
 }
-- (void)testRegularExpression
+
+
+- (NSString *)dirPath
 {
-    __ASYNC_PARALLEL_START__
-    NSString *pattern = @"#EXTINF:([0-9]+),([a-zA-Z0-9 ]+)- ([a-zA-Z0-9 .'_]+)";
-    NSString *searchValue = @"#EXTM3U #EXTINF:419,Alice In Chains - Rotten Apple Alice In Chains_Jar Of Flies_01_Rotten Apple.mp3#EXTINF:260,Alice In Chains - Nutshell Alice In Chains_Jar Of Flies_02_Nutshell.mp3 #EXTINF:255,Alice In Chains - I Stay Away Alice In Chains_Jar Of Flies_03_I Stay Away.mp3 #EXTINF:256,Alice In Chains - No Excuses Alice In Chains_Jar Of Flies_04_No Excuses.mp3 #EXTINF:157,Alice In Chains - Whale And Wasp Alice In Chains_Jar Of Flies_05_Whale And Wasp.mp3 #EXTINF:263,Alice In Chains - Don't Follow Alice In Chains_Jar Of Flies_06_Don't Follow.mp3 #EXTINF:245,Alice In Chains - Swing On This Alice In Chains_Jar Of Flies_07_Swing On This.mp3";
+    return @"mario";
+}
+- (NSString *)m3u8Path
+{
+    return @"high_15.m3u8";
+}
+- (NSNumber *)permission
+{
+    return @0755;
+}
+- (void)testDownload
+{
+    __SERIAL_THREAD_START__
+    [DirectoryFileManager createDirectory:self.dirPath
+                                permisson:self.permission];
+    [self m3u8Download];
+    [self movieDownload];
+    __THREAD_END__
+}
+- (void)m3u8Download
+{
+    if ([DirectoryFileManager checkFileWithDirPath:self.dirPath
+                                          filePath:self.m3u8Path])
+        return;
+    
+    [[MovieDownloadFetcher new] m3u8FetchingWithURL:CONST_M3U8_DOWNLOAD_API
+                                            success:^(NSData *m3u8Binary)
+    {
+        
+        [DirectoryFileManager createFile:m3u8Binary
+                                 dirPath:self.dirPath
+                                filePath:self.m3u8Path
+                               permisson:self.permission];
+    }
+                                             failed:^
+    {
+        
+    }];
+}
+- (NSArray *)downloadlist
+{
+    NSData *data = [DirectoryFileManager getFileWithDirPath:self.dirPath
+                                                   filePath:self.m3u8Path];
+    NSString *pattern = @"([\\w\\_-]+.ts)";
+    NSString *searchValue = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSArray *result = [RegularExpression searchReqularExpressinWithPattern:pattern
                                                                searchValue:searchValue];
-    NSMutableArray *results = @[].mutableCopy;
+    NSMutableArray *downloadLists = @[].mutableCopy;
     for (NSTextCheckingResult *match in result)
     {
-        NSMutableDictionary *tmpDictionary = @{}.mutableCopy;
-        [tmpDictionary setObject:[searchValue substringWithRange:[match rangeAtIndex:1]] forKey:@"No"];
-        [tmpDictionary setObject:[searchValue substringWithRange:[match rangeAtIndex:2]] forKey:@"Artist"];
-        [tmpDictionary setObject:[searchValue substringWithRange:[match rangeAtIndex:3]] forKey:@"Title"];
-        [results addObject:tmpDictionary];
+        [downloadLists addObject:[searchValue substringWithRange:[match rangeAtIndex:1]]];
     }
-    __ASYNC_END__
+    return downloadLists;
+}
+- (void)movieDownload
+{
+    NSArray * downloadLists = [self downloadlist];
+    for (NSInteger i = 0; i<downloadLists.count; i++)
+    {
+        if ([DirectoryFileManager checkFileWithDirPath:self.dirPath
+                                              filePath:downloadLists[i]])
+            continue;
+        
+        [[MovieDownloadFetcher new] movieFetchingWithURL:CONST_MOVIE_DOWNLOAD_API
+                                    count:i
+                                   success:^(NSData *movieBinary)
+        {
+            [DirectoryFileManager createFile:movieBinary
+                                     dirPath:self.dirPath
+                                    filePath:downloadLists[i]
+                                   permisson:self.permission];
+        }
+                                    failed:^
+        {
+            
+        }];
+    }
 }
 @end

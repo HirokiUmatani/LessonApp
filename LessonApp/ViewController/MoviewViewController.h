@@ -11,6 +11,6 @@
 @interface MoviewViewController : UIViewController
 @property (strong, nonatomic) MPMoviePlayerController *player;
 - (void)setMovieURLString:(NSString *)urlString;
-- (void)start;
-- (void)stop;
+- (void)movieStart;
+- (void)movieStop;
 @end

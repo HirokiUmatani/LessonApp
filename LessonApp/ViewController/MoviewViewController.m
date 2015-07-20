@@ -22,12 +22,12 @@
     NSURL *url = [NSURL URLWithString:urlString];
     [_player setContentURL:url];
 }
-- (void)start
+- (void)movieStart
 {
     [_player prepareToPlay];
     [_player play];
 }
-- (void)stop
+- (void)movieStop
 {
     [_player stop];
 }

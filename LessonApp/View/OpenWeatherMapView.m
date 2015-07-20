@@ -14,7 +14,7 @@
 @end
 
 @implementation OpenWeatherMapView
-
+NSString * const CONST_DEGRESS_CENTIGRADE = @"%@℃";
 - (void)setView:(OpenWeatherMapEntity *)openWeatherMapEntity
 {
     _iconFetcher = [OpenWeatherMapFetcher new];

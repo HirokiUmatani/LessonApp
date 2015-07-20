@@ -10,7 +10,7 @@
 #import "MenuCellEntity.h"
 
 @implementation MenuTableViewCell
-
+NSString * const CONST_MENU_CELL_IDENTIFIRE = @"MenuTableViewCell";
 - (void)setView:(NSArray *)cellLists
       indexPath:(NSIndexPath *)indexPath
 {

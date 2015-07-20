@@ -29,8 +29,6 @@
     [self initMoviePlayerView];
     [self initDetailViewAutoLayout];
     [self initMovieViewAutoLayout];
-    
-    
 }
 
 - (void)initDetailView
@@ -45,7 +43,7 @@
 {
     _movieViewController =[MoviewViewController new];
     [_movieViewController setMovieURLString:@"http://127.0.0.1:8080/mario/high_15.m3u8"];
-    [_movieViewController start];
+    [_movieViewController movieStart];
     [_contentView.movieView addSubview:_movieViewController.player.view];
 }
 

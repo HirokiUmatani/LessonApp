@@ -8,4 +8,6 @@
 
 @interface SignupButtonTableViewCell : UITableViewCell
 
+extern NSString * const CONST_SIGNUP_BUTTON_CELL_IDENTIFIRE;
+
 @end

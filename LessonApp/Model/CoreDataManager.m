@@ -78,8 +78,8 @@ static CoreDataManager * _sharedInstance = nil;
 }
 - (NSURL *)applicationLibraryDirectory
 {
-    NSString *coreDataDirectoryPath = [NSString stringWithFormat:@"CoreDataDirectoryPath : %@/Library",NSHomeDirectory()];
-    [Logger debugLogWithCategory:CONST_DEBUG message:coreDataDirectoryPath
+    NSString *coreDataDirectoryPathMessage = [NSString stringWithFormat:@"CoreDataDirectoryPath : %@/%@",NSHomeDirectory(),@"Library"];
+    [Logger debugLogWithCategory:CONST_DEBUG message:coreDataDirectoryPathMessage
                         Function:__PRETTY_FUNCTION__
                             line:__LINE__];
     

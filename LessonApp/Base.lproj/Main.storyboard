@@ -73,7 +73,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="BWK-Nc-2Ih" secondAttribute="bottom" id="0Fe-OJ-I6u"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="s0U-ae-E3c" secondAttribute="bottom" id="4kI-a2-rOa"/>

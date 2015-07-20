@@ -28,7 +28,7 @@ NSString * const CONST_TS_MIME_TYPE     = @"video/MP2T";
         
         NSString *homePath = NSHomeDirectory();
         NSString *fileName = request.path;
-        NSString *filePath = [NSString stringWithFormat:@"%@/%@",homePath,fileName];
+        NSString *filePath = [NSString stringWithFormat:@"%@%@",homePath,fileName];
         NSData *data = [NSData dataWithContentsOfFile:filePath];
         return [GCDWebServerDataResponse responseWithData:data
                                               contentType:CONST_M3U8_MIME_TYPE];
@@ -37,7 +37,7 @@ NSString * const CONST_TS_MIME_TYPE     = @"video/MP2T";
     // TODO need m3u8moviePathList
     for (NSInteger i = 1; i < 32; i++)
     {
-        NSString *path = [NSString stringWithFormat:@"/mario/high_15_%ld.ts",i];
+        NSString *path = [NSString stringWithFormat:@"/mario/high_15_%zd.ts",i];
         [_webServer addHandlerForMethod:CONST_HTTP_GET
                                    path:path
                            requestClass:[GCDWebServerURLEncodedFormRequest class]
@@ -46,7 +46,7 @@ NSString * const CONST_TS_MIME_TYPE     = @"video/MP2T";
              
              NSString *homePath = NSHomeDirectory();
              NSString *fileName = request.path;
-             NSString *filePath = [NSString stringWithFormat:@"%@/%@",homePath,fileName];
+             NSString *filePath = [NSString stringWithFormat:@"%@%@",homePath,fileName];
              NSData *data = [NSData dataWithContentsOfFile:filePath];
              return [GCDWebServerDataResponse responseWithData:data
                                                    contentType:CONST_TS_MIME_TYPE];

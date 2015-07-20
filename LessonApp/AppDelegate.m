@@ -18,6 +18,13 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self startup];
     return YES;
+}
+
+- (void)startup
+{
+    // Set UUID
+    [KeyChainData setUUID];
 }
 @end

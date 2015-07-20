@@ -7,5 +7,5 @@
 //
 
 @interface ItemCollectionViewCell : UICollectionViewCell
-
+extern NSString * const CONST_ITEM_CELL_IDENTIFIRE;
 @end

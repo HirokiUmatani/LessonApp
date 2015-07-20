@@ -30,7 +30,6 @@ static NSInteger  HTTP_TIME_OUT = 15;
                                                  returningResponse:&response
                                                              error:&error];
     
-    [self stopNetworkIndicator];
     if (error)
     {
         failed([self connectError:error]);
@@ -39,7 +38,7 @@ static NSInteger  HTTP_TIME_OUT = 15;
     {
         success(responseData);
     }
-    
+    [self stopNetworkIndicator];
 }
 
 #pragma mark - Get ASync
@@ -57,7 +56,6 @@ static NSInteger  HTTP_TIME_OUT = 15;
                                                NSData *responceData,
                                                NSError *error)
      {
-         [self stopNetworkIndicator];
          if (error)
          {
              failed([self connectError:error]);
@@ -66,7 +64,7 @@ static NSInteger  HTTP_TIME_OUT = 15;
          {
              success(responceData);
          }
-         
+         [self stopNetworkIndicator];
      }];
 }
 

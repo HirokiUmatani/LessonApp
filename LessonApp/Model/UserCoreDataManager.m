@@ -65,6 +65,7 @@
     User* entity = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([User class])
                                                  inManagedObjectContext:self.managedObjectContext];
     NSString *update = [NSObject stringFromDate:[NSDate date]];
+    entity.device_id = [KeyChainData getUUID];
     entity.name     = name;
     entity.mail     = mail;
     entity.create   = update;

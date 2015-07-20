@@ -12,7 +12,7 @@
 
 #import "AnimationView.h"
 #import "AutoLayout.h"
-#import "Const.h"
+#import "WebAPIConst.h"
 #import "HttpFetcher.h"
 #import "LocalServer.h"
 #import "LocationFetcher.h"
@@ -27,6 +27,8 @@
 #import "NSString+Device.h"
 #import "NSJSONSerialization+Serialize.h"
 #import "RegularExpression.h"
+#import "KeyChainData.h"
+#import "DirectoryFileManager.h"
 #define LessonApp_LessonAppPrefixHeader_pch
 
 #endif

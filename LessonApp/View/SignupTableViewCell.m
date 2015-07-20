@@ -10,6 +10,7 @@
 #import "SignupCellEntity.h"
 
 @implementation SignupTableViewCell
+NSString * const CONST_SIGNUP_CELL_IDENTIFIRE = @"SignupTableViewCell";
 - (void)setView:(NSArray *)cellLists
       indexPath:(NSIndexPath *)indexPath
 {

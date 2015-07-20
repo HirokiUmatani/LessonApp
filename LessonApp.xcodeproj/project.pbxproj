@@ -11,6 +11,9 @@
 		F40560731B3C2F24000B595A /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = F40560721B3C2F24000B595A /* podfile */; };
 		F42719031B4E9E1400B6521A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = F42719021B4E9E1400B6521A /* Logger.m */; };
 		F42775381B5204D2008082F8 /* RegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = F42775371B5204D2008082F8 /* RegularExpression.m */; };
+		F44B0F441B5C8C7C00A6B939 /* KeyChainData.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F431B5C8C7C00A6B939 /* KeyChainData.m */; };
+		F44B0F471B5C9F6E00A6B939 /* MovieDownloadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */; };
+		F44B0F4A1B5CB92100A6B939 /* DirectoryFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */; };
 		F45915361B3E80C20041AAF9 /* MoviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45915351B3E80C20041AAF9 /* MoviewViewController.m */; };
 		F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45962471B3E539900BFFFD2 /* DetailViewController.m */; };
 		F459624B1B3E5A3B00BFFFD2 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F459624A1B3E5A3B00BFFFD2 /* DetailView.m */; };
@@ -20,7 +23,7 @@
 		F46853DC1B3AF62E00AF461D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46853AA1B3AF62E00AF461D /* Main.storyboard */; };
 		F46853DD1B3AF62E00AF461D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46853AC1B3AF62E00AF461D /* Images.xcassets */; };
 		F46853DF1B3AF62E00AF461D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853AE1B3AF62E00AF461D /* main.m */; };
-		F46853E01B3AF62E00AF461D /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B11B3AF62E00AF461D /* Const.m */; };
+		F46853E01B3AF62E00AF461D /* WebAPIConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B11B3AF62E00AF461D /* WebAPIConst.m */; };
 		F46853E11B3AF62E00AF461D /* MenuCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B31B3AF62E00AF461D /* MenuCellEntity.m */; };
 		F46853E21B3AF62E00AF461D /* OpenWeatherMapEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B51B3AF62E00AF461D /* OpenWeatherMapEntity.m */; };
 		F46853E31B3AF62E00AF461D /* OpenWeatherMapFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B71B3AF62E00AF461D /* OpenWeatherMapFetcher.m */; };
@@ -75,6 +78,12 @@
 		F42719021B4E9E1400B6521A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		F42775361B5204D2008082F8 /* RegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularExpression.h; sourceTree = "<group>"; };
 		F42775371B5204D2008082F8 /* RegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularExpression.m; sourceTree = "<group>"; };
+		F44B0F421B5C8C7C00A6B939 /* KeyChainData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainData.h; sourceTree = "<group>"; };
+		F44B0F431B5C8C7C00A6B939 /* KeyChainData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainData.m; sourceTree = "<group>"; };
+		F44B0F451B5C9F6E00A6B939 /* MovieDownloadFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDownloadFetcher.h; sourceTree = "<group>"; };
+		F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDownloadFetcher.m; sourceTree = "<group>"; };
+		F44B0F481B5CB92100A6B939 /* DirectoryFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryFileManager.h; sourceTree = "<group>"; };
+		F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryFileManager.m; sourceTree = "<group>"; };
 		F45915341B3E80C20041AAF9 /* MoviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviewViewController.h; sourceTree = "<group>"; };
 		F45915351B3E80C20041AAF9 /* MoviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviewViewController.m; sourceTree = "<group>"; };
 		F45962461B3E539900BFFFD2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -89,8 +98,8 @@
 		F46853AC1B3AF62E00AF461D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LessonApp/Images.xcassets; sourceTree = "<group>"; };
 		F46853AD1B3AF62E00AF461D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LessonApp/Info.plist; sourceTree = "<group>"; };
 		F46853AE1B3AF62E00AF461D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LessonApp/main.m; sourceTree = "<group>"; };
-		F46853B01B3AF62E00AF461D /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
-		F46853B11B3AF62E00AF461D /* Const.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
+		F46853B01B3AF62E00AF461D /* WebAPIConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebAPIConst.h; sourceTree = "<group>"; };
+		F46853B11B3AF62E00AF461D /* WebAPIConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebAPIConst.m; sourceTree = "<group>"; };
 		F46853B21B3AF62E00AF461D /* MenuCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCellEntity.h; sourceTree = "<group>"; };
 		F46853B31B3AF62E00AF461D /* MenuCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCellEntity.m; sourceTree = "<group>"; };
 		F46853B41B3AF62E00AF461D /* OpenWeatherMapEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWeatherMapEntity.h; sourceTree = "<group>"; };
@@ -209,8 +218,6 @@
 			children = (
 				F469ED331B5A106E00CD78C6 /* WebAPI */,
 				F46B378D1B48C0E20051EB8E /* CoreData */,
-				F46853B01B3AF62E00AF461D /* Const.h */,
-				F46853B11B3AF62E00AF461D /* Const.m */,
 				F46853B21B3AF62E00AF461D /* MenuCellEntity.h */,
 				F46853B31B3AF62E00AF461D /* MenuCellEntity.m */,
 				F46853BA1B3AF62E00AF461D /* SignupCellEntity.h */,
@@ -306,6 +313,10 @@
 				F4DA030A1B40269200E11F93 /* UIView+extention.m */,
 				F42775361B5204D2008082F8 /* RegularExpression.h */,
 				F42775371B5204D2008082F8 /* RegularExpression.m */,
+				F44B0F421B5C8C7C00A6B939 /* KeyChainData.h */,
+				F44B0F431B5C8C7C00A6B939 /* KeyChainData.m */,
+				F44B0F481B5CB92100A6B939 /* DirectoryFileManager.h */,
+				F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */,
 			);
 			path = library;
 			sourceTree = "<group>";
@@ -313,6 +324,8 @@
 		F469ED331B5A106E00CD78C6 /* WebAPI */ = {
 			isa = PBXGroup;
 			children = (
+				F46853B01B3AF62E00AF461D /* WebAPIConst.h */,
+				F46853B11B3AF62E00AF461D /* WebAPIConst.m */,
 				F469ED371B5A10EA00CD78C6 /* Model */,
 				F469ED361B5A10E300CD78C6 /* Controller */,
 			);
@@ -344,6 +357,8 @@
 			children = (
 				F46853B61B3AF62E00AF461D /* OpenWeatherMapFetcher.h */,
 				F46853B71B3AF62E00AF461D /* OpenWeatherMapFetcher.m */,
+				F44B0F451B5C9F6E00A6B939 /* MovieDownloadFetcher.h */,
+				F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -518,7 +533,7 @@
 				F46B37991B48F79C0051EB8E /* User.m in Sources */,
 				F46853F31B3AF62E00AF461D /* MenuTableViewController.m in Sources */,
 				F46853E51B3AF62E00AF461D /* SignupCellEntity.m in Sources */,
-				F46853E01B3AF62E00AF461D /* Const.m in Sources */,
+				F46853E01B3AF62E00AF461D /* WebAPIConst.m in Sources */,
 				F46854111B3AF69D00AF461D /* Notification.m in Sources */,
 				F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */,
 				F468540D1B3AF69D00AF461D /* HttpFetcher.m in Sources */,
@@ -529,6 +544,7 @@
 				F46B37961B48F72A0051EB8E /* UserCoreDataManager.m in Sources */,
 				F4DA030B1B40269200E11F93 /* UIView+extention.m in Sources */,
 				F46853E61B3AF62E00AF461D /* ItemCollectionView.m in Sources */,
+				F44B0F441B5C8C7C00A6B939 /* KeyChainData.m in Sources */,
 				F46853F21B3AF62E00AF461D /* ItemCollectionViewController.m in Sources */,
 				F42719031B4E9E1400B6521A /* Logger.m in Sources */,
 				F468540C1B3AF69D00AF461D /* NSString+Device.m in Sources */,
@@ -541,6 +557,7 @@
 				F46853E81B3AF62E00AF461D /* ItemCollectionViewCell.m in Sources */,
 				F459624B1B3E5A3B00BFFFD2 /* DetailView.m in Sources */,
 				F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */,
+				F44B0F4A1B5CB92100A6B939 /* DirectoryFileManager.m in Sources */,
 				F46853EC1B3AF62E00AF461D /* OpenWeatherMapView.m in Sources */,
 				F46853F61B3AF62E00AF461D /* TopViewController.m in Sources */,
 				F4C81B7A1B482A2F00337B31 /* UIViewController+extention.m in Sources */,
@@ -548,6 +565,7 @@
 				F42775381B5204D2008082F8 /* RegularExpression.m in Sources */,
 				F46853EA1B3AF62E00AF461D /* MenuTableViewCell.m in Sources */,
 				F46853E31B3AF62E00AF461D /* OpenWeatherMapFetcher.m in Sources */,
+				F44B0F471B5C9F6E00A6B939 /* MovieDownloadFetcher.m in Sources */,
 				F46853F41B3AF62E00AF461D /* OpenWeatherMapViewController.m in Sources */,
 				F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */,
 				F46B37931B48F35E0051EB8E /* LessonApp.xcdatamodeld in Sources */,

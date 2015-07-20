@@ -2,11 +2,14 @@ PODS:
   - GCDWebServer/Core (3.2.5)
   - GCDWebServer/WebDAV (3.2.5):
     - GCDWebServer/Core
+  - LUKeychainAccess (1.2.4)
 
 DEPENDENCIES:
   - GCDWebServer/WebDAV (~> 3.0)
+  - LUKeychainAccess
 
 SPEC CHECKSUMS:
   GCDWebServer: d0e1b23785e3dfd6c87601323d0f7cae059aab18
+  LUKeychainAccess: 6479edb12cf06e11ff3336f796959eedbc58f714
 
 COCOAPODS: 0.38.0.beta.1
