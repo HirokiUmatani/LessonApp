@@ -6,16 +6,12 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "ItemCollectionView.h"
-
 @protocol ItemCollectionViewControllerDelegate <NSObject>
 - (void)hideWetherView;
 - (void)showWetherView;
-- (void)didSelectItemCollectionViewIndexPath:(NSIndexPath *)indexPath;
-
 @end
 
-@interface ItemCollectionViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
-@property ItemCollectionView *contentView;
+@interface ItemCollectionViewController : UIViewController
+
 @property (nonatomic, weak) id<ItemCollectionViewControllerDelegate> delegate;
 @end

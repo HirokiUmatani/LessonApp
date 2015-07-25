@@ -21,9 +21,9 @@
 }
 - (void)m3u8Download
 {
-//    if ([DirectoryFileManager checkFileWithDirPath:self.dirPath
-//                                          filePath:self.m3u8Path])
-//        return;
+    if ([DirectoryFileManager checkFileWithDirPath:self.dirPath
+                                          filePath:self.m3u8Path])
+        return;
     
     [[MovieDownloadFetcher new] m3u8FetchingWithURL:CONST_M3U8_DOWNLOAD_API
                                             success:^(NSData *m3u8Binary)
@@ -58,9 +58,9 @@
     NSArray * downloadLists = [self downloadlist];
     for (NSInteger i = 0; i < downloadLists.count; i++)
     {
-//        if ([DirectoryFileManager checkFileWithDirPath:self.dirPath
-//                                              filePath:downloadLists[i]])
-//            continue;
+        if ([DirectoryFileManager checkFileWithDirPath:self.dirPath
+                                              filePath:downloadLists[i]])
+            continue;
         
         [[MovieDownloadFetcher new] movieFetchingWithURL:CONST_MOVIE_DOWNLOAD_API
                                                    count:i
@@ -73,7 +73,7 @@
              NSInteger j = i+1;
              
              CGFloat downloadPercent = (CGFloat)j / (CGFloat)downloadLists.count;
-             [self.movieDownloadControllerDelegate updateDownloadProgressBar:downloadPercent];
+             [_delegate updateDownloadProgressBar:downloadPercent];
          }
                                                   failed:^
          {

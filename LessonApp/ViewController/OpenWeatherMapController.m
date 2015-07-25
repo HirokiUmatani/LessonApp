@@ -13,16 +13,17 @@
 @property LocationFetcher *locationFetcher;
 @property OpenWeatherMapFetcher *openWeatherMapFetcher;
 @property OpenWeatherMapFetcher *iconOpenWeatherMapFetcher;
+@property (strong, nonatomic)OpenWeatherMapView *weatherView;
 @end
 
 @implementation OpenWeatherMapController
 static NSString *CONST_VIEW_CLASS_NAME = @"OpenWeatherMapView";
-- (void)loadView
+- (void)viewDidLoad
 {
-    [super loadView];
-    [self createLocationFetcher];
-    [self startLocation];
+    [super viewDidLoad];
+    [self setBackGroundImage:@"subtle_stripes"];
     [self initOpenWeatherMapView];
+    [self fetchLocation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,42 +43,55 @@ static NSString *CONST_VIEW_CLASS_NAME = @"OpenWeatherMapView";
 }
 
 #pragma mark - private
-- (void)createLocationFetcher
+- (void)fetchLocation
 {
-    if (_locationFetcher)
-        return;
-    _locationFetcher = [LocationFetcher new];
-    _locationFetcher.delegate = self;
-
-}
-- (void)startLocation
-{
+    if (!_locationFetcher)
+    {
+        _locationFetcher = [LocationFetcher new];
+        _locationFetcher.delegate = self;
+    }
     [_locationFetcher startLocation];
-}
-
-- (void)fetchWeather
-{
-    _openWeatherMapFetcher = [OpenWeatherMapFetcher new];
-    [_openWeatherMapFetcher startAsyncFetchingWithLatitude:_locationFetcher.latitude
-                                                 longitude:_locationFetcher.longitude
-                                                   success:^(OpenWeatherMapEntity *openWeatherMapEntity)
-     {
-         _iconOpenWeatherMapFetcher = [OpenWeatherMapFetcher new];
-         [_iconOpenWeatherMapFetcher startAsyncFetchingIconImageWithEntity:openWeatherMapEntity
-                                                     success:^(UIImage * iconImage)
-          {
-              [_contentView setView:openWeatherMapEntity];
-          }
-                                                      failed:^(NSError *error){}];
-     }
-                                               failed:^(NSError *error){}];
 }
 
 - (void)initOpenWeatherMapView
 {
-    if (_contentView)
+    if (_weatherView)
         return;
-    _contentView = [[OpenWeatherMapView alloc]initWithXibName:CONST_VIEW_CLASS_NAME];
+    _weatherView = [[OpenWeatherMapView alloc]initWithXibName:CONST_VIEW_CLASS_NAME];
+    [self.view addSubview:_weatherView];
+    [AutoLayout addConstraintView:_weatherView targetView:self.view];
+}
+
+- (void)fetchWeather
+{
+    if(!_openWeatherMapFetcher)
+    {
+        _openWeatherMapFetcher = [OpenWeatherMapFetcher new];
+    }
+    
+    [_openWeatherMapFetcher startAsyncFetchingWithLatitude:_locationFetcher.latitude
+                                                 longitude:_locationFetcher.longitude
+                                                   success:^(OpenWeatherMapEntity *openWeatherMapEntity)
+     {
+         if(!_iconOpenWeatherMapFetcher)
+         {
+             _iconOpenWeatherMapFetcher = [OpenWeatherMapFetcher new];
+         }
+         
+         [_iconOpenWeatherMapFetcher startAsyncFetchingIconImageWithEntity:openWeatherMapEntity
+                                                                   success:^(UIImage *iconImage)
+         {
+             [_weatherView updateView:openWeatherMapEntity];
+         }
+                                                                    failed:^(NSError *error)
+         {
+             _iconOpenWeatherMapFetcher = nil;
+         }];
+     }
+                                                    failed:^(NSError *error)
+    {
+        _openWeatherMapFetcher = nil;
+    }];
 }
 
 @end

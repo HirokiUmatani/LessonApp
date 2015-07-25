@@ -15,14 +15,15 @@
 // NSMutableArray
 @property NSMutableArray * itemCellLists;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation ItemCollectionViewController
 static NSString *CONST_VIEW_CLASS_NAME = @"ItemCollectionView";
-- (void)loadView
+- (void)viewDidLoad
 {
-    [super loadView];
-    [self setCollectionView];
+    [super viewDidLoad];
+    [self setBackGroundImage:@"subtle_stripes"];
     [self setCellLists];
 }
 
@@ -61,7 +62,7 @@ static NSString *CONST_VIEW_CLASS_NAME = @"ItemCollectionView";
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.delegate didSelectItemCollectionViewIndexPath:indexPath];
+    [self performSegueWithIdentifier:@"DetailViewController" sender:self];
 }
 #pragma mark - private
 - (void)setCellLists
@@ -69,12 +70,5 @@ static NSString *CONST_VIEW_CLASS_NAME = @"ItemCollectionView";
     _itemCellLists = @[].mutableCopy;
     for (NSInteger i = 0; i < 1; i++)
         [_itemCellLists addObject:@""];
-}
-
-- (void)setCollectionView
-{
-    _contentView = [[ItemCollectionView alloc]initWithXibName:CONST_VIEW_CLASS_NAME];
-    _contentView.collectionView.dataSource = self;
-    _contentView.collectionView.delegate = self;
 }
 @end

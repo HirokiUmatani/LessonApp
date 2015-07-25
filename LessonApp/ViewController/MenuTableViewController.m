@@ -15,13 +15,14 @@
 @property NSMutableArray * menuCellLists;
 // CGFloat
 @property CGFloat tableViewOldOffset;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation MenuTableViewController
-- (void)loadView
+- (void)viewDidLoad
 {
-    [super loadView];
-    [self setTableView];
+    [super viewDidLoad];
+    [self setBackGroundImage:@"subtle_stripes"];
     [self setMenuCellLists];
 }
 #pragma mark - UIScrollViewDelegate
@@ -64,13 +65,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                                                                           xibName:CONST_MENU_CELL_IDENTIFIRE
                                                                       cellIdentifire:CONST_MENU_CELL_IDENTIFIRE
                                                                         indexPath:indexPath];
-            
-            [cell setView:_menuCellLists indexPath:indexPath];
+            [cell updateView:_menuCellLists indexPath:indexPath];
             resultCell = cell;
             break;
         }
-        default:
-            break;
     }
     return resultCell;
 }
@@ -80,12 +78,4 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     _menuCellLists = [MenuCellEntity setCellLists].mutableCopy;
 }
 
-- (void)setTableView
-{
-    _contentView = [UITableView new];
-    _contentView.backgroundColor = [UIColor clearColor];
-    _contentView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _contentView.dataSource = self;
-    _contentView.delegate = self;
-}
 @end

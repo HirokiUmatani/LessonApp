@@ -17,8 +17,6 @@
 		F44B0F4A1B5CB92100A6B939 /* DirectoryFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */; };
 		F45915361B3E80C20041AAF9 /* MoviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45915351B3E80C20041AAF9 /* MoviewViewController.m */; };
 		F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45962471B3E539900BFFFD2 /* DetailViewController.m */; };
-		F459624B1B3E5A3B00BFFFD2 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F459624A1B3E5A3B00BFFFD2 /* DetailView.m */; };
-		F459624D1B3E5A7F00BFFFD2 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F459624C1B3E5A7F00BFFFD2 /* DetailView.xib */; };
 		F46853DA1B3AF62E00AF461D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853A61B3AF62E00AF461D /* AppDelegate.m */; };
 		F46853DB1B3AF62E00AF461D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853A81B3AF62E00AF461D /* LaunchScreen.xib */; };
 		F46853DC1B3AF62E00AF461D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46853AA1B3AF62E00AF461D /* Main.storyboard */; };
@@ -30,8 +28,6 @@
 		F46853E31B3AF62E00AF461D /* OpenWeatherMapFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B71B3AF62E00AF461D /* OpenWeatherMapFetcher.m */; };
 		F46853E41B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B91B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m */; };
 		F46853E51B3AF62E00AF461D /* SignupCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853BB1B3AF62E00AF461D /* SignupCellEntity.m */; };
-		F46853E61B3AF62E00AF461D /* ItemCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853BE1B3AF62E00AF461D /* ItemCollectionView.m */; };
-		F46853E71B3AF62E00AF461D /* ItemCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853BF1B3AF62E00AF461D /* ItemCollectionView.xib */; };
 		F46853E81B3AF62E00AF461D /* ItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */; };
 		F46853E91B3AF62E00AF461D /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853C21B3AF62E00AF461D /* ItemCollectionViewCell.xib */; };
 		F46853EA1B3AF62E00AF461D /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C41B3AF62E00AF461D /* MenuTableViewCell.m */; };
@@ -93,9 +89,6 @@
 		F45915351B3E80C20041AAF9 /* MoviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviewViewController.m; sourceTree = "<group>"; };
 		F45962461B3E539900BFFFD2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F45962471B3E539900BFFFD2 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		F45962491B3E5A3B00BFFFD2 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailView.h; path = ../View/DetailView.h; sourceTree = "<group>"; };
-		F459624A1B3E5A3B00BFFFD2 /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailView.m; path = ../View/DetailView.m; sourceTree = "<group>"; };
-		F459624C1B3E5A7F00BFFFD2 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailView.xib; path = ../View/DetailView.xib; sourceTree = "<group>"; };
 		F46853A51B3AF62E00AF461D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = LessonApp/AppDelegate.h; sourceTree = "<group>"; };
 		F46853A61B3AF62E00AF461D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = LessonApp/AppDelegate.m; sourceTree = "<group>"; };
 		F46853A91B3AF62E00AF461D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -115,9 +108,6 @@
 		F46853B91B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWeatherMapWeatherEntity.m; path = ../Model/OpenWeatherMapWeatherEntity.m; sourceTree = "<group>"; };
 		F46853BA1B3AF62E00AF461D /* SignupCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupCellEntity.h; path = ../Model/SignupCellEntity.h; sourceTree = "<group>"; };
 		F46853BB1B3AF62E00AF461D /* SignupCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupCellEntity.m; path = ../Model/SignupCellEntity.m; sourceTree = "<group>"; };
-		F46853BD1B3AF62E00AF461D /* ItemCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemCollectionView.h; path = ../View/ItemCollectionView.h; sourceTree = "<group>"; };
-		F46853BE1B3AF62E00AF461D /* ItemCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemCollectionView.m; path = ../View/ItemCollectionView.m; sourceTree = "<group>"; };
-		F46853BF1B3AF62E00AF461D /* ItemCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCollectionView.xib; path = ../View/ItemCollectionView.xib; sourceTree = "<group>"; };
 		F46853C01B3AF62E00AF461D /* ItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemCollectionViewCell.h; path = ../View/ItemCollectionViewCell.h; sourceTree = "<group>"; };
 		F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemCollectionViewCell.m; path = ../View/ItemCollectionViewCell.m; sourceTree = "<group>"; };
 		F46853C21B3AF62E00AF461D /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCollectionViewCell.xib; path = ../View/ItemCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -323,9 +313,6 @@
 				F4B52F1B1B634875008D3799 /* MovieView */,
 				F45962461B3E539900BFFFD2 /* DetailViewController.h */,
 				F45962471B3E539900BFFFD2 /* DetailViewController.m */,
-				F45962491B3E5A3B00BFFFD2 /* DetailView.h */,
-				F459624A1B3E5A3B00BFFFD2 /* DetailView.m */,
-				F459624C1B3E5A7F00BFFFD2 /* DetailView.xib */,
 			);
 			name = DetailView;
 			path = LessonApp/ViewController;
@@ -351,9 +338,6 @@
 			children = (
 				F46853D01B3AF62E00AF461D /* ItemCollectionViewController.h */,
 				F46853D11B3AF62E00AF461D /* ItemCollectionViewController.m */,
-				F46853BD1B3AF62E00AF461D /* ItemCollectionView.h */,
-				F46853BE1B3AF62E00AF461D /* ItemCollectionView.m */,
-				F46853BF1B3AF62E00AF461D /* ItemCollectionView.xib */,
 				F46853C01B3AF62E00AF461D /* ItemCollectionViewCell.h */,
 				F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */,
 				F46853C21B3AF62E00AF461D /* ItemCollectionViewCell.xib */,
@@ -555,9 +539,7 @@
 				F46853EF1B3AF62E00AF461D /* SignupButtonTableViewCell.xib in Resources */,
 				F46853DB1B3AF62E00AF461D /* LaunchScreen.xib in Resources */,
 				F46853E91B3AF62E00AF461D /* ItemCollectionViewCell.xib in Resources */,
-				F46853E71B3AF62E00AF461D /* ItemCollectionView.xib in Resources */,
 				F46853DC1B3AF62E00AF461D /* Main.storyboard in Resources */,
-				F459624D1B3E5A7F00BFFFD2 /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,7 +597,6 @@
 				F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */,
 				F46B37961B48F72A0051EB8E /* UserCoreDataManager.m in Sources */,
 				F4DA030B1B40269200E11F93 /* UIView+extention.m in Sources */,
-				F46853E61B3AF62E00AF461D /* ItemCollectionView.m in Sources */,
 				F412EC0B1B5D0CC9007FEDD7 /* MovieDownloadController.m in Sources */,
 				F44B0F441B5C8C7C00A6B939 /* KeyChainData.m in Sources */,
 				F46853F21B3AF62E00AF461D /* ItemCollectionViewController.m in Sources */,
@@ -627,7 +608,6 @@
 				F468540E1B3AF69D00AF461D /* NSJSONSerialization+Serialize.m in Sources */,
 				F468540A1B3AF69D00AF461D /* AnimationView.m in Sources */,
 				F46853E81B3AF62E00AF461D /* ItemCollectionViewCell.m in Sources */,
-				F459624B1B3E5A3B00BFFFD2 /* DetailView.m in Sources */,
 				F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */,
 				F44B0F4A1B5CB92100A6B939 /* DirectoryFileManager.m in Sources */,
 				F46853EC1B3AF62E00AF461D /* OpenWeatherMapView.m in Sources */,

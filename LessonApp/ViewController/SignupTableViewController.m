@@ -12,28 +12,20 @@
 #import "SignupCellEntity.h"
 
 @interface SignupTableViewController ()
-// NSMutableArray
 @property NSMutableArray * signupCellLists;
 @property CGFloat defaultTableViewheight;;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableView_bottomConstraint;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic,strong) Notification *keyboardNotification;
 @end
 
 @implementation SignupTableViewController
-- (void)loadView
+- (void)viewDidLoad
 {
-    [super loadView];
-    [self setTableView];
+    [super viewDidLoad];
+    [self setBackGroundImage:@"subtle_stripes"];
     [self setCellLists];
-    [self setKeyBoardNotification];
-}
-
-- (void)keyboardWillShow:(NSNotification *)notification
-{
-    [_delegate keyboardWillShow:notification];
-}
-
-- (void)keyboardWillHide:(NSNotification *)notification
-{
-    [_delegate keyboardWillHide:notification];
+    [self setKeyBoardReciveNotification];
 }
 
 #pragma mark - UITableViewDataSource
@@ -57,10 +49,12 @@
     {
         case titleAndTextFieldCellType:
         {
-            SignupTableViewCell *cell = [[SignupTableViewCell alloc]initWithTableView:tableView
-                                                                              xibName:CONST_SIGNUP_CELL_IDENTIFIRE
-                                                                       cellIdentifire:CONST_SIGNUP_CELL_IDENTIFIRE
-                                                                            indexPath:indexPath];
+            SignupTableViewCell *cell = [[SignupTableViewCell alloc]
+                                         initWithTableView:tableView
+                                         xibName:CONST_SIGNUP_CELL_IDENTIFIRE
+                                         cellIdentifire:CONST_SIGNUP_CELL_IDENTIFIRE
+                                         indexPath:indexPath];
+            
             [cell setView:_signupCellLists indexPath:indexPath];
             cell.textField.delegate = self;
             resultCell = cell;
@@ -68,10 +62,11 @@
         }
         case buttonCellType:
         {
-            SignupButtonTableViewCell *cell = [[SignupButtonTableViewCell alloc]initWithTableView:tableView
-                                                                                          xibName:CONST_SIGNUP_BUTTON_CELL_IDENTIFIRE
-                                                                                   cellIdentifire:CONST_SIGNUP_BUTTON_CELL_IDENTIFIRE
-                                                                                        indexPath:indexPath];
+            SignupButtonTableViewCell *cell = [[SignupButtonTableViewCell alloc]
+                                               initWithTableView:tableView
+                                               xibName:CONST_SIGNUP_BUTTON_CELL_IDENTIFIRE
+                                               cellIdentifire:CONST_SIGNUP_BUTTON_CELL_IDENTIFIRE
+                                               indexPath:indexPath];
             resultCell = cell;
             break;
         }
@@ -105,30 +100,50 @@
     return YES;
 }
 #pragma mark - Private
+- (void)setKeyBoardReciveNotification
+{
+    _keyboardNotification = [Notification new];
+    [_keyboardNotification setReciveNotificationAddObserver:self
+                                          selector:@selector(keyboardWillShow:)
+                                              name:UIKeyboardWillShowNotification
+                                            object:nil];
+    
+    [_keyboardNotification setReciveNotificationAddObserver:self
+                                          selector:@selector(keyboardWillHide:)
+                                              name:UIKeyboardWillHideNotification
+                                            object:nil];
+    
+}
+
+- (void)removeKeyBoardNotification
+{
+    [_keyboardNotification removeObserver:self forKeyPath:UIKeyboardWillHideNotification];
+    [_keyboardNotification removeObserver:self forKeyPath:UIKeyboardWillShowNotification];
+    _keyboardNotification = nil;
+}
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    CGRect keyboardRect = [[[notification userInfo]
+                            objectForKey:UIKeyboardFrameEndUserInfoKey]
+                           CGRectValue];
+    CGFloat keyboardHeight = keyboardRect.size.height;
+    _tableView_bottomConstraint.constant -= keyboardHeight;
+    
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    CGRect keyboardRect = [[[notification userInfo]
+                            objectForKey:UIKeyboardFrameEndUserInfoKey]
+                           CGRectValue];
+    CGFloat keyboardHeight = keyboardRect.size.height;
+    _tableView_bottomConstraint.constant += keyboardHeight;
+    
+}
+
 - (void)setCellLists
 {
     _signupCellLists = [SignupCellEntity setCellLists].mutableCopy;
 }
 
-- (void)setTableView
-{
-    _contentView = [UITableView new];
-    _contentView.backgroundColor = [UIColor clearColor];
-    _contentView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _contentView.dataSource = self;
-    _contentView.delegate = self;
-}
-- (void)setKeyBoardNotification
-{
-    Notification *notification = [Notification new];
-    [notification setReciveNotificationAddObserver:self
-                                          selector:@selector(keyboardWillShow:)
-                                              name:UIKeyboardWillShowNotification
-                                            object:nil];
-    
-    [notification setReciveNotificationAddObserver:self
-                                          selector:@selector(keyboardWillHide:)
-                                              name:UIKeyboardWillHideNotification
-                                            object:nil];
-}
 @end

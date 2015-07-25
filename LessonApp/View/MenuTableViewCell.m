@@ -11,8 +11,8 @@
 
 @implementation MenuTableViewCell
 NSString * const CONST_MENU_CELL_IDENTIFIRE = @"MenuTableViewCell";
-- (void)setView:(NSArray *)cellLists
-      indexPath:(NSIndexPath *)indexPath
+- (void)updateView:(NSArray *)cellLists
+         indexPath:(NSIndexPath *)indexPath
 {
     MenuCellEntity *menuCellEntity = [MenuCellEntity new];
     menuCellEntity = cellLists[indexPath.row];

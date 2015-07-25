@@ -9,6 +9,57 @@
 #import "AutoLayout.h"
 
 @implementation AutoLayout
++ (AutoLayout *)addConstraintView:(id)addView targetView:(id)targetView
+
+{
+    AutoLayout *autolayout = [AutoLayout new];
+    [addView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        
+    // Top
+    autolayout.topConstraint = [NSLayoutConstraint constraintWithItem:addView
+                                                      attribute:NSLayoutAttributeTop
+                                                      relatedBy:NSLayoutRelationEqual
+                                                         toItem:targetView
+                                                      attribute:NSLayoutAttributeTop
+                                                     multiplier:1.0
+                                                       constant:0.0];
+        
+        // Down
+    autolayout.bottomConstraint = [NSLayoutConstraint constraintWithItem:addView
+                                                         attribute:NSLayoutAttributeBottom
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:targetView
+                                                         attribute:NSLayoutAttributeBottom
+                                                        multiplier:1.0
+                                                          constant:0.0];
+    // Left
+    autolayout.leftConstraint = [NSLayoutConstraint constraintWithItem:addView
+                                                       attribute:NSLayoutAttributeLeft
+                                                       relatedBy:NSLayoutRelationEqual
+                                                          toItem:targetView
+                                                       attribute:NSLayoutAttributeLeft
+                                                      multiplier:1.0
+                                                        constant:0.0];
+        
+        
+    // Right
+    autolayout.rightConstraint = [NSLayoutConstraint constraintWithItem:addView
+                                                        attribute:NSLayoutAttributeRight
+                                                        relatedBy:NSLayoutRelationEqual
+                                                           toItem:targetView
+                                                        attribute:NSLayoutAttributeRight
+                                                       multiplier:1.0
+                                                         constant:0.0];
+        // add Constraint List
+    autolayout.constraints = @[].mutableCopy;
+    [autolayout.constraints addObject:autolayout.topConstraint];
+    [autolayout.constraints addObject:autolayout.bottomConstraint];
+    [autolayout.constraints addObject:autolayout.leftConstraint];
+    [autolayout.constraints addObject:autolayout.rightConstraint];
+    [targetView addConstraints:autolayout.constraints];
+    return autolayout;
+}
+
 - (id)initWithAddView:(id)addView
              baseView:(id)baseView
 {

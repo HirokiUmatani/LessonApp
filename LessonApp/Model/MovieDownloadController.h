@@ -12,6 +12,6 @@
 
 
 @interface MovieDownloadController : NSObject
-@property (nonatomic,assign) id<MovieDownloadControllerDelegate>movieDownloadControllerDelegate;
+@property (nonatomic,assign) id<MovieDownloadControllerDelegate>delegate;
 - (void)download;
 @end

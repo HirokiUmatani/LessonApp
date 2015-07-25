@@ -18,4 +18,6 @@
 - (id)initWithAddView:(id)addView
              baseView:(id)baseView;
 
++ (AutoLayout *)addConstraintView:(UIView *)addView
+                       targetView:(UIView *)targetView;
 @end

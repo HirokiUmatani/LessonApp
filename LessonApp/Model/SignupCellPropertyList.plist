@@ -30,7 +30,8 @@
 		<key>cellType</key>
 		<integer>0</integer>
 		<key>title</key>
-		<string>Password\n(Confirm)</string>
+		<string>Password
+(Confirm)</string>
 		<key>textField</key>
 		<string></string>
 	</dict>

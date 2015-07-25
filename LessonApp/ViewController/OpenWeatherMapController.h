@@ -8,6 +8,4 @@
 
 #import "OpenWeatherMapView.h"
 @interface OpenWeatherMapController : UIViewController<LocationFetcherDelegate>
-@property (nonatomic,strong) OpenWeatherMapView *contentView;
-- (void)startLocation;
 @end

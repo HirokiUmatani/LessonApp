@@ -14,7 +14,7 @@ NSString * const CONST_ITEM_CELL_IDENTIFIRE = @"ItemCollectionViewCell";
 - (IBAction)tapDownloadButton:(UIButton *)sender
 {
     MovieDownloadController *movieDownloadController = [MovieDownloadController new];
-    movieDownloadController.movieDownloadControllerDelegate = self;
+    movieDownloadController.delegate = self;
     [movieDownloadController download];
 }
 #pragma mark - MovieDownloadControllerDelegate

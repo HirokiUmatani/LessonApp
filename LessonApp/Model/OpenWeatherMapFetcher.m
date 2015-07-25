@@ -59,6 +59,5 @@
      {
          failed(error);
      }];
-
 }
 @end

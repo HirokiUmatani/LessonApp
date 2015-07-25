@@ -15,7 +15,7 @@
 
 @implementation OpenWeatherMapView
 static NSString *degressCentigrade = @"%@℃";
-- (void)setView:(OpenWeatherMapEntity *)entity
+- (void)updateView:(OpenWeatherMapEntity *)entity
 {
     _iconImage.image = entity.weather.image;
     _tempLabel.text = [NSString stringWithFormat:degressCentigrade,entity.temp];

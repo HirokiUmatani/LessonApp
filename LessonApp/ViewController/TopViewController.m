@@ -6,10 +6,6 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 #import "TopViewController.h"
-#import "DetailViewController.h"
-#import "OpenWeatherMapController.h"
-#import "UserCoreDataManager.h"
-
 @interface TopViewController ()
 
 // Enum
@@ -20,33 +16,29 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     MenuSelectLicenses
 };
 
-// Controller
-@property (nonatomic,strong) ItemCollectionViewController  *itemViewController;
-@property (nonatomic,strong) OpenWeatherMapController  *weatherViewController;
-@property (nonatomic,strong) MenuTableViewController       *menuViewController;
-@property (nonatomic,strong) SignupTableViewController     *signupViewController;
-@property (nonatomic,strong) DetailViewController *detailViewController;
+typedef NS_ENUM(NSInteger, ChildViewController)
+{
+    MenuChildViewController = 0,
+    SignupChildViewController = 1,
+    ItemChildViewController = 2,
+    WeatherChildViewController = 3,
+};
 
-@property (nonatomic,strong) UserCoreDataManager *userCoreDataManager;
+@property (weak, nonatomic) IBOutlet UIView *weatherView;
+@property (weak, nonatomic) IBOutlet UIView *itemView;
+@property (weak, nonatomic) IBOutlet UIView *signupView;
+@property (weak, nonatomic) IBOutlet UIView *menuView;
+@property (weak, nonatomic) IBOutlet UIView *mainView;
 
-// AutoLayout
-@property (nonatomic,strong) AutoLayout *itemViewAutoLayout;
-@property (nonatomic,strong) AutoLayout *signupViewAutoLayout;
-@property (nonatomic,strong) AutoLayout *weatherViewAutoLayout;
-@property (nonatomic,strong) AutoLayout *menuViewAutoLayout;
-
+@property (nonatomic,strong) MenuTableViewController *menuViewController;
+@property (nonatomic,strong) SignupTableViewController *signupTableViewController;
+@property (nonatomic,strong) ItemCollectionViewController *itemCollectionViewController;
+@property (nonatomic,strong) OpenWeatherMapController * openWeatherMapController;
 // BOOL
 @property BOOL isSideMenu;
-@property BOOL isDetailView;
-
-// IBOutlet[BaseView]
-@property IBOutlet UIView *mainLayoutView;
-@property IBOutlet UIView *weatherLayoutView;
-@property IBOutlet UIView *menuLayoutView;
 
 // IBAction
 - (IBAction)tapSideMenuButton:(UIBarButtonItem *)sender;
-
 @end
 
 @implementation TopViewController
@@ -56,26 +48,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 {
     [super viewDidLoad];
     [self setBackGroundImage:@"subtle_stripes"];
-    [self setOpenWeatherMapViewController];
-    [self setMenuTableViewController];
-    [self setItemCollectionViewController];
-
-    [self setWeatherViewAutoLayout];
-    [self setMenuTableViewAutoLayout];
-    [self setItemCollectionViewAutoLayout];
-    
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [_itemViewController loadView];
-    [self testCoreData];
-}
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
+    [self setDelegate];
 }
 
 #pragma mark - IBAction
@@ -91,297 +64,84 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 - (void)didSelectMenuTableViewIndexPath:(NSIndexPath *)indexPath
 {
     [self tapSideMenuButton:nil];
+    [self removeMainView];
     switch (indexPath.row)
     {
         case MenuSelectSignup:
         {
-            [AnimationView transformAlpha:_itemViewController.contentView
-                                    alpha:0.0f
-                               completion:^(BOOL finished)
-             {
-                 [_mainLayoutView removeConstraints:_itemViewAutoLayout.constraints];
-                 [_itemViewController.contentView removeFromSuperview];
-                 [self setSignupTableViewController];
-                 [self setSignupTableViewAutoLayout];
-                 self.navigationItem.title = @"Signup";
-                 [AnimationView transformAlpha:_signupViewController.contentView
-                                         alpha:1.0f
-                                    completion:^(BOOL finished){}];
-             }];
+            [_signupView addSubview:_signupTableViewController.view];
+            self.navigationItem.title = @"Signup";
+            [AnimationView transformAlpha:_signupView
+                                    alpha:1.0f
+                               completion:^(BOOL finished){}];
             return;
         }
         case MenuSelectHome:
-        {
-            [AnimationView transformAlpha:_signupViewController.contentView
-                                    alpha:0.0f
-                               completion:^(BOOL finished)
-             {
-                 [_mainLayoutView removeConstraints:_signupViewAutoLayout.constraints];
-                 [_signupViewController.contentView removeFromSuperview];
-                 [self setItemCollectionViewController];
-                 [self setItemCollectionViewAutoLayout];
-                 self.navigationItem.title = @"Home";
-                 [AnimationView transformAlpha:_itemViewController.contentView
-                                         alpha:1.0f
-                                    completion:^(BOOL finished){}];
-             }];
-            return;
-        }
         case MenuSelectLicenses:
         {
-            
+            [_itemView addSubview:_itemCollectionViewController.view];
+            self.navigationItem.title = @"Home";
+            [AnimationView transformAlpha:_itemView
+                                    alpha:1.0f
+                               completion:^(BOOL finished){}];
+            return;
         }
-            return;
-        default:
-            return;
     }
 }
 
 #pragma mark - ItemCollectionViewControllerDelegate / MenuTableViewControllerDelegate
 - (void)showWetherView
 {
-    [_weatherLayoutView addSubview:_weatherViewController.contentView];
-    [_weatherLayoutView addConstraints:_weatherViewAutoLayout.constraints];
-    [AnimationView transformInit:_weatherLayoutView
-                      completion:^(BOOL finished)
-    {
-        
-    }];
-    [_weatherViewController startLocation];
+    [AnimationView transformInit:_weatherView
+                      completion:^(BOOL finished){}];
 }
 - (void)hideWetherView
 {
-    [AnimationView transformMove:_weatherLayoutView
+    [AnimationView transformMove:_weatherView
                            moveX:CONST_ANIMATION_NONE
-                           moveY:_weatherLayoutView.frame.size.height
-                      completion:^(BOOL finished)
-     {
-         [_weatherLayoutView removeConstraints:_weatherViewAutoLayout.constraints];
-         [_weatherViewController.contentView removeFromSuperview];
-
-     }];
-}
-
-#pragma mark - ItemCollectionViewControllerDelegate
-- (void)didSelectItemCollectionViewIndexPath:(NSIndexPath *)indexPath
-{
-    [self performSegueWithIdentifier:@"DetailViewController" sender:self];
-}
-#pragma mark SignupTableViewControllerDelegate
-- (void)keyboardWillShow:(NSNotification *)notification
-{
-    CGRect keyboardRect = [[[notification userInfo]
-                            objectForKey:UIKeyboardFrameEndUserInfoKey]
-                           CGRectValue];
-    CGFloat keyboardHeight = keyboardRect.size.height;
-    _signupViewAutoLayout.bottomConstraint.constant -= keyboardHeight;
-}
-
--(void)keyboardWillHide:(NSNotification *)notification
-{
-    CGRect keyboardRect = [[[notification userInfo]
-                            objectForKey:UIKeyboardFrameEndUserInfoKey]
-                           CGRectValue];
-    CGFloat keyboardHeight = keyboardRect.size.height;
-    _signupViewAutoLayout.bottomConstraint.constant += keyboardHeight;
+                           moveY:_weatherView.frame.size.height
+                      completion:^(BOOL finished){}];
 }
 
 #pragma mark - private
 - (void)showMenuView
 {
-    [AnimationView transformMove:_mainLayoutView
+    [AnimationView transformMove:_mainView
                            moveX:[NSObject screenWidth] * 2/ 5
                            moveY:CONST_ANIMATION_NONE
                       completion:^(BOOL finished){}];
-    [AnimationView transformAlpha:_menuLayoutView alpha:1.0f
+    [AnimationView transformAlpha:_menuView alpha:1.0f
                        completion:^(BOOL finished) {}];
     _isSideMenu = YES;
 }
 
 - (void)hideMenuView
 {
-    [AnimationView transformInit:_mainLayoutView
+    [AnimationView transformInit:_mainView
                       completion:^(BOOL finished){}];
-    [AnimationView transformAlpha:_menuLayoutView alpha:0.0f
+    [AnimationView transformAlpha:_menuView alpha:0.0f
                        completion:^(BOOL finished) {}];
     _isSideMenu = NO;
 }
 
-- (void)removeMainViewItem
+- (void)removeMainView
 {
-    [AnimationView transformAlpha:_signupViewController.contentView
-                            alpha:0.6f
-                       completion:^(BOOL finished)
-    {
-        [_mainLayoutView removeConstraints:_signupViewAutoLayout.constraints];
-        [_signupViewController.contentView removeFromSuperview];
-    }];
+    [_itemCollectionViewController.view removeFromSuperview];
+    [_signupTableViewController.view removeFromSuperview];
+}
+
+- (void)setDelegate
+{
+    _menuViewController = self.childViewControllers
+    [MenuChildViewController];
+    _signupTableViewController = self.childViewControllers
+    [SignupChildViewController];
+    _itemCollectionViewController = self.childViewControllers
+    [ItemChildViewController];
+    _openWeatherMapController = self.childViewControllers
+    [WeatherChildViewController];
     
-    [AnimationView transformAlpha:_itemViewController.contentView
-                            alpha:0.6f
-                       completion:^(BOOL finished)
-    {
-        [_mainLayoutView removeConstraints:_itemViewAutoLayout.constraints];
-        [_itemViewController.contentView removeFromSuperview];
-    }];
-    
+    _menuViewController.delegate = self;
+    _itemCollectionViewController.delegate = self;
 }
-- (void)showDetailView
-{
-    _isDetailView = YES;
-}
-
-- (void)hideDetailView
-{
-    _isDetailView = NO;
-}
-#pragma mark - Set ViewController
-
-
-- (void)setOpenWeatherMapViewController
-{
-    if (!_weatherViewController)
-    {
-        _weatherViewController = [OpenWeatherMapController new];
-        [_weatherViewController loadView];
-    }
-    [_weatherLayoutView addSubview:_weatherViewController.contentView];
-}
-
-- (void)setMenuTableViewController
-{
-    if (!_menuViewController)
-    {
-        _menuViewController = [MenuTableViewController new];
-        _menuViewController.delegate = self;
-        [_menuViewController loadView];
- 
-    }
-    _menuLayoutView.alpha = 0.0f;
-    [_menuLayoutView addSubview:_menuViewController.contentView];
-    
-}
-
-- (void)setItemCollectionViewController
-{
-    if (!_itemViewController)
-    {
-        _itemViewController = [ItemCollectionViewController new];
-        _itemViewController.delegate = self;
-        [_itemViewController loadView];
-    }
-    [_mainLayoutView addSubview:_itemViewController.contentView];
-}
-
-- (void)setSignupTableViewController
-{
-    if (!_signupViewController)
-    {
-        _signupViewController = [SignupTableViewController new];
-        _signupViewController.delegate = self;
-        [_signupViewController loadView];
-    }
-    [_mainLayoutView addSubview:_signupViewController.contentView];
-}
-
-#pragma mark - Set Auto Layout
-
-- (void)setWeatherViewAutoLayout
-{
-    if (!_weatherViewAutoLayout)
-    {
-        _weatherViewAutoLayout =
-        [[AutoLayout alloc]initWithAddView:_weatherViewController.contentView baseView:_weatherLayoutView];
-    }
-    [_weatherLayoutView addConstraints:_weatherViewAutoLayout.constraints];
-}
-- (void)setMenuTableViewAutoLayout
-{
-    if (!_menuViewAutoLayout)
-    {
-        _menuViewAutoLayout = [[AutoLayout alloc]initWithAddView:_menuViewController.contentView baseView:_menuLayoutView];
-    }
-    [_menuLayoutView addConstraints:_menuViewAutoLayout.constraints];
-}
-- (void)setItemCollectionViewAutoLayout
-{
-    if (!_itemViewAutoLayout)
-    {
-        _itemViewAutoLayout = [[AutoLayout alloc]initWithAddView:_itemViewController.contentView baseView:_mainLayoutView];
-    }
-    [_mainLayoutView addConstraints:_itemViewAutoLayout.constraints];
-}
-- (void)setSignupTableViewAutoLayout
-{
-    if (!_signupViewAutoLayout)
-    {
-        _signupViewAutoLayout = [[AutoLayout alloc]initWithAddView:_signupViewController.contentView baseView:_mainLayoutView];
-    }
-    [_mainLayoutView addConstraints:_signupViewAutoLayout.constraints];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"DetailViewController"])
-    {
-        
-    }
-}
-
-#pragma mark - Dealloc
-- (void)deallocObject
-{
-    // Controller
-    _itemViewController     = nil;
-    _weatherViewController  = nil;
-    _menuViewController     = nil;
-    _signupViewController   = nil;
-    
-    // AutoLayout
-    _itemViewAutoLayout     = nil;
-    _signupViewAutoLayout   = nil;
-    _weatherViewAutoLayout  = nil;
-    _menuViewAutoLayout     = nil;
-}
-
-#pragma mark -TEST
-
-- (void)testCoreData
-{
-    __SERIAL_THREAD_START__
-    for (int i=0; i<10000; i++)
-    {
-        __autoreleasing UserCoreDataManager *userCoreDataManager;
-        __autoreleasing NSPredicate         *predicate;
-        __autoreleasing NSString            *device_id;
-        __autoreleasing NSString            *tmpName;
-        __autoreleasing NSString            *tmpMail;
-        @autoreleasepool
-        {
-            device_id = [KeyChainData getUUID];
-            userCoreDataManager = [UserCoreDataManager new];
-            predicate = [userCoreDataManager setPredicateWithSearchKey:CONST_CORE_DATA_ENTITY_DEVICE_ID searchValue:device_id];
-            tmpName = @"yyyy";
-            tmpMail = @"xxxx";
-            
-            // delete
-            [userCoreDataManager deleteWithPredicate:predicate];
-            
-            // insert
-            [userCoreDataManager insertWithPredicate:predicate
-                                           device_id:device_id
-                                                name:tmpName
-                                                mail:nil];
-            // update
-            [userCoreDataManager updateWithPredicate:predicate
-                                                name:nil
-                                                mail:tmpMail];
-            // fetch
-            [userCoreDataManager fetchWithPredicate:predicate];
-            sleep(1); //wait time
-        }
-    }
-    __THREAD_END__
-}
-
 @end
