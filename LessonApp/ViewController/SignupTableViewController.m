@@ -62,11 +62,7 @@
         }
         case buttonCellType:
         {
-            SignupButtonTableViewCell *cell = [[SignupButtonTableViewCell alloc]
-                                               initWithTableView:tableView
-                                               xibName:CONST_SIGNUP_BUTTON_CELL_IDENTIFIRE
-                                               cellIdentifire:CONST_SIGNUP_BUTTON_CELL_IDENTIFIRE
-                                               indexPath:indexPath];
+            SignupButtonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CONST_SIGNUP_BUTTON_CELL_IDENTIFIRE forIndexPath:indexPath];
             resultCell = cell;
             break;
         }
@@ -128,7 +124,6 @@
                            CGRectValue];
     CGFloat keyboardHeight = keyboardRect.size.height;
     _tableView_bottomConstraint.constant -= keyboardHeight;
-    
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification
@@ -138,7 +133,6 @@
                            CGRectValue];
     CGFloat keyboardHeight = keyboardRect.size.height;
     _tableView_bottomConstraint.constant += keyboardHeight;
-    
 }
 
 - (void)setCellLists

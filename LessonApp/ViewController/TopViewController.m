@@ -64,12 +64,11 @@ typedef NS_ENUM(NSInteger, ChildViewController)
 - (void)didSelectMenuTableViewIndexPath:(NSIndexPath *)indexPath
 {
     [self tapSideMenuButton:nil];
-    [self removeMainView];
     switch (indexPath.row)
     {
         case MenuSelectSignup:
         {
-            [_signupView addSubview:_signupTableViewController.view];
+            [_mainView addSubview:_signupView];
             self.navigationItem.title = @"Signup";
             [AnimationView transformAlpha:_signupView
                                     alpha:1.0f
@@ -79,7 +78,7 @@ typedef NS_ENUM(NSInteger, ChildViewController)
         case MenuSelectHome:
         case MenuSelectLicenses:
         {
-            [_itemView addSubview:_itemCollectionViewController.view];
+            [_mainView addSubview:_itemView];
             self.navigationItem.title = @"Home";
             [AnimationView transformAlpha:_itemView
                                     alpha:1.0f
@@ -122,12 +121,6 @@ typedef NS_ENUM(NSInteger, ChildViewController)
     [AnimationView transformAlpha:_menuView alpha:0.0f
                        completion:^(BOOL finished) {}];
     _isSideMenu = NO;
-}
-
-- (void)removeMainView
-{
-    [_itemCollectionViewController.view removeFromSuperview];
-    [_signupTableViewController.view removeFromSuperview];
 }
 
 - (void)setDelegate

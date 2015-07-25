@@ -31,7 +31,6 @@
 		F46853E81B3AF62E00AF461D /* ItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */; };
 		F46853E91B3AF62E00AF461D /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853C21B3AF62E00AF461D /* ItemCollectionViewCell.xib */; };
 		F46853EA1B3AF62E00AF461D /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C41B3AF62E00AF461D /* MenuTableViewCell.m */; };
-		F46853EB1B3AF62E00AF461D /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853C51B3AF62E00AF461D /* MenuTableViewCell.xib */; };
 		F46853EC1B3AF62E00AF461D /* OpenWeatherMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C71B3AF62E00AF461D /* OpenWeatherMapView.m */; };
 		F46853ED1B3AF62E00AF461D /* OpenWeatherMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853C81B3AF62E00AF461D /* OpenWeatherMapView.xib */; };
 		F46853EE1B3AF62E00AF461D /* SignupButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853CA1B3AF62E00AF461D /* SignupButtonTableViewCell.m */; };
@@ -113,7 +112,6 @@
 		F46853C21B3AF62E00AF461D /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCollectionViewCell.xib; path = ../View/ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		F46853C31B3AF62E00AF461D /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewCell.h; path = ../View/MenuTableViewCell.h; sourceTree = "<group>"; };
 		F46853C41B3AF62E00AF461D /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewCell.m; path = ../View/MenuTableViewCell.m; sourceTree = "<group>"; };
-		F46853C51B3AF62E00AF461D /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuTableViewCell.xib; path = ../View/MenuTableViewCell.xib; sourceTree = "<group>"; };
 		F46853C61B3AF62E00AF461D /* OpenWeatherMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWeatherMapView.h; path = ../View/OpenWeatherMapView.h; sourceTree = "<group>"; };
 		F46853C71B3AF62E00AF461D /* OpenWeatherMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWeatherMapView.m; path = ../View/OpenWeatherMapView.m; sourceTree = "<group>"; };
 		F46853C81B3AF62E00AF461D /* OpenWeatherMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpenWeatherMapView.xib; path = ../View/OpenWeatherMapView.xib; sourceTree = "<group>"; };
@@ -323,7 +321,6 @@
 			children = (
 				F46853C31B3AF62E00AF461D /* MenuTableViewCell.h */,
 				F46853C41B3AF62E00AF461D /* MenuTableViewCell.m */,
-				F46853C51B3AF62E00AF461D /* MenuTableViewCell.xib */,
 				F46853D21B3AF62E00AF461D /* MenuTableViewController.h */,
 				F46853D31B3AF62E00AF461D /* MenuTableViewController.m */,
 				F46853B21B3AF62E00AF461D /* MenuCellEntity.h */,
@@ -529,7 +526,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F46853F11B3AF62E00AF461D /* SignupTableViewCell.xib in Resources */,
-				F46853EB1B3AF62E00AF461D /* MenuTableViewCell.xib in Resources */,
 				F40560731B3C2F24000B595A /* podfile in Resources */,
 				F476A1921B4974370062A64C /* Pods-acknowledgements.plist in Resources */,
 				F46853ED1B3AF62E00AF461D /* OpenWeatherMapView.xib in Resources */,
