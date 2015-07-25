@@ -9,35 +9,30 @@
 #import "SignupCellEntity.h"
 
 @implementation SignupCellEntity
++ (SignupCellEntity *)setCellEntity:(cellType)cellType
+                              title:(NSString *)title
+                          textField:(NSString *)textField
+{
+    SignupCellEntity *entiry = [SignupCellEntity new];
+    entiry.cellType = cellType;
+    entiry.title = title;
+    entiry.textField = textField;
+    return entiry;
+}
 + (NSArray *)setCellLists
 {
-    NSMutableArray *tempList =@[].mutableCopy;
-    SignupCellEntity *entity;
-    
-    entity = SignupCellEntity.new;
-    entity.cellType = titleAndTextFieldCellType;
-    entity.title = @"Nick Name";
-    [tempList addObject:entity];
-    
-    entity = SignupCellEntity.new;
-    entity.cellType = titleAndTextFieldCellType;
-    entity.title = @"Mail Address";
-    [tempList addObject:entity];
-    
-    entity = SignupCellEntity.new;
-    entity.cellType = titleAndTextFieldCellType;
-    entity.title = @"Password";
-    [tempList addObject:entity];
-    
-    entity = SignupCellEntity.new;
-    entity.cellType = titleAndTextFieldCellType;
-    entity.title = @"Password\n(Confirm)";
-    [tempList addObject:entity];
-    
-    entity = SignupCellEntity.new;
-    entity.cellType = buttonCellType;
-    [tempList addObject:entity];
-    
-    return tempList;
+    NSString* propertyDataFile = [[NSBundle mainBundle]pathForResource:@"SignupCellPropertyList"
+                                                                ofType:@"plist"];
+    NSArray *propertyDataList = [NSArray arrayWithContentsOfFile:propertyDataFile];
+    NSMutableArray *results =@[].mutableCopy;
+    for (NSDictionary *propertyDict in propertyDataList)
+    {
+        SignupCellEntity *entity = [SignupCellEntity new];
+        entity = [self setCellEntity:[propertyDict[@"cellType"] integerValue]
+                               title: propertyDict[@"title"]
+                           textField: propertyDict[@"textField"]];
+        [results addObject:entity];
+    }
+    return results;
 }
 @end

@@ -6,21 +6,14 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-/**
- * @class NSNotificationラッピングClass
- */
+/*** @class NSNotification rapping class */
 @interface Notification : NSObject
 
-#pragma mark - Method
-/**
- * 通知受信
- */
+/*** recive notification */
 - (void)setReciveNotificationAddObserver:(id)observer
                                 selector:(SEL)selector
                                     name:(NSString *)name
                                   object:(id)object;
-/**
- * 通知送信
- */
+/*** senf notification */
 - (void)setSendNotificationWithName:(NSString *)name object:(id)object;
 @end

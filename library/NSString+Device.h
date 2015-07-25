@@ -7,10 +7,13 @@
 //
 
 @interface NSObject(Device)
+
 + (NSDictionary *)appInfo;
-+ (CGRect)screenRect;
+
++ (CGRect) screenRect;
 + (CGFloat)screenWidth;
 + (CGFloat)screenHeight;
+
 + (NSString *)stringFromDate:(NSDate *)date;
-+ (NSDate *)dateFromString:(NSString *)string;
++ (NSDate   *)dateFromString:(NSString *)string;
 @end

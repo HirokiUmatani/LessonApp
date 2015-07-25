@@ -6,62 +6,32 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-extern NSString * const CONST_HTTP_GET;
-extern NSString * const CONST_HTTP_POST;
-/**
- * 通信成功時のBlocks
- * @param data httpレスポンスデータ
- */
+/*** request success blocks */
 typedef void (^FetchSuccess)();
 
-/**
- * 通信失敗時のBlocks
- * @param error Httpエラー
- */
+/*** request failed blocks */
 typedef void (^FetchFailed)();
 
-/**
- * @class HTTP通信を担当するClass
- */
+
+/*** @class fetcher web api class */
 @interface HttpFetcher : NSObject
 
 #pragma mark Method
-/**
- * HTTP GET同期通信
- * @param urlString 通信を行うURL
- * @param success 通信成功時のブロックス処理
- * @param failed 通信失敗時のブロックス処理
- */
+/*** sync fetcher get method */
 - (void)startSyncFetchingWithUrlString:(NSString *)urlString
                            success:(FetchSuccess)success
                             failed:(FetchFailed)failed;
-/**
- * HTTP GET非同期通信
- * @param urlString 通信を行うURL
- * @param success 通信成功時のブロックス処理
- * @param failed 通信失敗時のブロックス処理
- */
+/*** async fetcher get method */
 - (void)startAsyncFetchingWithUrlString:(NSString *)urlString
                                 success:(FetchSuccess)success
                                  failed:(FetchFailed)failed;
 
-/**
- * HTTP POST非同期通信
- * @param urlString 通信を行うURL
- * @param param POST パラメータ
- * @param success 通信成功時のブロックス処理
- * @param failed 通信失敗時のブロックス処理
- */
+/*** async fetcher post method */
 - (void)startFetchingWithUrlString:(NSString *)urlString
                          paramData:(NSData *)paramData
                            success:(FetchSuccess)success
                             failed:(FetchFailed)failed;
 
-/**
- * 引数のstringを順番にpostパラメータのStringパラメータに変換する
- * exaple : @"key1",@"value1",@"key2",@"value2" → @"key1=value1&key2:value2"
- * @param paramString 可変 string
- * @return stringパラメータデータ
- */
+/*** genarate post parameter */
 - (NSData *)setStringParameter:(NSString *)paramString,...NS_REQUIRES_NIL_TERMINATION;
 @end

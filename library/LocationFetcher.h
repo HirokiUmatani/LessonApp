@@ -9,53 +9,31 @@
 #import <CoreLocation/CoreLocation.h>
 
 #pragma mark - LocationDelegate
-/**
- * @class 測位（位置情報）のコールバック用デリゲート
- */
+/*** @class locacion delegate */
 @protocol LocationFetcherDelegate <NSObject>
 
-#pragma mark Method
-/**
- * 位置情報取得毎にコールバック
- */
+/*** call back locacion update */
 - (void)didUpdateToLocation;
 
-/**
- * 位置情報取得失敗時にコールバック
- */
+/*** call back location failed */
 - (void)didFailWithError;
 @end
 
 
 #pragma mark - Location
-/**
- * @class 測位（位置情報）を担当するClass
- */
+/*** @class fetch location class */
 @interface LocationFetcher : NSObject<CLLocationManagerDelegate>
-#pragma mark Property
-/**
- * 緯度
- */
+/*** latitude */
 @property (nonatomic,retain) NSString *latitude;
 
-/**
- * 経度
- */
+/*** longitude */
 @property (nonatomic,retain) NSString *longitude;
 
-/**
- * GeodeticDelegate
- */
+/*** location delegate */
 @property (nonatomic,weak) id <LocationFetcherDelegate> delegate;
-#pragma mark Method
-/**
- * 位置情報取得開始
- */
+
+/*** fetch location start */
 - (void)startLocation;
-/**
- * 位置情報取得終了;
- */
+/*** fetch location stop */
 - (void)stopLocation;
-
-
 @end

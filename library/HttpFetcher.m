@@ -7,20 +7,19 @@
 //
 
 #import "HttpFetcher.h"
+static NSString * httpGet  = @"GET";
+static NSString * httpPost = @"POST";
 
 @implementation HttpFetcher
+static NSInteger  httpTimeOut = 15;
 
-NSString * const CONST_HTTP_GET  = @"GET";
-NSString * const CONST_HTTP_POST = @"POST";
-
-static NSInteger  HTTP_TIME_OUT = 15;
 #pragma mark - Get Sync
 - (void)startSyncFetchingWithUrlString:(NSString *)urlString
                                success:(FetchSuccess)success
                                 failed:(FetchFailed)failed
 {
     NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
-                                                        method:CONST_HTTP_GET];
+                                                        method:httpGet];
     [self restartNetworkIndicator];
     
     NSURLResponse *response;
@@ -32,7 +31,8 @@ static NSInteger  HTTP_TIME_OUT = 15;
     
     if (error)
     {
-        failed([self connectError:error]);
+        [self connectError:error];
+        failed();
     }
     else
     {
@@ -47,7 +47,7 @@ static NSInteger  HTTP_TIME_OUT = 15;
                                  failed:(FetchFailed)failed
 {
     NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
-                                                        method:CONST_HTTP_GET];
+                                                        method:httpGet];
 
     [self restartNetworkIndicator];
     [NSURLConnection sendAsynchronousRequest:request
@@ -58,7 +58,8 @@ static NSInteger  HTTP_TIME_OUT = 15;
      {
          if (error)
          {
-             failed([self connectError:error]);
+             [self connectError:error];
+             failed();
          }
          else
          {
@@ -75,7 +76,7 @@ static NSInteger  HTTP_TIME_OUT = 15;
                             failed:(FetchFailed)failed
 {
     NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
-                                                        method:CONST_HTTP_POST];
+                                                        method:httpPost];
     request.HTTPBody = paramData;
     [self restartNetworkIndicator];
     [NSURLConnection sendAsynchronousRequest:request
@@ -87,7 +88,8 @@ static NSInteger  HTTP_TIME_OUT = 15;
          [self stopNetworkIndicator];
          if (error)
          {
-             failed([self connectError:error]);
+             [self connectError:error];
+             failed();
          }
          else
          {
@@ -129,14 +131,15 @@ static NSInteger  HTTP_TIME_OUT = 15;
 }
 
 #pragma mark - Set Request Parameter
-- (NSMutableURLRequest *)setHttpRequestWithURL:(NSString *)urlString method:(NSString *)method
+- (NSMutableURLRequest *)setHttpRequestWithURL:(NSString *)urlString
+                                        method:(NSString *)method
 {
     NSMutableURLRequest *request = NSMutableURLRequest.new;
     NSURL *url = [NSURL URLWithString:urlString];
     
     request.URL             = url;
     request.HTTPMethod      = method;
-    request.timeoutInterval = HTTP_TIME_OUT;
+    request.timeoutInterval = httpTimeOut;
 
     return request;
 }

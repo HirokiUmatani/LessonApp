@@ -9,6 +9,7 @@
 @interface RegularExpression : NSObject
 + (NSArray *)searchReqularExpressinWithPattern:(NSString *)pattern
                                    searchValue:(NSString *)searchValue;
+
 + (NSArray *)convertListsFromRegularExpressionLists:(NSArray*)egularExpressionLists
                                         searchValue:(NSString *)searchValue;
 @end

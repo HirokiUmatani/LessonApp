@@ -30,7 +30,12 @@
     [self initDetailViewAutoLayout];
     [self initMovieViewAutoLayout];
 }
-
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [_movieViewController movieStop];
+    _localServer = nil;
+    [super viewWillDisappear:animated];
+}
 - (void)initDetailView
 {
     if (_contentView)
@@ -42,9 +47,10 @@
 - (void)initMoviePlayerView
 {
     _movieViewController =[MoviewViewController new];
+    [_contentView.movieView addSubview:_movieViewController.player.view];
     [_movieViewController setMovieURLString:@"http://127.0.0.1:8080/mario/high_15.m3u8"];
     [_movieViewController movieStart];
-    [_contentView.movieView addSubview:_movieViewController.player.view];
+    
 }
 
 - (void)initDetailViewAutoLayout

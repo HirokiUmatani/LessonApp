@@ -7,9 +7,11 @@
 //
 
 @interface MovieDownloadFetcher : HttpFetcher
+
 - (void)m3u8FetchingWithURL:(NSString *)url
                     success:(FetchSuccess)success
                      failed:(FetchFailed)failed;
+
 - (void)movieFetchingWithURL:(NSString *)url
                        count:(NSInteger)count
                      success:(FetchSuccess)success

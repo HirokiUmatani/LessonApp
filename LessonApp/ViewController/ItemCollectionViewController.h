@@ -12,6 +12,7 @@
 - (void)hideWetherView;
 - (void)showWetherView;
 - (void)didSelectItemCollectionViewIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @interface ItemCollectionViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>

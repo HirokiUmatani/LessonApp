@@ -14,20 +14,10 @@
 @end
 
 @implementation OpenWeatherMapView
-NSString * const CONST_DEGRESS_CENTIGRADE = @"%@℃";
-- (void)setView:(OpenWeatherMapEntity *)openWeatherMapEntity
+static NSString *degressCentigrade = @"%@℃";
+- (void)setView:(OpenWeatherMapEntity *)entity
 {
-    _iconFetcher = [OpenWeatherMapFetcher new];
-    [_iconFetcher startAsyncFetchingIconImageWithIconCd:openWeatherMapEntity.weather.icon
-                                                success:^(UIImage * iconImage)
-    {
-        _iconImage.image = iconImage;
-        _tempLabel.text = [NSString stringWithFormat:CONST_DEGRESS_CENTIGRADE,openWeatherMapEntity.temp];
-        _iconFetcher = nil;
-    }
-                                                 failed:^(NSError *error)
-    {
-        _iconFetcher = nil;
-    }];
+    _iconImage.image = entity.weather.image;
+    _tempLabel.text = [NSString stringWithFormat:degressCentigrade,entity.temp];
 }
 @end

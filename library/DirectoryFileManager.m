@@ -9,9 +9,9 @@
 #import "DirectoryFileManager.h"
 
 @implementation DirectoryFileManager
-+ (NSArray *)getDirectoryFileWithDirPath:(NSString *)dirPath
++ (NSArray *)getDirectory:(NSString *)dirPath
 {
-    if ([self checkDirectoryWithDirPath:dirPath])
+    if ([self checkDirectory:dirPath])
     {
         return [[NSFileManager new] contentsOfDirectoryAtPath:dirPath error:nil];
     }
@@ -41,7 +41,7 @@
                                                   dirPath,
                                                   filePath]];
 }
-+ (BOOL)checkDirectoryWithDirPath:(NSString *)dirPath
++ (BOOL)checkDirectory:(NSString *)dirPath
 {
     
     return [[NSFileManager new] fileExistsAtPath:[NSString stringWithFormat:
@@ -53,7 +53,7 @@
 + (void)createDirectory:(NSString *)dirPath
               permisson:(NSNumber *)permission
 {
-    if ([self checkDirectoryWithDirPath:dirPath])
+    if ([self checkDirectory:dirPath])
         return;
     
     [[NSFileManager new] createDirectoryAtPath:[NSString stringWithFormat:
@@ -68,20 +68,39 @@
 }
 
 + (void)createFile:(NSData   *)fileData
-           dirPath:(NSString *)dirPaht
+           dirPath:(NSString *)dirPath
           filePath:(NSString *)filePath
          permisson:(NSNumber *)permission
 {
     
-    if ([self checkFileWithDirPath:dirPaht filePath:filePath])
+    if ([self checkFileWithDirPath:dirPath filePath:filePath])
         return;
     
     [[NSFileManager new] createFileAtPath:[NSString stringWithFormat:
                                            @"%@/%@/%@",
                                            NSHomeDirectory(),
-                                           dirPaht,
+                                           dirPath,
                                            filePath]
                                  contents:fileData
                                attributes:@{NSFilePosixPermissions: permission}];
+}
+
++ (void)deleteDirectory:(NSString *)dirPath
+{
+    [[NSFileManager new] removeItemAtPath:[NSString stringWithFormat:
+                                           @"%@/%@",
+                                           NSHomeDirectory(),
+                                           dirPath]
+                                    error:nil];
+}
++ (void)deleteFileWithDirPath:(NSString *)dirPath
+                     filePath:(NSString *)filePath
+{
+    [[NSFileManager new] removeItemAtPath:[NSString stringWithFormat:
+                                           @"%@/%@/%@",
+                                           NSHomeDirectory(),
+                                           dirPath,
+                                           filePath]
+                                    error:nil];
 }
 @end

@@ -6,15 +6,16 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "OpenWeatherMapViewController.h"
+#import "OpenWeatherMapController.h"
 #import "OpenWeatherMapFetcher.h"
 
-@interface OpenWeatherMapViewController ()
+@interface OpenWeatherMapController ()
 @property LocationFetcher *locationFetcher;
 @property OpenWeatherMapFetcher *openWeatherMapFetcher;
+@property OpenWeatherMapFetcher *iconOpenWeatherMapFetcher;
 @end
 
-@implementation OpenWeatherMapViewController
+@implementation OpenWeatherMapController
 static NSString *CONST_VIEW_CLASS_NAME = @"OpenWeatherMapView";
 - (void)loadView
 {
@@ -61,13 +62,15 @@ static NSString *CONST_VIEW_CLASS_NAME = @"OpenWeatherMapView";
                                                  longitude:_locationFetcher.longitude
                                                    success:^(OpenWeatherMapEntity *openWeatherMapEntity)
      {
-         [_contentView setView:openWeatherMapEntity];
-         _openWeatherMapFetcher = nil;
+         _iconOpenWeatherMapFetcher = [OpenWeatherMapFetcher new];
+         [_iconOpenWeatherMapFetcher startAsyncFetchingIconImageWithEntity:openWeatherMapEntity
+                                                     success:^(UIImage * iconImage)
+          {
+              [_contentView setView:openWeatherMapEntity];
+          }
+                                                      failed:^(NSError *error){}];
      }
-                                               failed:^(NSError *error)
-     {
-         _openWeatherMapFetcher = nil;
-     }];
+                                               failed:^(NSError *error){}];
 }
 
 - (void)initOpenWeatherMapView

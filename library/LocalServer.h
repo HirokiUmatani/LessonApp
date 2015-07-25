@@ -8,11 +8,9 @@
 #import "GCDWebServer.h"
 #import "GCDWebServerDataResponse.h"
 
-extern NSString * const CONST_M3U8_MIME_TYPE;
-extern NSString * const CONST_TS_MIME_TYPE;
-
 @interface LocalServer : NSObject
 
 @property(nonatomic,strong)GCDWebServer* webServer;
 - (void)start;
+- (void)stop;
 @end

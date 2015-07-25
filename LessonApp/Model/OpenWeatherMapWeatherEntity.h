@@ -9,6 +9,7 @@
 @interface OpenWeatherMapWeatherEntity : NSObject
 @property (nonatomic,strong)NSString *weather_description;
 @property (nonatomic,strong)NSString *icon;
+@property (nonatomic,strong)UIImage  *image;
 @property (nonatomic,strong)NSNumber *weather_id;
 @property (nonatomic,strong)NSString *main;
 

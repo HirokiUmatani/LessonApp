@@ -26,4 +26,6 @@
 @property(nonatomic,strong)NSNumber *speed;
 
 + (OpenWeatherMapEntity *)convertEntityFromDictionary:(NSDictionary *)dictionary;
++ (OpenWeatherMapEntity *)addEntityItem:(OpenWeatherMapEntity *)entity
+                    wetherImageIconData:(NSData *)iconImageData;
 @end

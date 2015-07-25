@@ -8,12 +8,13 @@
 
 #import "ItemCollectionViewController.h"
 #import "ItemCollectionViewCell.h"
-
+#import "MovieDownloadController.h"
 @interface ItemCollectionViewController ()
 // Float
 @property CGFloat collectionViewOldOffset;
 // NSMutableArray
 @property NSMutableArray * itemCellLists;
+
 @end
 
 @implementation ItemCollectionViewController
@@ -24,6 +25,8 @@ static NSString *CONST_VIEW_CLASS_NAME = @"ItemCollectionView";
     [self setCollectionView];
     [self setCellLists];
 }
+
+
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
                   willDecelerate:(BOOL)decelerate
@@ -48,10 +51,11 @@ static NSString *CONST_VIEW_CLASS_NAME = @"ItemCollectionView";
 {
 
     ItemCollectionViewCell *cell = [[ItemCollectionViewCell alloc]
-                                    initWithCollectionView:collectionView
-                                    xibName:CONST_ITEM_CELL_IDENTIFIRE 
-                                    cellIdentifire:CONST_ITEM_CELL_IDENTIFIRE
-                                    indexPath:indexPath];
+             initWithCollectionView:collectionView
+             xibName:CONST_ITEM_CELL_IDENTIFIRE
+             cellIdentifire:CONST_ITEM_CELL_IDENTIFIRE
+             indexPath:indexPath];
+    
     return cell;
 }
 #pragma mark - UICollectionViewDelegate
@@ -63,8 +67,8 @@ static NSString *CONST_VIEW_CLASS_NAME = @"ItemCollectionView";
 - (void)setCellLists
 {
     _itemCellLists = @[].mutableCopy;
-    for (NSInteger i = 0; i < 100; i++)
-        [_itemCellLists addObject:CONST_BLANK_STRING];
+    for (NSInteger i = 0; i < 1; i++)
+        [_itemCellLists addObject:@""];
 }
 
 - (void)setCollectionView

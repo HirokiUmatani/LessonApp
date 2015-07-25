@@ -7,11 +7,16 @@
 //
 
 @interface MenuCellEntity : NSObject
+
 typedef NS_ENUM(NSInteger, cellType)
 {
-    titleCellType
+    titleCellType = 0,
 };
+
 @property (nonatomic,assign) NSInteger cellType;
 @property (nonatomic,strong) NSString * title;
+
++ (MenuCellEntity *)setCellEntity:(cellType)cellType
+                            title:(NSString *)title;
 + (NSArray *)setCellLists;
 @end

@@ -15,7 +15,7 @@
                                success:(FetchSuccess)success
                                 failed:(FetchFailed)failed;
 
-- (void)startAsyncFetchingIconImageWithIconCd:(NSString *)icon
+- (void)startAsyncFetchingIconImageWithEntity:(OpenWeatherMapEntity *)entity
                                       success:(FetchSuccess)success
                                        failed:(FetchFailed)failed;
 @end

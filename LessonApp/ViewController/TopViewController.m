@@ -7,9 +7,9 @@
 //
 #import "TopViewController.h"
 #import "DetailViewController.h"
-#import "OpenWeatherMapViewController.h"
+#import "OpenWeatherMapController.h"
 #import "UserCoreDataManager.h"
-#import "MovieDownloadFetcher.h"
+
 @interface TopViewController ()
 
 // Enum
@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 
 // Controller
 @property (nonatomic,strong) ItemCollectionViewController  *itemViewController;
-@property (nonatomic,strong) OpenWeatherMapViewController  *weatherViewController;
+@property (nonatomic,strong) OpenWeatherMapController  *weatherViewController;
 @property (nonatomic,strong) MenuTableViewController       *menuViewController;
 @property (nonatomic,strong) SignupTableViewController     *signupViewController;
 @property (nonatomic,strong) DetailViewController *detailViewController;
@@ -64,19 +64,15 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
     [self setMenuTableViewAutoLayout];
     [self setItemCollectionViewAutoLayout];
     
+    
 }
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [_itemViewController loadView];
     [self testCoreData];
-    [self testDownload];
 }
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -246,7 +242,7 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 {
     if (!_weatherViewController)
     {
-        _weatherViewController = [OpenWeatherMapViewController new];
+        _weatherViewController = [OpenWeatherMapController new];
         [_weatherViewController loadView];
     }
     [_weatherLayoutView addSubview:_weatherViewController.contentView];
@@ -353,108 +349,39 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 - (void)testCoreData
 {
     __SERIAL_THREAD_START__
-    /***** test core data *****/
-    _userCoreDataManager = [UserCoreDataManager new];
-    // test data
-    NSString *tmpName = [KeyChainData getUUID];
-    NSString *tmpMail = @"xxxx";
-    NSPredicate *predicate = [_userCoreDataManager setPredicateWithSearchKey:CONST_CORE_DATA_ENTITY_USER_NAME searchValue:tmpName];
-    // delete
-    [_userCoreDataManager deleteWithPredicate:predicate];
-    
-    //insert
-    [_userCoreDataManager insertWithPredicate:predicate
-                                         name:tmpName
-                                         mail:nil];
-    // update
-    [_userCoreDataManager updateWithPredicate:predicate
-                                         name:nil
-                                         mail:tmpMail];
-    // fetch
-    [_userCoreDataManager fetchWithPredicate:predicate];
-    
-    __THREAD_END__
-}
-
-
-- (NSString *)dirPath
-{
-    return @"mario";
-}
-- (NSString *)m3u8Path
-{
-    return @"high_15.m3u8";
-}
-- (NSNumber *)permission
-{
-    return @0755;
-}
-- (void)testDownload
-{
-    __SERIAL_THREAD_START__
-    [DirectoryFileManager createDirectory:self.dirPath
-                                permisson:self.permission];
-    [self m3u8Download];
-    [self movieDownload];
-    __THREAD_END__
-}
-- (void)m3u8Download
-{
-    if ([DirectoryFileManager checkFileWithDirPath:self.dirPath
-                                          filePath:self.m3u8Path])
-        return;
-    
-    [[MovieDownloadFetcher new] m3u8FetchingWithURL:CONST_M3U8_DOWNLOAD_API
-                                            success:^(NSData *m3u8Binary)
+    for (int i=0; i<10000; i++)
     {
-        
-        [DirectoryFileManager createFile:m3u8Binary
-                                 dirPath:self.dirPath
-                                filePath:self.m3u8Path
-                               permisson:self.permission];
-    }
-                                             failed:^
-    {
-        
-    }];
-}
-- (NSArray *)downloadlist
-{
-    NSData *data = [DirectoryFileManager getFileWithDirPath:self.dirPath
-                                                   filePath:self.m3u8Path];
-    NSString *pattern = @"([\\w\\_-]+.ts)";
-    NSString *searchValue = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSArray *result = [RegularExpression searchReqularExpressinWithPattern:pattern
-                                                               searchValue:searchValue];
-    NSMutableArray *downloadLists = @[].mutableCopy;
-    for (NSTextCheckingResult *match in result)
-    {
-        [downloadLists addObject:[searchValue substringWithRange:[match rangeAtIndex:1]]];
-    }
-    return downloadLists;
-}
-- (void)movieDownload
-{
-    NSArray * downloadLists = [self downloadlist];
-    for (NSInteger i = 0; i<downloadLists.count; i++)
-    {
-        if ([DirectoryFileManager checkFileWithDirPath:self.dirPath
-                                              filePath:downloadLists[i]])
-            continue;
-        
-        [[MovieDownloadFetcher new] movieFetchingWithURL:CONST_MOVIE_DOWNLOAD_API
-                                    count:i
-                                   success:^(NSData *movieBinary)
+        __autoreleasing UserCoreDataManager *userCoreDataManager;
+        __autoreleasing NSPredicate         *predicate;
+        __autoreleasing NSString            *device_id;
+        __autoreleasing NSString            *tmpName;
+        __autoreleasing NSString            *tmpMail;
+        @autoreleasepool
         {
-            [DirectoryFileManager createFile:movieBinary
-                                     dirPath:self.dirPath
-                                    filePath:downloadLists[i]
-                                   permisson:self.permission];
-        }
-                                    failed:^
-        {
+            device_id = [KeyChainData getUUID];
+            userCoreDataManager = [UserCoreDataManager new];
+            predicate = [userCoreDataManager setPredicateWithSearchKey:CONST_CORE_DATA_ENTITY_DEVICE_ID searchValue:device_id];
+            tmpName = @"yyyy";
+            tmpMail = @"xxxx";
             
-        }];
+            // delete
+            [userCoreDataManager deleteWithPredicate:predicate];
+            
+            // insert
+            [userCoreDataManager insertWithPredicate:predicate
+                                           device_id:device_id
+                                                name:tmpName
+                                                mail:nil];
+            // update
+            [userCoreDataManager updateWithPredicate:predicate
+                                                name:nil
+                                                mail:tmpMail];
+            // fetch
+            [userCoreDataManager fetchWithPredicate:predicate];
+            sleep(1); //wait time
+        }
     }
+    __THREAD_END__
 }
+
 @end

@@ -9,12 +9,10 @@
 #import "CoreDataManager.h"
 #import "User.h"
 
-@interface UserCoreDataManager : CoreDataManager
-
-typedef void (^CoreDataSuccess)();
-typedef void (^CoreDataFailed)();
+@interface UserCoreDataManager : NSObject
 
 - (void)insertWithPredicate:(NSPredicate *)predicate
+                  device_id:(NSString *)device_id
                        name:(NSString *)name
                        mail:(NSString *)mail;
 

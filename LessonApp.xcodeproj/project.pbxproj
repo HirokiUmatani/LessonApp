@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		073552FB7613ED4EC433BE4A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2EF1F18A8D2AF9FD8F8D1B /* libPods.a */; };
 		F40560731B3C2F24000B595A /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = F40560721B3C2F24000B595A /* podfile */; };
+		F412EC0B1B5D0CC9007FEDD7 /* MovieDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F412EC0A1B5D0CC9007FEDD7 /* MovieDownloadController.m */; };
 		F42719031B4E9E1400B6521A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = F42719021B4E9E1400B6521A /* Logger.m */; };
 		F42775381B5204D2008082F8 /* RegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = F42775371B5204D2008082F8 /* RegularExpression.m */; };
 		F44B0F441B5C8C7C00A6B939 /* KeyChainData.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F431B5C8C7C00A6B939 /* KeyChainData.m */; };
@@ -43,7 +44,7 @@
 		F46853F11B3AF62E00AF461D /* SignupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853CE1B3AF62E00AF461D /* SignupTableViewCell.xib */; };
 		F46853F21B3AF62E00AF461D /* ItemCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D11B3AF62E00AF461D /* ItemCollectionViewController.m */; };
 		F46853F31B3AF62E00AF461D /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D31B3AF62E00AF461D /* MenuTableViewController.m */; };
-		F46853F41B3AF62E00AF461D /* OpenWeatherMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D51B3AF62E00AF461D /* OpenWeatherMapViewController.m */; };
+		F46853F41B3AF62E00AF461D /* OpenWeatherMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D51B3AF62E00AF461D /* OpenWeatherMapController.m */; };
 		F46853F51B3AF62E00AF461D /* SignupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D71B3AF62E00AF461D /* SignupTableViewController.m */; };
 		F46853F61B3AF62E00AF461D /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D91B3AF62E00AF461D /* TopViewController.m */; };
 		F468540A1B3AF69D00AF461D /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853F91B3AF69D00AF461D /* AnimationView.m */; };
@@ -62,7 +63,9 @@
 		F476A1921B4974370062A64C /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = F476A1911B4974370062A64C /* Pods-acknowledgements.plist */; };
 		F489F81B1B1EA1860077BCFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489F81A1B1EA1860077BCFB /* CoreLocation.framework */; };
 		F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B1A5BD1B47BCC20000CC47 /* Thread.m */; };
-		F4C81B771B480A1800337B31 /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C81B761B480A1800337B31 /* CustomSegue.m */; };
+		F4B52F241B63633C008D3799 /* ItemCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B52F231B63633C008D3799 /* ItemCellEntity.m */; };
+		F4B52F261B636B43008D3799 /* MenuCellPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4B52F251B636B43008D3799 /* MenuCellPropertyList.plist */; };
+		F4B52F281B636E5C008D3799 /* SignupCellPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4B52F271B636E5C008D3799 /* SignupCellPropertyList.plist */; };
 		F4C81B7A1B482A2F00337B31 /* UIViewController+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C81B791B482A2F00337B31 /* UIViewController+extention.m */; };
 		F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */; };
 		F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */; };
@@ -74,6 +77,8 @@
 		605C897D4917DA12EE58A282 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AFAFD21AE9F87D19562F14C9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F40560721B3C2F24000B595A /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F412EC091B5D0CC9007FEDD7 /* MovieDownloadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieDownloadController.h; path = ../Model/MovieDownloadController.h; sourceTree = "<group>"; };
+		F412EC0A1B5D0CC9007FEDD7 /* MovieDownloadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieDownloadController.m; path = ../Model/MovieDownloadController.m; sourceTree = "<group>"; };
 		F42719011B4E9E1400B6521A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		F42719021B4E9E1400B6521A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		F42775361B5204D2008082F8 /* RegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularExpression.h; sourceTree = "<group>"; };
@@ -88,9 +93,9 @@
 		F45915351B3E80C20041AAF9 /* MoviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviewViewController.m; sourceTree = "<group>"; };
 		F45962461B3E539900BFFFD2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F45962471B3E539900BFFFD2 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		F45962491B3E5A3B00BFFFD2 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
-		F459624A1B3E5A3B00BFFFD2 /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
-		F459624C1B3E5A7F00BFFFD2 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		F45962491B3E5A3B00BFFFD2 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailView.h; path = ../View/DetailView.h; sourceTree = "<group>"; };
+		F459624A1B3E5A3B00BFFFD2 /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailView.m; path = ../View/DetailView.m; sourceTree = "<group>"; };
+		F459624C1B3E5A7F00BFFFD2 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailView.xib; path = ../View/DetailView.xib; sourceTree = "<group>"; };
 		F46853A51B3AF62E00AF461D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = LessonApp/AppDelegate.h; sourceTree = "<group>"; };
 		F46853A61B3AF62E00AF461D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = LessonApp/AppDelegate.m; sourceTree = "<group>"; };
 		F46853A91B3AF62E00AF461D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -100,40 +105,40 @@
 		F46853AE1B3AF62E00AF461D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LessonApp/main.m; sourceTree = "<group>"; };
 		F46853B01B3AF62E00AF461D /* WebAPIConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebAPIConst.h; sourceTree = "<group>"; };
 		F46853B11B3AF62E00AF461D /* WebAPIConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebAPIConst.m; sourceTree = "<group>"; };
-		F46853B21B3AF62E00AF461D /* MenuCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCellEntity.h; sourceTree = "<group>"; };
-		F46853B31B3AF62E00AF461D /* MenuCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCellEntity.m; sourceTree = "<group>"; };
-		F46853B41B3AF62E00AF461D /* OpenWeatherMapEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWeatherMapEntity.h; sourceTree = "<group>"; };
-		F46853B51B3AF62E00AF461D /* OpenWeatherMapEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWeatherMapEntity.m; sourceTree = "<group>"; };
-		F46853B61B3AF62E00AF461D /* OpenWeatherMapFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWeatherMapFetcher.h; sourceTree = "<group>"; };
-		F46853B71B3AF62E00AF461D /* OpenWeatherMapFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWeatherMapFetcher.m; sourceTree = "<group>"; };
-		F46853B81B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWeatherMapWeatherEntity.h; sourceTree = "<group>"; };
-		F46853B91B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWeatherMapWeatherEntity.m; sourceTree = "<group>"; };
-		F46853BA1B3AF62E00AF461D /* SignupCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupCellEntity.h; sourceTree = "<group>"; };
-		F46853BB1B3AF62E00AF461D /* SignupCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupCellEntity.m; sourceTree = "<group>"; };
-		F46853BD1B3AF62E00AF461D /* ItemCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCollectionView.h; sourceTree = "<group>"; };
-		F46853BE1B3AF62E00AF461D /* ItemCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCollectionView.m; sourceTree = "<group>"; };
-		F46853BF1B3AF62E00AF461D /* ItemCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCollectionView.xib; sourceTree = "<group>"; };
-		F46853C01B3AF62E00AF461D /* ItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCollectionViewCell.h; sourceTree = "<group>"; };
-		F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCollectionViewCell.m; sourceTree = "<group>"; };
-		F46853C21B3AF62E00AF461D /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
-		F46853C31B3AF62E00AF461D /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
-		F46853C41B3AF62E00AF461D /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
-		F46853C51B3AF62E00AF461D /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
-		F46853C61B3AF62E00AF461D /* OpenWeatherMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWeatherMapView.h; sourceTree = "<group>"; };
-		F46853C71B3AF62E00AF461D /* OpenWeatherMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWeatherMapView.m; sourceTree = "<group>"; };
-		F46853C81B3AF62E00AF461D /* OpenWeatherMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenWeatherMapView.xib; sourceTree = "<group>"; };
-		F46853C91B3AF62E00AF461D /* SignupButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupButtonTableViewCell.h; sourceTree = "<group>"; };
-		F46853CA1B3AF62E00AF461D /* SignupButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupButtonTableViewCell.m; sourceTree = "<group>"; };
-		F46853CB1B3AF62E00AF461D /* SignupButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupButtonTableViewCell.xib; sourceTree = "<group>"; };
-		F46853CC1B3AF62E00AF461D /* SignupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupTableViewCell.h; sourceTree = "<group>"; };
-		F46853CD1B3AF62E00AF461D /* SignupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupTableViewCell.m; sourceTree = "<group>"; };
-		F46853CE1B3AF62E00AF461D /* SignupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupTableViewCell.xib; sourceTree = "<group>"; };
+		F46853B21B3AF62E00AF461D /* MenuCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuCellEntity.h; path = ../Model/MenuCellEntity.h; sourceTree = "<group>"; };
+		F46853B31B3AF62E00AF461D /* MenuCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuCellEntity.m; path = ../Model/MenuCellEntity.m; sourceTree = "<group>"; };
+		F46853B41B3AF62E00AF461D /* OpenWeatherMapEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWeatherMapEntity.h; path = ../Model/OpenWeatherMapEntity.h; sourceTree = "<group>"; };
+		F46853B51B3AF62E00AF461D /* OpenWeatherMapEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWeatherMapEntity.m; path = ../Model/OpenWeatherMapEntity.m; sourceTree = "<group>"; };
+		F46853B61B3AF62E00AF461D /* OpenWeatherMapFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWeatherMapFetcher.h; path = ../Model/OpenWeatherMapFetcher.h; sourceTree = "<group>"; };
+		F46853B71B3AF62E00AF461D /* OpenWeatherMapFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWeatherMapFetcher.m; path = ../Model/OpenWeatherMapFetcher.m; sourceTree = "<group>"; };
+		F46853B81B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWeatherMapWeatherEntity.h; path = ../Model/OpenWeatherMapWeatherEntity.h; sourceTree = "<group>"; };
+		F46853B91B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWeatherMapWeatherEntity.m; path = ../Model/OpenWeatherMapWeatherEntity.m; sourceTree = "<group>"; };
+		F46853BA1B3AF62E00AF461D /* SignupCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupCellEntity.h; path = ../Model/SignupCellEntity.h; sourceTree = "<group>"; };
+		F46853BB1B3AF62E00AF461D /* SignupCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupCellEntity.m; path = ../Model/SignupCellEntity.m; sourceTree = "<group>"; };
+		F46853BD1B3AF62E00AF461D /* ItemCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemCollectionView.h; path = ../View/ItemCollectionView.h; sourceTree = "<group>"; };
+		F46853BE1B3AF62E00AF461D /* ItemCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemCollectionView.m; path = ../View/ItemCollectionView.m; sourceTree = "<group>"; };
+		F46853BF1B3AF62E00AF461D /* ItemCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCollectionView.xib; path = ../View/ItemCollectionView.xib; sourceTree = "<group>"; };
+		F46853C01B3AF62E00AF461D /* ItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemCollectionViewCell.h; path = ../View/ItemCollectionViewCell.h; sourceTree = "<group>"; };
+		F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemCollectionViewCell.m; path = ../View/ItemCollectionViewCell.m; sourceTree = "<group>"; };
+		F46853C21B3AF62E00AF461D /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCollectionViewCell.xib; path = ../View/ItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		F46853C31B3AF62E00AF461D /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewCell.h; path = ../View/MenuTableViewCell.h; sourceTree = "<group>"; };
+		F46853C41B3AF62E00AF461D /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewCell.m; path = ../View/MenuTableViewCell.m; sourceTree = "<group>"; };
+		F46853C51B3AF62E00AF461D /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuTableViewCell.xib; path = ../View/MenuTableViewCell.xib; sourceTree = "<group>"; };
+		F46853C61B3AF62E00AF461D /* OpenWeatherMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWeatherMapView.h; path = ../View/OpenWeatherMapView.h; sourceTree = "<group>"; };
+		F46853C71B3AF62E00AF461D /* OpenWeatherMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWeatherMapView.m; path = ../View/OpenWeatherMapView.m; sourceTree = "<group>"; };
+		F46853C81B3AF62E00AF461D /* OpenWeatherMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpenWeatherMapView.xib; path = ../View/OpenWeatherMapView.xib; sourceTree = "<group>"; };
+		F46853C91B3AF62E00AF461D /* SignupButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupButtonTableViewCell.h; path = ../View/SignupButtonTableViewCell.h; sourceTree = "<group>"; };
+		F46853CA1B3AF62E00AF461D /* SignupButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupButtonTableViewCell.m; path = ../View/SignupButtonTableViewCell.m; sourceTree = "<group>"; };
+		F46853CB1B3AF62E00AF461D /* SignupButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignupButtonTableViewCell.xib; path = ../View/SignupButtonTableViewCell.xib; sourceTree = "<group>"; };
+		F46853CC1B3AF62E00AF461D /* SignupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupTableViewCell.h; path = ../View/SignupTableViewCell.h; sourceTree = "<group>"; };
+		F46853CD1B3AF62E00AF461D /* SignupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupTableViewCell.m; path = ../View/SignupTableViewCell.m; sourceTree = "<group>"; };
+		F46853CE1B3AF62E00AF461D /* SignupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignupTableViewCell.xib; path = ../View/SignupTableViewCell.xib; sourceTree = "<group>"; };
 		F46853D01B3AF62E00AF461D /* ItemCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCollectionViewController.h; sourceTree = "<group>"; };
 		F46853D11B3AF62E00AF461D /* ItemCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCollectionViewController.m; sourceTree = "<group>"; };
 		F46853D21B3AF62E00AF461D /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		F46853D31B3AF62E00AF461D /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
-		F46853D41B3AF62E00AF461D /* OpenWeatherMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWeatherMapViewController.h; sourceTree = "<group>"; };
-		F46853D51B3AF62E00AF461D /* OpenWeatherMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWeatherMapViewController.m; sourceTree = "<group>"; };
+		F46853D41B3AF62E00AF461D /* OpenWeatherMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWeatherMapController.h; sourceTree = "<group>"; };
+		F46853D51B3AF62E00AF461D /* OpenWeatherMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWeatherMapController.m; sourceTree = "<group>"; };
 		F46853D61B3AF62E00AF461D /* SignupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupTableViewController.h; sourceTree = "<group>"; };
 		F46853D71B3AF62E00AF461D /* SignupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupTableViewController.m; sourceTree = "<group>"; };
 		F46853D81B3AF62E00AF461D /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
@@ -155,8 +160,8 @@
 		F46854061B3AF69D00AF461D /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
 		F46854071B3AF69D00AF461D /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 		F46854161B3C1FBE00AF461D /* LessonAppPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LessonAppPrefixHeader.pch; path = LessonApp/LessonAppPrefixHeader.pch; sourceTree = "<group>"; };
-		F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
-		F46B37801B48AC0E0051EB8E /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = ../LessonApp/Model/CoreDataManager.h; sourceTree = "<group>"; };
+		F46B37801B48AC0E0051EB8E /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = ../LessonApp/Model/CoreDataManager.m; sourceTree = "<group>"; };
 		F46B37851B48B2C40051EB8E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F46B37921B48F35E0051EB8E /* LessonApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LessonApp.xcdatamodel; sourceTree = "<group>"; };
 		F46B37941B48F72A0051EB8E /* UserCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCoreDataManager.h; sourceTree = "<group>"; };
@@ -167,11 +172,13 @@
 		F489F81A1B1EA1860077BCFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F4B1A5BC1B47BCC20000CC47 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
 		F4B1A5BD1B47BCC20000CC47 /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thread.m; sourceTree = "<group>"; };
+		F4B52F221B63633C008D3799 /* ItemCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemCellEntity.h; path = LessonApp/Model/ItemCellEntity.h; sourceTree = SOURCE_ROOT; };
+		F4B52F231B63633C008D3799 /* ItemCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemCellEntity.m; path = LessonApp/Model/ItemCellEntity.m; sourceTree = SOURCE_ROOT; };
+		F4B52F251B636B43008D3799 /* MenuCellPropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MenuCellPropertyList.plist; path = LessonApp/Model/MenuCellPropertyList.plist; sourceTree = SOURCE_ROOT; };
+		F4B52F271B636E5C008D3799 /* SignupCellPropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SignupCellPropertyList.plist; path = LessonApp/Model/SignupCellPropertyList.plist; sourceTree = SOURCE_ROOT; };
 		F4B6D0631B4C04C300F1D4DC /* LessonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4C81B751B480A1800337B31 /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
-		F4C81B761B480A1800337B31 /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
-		F4C81B781B482A2F00337B31 /* UIViewController+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+extention.h"; sourceTree = "<group>"; };
-		F4C81B791B482A2F00337B31 /* UIViewController+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+extention.m"; sourceTree = "<group>"; };
+		F4C81B781B482A2F00337B31 /* UIViewController+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+extention.h"; path = "../LessonApp/ViewController/UIViewController+extention.h"; sourceTree = "<group>"; };
+		F4C81B791B482A2F00337B31 /* UIViewController+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+extention.m"; path = "../LessonApp/ViewController/UIViewController+extention.m"; sourceTree = "<group>"; };
 		F4DA03031B40247E00E11F93 /* UITableViewCell+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+extention.h"; sourceTree = "<group>"; };
 		F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+extention.m"; sourceTree = "<group>"; };
 		F4DA03061B4025FF00E11F93 /* UICollectionViewCell+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+extention.h"; sourceTree = "<group>"; };
@@ -203,100 +210,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F46853A71B3AF62E00AF461D /* Base.lproj */ = {
+		F46853F71B3AF69D00AF461D /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				F46853A81B3AF62E00AF461D /* LaunchScreen.xib */,
-				F46853AA1B3AF62E00AF461D /* Main.storyboard */,
-			);
-			name = Base.lproj;
-			path = LessonApp/Base.lproj;
-			sourceTree = "<group>";
-		};
-		F46853AF1B3AF62E00AF461D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F469ED331B5A106E00CD78C6 /* WebAPI */,
-				F46B378D1B48C0E20051EB8E /* CoreData */,
-				F46853B21B3AF62E00AF461D /* MenuCellEntity.h */,
-				F46853B31B3AF62E00AF461D /* MenuCellEntity.m */,
-				F46853BA1B3AF62E00AF461D /* SignupCellEntity.h */,
-				F46853BB1B3AF62E00AF461D /* SignupCellEntity.m */,
-			);
-			name = Model;
-			path = LessonApp/Model;
-			sourceTree = "<group>";
-		};
-		F46853BC1B3AF62E00AF461D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F46853BD1B3AF62E00AF461D /* ItemCollectionView.h */,
-				F46853BE1B3AF62E00AF461D /* ItemCollectionView.m */,
-				F46853BF1B3AF62E00AF461D /* ItemCollectionView.xib */,
-				F46853C01B3AF62E00AF461D /* ItemCollectionViewCell.h */,
-				F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */,
-				F46853C21B3AF62E00AF461D /* ItemCollectionViewCell.xib */,
-				F46853C31B3AF62E00AF461D /* MenuTableViewCell.h */,
-				F46853C41B3AF62E00AF461D /* MenuTableViewCell.m */,
-				F46853C51B3AF62E00AF461D /* MenuTableViewCell.xib */,
-				F46853C61B3AF62E00AF461D /* OpenWeatherMapView.h */,
-				F46853C71B3AF62E00AF461D /* OpenWeatherMapView.m */,
-				F46853C81B3AF62E00AF461D /* OpenWeatherMapView.xib */,
-				F46853C91B3AF62E00AF461D /* SignupButtonTableViewCell.h */,
-				F46853CA1B3AF62E00AF461D /* SignupButtonTableViewCell.m */,
-				F46853CB1B3AF62E00AF461D /* SignupButtonTableViewCell.xib */,
-				F46853CC1B3AF62E00AF461D /* SignupTableViewCell.h */,
-				F46853CD1B3AF62E00AF461D /* SignupTableViewCell.m */,
-				F46853CE1B3AF62E00AF461D /* SignupTableViewCell.xib */,
-				F45962491B3E5A3B00BFFFD2 /* DetailView.h */,
-				F459624A1B3E5A3B00BFFFD2 /* DetailView.m */,
-				F459624C1B3E5A7F00BFFFD2 /* DetailView.xib */,
-			);
-			name = View;
-			path = LessonApp/View;
-			sourceTree = "<group>";
-		};
-		F46853CF1B3AF62E00AF461D /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F46853D01B3AF62E00AF461D /* ItemCollectionViewController.h */,
-				F46853D11B3AF62E00AF461D /* ItemCollectionViewController.m */,
-				F46853D21B3AF62E00AF461D /* MenuTableViewController.h */,
-				F46853D31B3AF62E00AF461D /* MenuTableViewController.m */,
-				F46853D41B3AF62E00AF461D /* OpenWeatherMapViewController.h */,
-				F46853D51B3AF62E00AF461D /* OpenWeatherMapViewController.m */,
-				F45962461B3E539900BFFFD2 /* DetailViewController.h */,
-				F45962471B3E539900BFFFD2 /* DetailViewController.m */,
-				F46853D61B3AF62E00AF461D /* SignupTableViewController.h */,
-				F46853D71B3AF62E00AF461D /* SignupTableViewController.m */,
-				F46853D81B3AF62E00AF461D /* TopViewController.h */,
-				F46853D91B3AF62E00AF461D /* TopViewController.m */,
-				F45915341B3E80C20041AAF9 /* MoviewViewController.h */,
-				F45915351B3E80C20041AAF9 /* MoviewViewController.m */,
-				F4C81B751B480A1800337B31 /* CustomSegue.h */,
-				F4C81B761B480A1800337B31 /* CustomSegue.m */,
-				F4C81B781B482A2F00337B31 /* UIViewController+extention.h */,
-				F4C81B791B482A2F00337B31 /* UIViewController+extention.m */,
-			);
-			name = ViewController;
-			path = LessonApp/ViewController;
-			sourceTree = "<group>";
-		};
-		F46853F71B3AF69D00AF461D /* library */ = {
-			isa = PBXGroup;
-			children = (
+				F4B52F1D1B635FAA008D3799 /* hold */,
+				F46853FE1B3AF69D00AF461D /* HttpFetcher.h */,
+				F46853FF1B3AF69D00AF461D /* HttpFetcher.m */,
+				F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */,
+				F46B37801B48AC0E0051EB8E /* CoreDataManager.m */,
+				F44B0F481B5CB92100A6B939 /* DirectoryFileManager.h */,
+				F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */,
 				F46853F81B3AF69D00AF461D /* AnimationView.h */,
 				F46853F91B3AF69D00AF461D /* AnimationView.m */,
 				F46853FA1B3AF69D00AF461D /* AutoLayout.h */,
 				F46853FB1B3AF69D00AF461D /* AutoLayout.m */,
-				F46853FC1B3AF69D00AF461D /* NSString+Device.h */,
-				F46853FD1B3AF69D00AF461D /* NSString+Device.m */,
-				F46853FE1B3AF69D00AF461D /* HttpFetcher.h */,
-				F46853FF1B3AF69D00AF461D /* HttpFetcher.m */,
-				F46854001B3AF69D00AF461D /* NSJSONSerialization+Serialize.h */,
-				F46854011B3AF69D00AF461D /* NSJSONSerialization+Serialize.m */,
-				F46854021B3AF69D00AF461D /* LocalServer.h */,
-				F46854031B3AF69D00AF461D /* LocalServer.m */,
 				F46854041B3AF69D00AF461D /* LocationFetcher.h */,
 				F46854051B3AF69D00AF461D /* LocationFetcher.m */,
 				F46854061B3AF69D00AF461D /* Notification.h */,
@@ -305,19 +232,22 @@
 				F4B1A5BD1B47BCC20000CC47 /* Thread.m */,
 				F42719011B4E9E1400B6521A /* Logger.h */,
 				F42719021B4E9E1400B6521A /* Logger.m */,
+				F44B0F421B5C8C7C00A6B939 /* KeyChainData.h */,
+				F44B0F431B5C8C7C00A6B939 /* KeyChainData.m */,
+				F46853FC1B3AF69D00AF461D /* NSString+Device.h */,
+				F46853FD1B3AF69D00AF461D /* NSString+Device.m */,
+				F46854001B3AF69D00AF461D /* NSJSONSerialization+Serialize.h */,
+				F46854011B3AF69D00AF461D /* NSJSONSerialization+Serialize.m */,
+				F4DA03091B40269200E11F93 /* UIView+extention.h */,
+				F4DA030A1B40269200E11F93 /* UIView+extention.m */,
 				F4DA03031B40247E00E11F93 /* UITableViewCell+extention.h */,
 				F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */,
 				F4DA03061B4025FF00E11F93 /* UICollectionViewCell+extention.h */,
 				F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */,
-				F4DA03091B40269200E11F93 /* UIView+extention.h */,
-				F4DA030A1B40269200E11F93 /* UIView+extention.m */,
-				F42775361B5204D2008082F8 /* RegularExpression.h */,
-				F42775371B5204D2008082F8 /* RegularExpression.m */,
-				F44B0F421B5C8C7C00A6B939 /* KeyChainData.h */,
-				F44B0F431B5C8C7C00A6B939 /* KeyChainData.m */,
-				F44B0F481B5CB92100A6B939 /* DirectoryFileManager.h */,
-				F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */,
+				F4C81B781B482A2F00337B31 /* UIViewController+extention.h */,
+				F4C81B791B482A2F00337B31 /* UIViewController+extention.m */,
 			);
+			name = Library;
 			path = library;
 			sourceTree = "<group>";
 		};
@@ -326,84 +256,223 @@
 			children = (
 				F46853B01B3AF62E00AF461D /* WebAPIConst.h */,
 				F46853B11B3AF62E00AF461D /* WebAPIConst.m */,
-				F469ED371B5A10EA00CD78C6 /* Model */,
-				F469ED361B5A10E300CD78C6 /* Controller */,
+				F4B52F171B63481A008D3799 /* Weather */,
+				F469ED361B5A10E300CD78C6 /* Movie */,
 			);
 			name = WebAPI;
+			path = LessonApp/Model;
 			sourceTree = "<group>";
 		};
-		F469ED341B5A10B100CD78C6 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */,
-				F46B37801B48AC0E0051EB8E /* CoreDataManager.m */,
-				F46B37941B48F72A0051EB8E /* UserCoreDataManager.h */,
-				F46B37951B48F72A0051EB8E /* UserCoreDataManager.m */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		F469ED351B5A10C500CD78C6 /* Model */ = {
+		F469ED351B5A10C500CD78C6 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				F46B37971B48F79C0051EB8E /* User.h */,
 				F46B37981B48F79C0051EB8E /* User.m */,
+				F46B37941B48F72A0051EB8E /* UserCoreDataManager.h */,
+				F46B37951B48F72A0051EB8E /* UserCoreDataManager.m */,
 			);
-			name = Model;
+			name = User;
 			sourceTree = "<group>";
 		};
-		F469ED361B5A10E300CD78C6 /* Controller */ = {
+		F469ED361B5A10E300CD78C6 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
-				F46853B61B3AF62E00AF461D /* OpenWeatherMapFetcher.h */,
-				F46853B71B3AF62E00AF461D /* OpenWeatherMapFetcher.m */,
 				F44B0F451B5C9F6E00A6B939 /* MovieDownloadFetcher.h */,
 				F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */,
 			);
-			name = Controller;
+			name = Movie;
 			sourceTree = "<group>";
 		};
-		F469ED371B5A10EA00CD78C6 /* Model */ = {
+		F46B378D1B48C0E20051EB8E /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				F46B37911B48F35E0051EB8E /* LessonApp.xcdatamodeld */,
+				F469ED351B5A10C500CD78C6 /* User */,
+			);
+			name = DataBase;
+			path = LessonApp/Model;
+			sourceTree = "<group>";
+		};
+		F489F7D61B1D4EF60077BCFB = {
+			isa = PBXGroup;
+			children = (
+				F4B52F211B6360F6008D3799 /* App */,
+				F46853F71B3AF69D00AF461D /* Library */,
+				F4B52F201B63608A008D3799 /* etc */,
+				F4B6D0631B4C04C300F1D4DC /* LessonApp.app */,
+			);
+			sourceTree = "<group>";
+		};
+		F4B52F081B63432E008D3799 /* TopView */ = {
+			isa = PBXGroup;
+			children = (
+				F4B52F181B634829008D3799 /* WeatherVIew */,
+				F4B52F111B6343DB008D3799 /* SignupView */,
+				F4B52F0E1B6343A2008D3799 /* ItemView */,
+				F4B52F0A1B634358008D3799 /* MenuView */,
+				F46853D81B3AF62E00AF461D /* TopViewController.h */,
+				F46853D91B3AF62E00AF461D /* TopViewController.m */,
+			);
+			name = TopView;
+			path = LessonApp/ViewController;
+			sourceTree = "<group>";
+		};
+		F4B52F091B63433E008D3799 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				F4B52F1B1B634875008D3799 /* MovieView */,
+				F45962461B3E539900BFFFD2 /* DetailViewController.h */,
+				F45962471B3E539900BFFFD2 /* DetailViewController.m */,
+				F45962491B3E5A3B00BFFFD2 /* DetailView.h */,
+				F459624A1B3E5A3B00BFFFD2 /* DetailView.m */,
+				F459624C1B3E5A7F00BFFFD2 /* DetailView.xib */,
+			);
+			name = DetailView;
+			path = LessonApp/ViewController;
+			sourceTree = "<group>";
+		};
+		F4B52F0A1B634358008D3799 /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				F46853C31B3AF62E00AF461D /* MenuTableViewCell.h */,
+				F46853C41B3AF62E00AF461D /* MenuTableViewCell.m */,
+				F46853C51B3AF62E00AF461D /* MenuTableViewCell.xib */,
+				F46853D21B3AF62E00AF461D /* MenuTableViewController.h */,
+				F46853D31B3AF62E00AF461D /* MenuTableViewController.m */,
+				F46853B21B3AF62E00AF461D /* MenuCellEntity.h */,
+				F46853B31B3AF62E00AF461D /* MenuCellEntity.m */,
+				F4B52F251B636B43008D3799 /* MenuCellPropertyList.plist */,
+			);
+			name = MenuView;
+			sourceTree = "<group>";
+		};
+		F4B52F0E1B6343A2008D3799 /* ItemView */ = {
+			isa = PBXGroup;
+			children = (
+				F46853D01B3AF62E00AF461D /* ItemCollectionViewController.h */,
+				F46853D11B3AF62E00AF461D /* ItemCollectionViewController.m */,
+				F46853BD1B3AF62E00AF461D /* ItemCollectionView.h */,
+				F46853BE1B3AF62E00AF461D /* ItemCollectionView.m */,
+				F46853BF1B3AF62E00AF461D /* ItemCollectionView.xib */,
+				F46853C01B3AF62E00AF461D /* ItemCollectionViewCell.h */,
+				F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */,
+				F46853C21B3AF62E00AF461D /* ItemCollectionViewCell.xib */,
+				F4B52F221B63633C008D3799 /* ItemCellEntity.h */,
+				F4B52F231B63633C008D3799 /* ItemCellEntity.m */,
+			);
+			name = ItemView;
+			sourceTree = "<group>";
+		};
+		F4B52F111B6343DB008D3799 /* SignupView */ = {
+			isa = PBXGroup;
+			children = (
+				F46853D61B3AF62E00AF461D /* SignupTableViewController.h */,
+				F46853D71B3AF62E00AF461D /* SignupTableViewController.m */,
+				F46853C91B3AF62E00AF461D /* SignupButtonTableViewCell.h */,
+				F46853CA1B3AF62E00AF461D /* SignupButtonTableViewCell.m */,
+				F46853CB1B3AF62E00AF461D /* SignupButtonTableViewCell.xib */,
+				F46853CC1B3AF62E00AF461D /* SignupTableViewCell.h */,
+				F46853CD1B3AF62E00AF461D /* SignupTableViewCell.m */,
+				F46853CE1B3AF62E00AF461D /* SignupTableViewCell.xib */,
+				F46853BA1B3AF62E00AF461D /* SignupCellEntity.h */,
+				F46853BB1B3AF62E00AF461D /* SignupCellEntity.m */,
+				F4B52F271B636E5C008D3799 /* SignupCellPropertyList.plist */,
+			);
+			name = SignupView;
+			sourceTree = "<group>";
+		};
+		F4B52F171B63481A008D3799 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
 				F46853B41B3AF62E00AF461D /* OpenWeatherMapEntity.h */,
 				F46853B51B3AF62E00AF461D /* OpenWeatherMapEntity.m */,
 				F46853B81B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.h */,
 				F46853B91B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m */,
+				F46853B61B3AF62E00AF461D /* OpenWeatherMapFetcher.h */,
+				F46853B71B3AF62E00AF461D /* OpenWeatherMapFetcher.m */,
 			);
-			name = Model;
+			name = Weather;
+			path = ../ViewController;
 			sourceTree = "<group>";
 		};
-		F46B378D1B48C0E20051EB8E /* CoreData */ = {
+		F4B52F181B634829008D3799 /* WeatherVIew */ = {
 			isa = PBXGroup;
 			children = (
-				F469ED351B5A10C500CD78C6 /* Model */,
-				F469ED341B5A10B100CD78C6 /* Controller */,
-				F46B37911B48F35E0051EB8E /* LessonApp.xcdatamodeld */,
+				F46853C61B3AF62E00AF461D /* OpenWeatherMapView.h */,
+				F46853C71B3AF62E00AF461D /* OpenWeatherMapView.m */,
+				F46853C81B3AF62E00AF461D /* OpenWeatherMapView.xib */,
+				F46853D41B3AF62E00AF461D /* OpenWeatherMapController.h */,
+				F46853D51B3AF62E00AF461D /* OpenWeatherMapController.m */,
 			);
-			name = CoreData;
+			name = WeatherVIew;
 			sourceTree = "<group>";
 		};
-		F489F7D61B1D4EF60077BCFB = {
+		F4B52F1B1B634875008D3799 /* MovieView */ = {
 			isa = PBXGroup;
 			children = (
+				F412EC091B5D0CC9007FEDD7 /* MovieDownloadController.h */,
+				F412EC0A1B5D0CC9007FEDD7 /* MovieDownloadController.m */,
+				F45915341B3E80C20041AAF9 /* MoviewViewController.h */,
+				F45915351B3E80C20041AAF9 /* MoviewViewController.m */,
+			);
+			name = MovieView;
+			sourceTree = "<group>";
+		};
+		F4B52F1D1B635FAA008D3799 /* hold */ = {
+			isa = PBXGroup;
+			children = (
+				F42775361B5204D2008082F8 /* RegularExpression.h */,
+				F42775371B5204D2008082F8 /* RegularExpression.m */,
+				F46854021B3AF69D00AF461D /* LocalServer.h */,
+				F46854031B3AF69D00AF461D /* LocalServer.m */,
+			);
+			name = hold;
+			sourceTree = "<group>";
+		};
+		F4B52F1E1B635FBF008D3799 /* Storyboard/LounchScreen/Image */ = {
+			isa = PBXGroup;
+			children = (
+				F46853AC1B3AF62E00AF461D /* Images.xcassets */,
+				F46853A81B3AF62E00AF461D /* LaunchScreen.xib */,
+				F46853AA1B3AF62E00AF461D /* Main.storyboard */,
+			);
+			name = Storyboard/LounchScreen/Image;
+			sourceTree = "<group>";
+		};
+		F4B52F1F1B63603C008D3799 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				F476A1911B4974370062A64C /* Pods-acknowledgements.plist */,
+				F46853AD1B3AF62E00AF461D /* Info.plist */,
+			);
+			name = plist;
+			sourceTree = "<group>";
+		};
+		F4B52F201B63608A008D3799 /* etc */ = {
+			isa = PBXGroup;
+			children = (
+				990C654DDF764BA12CE3D0EB /* Pods */,
+				F6C816BAB14CA12561B0581E /* Frameworks */,
+				F4B52F1F1B63603C008D3799 /* plist */,
+				F46854161B3C1FBE00AF461D /* LessonAppPrefixHeader.pch */,
+				F46853AE1B3AF62E00AF461D /* main.m */,
 				F46853A51B3AF62E00AF461D /* AppDelegate.h */,
 				F46853A61B3AF62E00AF461D /* AppDelegate.m */,
 				F40560721B3C2F24000B595A /* podfile */,
-				F476A1911B4974370062A64C /* Pods-acknowledgements.plist */,
-				F46853AD1B3AF62E00AF461D /* Info.plist */,
-				F46853AE1B3AF62E00AF461D /* main.m */,
-				F46854161B3C1FBE00AF461D /* LessonAppPrefixHeader.pch */,
-				F46853AC1B3AF62E00AF461D /* Images.xcassets */,
-				F46853F71B3AF69D00AF461D /* library */,
-				F46853A71B3AF62E00AF461D /* Base.lproj */,
-				F46853AF1B3AF62E00AF461D /* Model */,
-				F46853BC1B3AF62E00AF461D /* View */,
-				F46853CF1B3AF62E00AF461D /* ViewController */,
-				F6C816BAB14CA12561B0581E /* Frameworks */,
-				990C654DDF764BA12CE3D0EB /* Pods */,
-				F4B6D0631B4C04C300F1D4DC /* LessonApp.app */,
 			);
+			name = etc;
+			sourceTree = "<group>";
+		};
+		F4B52F211B6360F6008D3799 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F4B52F1E1B635FBF008D3799 /* Storyboard/LounchScreen/Image */,
+				F469ED331B5A106E00CD78C6 /* WebAPI */,
+				F46B378D1B48C0E20051EB8E /* DataBase */,
+				F4B52F091B63433E008D3799 /* DetailView */,
+				F4B52F081B63432E008D3799 /* TopView */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 		F6C816BAB14CA12561B0581E /* Frameworks */ = {
@@ -481,6 +550,8 @@
 				F476A1921B4974370062A64C /* Pods-acknowledgements.plist in Resources */,
 				F46853ED1B3AF62E00AF461D /* OpenWeatherMapView.xib in Resources */,
 				F46853DD1B3AF62E00AF461D /* Images.xcassets in Resources */,
+				F4B52F261B636B43008D3799 /* MenuCellPropertyList.plist in Resources */,
+				F4B52F281B636E5C008D3799 /* SignupCellPropertyList.plist in Resources */,
 				F46853EF1B3AF62E00AF461D /* SignupButtonTableViewCell.xib in Resources */,
 				F46853DB1B3AF62E00AF461D /* LaunchScreen.xib in Resources */,
 				F46853E91B3AF62E00AF461D /* ItemCollectionViewCell.xib in Resources */,
@@ -537,6 +608,7 @@
 				F46854111B3AF69D00AF461D /* Notification.m in Sources */,
 				F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */,
 				F468540D1B3AF69D00AF461D /* HttpFetcher.m in Sources */,
+				F4B52F241B63633C008D3799 /* ItemCellEntity.m in Sources */,
 				F46853F51B3AF62E00AF461D /* SignupTableViewController.m in Sources */,
 				F468540F1B3AF69D00AF461D /* LocalServer.m in Sources */,
 				F46853E11B3AF62E00AF461D /* MenuCellEntity.m in Sources */,
@@ -544,6 +616,7 @@
 				F46B37961B48F72A0051EB8E /* UserCoreDataManager.m in Sources */,
 				F4DA030B1B40269200E11F93 /* UIView+extention.m in Sources */,
 				F46853E61B3AF62E00AF461D /* ItemCollectionView.m in Sources */,
+				F412EC0B1B5D0CC9007FEDD7 /* MovieDownloadController.m in Sources */,
 				F44B0F441B5C8C7C00A6B939 /* KeyChainData.m in Sources */,
 				F46853F21B3AF62E00AF461D /* ItemCollectionViewController.m in Sources */,
 				F42719031B4E9E1400B6521A /* Logger.m in Sources */,
@@ -553,7 +626,6 @@
 				F468540B1B3AF69D00AF461D /* AutoLayout.m in Sources */,
 				F468540E1B3AF69D00AF461D /* NSJSONSerialization+Serialize.m in Sources */,
 				F468540A1B3AF69D00AF461D /* AnimationView.m in Sources */,
-				F4C81B771B480A1800337B31 /* CustomSegue.m in Sources */,
 				F46853E81B3AF62E00AF461D /* ItemCollectionViewCell.m in Sources */,
 				F459624B1B3E5A3B00BFFFD2 /* DetailView.m in Sources */,
 				F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */,
@@ -566,7 +638,7 @@
 				F46853EA1B3AF62E00AF461D /* MenuTableViewCell.m in Sources */,
 				F46853E31B3AF62E00AF461D /* OpenWeatherMapFetcher.m in Sources */,
 				F44B0F471B5C9F6E00A6B939 /* MovieDownloadFetcher.m in Sources */,
-				F46853F41B3AF62E00AF461D /* OpenWeatherMapViewController.m in Sources */,
+				F46853F41B3AF62E00AF461D /* OpenWeatherMapController.m in Sources */,
 				F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */,
 				F46B37931B48F35E0051EB8E /* LessonApp.xcdatamodeld in Sources */,
 				F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */,
@@ -587,6 +659,7 @@
 				F46853A91B3AF62E00AF461D /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = LessonApp/Base.lproj;
 			sourceTree = "<group>";
 		};
 		F46853AA1B3AF62E00AF461D /* Main.storyboard */ = {
@@ -595,6 +668,7 @@
 				F46853AB1B3AF62E00AF461D /* Base */,
 			);
 			name = Main.storyboard;
+			path = LessonApp/Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

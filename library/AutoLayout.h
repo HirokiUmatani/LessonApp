@@ -18,6 +18,4 @@
 - (id)initWithAddView:(id)addView
              baseView:(id)baseView;
 
-- (void)makeJustSizeConstraintsAddSubView:(id)addView
-                                 baseView:(id)baseView;
 @end

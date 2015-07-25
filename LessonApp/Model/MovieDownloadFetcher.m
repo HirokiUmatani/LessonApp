@@ -15,13 +15,13 @@
 {
     [self startSyncFetchingWithUrlString:url
                                  success:^(NSData *responceData)
-     {
-         success(responceData);
-     }
-                                   failed:^(NSError *error)
-     {
-         failed(error);
-     }];
+    {
+        success(responceData);
+    }
+                                  failed:^(NSError *error)
+    {
+        failed(error);
+    }];
 }
 
 - (void)movieFetchingWithURL:(NSString *)url
@@ -31,12 +31,12 @@
 {
     [self startSyncFetchingWithUrlString:[NSString stringWithFormat:url,count]
                                  success:^(NSData *responceData)
-     {
-         success(responceData);
-     }
-                                   failed:^(NSError *error)
-     {
-         failed(error);
-     }];
+    {
+        success(responceData);
+    }
+                                  failed:^(NSError *error)
+    {
+        failed(error);
+    }];
 }
 @end

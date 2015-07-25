@@ -9,26 +9,28 @@
 #import "MenuCellEntity.h"
 
 @implementation MenuCellEntity
++ (MenuCellEntity *)setCellEntity:(cellType)cellType
+                            title:(NSString *)title
+{
+    MenuCellEntity *entity = [MenuCellEntity new];
+    entity.cellType = cellType;
+    entity.title = title;
+    return entity;
+}
+
 + (NSArray *)setCellLists
 {
-    NSMutableArray *tempList =@[].mutableCopy;
-    MenuCellEntity *entity;
-    
-    entity = MenuCellEntity.new;
-    entity.cellType = titleCellType;
-    entity.title = @"Sign Up";
-    [tempList addObject:entity];
-    
-    entity = MenuCellEntity.new;
-    entity.cellType = titleCellType;
-    entity.title = @"Home";
-    [tempList addObject:entity];
-    
-    entity = MenuCellEntity.new;
-    entity.cellType = titleCellType;
-    entity.title = @"License";
-    [tempList addObject:entity];
-    
-    return tempList;
+    NSString* propertyDataFile = [[NSBundle mainBundle]pathForResource:@"MenuCellPropertyList" ofType:@"plist"];
+    NSArray *propertyDataList = [NSArray arrayWithContentsOfFile:propertyDataFile];
+    NSMutableArray *results =@[].mutableCopy;
+
+    for (NSDictionary *propertyDict in propertyDataList)
+    {
+        MenuCellEntity *entity = [MenuCellEntity new];
+        entity = [self setCellEntity:[propertyDict[@"cellType"] integerValue]
+                               title: propertyDict[@"title"]];
+        [results addObject:entity];
+    }
+    return results;
 }
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "OpenWeatherMapEntity.h"
-
 @implementation OpenWeatherMapEntity
 + (OpenWeatherMapEntity *)convertEntityFromDictionary:(NSDictionary *)dictionary
 {
@@ -51,4 +50,11 @@
     return entity;
 }
 
++ (OpenWeatherMapEntity *)addEntityItem:(OpenWeatherMapEntity *)entity
+                    wetherImageIconData:(NSData *)iconImageData
+{
+    UIImage *imageIcon = [UIImage imageWithData:iconImageData];
+    entity.weather.image = imageIcon;
+    return entity;
+}
 @end
