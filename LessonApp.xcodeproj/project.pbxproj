@@ -29,12 +29,9 @@
 		F46853E41B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B91B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m */; };
 		F46853E51B3AF62E00AF461D /* SignupCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853BB1B3AF62E00AF461D /* SignupCellEntity.m */; };
 		F46853E81B3AF62E00AF461D /* ItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */; };
-		F46853E91B3AF62E00AF461D /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853C21B3AF62E00AF461D /* ItemCollectionViewCell.xib */; };
 		F46853EA1B3AF62E00AF461D /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C41B3AF62E00AF461D /* MenuTableViewCell.m */; };
 		F46853EC1B3AF62E00AF461D /* OpenWeatherMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C71B3AF62E00AF461D /* OpenWeatherMapView.m */; };
-		F46853ED1B3AF62E00AF461D /* OpenWeatherMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853C81B3AF62E00AF461D /* OpenWeatherMapView.xib */; };
 		F46853EE1B3AF62E00AF461D /* SignupButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853CA1B3AF62E00AF461D /* SignupButtonTableViewCell.m */; };
-		F46853EF1B3AF62E00AF461D /* SignupButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853CB1B3AF62E00AF461D /* SignupButtonTableViewCell.xib */; };
 		F46853F01B3AF62E00AF461D /* SignupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853CD1B3AF62E00AF461D /* SignupTableViewCell.m */; };
 		F46853F11B3AF62E00AF461D /* SignupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853CE1B3AF62E00AF461D /* SignupTableViewCell.xib */; };
 		F46853F21B3AF62E00AF461D /* ItemCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D11B3AF62E00AF461D /* ItemCollectionViewController.m */; };
@@ -55,7 +52,7 @@
 		F46B37931B48F35E0051EB8E /* LessonApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F46B37911B48F35E0051EB8E /* LessonApp.xcdatamodeld */; };
 		F46B37961B48F72A0051EB8E /* UserCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B37951B48F72A0051EB8E /* UserCoreDataManager.m */; };
 		F46B37991B48F79C0051EB8E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B37981B48F79C0051EB8E /* User.m */; };
-		F476A1921B4974370062A64C /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = F476A1911B4974370062A64C /* Pods-acknowledgements.plist */; };
+		F477557E1B63FCE40056FEBA /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = F477557D1B63FCE40056FEBA /* mario.png */; };
 		F489F81B1B1EA1860077BCFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489F81A1B1EA1860077BCFB /* CoreLocation.framework */; };
 		F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B1A5BD1B47BCC20000CC47 /* Thread.m */; };
 		F4B52F241B63633C008D3799 /* ItemCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B52F231B63633C008D3799 /* ItemCellEntity.m */; };
@@ -109,15 +106,12 @@
 		F46853BB1B3AF62E00AF461D /* SignupCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupCellEntity.m; path = ../Model/SignupCellEntity.m; sourceTree = "<group>"; };
 		F46853C01B3AF62E00AF461D /* ItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemCollectionViewCell.h; path = ../View/ItemCollectionViewCell.h; sourceTree = "<group>"; };
 		F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemCollectionViewCell.m; path = ../View/ItemCollectionViewCell.m; sourceTree = "<group>"; };
-		F46853C21B3AF62E00AF461D /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCollectionViewCell.xib; path = ../View/ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		F46853C31B3AF62E00AF461D /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewCell.h; path = ../View/MenuTableViewCell.h; sourceTree = "<group>"; };
 		F46853C41B3AF62E00AF461D /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewCell.m; path = ../View/MenuTableViewCell.m; sourceTree = "<group>"; };
 		F46853C61B3AF62E00AF461D /* OpenWeatherMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWeatherMapView.h; path = ../View/OpenWeatherMapView.h; sourceTree = "<group>"; };
 		F46853C71B3AF62E00AF461D /* OpenWeatherMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWeatherMapView.m; path = ../View/OpenWeatherMapView.m; sourceTree = "<group>"; };
-		F46853C81B3AF62E00AF461D /* OpenWeatherMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpenWeatherMapView.xib; path = ../View/OpenWeatherMapView.xib; sourceTree = "<group>"; };
 		F46853C91B3AF62E00AF461D /* SignupButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupButtonTableViewCell.h; path = ../View/SignupButtonTableViewCell.h; sourceTree = "<group>"; };
 		F46853CA1B3AF62E00AF461D /* SignupButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupButtonTableViewCell.m; path = ../View/SignupButtonTableViewCell.m; sourceTree = "<group>"; };
-		F46853CB1B3AF62E00AF461D /* SignupButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignupButtonTableViewCell.xib; path = ../View/SignupButtonTableViewCell.xib; sourceTree = "<group>"; };
 		F46853CC1B3AF62E00AF461D /* SignupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupTableViewCell.h; path = ../View/SignupTableViewCell.h; sourceTree = "<group>"; };
 		F46853CD1B3AF62E00AF461D /* SignupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupTableViewCell.m; path = ../View/SignupTableViewCell.m; sourceTree = "<group>"; };
 		F46853CE1B3AF62E00AF461D /* SignupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignupTableViewCell.xib; path = ../View/SignupTableViewCell.xib; sourceTree = "<group>"; };
@@ -156,7 +150,7 @@
 		F46B37951B48F72A0051EB8E /* UserCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCoreDataManager.m; sourceTree = "<group>"; };
 		F46B37971B48F79C0051EB8E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		F46B37981B48F79C0051EB8E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		F476A1911B4974370062A64C /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Pods/Target Support Files/Pods/Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		F477557D1B63FCE40056FEBA /* mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario.png; sourceTree = "<group>"; };
 		F489F81A1B1EA1860077BCFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F4B1A5BC1B47BCC20000CC47 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
 		F4B1A5BD1B47BCC20000CC47 /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thread.m; sourceTree = "<group>"; };
@@ -271,19 +265,20 @@
 			name = Movie;
 			sourceTree = "<group>";
 		};
-		F46B378D1B48C0E20051EB8E /* DataBase */ = {
+		F46B378D1B48C0E20051EB8E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				F46B37911B48F35E0051EB8E /* LessonApp.xcdatamodeld */,
 				F469ED351B5A10C500CD78C6 /* User */,
 			);
-			name = DataBase;
+			name = CoreData;
 			path = LessonApp/Model;
 			sourceTree = "<group>";
 		};
 		F489F7D61B1D4EF60077BCFB = {
 			isa = PBXGroup;
 			children = (
+				F477557D1B63FCE40056FEBA /* mario.png */,
 				F4B52F211B6360F6008D3799 /* App */,
 				F46853F71B3AF69D00AF461D /* Library */,
 				F4B52F201B63608A008D3799 /* etc */,
@@ -337,7 +332,6 @@
 				F46853D11B3AF62E00AF461D /* ItemCollectionViewController.m */,
 				F46853C01B3AF62E00AF461D /* ItemCollectionViewCell.h */,
 				F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */,
-				F46853C21B3AF62E00AF461D /* ItemCollectionViewCell.xib */,
 				F4B52F221B63633C008D3799 /* ItemCellEntity.h */,
 				F4B52F231B63633C008D3799 /* ItemCellEntity.m */,
 			);
@@ -351,7 +345,6 @@
 				F46853D71B3AF62E00AF461D /* SignupTableViewController.m */,
 				F46853C91B3AF62E00AF461D /* SignupButtonTableViewCell.h */,
 				F46853CA1B3AF62E00AF461D /* SignupButtonTableViewCell.m */,
-				F46853CB1B3AF62E00AF461D /* SignupButtonTableViewCell.xib */,
 				F46853CC1B3AF62E00AF461D /* SignupTableViewCell.h */,
 				F46853CD1B3AF62E00AF461D /* SignupTableViewCell.m */,
 				F46853CE1B3AF62E00AF461D /* SignupTableViewCell.xib */,
@@ -381,7 +374,6 @@
 			children = (
 				F46853C61B3AF62E00AF461D /* OpenWeatherMapView.h */,
 				F46853C71B3AF62E00AF461D /* OpenWeatherMapView.m */,
-				F46853C81B3AF62E00AF461D /* OpenWeatherMapView.xib */,
 				F46853D41B3AF62E00AF461D /* OpenWeatherMapController.h */,
 				F46853D51B3AF62E00AF461D /* OpenWeatherMapController.m */,
 			);
@@ -423,7 +415,6 @@
 		F4B52F1F1B63603C008D3799 /* plist */ = {
 			isa = PBXGroup;
 			children = (
-				F476A1911B4974370062A64C /* Pods-acknowledgements.plist */,
 				F46853AD1B3AF62E00AF461D /* Info.plist */,
 			);
 			name = plist;
@@ -449,7 +440,7 @@
 			children = (
 				F4B52F1E1B635FBF008D3799 /* Storyboard/LounchScreen/Image */,
 				F469ED331B5A106E00CD78C6 /* WebAPI */,
-				F46B378D1B48C0E20051EB8E /* DataBase */,
+				F46B378D1B48C0E20051EB8E /* CoreData */,
 				F4B52F091B63433E008D3799 /* DetailView */,
 				F4B52F081B63432E008D3799 /* TopView */,
 			);
@@ -525,16 +516,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F477557E1B63FCE40056FEBA /* mario.png in Resources */,
 				F46853F11B3AF62E00AF461D /* SignupTableViewCell.xib in Resources */,
 				F40560731B3C2F24000B595A /* podfile in Resources */,
-				F476A1921B4974370062A64C /* Pods-acknowledgements.plist in Resources */,
-				F46853ED1B3AF62E00AF461D /* OpenWeatherMapView.xib in Resources */,
 				F46853DD1B3AF62E00AF461D /* Images.xcassets in Resources */,
 				F4B52F261B636B43008D3799 /* MenuCellPropertyList.plist in Resources */,
 				F4B52F281B636E5C008D3799 /* SignupCellPropertyList.plist in Resources */,
-				F46853EF1B3AF62E00AF461D /* SignupButtonTableViewCell.xib in Resources */,
 				F46853DB1B3AF62E00AF461D /* LaunchScreen.xib in Resources */,
-				F46853E91B3AF62E00AF461D /* ItemCollectionViewCell.xib in Resources */,
 				F46853DC1B3AF62E00AF461D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

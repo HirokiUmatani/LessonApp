@@ -6,7 +6,7 @@ PODS:
 
 DEPENDENCIES:
   - GCDWebServer/WebDAV (~> 3.0)
-  - LUKeychainAccess
+  - LUKeychainAccess (~> 1.2.4)
 
 SPEC CHECKSUMS:
   GCDWebServer: d0e1b23785e3dfd6c87601323d0f7cae059aab18

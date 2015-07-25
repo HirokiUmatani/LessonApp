@@ -9,10 +9,10 @@
 #import "Notification.h"
 
 @implementation Notification
-- (void)setReciveNotificationAddObserver:(id)observer
-                                selector:(SEL)selector
-                                    name:(NSString *)name
-                                  object:(id)object
+- (void)setReciveNotificationObserver:(id)observer
+                             selector:(SEL)selector
+                                 name:(NSString *)name
+                               object:(id)object
 {
     NSNotificationCenter *notificationCenter = NSNotificationCenter.defaultCenter;
     [notificationCenter addObserver:observer
@@ -28,4 +28,12 @@
                                                                  object:object];
     [NSNotificationCenter.defaultCenter postNotification:notification];
 }
+- (void)removeNotificationWithObserver:(id)observer
+                                  Name:(NSString *)name
+                                object:(id)object
+{
+    NSNotificationCenter *notificationCenter = NSNotificationCenter.defaultCenter;
+    [notificationCenter removeObserver:observer name:name object:object];
+}
+
 @end

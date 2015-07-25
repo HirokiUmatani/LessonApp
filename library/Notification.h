@@ -10,10 +10,14 @@
 @interface Notification : NSObject
 
 /*** recive notification */
-- (void)setReciveNotificationAddObserver:(id)observer
-                                selector:(SEL)selector
-                                    name:(NSString *)name
-                                  object:(id)object;
+- (void)setReciveNotificationObserver:(id)observer
+                             selector:(SEL)selector
+                                 name:(NSString *)name
+                               object:(id)object;
 /*** senf notification */
 - (void)setSendNotificationWithName:(NSString *)name object:(id)object;
+
+- (void)removeNotificationWithObserver:(id)observer
+                                  Name:(NSString *)name
+                                object:(id)object;
 @end
