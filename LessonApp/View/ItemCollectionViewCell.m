@@ -7,7 +7,12 @@
 //
 
 #import "ItemCollectionViewCell.h"
-
+#import "ItemCellEntity.h"
+@interface ItemCollectionViewCell()
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
+@property (weak, nonatomic) IBOutlet UIProgressView *downloadBar;
+- (IBAction)tapDownloadButton:(UIButton *)sender;
+@end
 
 @implementation ItemCollectionViewCell
 NSString * const CONST_ITEM_CELL_IDENTIFIRE = @"ItemCollectionViewCell";
@@ -23,6 +28,14 @@ NSString * const CONST_ITEM_CELL_IDENTIFIRE = @"ItemCollectionViewCell";
     __MAIN_THREAD_START__
     [self.downloadBar setProgress:barFloat animated:YES];
     __THREAD_END__
-    
+}
+
+- (void)updateView:(NSArray *)cellLists
+         indexPath:(NSIndexPath *)indexPath
+{
+    ItemCellEntity *itemCellEntity = [ItemCellEntity new];
+    itemCellEntity = cellLists[indexPath.row];
+    _thumbnailView.image = itemCellEntity.thumbnailImage;
+    [_downloadBar setProgress:itemCellEntity.progressRait animated:YES];
 }
 @end

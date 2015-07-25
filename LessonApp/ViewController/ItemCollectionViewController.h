@@ -12,6 +12,5 @@
 @end
 
 @interface ItemCollectionViewController : UIViewController
-
 @property (nonatomic, weak) id<ItemCollectionViewControllerDelegate> delegate;
 @end

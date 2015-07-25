@@ -13,16 +13,17 @@
 @property LocationFetcher *locationFetcher;
 @property OpenWeatherMapFetcher *openWeatherMapFetcher;
 @property OpenWeatherMapFetcher *iconOpenWeatherMapFetcher;
-@property (strong, nonatomic)OpenWeatherMapView *weatherView;
+@property (strong, nonatomic) IBOutlet OpenWeatherMapView *weatherView;
+
 @end
 
 @implementation OpenWeatherMapController
 static NSString *CONST_VIEW_CLASS_NAME = @"OpenWeatherMapView";
+#pragma mark - Life Cycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self setBackGroundImage:@"subtle_stripes"];
-    [self initOpenWeatherMapView];
     [self fetchLocation];
 }
 
@@ -51,15 +52,6 @@ static NSString *CONST_VIEW_CLASS_NAME = @"OpenWeatherMapView";
         _locationFetcher.delegate = self;
     }
     [_locationFetcher startLocation];
-}
-
-- (void)initOpenWeatherMapView
-{
-    if (_weatherView)
-        return;
-    _weatherView = [[OpenWeatherMapView alloc]initWithXibName:CONST_VIEW_CLASS_NAME];
-    [self.view addSubview:_weatherView];
-    [AutoLayout addConstraintView:_weatherView targetView:self.view];
 }
 
 - (void)fetchWeather

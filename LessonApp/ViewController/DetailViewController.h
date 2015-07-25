@@ -7,5 +7,4 @@
 //
 
 @interface DetailViewController : UIViewController
-
 @end

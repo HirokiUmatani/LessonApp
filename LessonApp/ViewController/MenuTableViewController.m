@@ -11,14 +11,13 @@
 #import "MenuCellEntity.h"
 
 @interface MenuTableViewController ()
-// NSMutableArray
 @property NSMutableArray * menuCellLists;
-// CGFloat
 @property CGFloat tableViewOldOffset;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation MenuTableViewController
+#pragma mark - Life Cycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
