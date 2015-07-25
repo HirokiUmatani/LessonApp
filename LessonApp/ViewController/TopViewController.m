@@ -7,42 +7,31 @@
 //
 #import "TopViewController.h"
 @interface TopViewController ()
-
-// Enum
 typedef NS_ENUM(NSInteger, MenuSelectCell)
 {
     MenuSelectSignup,
     MenuSelectHome,
     MenuSelectLicenses
 };
-
 typedef NS_ENUM(NSInteger, ChildViewController)
 {
-    MenuChildViewController = 0,
-    SignupChildViewController = 1,
-    ItemChildViewController = 2,
-    WeatherChildViewController = 3,
+    MenuChildViewController     = 0,
+    SignupChildViewController   = 1,
+    ItemChildViewController     = 2,
+    WeatherChildViewController  = 3,
 };
-
+@property (nonatomic,strong) MenuTableViewController *menuViewController;
+@property (nonatomic,strong) ItemCollectionViewController *itemCollectionViewController;
+@property (nonatomic,assign) BOOL isSideMenu;
 @property (weak, nonatomic) IBOutlet UIView *weatherView;
 @property (weak, nonatomic) IBOutlet UIView *itemView;
 @property (weak, nonatomic) IBOutlet UIView *signupView;
 @property (weak, nonatomic) IBOutlet UIView *menuView;
 @property (weak, nonatomic) IBOutlet UIView *mainView;
-
-@property (nonatomic,strong) MenuTableViewController *menuViewController;
-@property (nonatomic,strong) SignupTableViewController *signupTableViewController;
-@property (nonatomic,strong) ItemCollectionViewController *itemCollectionViewController;
-@property (nonatomic,strong) OpenWeatherMapController * openWeatherMapController;
-// BOOL
-@property BOOL isSideMenu;
-
-// IBAction
 - (IBAction)tapSideMenuButton:(UIBarButtonItem *)sender;
 @end
 
 @implementation TopViewController
-
 #pragma mark - Life Cycle
 - (void)viewDidLoad
 {
@@ -88,7 +77,8 @@ typedef NS_ENUM(NSInteger, ChildViewController)
     }
 }
 
-#pragma mark - ItemCollectionViewControllerDelegate / MenuTableViewControllerDelegate
+#pragma mark - MenuTableViewControllerDelegate
+#pragma mark ItemCollectionViewControllerDelegate
 - (void)showWetherView
 {
     [AnimationView transformInit:_weatherView
@@ -125,16 +115,10 @@ typedef NS_ENUM(NSInteger, ChildViewController)
 
 - (void)setDelegate
 {
-    _menuViewController = self.childViewControllers
-    [MenuChildViewController];
-    _signupTableViewController = self.childViewControllers
-    [SignupChildViewController];
-    _itemCollectionViewController = self.childViewControllers
-    [ItemChildViewController];
-    _openWeatherMapController = self.childViewControllers
-    [WeatherChildViewController];
-    
+    _menuViewController = self.childViewControllers[MenuChildViewController];
     _menuViewController.delegate = self;
+    
+    _itemCollectionViewController = self.childViewControllers[ItemChildViewController];
     _itemCollectionViewController.delegate = self;
 }
 @end

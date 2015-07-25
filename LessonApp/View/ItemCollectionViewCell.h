@@ -10,9 +10,7 @@
 
 @interface ItemCollectionViewCell : UICollectionViewCell<MovieDownloadControllerDelegate>
 extern NSString * const CONST_ITEM_CELL_IDENTIFIRE;
-@property (weak, nonatomic) IBOutlet UIProgressView *downloadBar;
 
-- (IBAction)tapDownloadButton:(UIButton *)sender;
-- (void)updateDownloadProgressBar:(CGFloat)barFloat;
-
+- (void)updateView:(NSArray *)cellLists
+         indexPath:(NSIndexPath *)indexPath;
 @end

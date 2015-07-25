@@ -9,24 +9,27 @@
 #import "ItemCollectionViewController.h"
 #import "ItemCollectionViewCell.h"
 #import "MovieDownloadController.h"
-@interface ItemCollectionViewController ()
-// Float
-@property CGFloat collectionViewOldOffset;
-// NSMutableArray
-@property NSMutableArray * itemCellLists;
+#import "ItemCellEntity.h"
 
+@interface ItemCollectionViewController ()
+@property CGFloat collectionViewOldOffset;
+@property NSMutableArray * itemCellLists;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation ItemCollectionViewController
-static NSString *CONST_VIEW_CLASS_NAME = @"ItemCollectionView";
+#pragma mark - Life Cycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self setBackGroundImage:@"subtle_stripes"];
     [self setCellLists];
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [_collectionView reloadData];
+}
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
@@ -51,16 +54,16 @@ static NSString *CONST_VIEW_CLASS_NAME = @"ItemCollectionView";
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    ItemCollectionViewCell *cell = [[ItemCollectionViewCell alloc]
-             initWithCollectionView:collectionView
-             xibName:CONST_ITEM_CELL_IDENTIFIRE
-             cellIdentifire:CONST_ITEM_CELL_IDENTIFIRE
-             indexPath:indexPath];
-    
+    ItemCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:
+                                    CONST_ITEM_CELL_IDENTIFIRE
+                                                                             forIndexPath:
+                                    indexPath];
+    [cell updateView:_itemCellLists indexPath:indexPath];
     return cell;
 }
 #pragma mark - UICollectionViewDelegate
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:@"DetailViewController" sender:self];
 }
@@ -69,6 +72,12 @@ static NSString *CONST_VIEW_CLASS_NAME = @"ItemCollectionView";
 {
     _itemCellLists = @[].mutableCopy;
     for (NSInteger i = 0; i < 1; i++)
-        [_itemCellLists addObject:@""];
+    {
+        ItemCellEntity *entity = [ItemCellEntity setCellEntity:normalCellType
+                                                  progressRait:0.0f
+                                                thumbnailImage:[UIImage imageNamed:@"mario.png"]
+                                                   titleString:@"mario"];
+        [_itemCellLists addObject:entity];
+    }
 }
 @end

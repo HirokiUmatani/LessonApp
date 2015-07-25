@@ -8,6 +8,9 @@
 
 #import "MenuTableViewCell.h"
 #import "MenuCellEntity.h"
+@interface MenuTableViewCell()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@end
 
 @implementation MenuTableViewCell
 NSString * const CONST_MENU_CELL_IDENTIFIRE = @"MenuTableViewCell";
