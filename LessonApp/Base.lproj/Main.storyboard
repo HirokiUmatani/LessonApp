@@ -241,6 +241,7 @@
                                         <size key="customSize" width="145" height="150"/>
                                         <connections>
                                             <outlet property="downloadBar" destination="uEj-v7-Lyw" id="vOd-W8-Wjj"/>
+                                            <outlet property="downloadButton" destination="bhX-hG-S2i" id="Ovw-vp-pcT"/>
                                             <outlet property="thumbnailView" destination="fPu-bs-dD4" id="2SK-tM-sER"/>
                                         </connections>
                                     </collectionViewCell>

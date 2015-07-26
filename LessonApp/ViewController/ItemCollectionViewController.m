@@ -8,9 +8,9 @@
 
 #import "ItemCollectionViewController.h"
 #import "ItemCollectionViewCell.h"
-#import "MovieDownloadController.h"
 #import "ItemCellEntity.h"
-
+#import "DownLoadMovieCoreDataManager.h"
+#import "DownLoadMovie.h"
 @interface ItemCollectionViewController ()
 @property CGFloat collectionViewOldOffset;
 @property NSMutableArray * itemCellLists;
@@ -28,6 +28,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self setCellLists];
     [_collectionView reloadData];
 }
 
@@ -71,13 +72,27 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 - (void)setCellLists
 {
     _itemCellLists = @[].mutableCopy;
-    for (NSInteger i = 0; i < 1; i++)
+    
+    DownLoadMovieCoreDataManager *downLoadMovieCoreDataManager = [DownLoadMovieCoreDataManager new];
+    NSArray *downloadMovieDataLists = [downLoadMovieCoreDataManager fetchWithPredicate:nil].copy;
+    if (downloadMovieDataLists.count == 0)
     {
         ItemCellEntity *entity = [ItemCellEntity setCellEntity:normalCellType
                                                   progressRait:0.0f
                                                 thumbnailImage:[UIImage imageNamed:@"mario.png"]
                                                    titleString:@"mario"];
         [_itemCellLists addObject:entity];
+    }
+    else
+    {
+        for (DownLoadMovie *downloadMovieEntity in downloadMovieDataLists)
+        {
+            ItemCellEntity *entity = [ItemCellEntity setCellEntity:normalCellType
+                                                      progressRait:downloadMovieEntity.downloadRait
+                                                    thumbnailImage:[UIImage imageNamed:@"mario.png"]
+                                                       titleString:@"mario"];
+            [_itemCellLists addObject:entity];
+        }
     }
 }
 @end

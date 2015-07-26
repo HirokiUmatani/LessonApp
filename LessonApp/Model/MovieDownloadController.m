@@ -8,89 +8,111 @@
 
 #import "MovieDownloadController.h"
 #import "MovieDownloadFetcher.h"
+#import "DownLoadMovieCoreDataManager.h"
 @implementation MovieDownloadController
-- (void)download
+- (void)startMovieDownload:(NSString *)url
 {
+    URLEntity *urlEntity = [URLEntity new];
+    urlEntity = [URLParser urlParse:url];
     __SERIAL_THREAD_START__
-    [DirectoryFileManager createDirectory:self.dirPath
-                                permisson:self.permission];
-    
-    [self m3u8Download];
-    [self movieDownload];
+    [self m3u8Download:urlEntity];
+    [self movieDownload:urlEntity];
     __THREAD_END__
 }
-- (void)m3u8Download
+- (void)m3u8Download:(URLEntity *)urlEntity
 {
-//    if ([DirectoryFileManager checkFileWithDirPath:self.dirPath
-//                                          filePath:self.m3u8Path])
-//        return;
+    // check save directory
+    if (![DirectoryFileManager checkDirectory:urlEntity.path])
+    {   // create save directory
+        [DirectoryFileManager createDirectory:urlEntity.path
+                                    permisson:@0755];
+    }
+    // check m3u8 file
+    if ([DirectoryFileManager checkFileWithDirPath:urlEntity.path
+                                          filePath:urlEntity.lastPath])
+        return;
     
-    [[MovieDownloadFetcher new] m3u8FetchingWithURL:CONST_M3U8_DOWNLOAD_API
+    // download m3u8 data
+    [[MovieDownloadFetcher new] m3u8FetchingWithURL:urlEntity.url
                                             success:^(NSData *m3u8Binary)
-    {
+    {   // create m3u8 file
         [DirectoryFileManager createFile:m3u8Binary
-                                 dirPath:self.dirPath
-                                filePath:self.m3u8Path
-                               permisson:self.permission];
-    }
-                                             failed:^
-    {
+                                 dirPath:urlEntity.path
+                                filePath:urlEntity.lastPath
+                               permisson:@0755];
+        // CoreData m3u8 file path insert
+        DownLoadMovieCoreDataManager * downloadMovieCoreDataManager = [DownLoadMovieCoreDataManager new];
+        NSString * moviePlayDirPath = [NSString stringWithFormat:
+                                       @"%@/%@",
+                                       urlEntity.path,
+                                       urlEntity.lastPath];
         
-    }];
+        NSPredicate *predicate = [downloadMovieCoreDataManager setPredicateWithSearchKey:@"moviePlayDirPath"
+                                                                             searchValue:moviePlayDirPath];
+        
+        [downloadMovieCoreDataManager insertWithPredicate:predicate
+                                         moviePlayDirPath:moviePlayDirPath];
+    }failed:^{}];
 }
-- (NSArray *)downloadlist
+
+- (void)movieDownload:(URLEntity *)urlEntity
 {
-    NSData *data = [DirectoryFileManager getFileWithDirPath:self.dirPath
-                                                   filePath:self.m3u8Path];
-    NSString *pattern = @"([\\w\\_-]+.ts)";
-    NSString *searchValue = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSArray *result = [RegularExpression searchReqularExpressinWithPattern:pattern
-                                                               searchValue:searchValue];
-    NSMutableArray *downloadLists = @[].mutableCopy;
-    for (NSTextCheckingResult *match in result)
-    {
-        [downloadLists addObject:[searchValue substringWithRange:[match rangeAtIndex:1]]];
-    }
-    return downloadLists;
-}
-- (void)movieDownload
-{
-    NSArray * downloadLists = [self downloadlist];
+    // check m3u8 file
+    if (![DirectoryFileManager checkFileWithDirPath:urlEntity.path
+                                           filePath:urlEntity.lastPath])
+        return;
+    // get m3u8 data
+    NSData *data = [DirectoryFileManager getFileWithDirPath:urlEntity.path
+                                                   filePath:urlEntity.lastPath];
+    // make movie download lists
+    NSArray * downloadLists = [M3U8Serializer movieDownloadListsFromM3UList:data];
+    
+    // make movie download lists data
+    NSData *downloadData = [NSKeyedArchiver archivedDataWithRootObject:downloadLists];
+    // *** CoreData movie download List update
+    DownLoadMovieCoreDataManager * downloadMovieCoreDataManager = [DownLoadMovieCoreDataManager new];
+    NSString * moviePlayDirPath = [NSString stringWithFormat:
+                                   @"%@/%@",
+                                   urlEntity.path,
+                                   urlEntity.lastPath];
+    
+    NSPredicate *predicate = [downloadMovieCoreDataManager setPredicateWithSearchKey:@"moviePlayDirPath"
+                                                                         searchValue:moviePlayDirPath];
+    [downloadMovieCoreDataManager updateWithPredicate:predicate
+                                      downloadURLList:downloadData
+                                        downloadCount:@(0)
+                                         downloadRait:0.0f];
     for (NSInteger i = 0; i < downloadLists.count; i++)
-    {
-//        if ([DirectoryFileManager checkFileWithDirPath:self.dirPath
-//                                              filePath:downloadLists[i]])
-//            continue;
+    {   // check movie file
+        if ([DirectoryFileManager checkFileWithDirPath:urlEntity.path
+                                              filePath:downloadLists[i]])
+            continue;
+        // download movie data
+        NSString *urlString = [NSString stringWithFormat:
+                               @"http://%@/%@/%@",
+                               urlEntity.host,
+                               urlEntity.path,
+                               downloadLists[i]];
         
-        [[MovieDownloadFetcher new] movieFetchingWithURL:CONST_MOVIE_DOWNLOAD_API
-                                                   count:i
+        [[MovieDownloadFetcher new] movieFetchingWithURL:urlString
                                                  success:^(NSData *movieBinary)
-         {
-             [DirectoryFileManager createFile:movieBinary
-                                      dirPath:self.dirPath
-                                     filePath:downloadLists[i]
-                                    permisson:self.permission];
-             NSInteger j = i+1;
-             
-             CGFloat downloadPercent = (CGFloat)j / (CGFloat)downloadLists.count;
-             [_delegate updateDownloadProgressBar:downloadPercent];
-         }
-                                                  failed:^
-         {
-             
-         }];
+        {   // create movie file
+            [DirectoryFileManager createFile:movieBinary
+                                     dirPath:urlEntity.path
+                                    filePath:downloadLists[i]
+                                   permisson:@0755];
+            
+            // update download progressbar
+            NSInteger j = i+1;
+            CGFloat downloadPercent = (CGFloat)j / (CGFloat)downloadLists.count;
+            [_delegate updateDownloadProgressBar:downloadPercent];
+            
+            // *** CoreData movie download count update
+            [downloadMovieCoreDataManager updateWithPredicate:predicate
+                                              downloadURLList:downloadData
+                                                downloadCount:@(i)
+                                                 downloadRait:downloadPercent];
+         }failed:^{}];
     }
-}
-- (NSString *)dirPath
-{
-    return @"mario";
-}
-- (NSString *)m3u8Path
-{
-    return @"high_15.m3u8";
-}
-- (NSNumber *)permission
-{
-    return @0755;
 }
 @end

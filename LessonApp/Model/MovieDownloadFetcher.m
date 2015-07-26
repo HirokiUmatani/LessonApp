@@ -25,11 +25,10 @@
 }
 
 - (void)movieFetchingWithURL:(NSString *)url
-                       count:(NSInteger)count
                      success:(FetchSuccess)success
                       failed:(FetchFailed)failed
 {
-    [self startSyncFetchingWithUrlString:[NSString stringWithFormat:url,count]
+    [self startSyncFetchingWithUrlString:url
                                  success:^(NSData *responceData)
     {
         success(responceData);

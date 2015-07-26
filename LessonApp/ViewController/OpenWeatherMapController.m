@@ -40,7 +40,7 @@ static NSString *CONST_VIEW_CLASS_NAME = @"OpenWeatherMapView";
 
 - (void)didFailWithError
 {
-    
+    [_locationFetcher stopLocation];
 }
 
 #pragma mark - private
@@ -74,15 +74,18 @@ static NSString *CONST_VIEW_CLASS_NAME = @"OpenWeatherMapView";
                                                                    success:^(UIImage *iconImage)
          {
              [_weatherView updateView:openWeatherMapEntity];
+             [_locationFetcher stopLocation];
          }
                                                                     failed:^(NSError *error)
          {
              _iconOpenWeatherMapFetcher = nil;
+             [_locationFetcher stopLocation];
          }];
      }
                                                     failed:^(NSError *error)
     {
         _openWeatherMapFetcher = nil;
+        [_locationFetcher stopLocation];
     }];
 }
 

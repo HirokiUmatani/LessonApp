@@ -13,7 +13,6 @@
                      failed:(FetchFailed)failed;
 
 - (void)movieFetchingWithURL:(NSString *)url
-                       count:(NSInteger)count
                      success:(FetchSuccess)success
                       failed:(FetchFailed)failed;
 @end

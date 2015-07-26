@@ -19,18 +19,4 @@
     return [regularExpression matchesInString:searchValue options:0 range:NSMakeRange(0, searchValue.length)];
 }
 
-+ (NSArray *)convertListsFromRegularExpressionLists:(NSArray*)egularExpressionLists
-                                   searchValue:(NSString *)searchValue
-{
-    NSMutableArray *result = @[].mutableCopy;
-    for (NSTextCheckingResult *match in egularExpressionLists)
-    {
-        NSMutableDictionary *tmpDictionary = @{}.mutableCopy;
-        [tmpDictionary setObject:[searchValue substringWithRange:[match rangeAtIndex:2]] forKey:@"No"];
-        [tmpDictionary setObject:[searchValue substringWithRange:[match rangeAtIndex:3]] forKey:@"Artist"];
-        [tmpDictionary setObject:[searchValue substringWithRange:[match rangeAtIndex:4]] forKey:@"Title"];
-        [result addObject:tmpDictionary];
-    }
-    return result;
-}
 @end

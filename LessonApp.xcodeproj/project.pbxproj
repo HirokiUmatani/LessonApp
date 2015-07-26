@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		073552FB7613ED4EC433BE4A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2EF1F18A8D2AF9FD8F8D1B /* libPods.a */; };
 		F40560731B3C2F24000B595A /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = F40560721B3C2F24000B595A /* podfile */; };
+		F40D442E1B646916005A2029 /* M3U8Serializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D442D1B646916005A2029 /* M3U8Serializer.m */; };
+		F40D44311B6472EE005A2029 /* URLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D44301B6472EE005A2029 /* URLParser.m */; };
+		F40D44341B647375005A2029 /* URLEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D44331B647375005A2029 /* URLEntity.m */; };
+		F40D443A1B6490AE005A2029 /* DownLoadMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D44391B6490AE005A2029 /* DownLoadMovie.m */; };
+		F40D443D1B6490FD005A2029 /* DownLoadMovieCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D443C1B6490FD005A2029 /* DownLoadMovieCoreDataManager.m */; };
 		F412EC0B1B5D0CC9007FEDD7 /* MovieDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F412EC0A1B5D0CC9007FEDD7 /* MovieDownloadController.m */; };
 		F42719031B4E9E1400B6521A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = F42719021B4E9E1400B6521A /* Logger.m */; };
 		F42775381B5204D2008082F8 /* RegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = F42775371B5204D2008082F8 /* RegularExpression.m */; };
@@ -69,8 +74,18 @@
 		605C897D4917DA12EE58A282 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AFAFD21AE9F87D19562F14C9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F40560721B3C2F24000B595A /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F412EC091B5D0CC9007FEDD7 /* MovieDownloadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieDownloadController.h; path = ../Model/MovieDownloadController.h; sourceTree = "<group>"; };
-		F412EC0A1B5D0CC9007FEDD7 /* MovieDownloadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieDownloadController.m; path = ../Model/MovieDownloadController.m; sourceTree = "<group>"; };
+		F40D442C1B646916005A2029 /* M3U8Serializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M3U8Serializer.h; path = library/M3U8Serializer.h; sourceTree = SOURCE_ROOT; };
+		F40D442D1B646916005A2029 /* M3U8Serializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M3U8Serializer.m; path = library/M3U8Serializer.m; sourceTree = SOURCE_ROOT; };
+		F40D442F1B6472EE005A2029 /* URLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLParser.h; path = library/URLParser.h; sourceTree = SOURCE_ROOT; };
+		F40D44301B6472EE005A2029 /* URLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLParser.m; path = library/URLParser.m; sourceTree = SOURCE_ROOT; };
+		F40D44321B647375005A2029 /* URLEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLEntity.h; sourceTree = "<group>"; };
+		F40D44331B647375005A2029 /* URLEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLEntity.m; sourceTree = "<group>"; };
+		F40D44381B6490AE005A2029 /* DownLoadMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadMovie.h; sourceTree = "<group>"; };
+		F40D44391B6490AE005A2029 /* DownLoadMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadMovie.m; sourceTree = "<group>"; };
+		F40D443B1B6490FD005A2029 /* DownLoadMovieCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadMovieCoreDataManager.h; sourceTree = "<group>"; };
+		F40D443C1B6490FD005A2029 /* DownLoadMovieCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadMovieCoreDataManager.m; sourceTree = "<group>"; };
+		F412EC091B5D0CC9007FEDD7 /* MovieDownloadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieDownloadController.h; path = ../LessonApp/Model/MovieDownloadController.h; sourceTree = "<group>"; };
+		F412EC0A1B5D0CC9007FEDD7 /* MovieDownloadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieDownloadController.m; path = ../LessonApp/Model/MovieDownloadController.m; sourceTree = "<group>"; };
 		F42719011B4E9E1400B6521A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		F42719021B4E9E1400B6521A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		F42775361B5204D2008082F8 /* RegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularExpression.h; sourceTree = "<group>"; };
@@ -192,16 +207,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F40D443E1B649103005A2029 /* DownLoadMovie */ = {
+			isa = PBXGroup;
+			children = (
+				F40D44381B6490AE005A2029 /* DownLoadMovie.h */,
+				F40D44391B6490AE005A2029 /* DownLoadMovie.m */,
+				F40D443B1B6490FD005A2029 /* DownLoadMovieCoreDataManager.h */,
+				F40D443C1B6490FD005A2029 /* DownLoadMovieCoreDataManager.m */,
+			);
+			name = DownLoadMovie;
+			sourceTree = "<group>";
+		};
 		F46853F71B3AF69D00AF461D /* Library */ = {
 			isa = PBXGroup;
 			children = (
 				F4B52F1D1B635FAA008D3799 /* hold */,
+				F412EC091B5D0CC9007FEDD7 /* MovieDownloadController.h */,
+				F412EC0A1B5D0CC9007FEDD7 /* MovieDownloadController.m */,
+				F40D442C1B646916005A2029 /* M3U8Serializer.h */,
+				F40D442D1B646916005A2029 /* M3U8Serializer.m */,
+				F44B0F481B5CB92100A6B939 /* DirectoryFileManager.h */,
+				F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */,
+				F42775361B5204D2008082F8 /* RegularExpression.h */,
+				F42775371B5204D2008082F8 /* RegularExpression.m */,
 				F46853FE1B3AF69D00AF461D /* HttpFetcher.h */,
 				F46853FF1B3AF69D00AF461D /* HttpFetcher.m */,
 				F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */,
 				F46B37801B48AC0E0051EB8E /* CoreDataManager.m */,
-				F44B0F481B5CB92100A6B939 /* DirectoryFileManager.h */,
-				F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */,
 				F46853F81B3AF69D00AF461D /* AnimationView.h */,
 				F46853F91B3AF69D00AF461D /* AnimationView.m */,
 				F46853FA1B3AF69D00AF461D /* AutoLayout.h */,
@@ -261,6 +293,10 @@
 			children = (
 				F44B0F451B5C9F6E00A6B939 /* MovieDownloadFetcher.h */,
 				F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */,
+				F40D442F1B6472EE005A2029 /* URLParser.h */,
+				F40D44301B6472EE005A2029 /* URLParser.m */,
+				F40D44321B647375005A2029 /* URLEntity.h */,
+				F40D44331B647375005A2029 /* URLEntity.m */,
 			);
 			name = Movie;
 			sourceTree = "<group>";
@@ -269,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				F46B37911B48F35E0051EB8E /* LessonApp.xcdatamodeld */,
+				F40D443E1B649103005A2029 /* DownLoadMovie */,
 				F469ED351B5A10C500CD78C6 /* User */,
 			);
 			name = CoreData;
@@ -383,8 +420,6 @@
 		F4B52F1B1B634875008D3799 /* MovieView */ = {
 			isa = PBXGroup;
 			children = (
-				F412EC091B5D0CC9007FEDD7 /* MovieDownloadController.h */,
-				F412EC0A1B5D0CC9007FEDD7 /* MovieDownloadController.m */,
 				F45915341B3E80C20041AAF9 /* MoviewViewController.h */,
 				F45915351B3E80C20041AAF9 /* MoviewViewController.m */,
 			);
@@ -394,8 +429,6 @@
 		F4B52F1D1B635FAA008D3799 /* hold */ = {
 			isa = PBXGroup;
 			children = (
-				F42775361B5204D2008082F8 /* RegularExpression.h */,
-				F42775371B5204D2008082F8 /* RegularExpression.m */,
 				F46854021B3AF69D00AF461D /* LocalServer.h */,
 				F46854031B3AF69D00AF461D /* LocalServer.m */,
 			);
@@ -570,6 +603,7 @@
 				F46B37991B48F79C0051EB8E /* User.m in Sources */,
 				F46853F31B3AF62E00AF461D /* MenuTableViewController.m in Sources */,
 				F46853E51B3AF62E00AF461D /* SignupCellEntity.m in Sources */,
+				F40D443D1B6490FD005A2029 /* DownLoadMovieCoreDataManager.m in Sources */,
 				F46853E01B3AF62E00AF461D /* WebAPIConst.m in Sources */,
 				F46854111B3AF69D00AF461D /* Notification.m in Sources */,
 				F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */,
@@ -584,6 +618,7 @@
 				F412EC0B1B5D0CC9007FEDD7 /* MovieDownloadController.m in Sources */,
 				F44B0F441B5C8C7C00A6B939 /* KeyChainData.m in Sources */,
 				F46853F21B3AF62E00AF461D /* ItemCollectionViewController.m in Sources */,
+				F40D442E1B646916005A2029 /* M3U8Serializer.m in Sources */,
 				F42719031B4E9E1400B6521A /* Logger.m in Sources */,
 				F468540C1B3AF69D00AF461D /* NSString+Device.m in Sources */,
 				F46853E41B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m in Sources */,
@@ -600,10 +635,13 @@
 				F46853DF1B3AF62E00AF461D /* main.m in Sources */,
 				F42775381B5204D2008082F8 /* RegularExpression.m in Sources */,
 				F46853EA1B3AF62E00AF461D /* MenuTableViewCell.m in Sources */,
+				F40D443A1B6490AE005A2029 /* DownLoadMovie.m in Sources */,
 				F46853E31B3AF62E00AF461D /* OpenWeatherMapFetcher.m in Sources */,
 				F44B0F471B5C9F6E00A6B939 /* MovieDownloadFetcher.m in Sources */,
 				F46853F41B3AF62E00AF461D /* OpenWeatherMapController.m in Sources */,
 				F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */,
+				F40D44311B6472EE005A2029 /* URLParser.m in Sources */,
+				F40D44341B647375005A2029 /* URLEntity.m in Sources */,
 				F46B37931B48F35E0051EB8E /* LessonApp.xcdatamodeld in Sources */,
 				F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */,
 				F46853EE1B3AF62E00AF461D /* SignupButtonTableViewCell.m in Sources */,

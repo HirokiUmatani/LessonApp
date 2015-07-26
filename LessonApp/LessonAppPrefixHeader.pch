@@ -28,6 +28,8 @@
     #import "RegularExpression.h"
     #import "KeyChainData.h"
     #import "DirectoryFileManager.h"
+    #import "M3U8Serializer.h"
+    #import "URLParser.h"
 #define LessonApp_LessonAppPrefixHeader_pch
 
 #endif

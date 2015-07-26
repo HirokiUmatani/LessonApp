@@ -7,11 +7,11 @@
 //
 
 @protocol MovieDownloadControllerDelegate <NSObject>
-- (void)updateDownloadProgressBar:(CGFloat)downloadPercent;
+- (void)updateDownloadProgressBar:(CGFloat)downloadRait;
 @end
 
 
 @interface MovieDownloadController : NSObject
 @property (nonatomic,assign) id<MovieDownloadControllerDelegate>delegate;
-- (void)download;
+- (void)startMovieDownload:(NSString *)url;
 @end

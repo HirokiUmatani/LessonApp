@@ -11,6 +11,5 @@
 extern NSString * const CONST_OPEN_WEATHER_MAP_DATA_API;
 extern NSString * const CONST_OPEN_WEATHER_MAP_ICON_IMAGE_API;
 extern NSString * const CONST_M3U8_DOWNLOAD_API;
-extern NSString * const CONST_MOVIE_DOWNLOAD_API;
 
 @end

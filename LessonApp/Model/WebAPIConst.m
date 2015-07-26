@@ -20,7 +20,5 @@ NSString * const CONST_OPEN_WEATHER_MAP_ICON_IMAGE_API =
 NSString * const CONST_M3U8_DOWNLOAD_API =
 @"http://49.212.39.17/mario/high_15.m3u8";
 
-NSString * const CONST_MOVIE_DOWNLOAD_API =
-@"http://49.212.39.17/mario/high_15_%zd.ts";
 
 @end

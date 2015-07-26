@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DownLoadMovie" representedClassName="DownLoadMovie" syncable="YES">
+        <attribute name="create" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="downloadCount" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="downloadRait" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="downloadURLList" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="moviePlayDirPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="update" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="create" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="device_id" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,5 +17,6 @@
     </entity>
     <elements>
         <element name="User" positionX="-4428" positionY="-531" width="128" height="120"/>
+        <element name="DownLoadMovie" positionX="-4428" positionY="-495" width="128" height="135"/>
     </elements>
 </model>
