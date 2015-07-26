@@ -32,7 +32,7 @@
         entity = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([DownLoadMovie class])
                                              inManagedObjectContext:managedObjectContext];
         
-        update                      = [NSObject stringFromDate:[NSDate date]];
+        update                      = [NSString stringFromDate:[NSDate date]];
         entity.moviePlayDirPath     = moviePlayDirPath;
         entity.create               = update;
         entity.update               = update;
@@ -63,7 +63,7 @@
             return;
         }
         
-        update = [NSObject stringFromDate:[NSDate date]];
+        update = [NSString stringFromDate:[NSDate date]];
         for (entity in fetchDataLists)
         {
             if (downloadURLList)

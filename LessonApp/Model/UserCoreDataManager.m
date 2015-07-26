@@ -35,7 +35,7 @@
         user = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([User class])
                                              inManagedObjectContext:managedObjectContext];
         
-        update          = [NSObject stringFromDate:[NSDate date]];
+        update          = [NSString stringFromDate:[NSDate date]];
         user.device_id  = device_id;
         user.name       = name;
         user.mail       = mail;
@@ -67,7 +67,7 @@
             return;
         }
         
-        update = [NSObject stringFromDate:[NSDate date]];
+        update = [NSString stringFromDate:[NSDate date]];
         for (entity in fetchDataLists)
         {
             if (name)

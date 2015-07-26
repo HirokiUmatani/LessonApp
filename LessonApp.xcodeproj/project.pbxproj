@@ -57,6 +57,7 @@
 		F46B37931B48F35E0051EB8E /* LessonApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F46B37911B48F35E0051EB8E /* LessonApp.xcdatamodeld */; };
 		F46B37961B48F72A0051EB8E /* UserCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B37951B48F72A0051EB8E /* UserCoreDataManager.m */; };
 		F46B37991B48F79C0051EB8E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B37981B48F79C0051EB8E /* User.m */; };
+		F46E703A1B6501F200CF0FB5 /* NSData+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F46E70391B6501F200CF0FB5 /* NSData+extention.m */; };
 		F477557E1B63FCE40056FEBA /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = F477557D1B63FCE40056FEBA /* mario.png */; };
 		F489F81B1B1EA1860077BCFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489F81A1B1EA1860077BCFB /* CoreLocation.framework */; };
 		F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B1A5BD1B47BCC20000CC47 /* Thread.m */; };
@@ -165,6 +166,8 @@
 		F46B37951B48F72A0051EB8E /* UserCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCoreDataManager.m; sourceTree = "<group>"; };
 		F46B37971B48F79C0051EB8E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		F46B37981B48F79C0051EB8E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F46E70381B6501F200CF0FB5 /* NSData+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+extention.h"; sourceTree = "<group>"; };
+		F46E70391B6501F200CF0FB5 /* NSData+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+extention.m"; sourceTree = "<group>"; };
 		F477557D1B63FCE40056FEBA /* mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario.png; sourceTree = "<group>"; };
 		F489F81A1B1EA1860077BCFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F4B1A5BC1B47BCC20000CC47 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */,
 				F4C81B781B482A2F00337B31 /* UIViewController+extention.h */,
 				F4C81B791B482A2F00337B31 /* UIViewController+extention.m */,
+				F46E70381B6501F200CF0FB5 /* NSData+extention.h */,
+				F46E70391B6501F200CF0FB5 /* NSData+extention.m */,
 			);
 			name = Library;
 			path = library;
@@ -633,6 +638,7 @@
 				F46853F61B3AF62E00AF461D /* TopViewController.m in Sources */,
 				F4C81B7A1B482A2F00337B31 /* UIViewController+extention.m in Sources */,
 				F46853DF1B3AF62E00AF461D /* main.m in Sources */,
+				F46E703A1B6501F200CF0FB5 /* NSData+extention.m in Sources */,
 				F42775381B5204D2008082F8 /* RegularExpression.m in Sources */,
 				F46853EA1B3AF62E00AF461D /* MenuTableViewCell.m in Sources */,
 				F40D443A1B6490AE005A2029 /* DownLoadMovie.m in Sources */,

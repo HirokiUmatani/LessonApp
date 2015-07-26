@@ -20,13 +20,7 @@ typedef NS_ENUM(NSInteger, ChildViewController)
     ItemChildViewController     = 2,
     WeatherChildViewController  = 3,
 };
-@property (nonatomic,strong) MenuTableViewController *menuViewController;
-@property (nonatomic,strong) ItemCollectionViewController *itemCollectionViewController;
 @property (nonatomic,assign) BOOL isSideMenu;
-@property (weak, nonatomic) IBOutlet UIView *weatherView;
-@property (weak, nonatomic) IBOutlet UIView *itemView;
-@property (weak, nonatomic) IBOutlet UIView *signupView;
-@property (weak, nonatomic) IBOutlet UIView *menuView;
 @property (weak, nonatomic) IBOutlet UIView *mainView;
 - (IBAction)tapSideMenuButton:(UIBarButtonItem *)sender;
 @end
@@ -53,13 +47,14 @@ typedef NS_ENUM(NSInteger, ChildViewController)
 - (void)didSelectMenuTableViewIndexPath:(NSIndexPath *)indexPath
 {
     [self tapSideMenuButton:nil];
+    [self removeViews];
     switch (indexPath.row)
     {
         case MenuSelectSignup:
         {
-            [_mainView addSubview:_signupView];
+            [_mainView addSubview:[self.childViewControllers[SignupChildViewController] view]];
             self.navigationItem.title = @"Signup";
-            [AnimationView transformAlpha:_signupView
+            [AnimationView transformAlpha:[self.childViewControllers[SignupChildViewController] view]
                                     alpha:1.0f
                                completion:^(BOOL finished){}];
             return;
@@ -67,9 +62,9 @@ typedef NS_ENUM(NSInteger, ChildViewController)
         case MenuSelectHome:
         case MenuSelectLicenses:
         {
-            [_mainView addSubview:_itemView];
+            [_mainView addSubview:[self.childViewControllers[ItemChildViewController] view]];
             self.navigationItem.title = @"Home";
-            [AnimationView transformAlpha:_itemView
+            [AnimationView transformAlpha:[self.childViewControllers[ItemChildViewController] view]
                                     alpha:1.0f
                                completion:^(BOOL finished){}];
             return;
@@ -81,14 +76,14 @@ typedef NS_ENUM(NSInteger, ChildViewController)
 #pragma mark ItemCollectionViewControllerDelegate
 - (void)showWetherView
 {
-    [AnimationView transformInit:_weatherView
+    [AnimationView transformInit:[self.childViewControllers[WeatherChildViewController] view]
                       completion:^(BOOL finished){}];
 }
 - (void)hideWetherView
 {
-    [AnimationView transformMove:_weatherView
+    [AnimationView transformMove:[self.childViewControllers[WeatherChildViewController] view]
                            moveX:CONST_ANIMATION_NONE
-                           moveY:_weatherView.frame.size.height
+                           moveY:[self.childViewControllers[WeatherChildViewController] view].frame.size.height
                       completion:^(BOOL finished){}];
 }
 
@@ -96,29 +91,31 @@ typedef NS_ENUM(NSInteger, ChildViewController)
 - (void)showMenuView
 {
     [AnimationView transformMove:_mainView
-                           moveX:[NSObject screenWidth] * 2/ 5
+                           moveX:[NSString screenWidth] * 2/ 5
                            moveY:CONST_ANIMATION_NONE
-                      completion:^(BOOL finished){}];
-    [AnimationView transformAlpha:_menuView alpha:1.0f
-                       completion:^(BOOL finished) {}];
-    _isSideMenu = YES;
+                      completion:^(BOOL finished)
+    {
+        _isSideMenu = YES;
+    }];
 }
 
 - (void)hideMenuView
 {
     [AnimationView transformInit:_mainView
-                      completion:^(BOOL finished){}];
-    [AnimationView transformAlpha:_menuView alpha:0.0f
-                       completion:^(BOOL finished) {}];
-    _isSideMenu = NO;
+                      completion:^(BOOL finished)
+    {
+        _isSideMenu = NO;
+    }];
+    
 }
-
+- (void)removeViews
+{
+    [[self.childViewControllers[SignupChildViewController] view] removeFromSuperview];
+    [[self.childViewControllers[ItemChildViewController  ] view] removeFromSuperview];
+}
 - (void)setDelegate
 {
-    _menuViewController = self.childViewControllers[MenuChildViewController];
-    _menuViewController.delegate = self;
-    
-    _itemCollectionViewController = self.childViewControllers[ItemChildViewController];
-    _itemCollectionViewController.delegate = self;
+    [self.childViewControllers[MenuChildViewController] setDelegate:self];
+    [self.childViewControllers[ItemChildViewController] setDelegate:self];
 }
 @end

@@ -11,7 +11,7 @@
 
 static NSString * CONST_M3U8_MIME_TYPE   = @"vnd.apple.mpegURL";
 static NSString * CONST_TS_MIME_TYPE     = @"video/MP2T";
-
+static NSString *password = nil;
 @implementation LocalServer
 - (void)start
 {
@@ -20,7 +20,7 @@ static NSString * CONST_TS_MIME_TYPE     = @"video/MP2T";
 }
 
 - (void)setServer
-{
+{   password = [KeyChainData getUUID];
     [_webServer addHandlerForMethod:@"GET"
                                path:@"/mario/high_15.m3u8"
                        requestClass:[GCDWebServerURLEncodedFormRequest class]
@@ -31,11 +31,12 @@ static NSString * CONST_TS_MIME_TYPE     = @"video/MP2T";
          NSString *fileName = request.path;
          NSString *filePath = [NSString stringWithFormat:@"%@%@",homePath,fileName];
          NSData *data = [NSData dataWithContentsOfFile:filePath];
-         return [GCDWebServerDataResponse responseWithData:data
+         NSData *de_data = [data AES128DecryptWithKey:password iv:password];
+         return [GCDWebServerDataResponse responseWithData:de_data
                                                contentType:CONST_M3U8_MIME_TYPE];
      }];
     
-    // TODO need m3u8moviePathList
+    // TODO need moviePathList
     for (NSInteger i = 1; i < 32; i++)
     {
         NSString *path = [NSString stringWithFormat:@"/mario/high_15_%zd.ts",i];
@@ -49,7 +50,8 @@ static NSString * CONST_TS_MIME_TYPE     = @"video/MP2T";
              NSString *fileName = request.path;
              NSString *filePath = [NSString stringWithFormat:@"%@%@",homePath,fileName];
              NSData *data = [NSData dataWithContentsOfFile:filePath];
-             return [GCDWebServerDataResponse responseWithData:data
+             NSData *de_data = [data AES128DecryptWithKey:password iv:password];
+             return [GCDWebServerDataResponse responseWithData:de_data
                                                    contentType:CONST_TS_MIME_TYPE];
          }];
     }

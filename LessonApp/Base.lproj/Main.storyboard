@@ -133,11 +133,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="itemView" destination="uNb-2t-a4P" id="Td0-WQ-0O9"/>
                         <outlet property="mainView" destination="jK7-8G-Jxk" id="hVC-3y-cno"/>
-                        <outlet property="menuView" destination="LIa-5u-TVH" id="rvJ-Xe-YBu"/>
-                        <outlet property="signupView" destination="46T-s9-1RW" id="4LK-7J-vHT"/>
-                        <outlet property="weatherView" destination="oGw-pL-o5q" id="r31-hu-Y9D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-@interface NSObject(Device)
+@interface NSString(Device)
 
 + (NSDictionary *)appInfo;
 
@@ -16,4 +16,8 @@
 
 + (NSString *)stringFromDate:(NSDate *)date;
 + (NSDate   *)dateFromString:(NSString *)string;
+- (NSString *)md5;
+- (NSString *)AES128Key:(NSString *)salt;
+- (NSString *)AES128iv:(NSString *)salt;
+
 @end

@@ -30,6 +30,7 @@
     #import "DirectoryFileManager.h"
     #import "M3U8Serializer.h"
     #import "URLParser.h"
+    #import "NSData+extention.h"
 #define LessonApp_LessonAppPrefixHeader_pch
 
 #endif

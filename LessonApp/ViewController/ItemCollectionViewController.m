@@ -74,7 +74,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
     _itemCellLists = @[].mutableCopy;
     
     DownLoadMovieCoreDataManager *downLoadMovieCoreDataManager = [DownLoadMovieCoreDataManager new];
-    NSArray *downloadMovieDataLists = [downLoadMovieCoreDataManager fetchWithPredicate:nil].copy;
+    NSArray *downloadMovieDataLists = [downLoadMovieCoreDataManager fetchWithPredicate:nil];
     if (downloadMovieDataLists.count == 0)
     {
         ItemCellEntity *entity = [ItemCellEntity setCellEntity:normalCellType
@@ -82,17 +82,16 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
                                                 thumbnailImage:[UIImage imageNamed:@"mario.png"]
                                                    titleString:@"mario"];
         [_itemCellLists addObject:entity];
+        return;
     }
-    else
+    
+    for (DownLoadMovie *downloadMovieEntity in downloadMovieDataLists)
     {
-        for (DownLoadMovie *downloadMovieEntity in downloadMovieDataLists)
-        {
-            ItemCellEntity *entity = [ItemCellEntity setCellEntity:normalCellType
-                                                      progressRait:downloadMovieEntity.downloadRait
-                                                    thumbnailImage:[UIImage imageNamed:@"mario.png"]
-                                                       titleString:@"mario"];
-            [_itemCellLists addObject:entity];
-        }
+        ItemCellEntity *entity = [ItemCellEntity setCellEntity:normalCellType
+                                                  progressRait:downloadMovieEntity.downloadRait
+                                                thumbnailImage:[UIImage imageNamed:@"mario.png"]
+                                                   titleString:@"mario"];
+        [_itemCellLists addObject:entity];
     }
 }
 @end
