@@ -15,10 +15,10 @@ typedef NS_ENUM(NSInteger, MenuSelectCell)
 };
 typedef NS_ENUM(NSInteger, ChildViewController)
 {
-    MenuChildViewController     = 0,
-    SignupChildViewController   = 1,
-    ItemChildViewController     = 2,
-    WeatherChildViewController  = 3,
+    MenuChildViewController,
+    SignupChildViewController,
+    ItemChildViewController,
+    WeatherChildViewController,
 };
 @property (nonatomic,assign) BOOL isSideMenu;
 @property (weak, nonatomic) IBOutlet UIView *mainView;
@@ -118,4 +118,5 @@ typedef NS_ENUM(NSInteger, ChildViewController)
     [self.childViewControllers[MenuChildViewController] setDelegate:self];
     [self.childViewControllers[ItemChildViewController] setDelegate:self];
 }
+
 @end

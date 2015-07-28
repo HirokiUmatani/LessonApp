@@ -12,5 +12,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *tempLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 
-- (void)updateView:(OpenWeatherMapEntity *)entity;
+- (void)setView:(OpenWeatherMapEntity *)entity;
 @end

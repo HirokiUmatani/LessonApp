@@ -73,7 +73,7 @@ static NSString *CONST_VIEW_CLASS_NAME = @"OpenWeatherMapView";
          [_iconOpenWeatherMapFetcher startAsyncFetchingIconImageWithEntity:openWeatherMapEntity
                                                                    success:^(UIImage *iconImage)
          {
-             [_weatherView updateView:openWeatherMapEntity];
+             [_weatherView setView:openWeatherMapEntity];
              [_locationFetcher stopLocation];
          }
                                                                     failed:^(NSError *error)

@@ -8,13 +8,20 @@
 
 #import "ItemCollectionViewController.h"
 #import "ItemCollectionViewCell.h"
-#import "ItemCellEntity.h"
 #import "DownLoadMovieCoreDataManager.h"
-#import "DownLoadMovie.h"
+
 @interface ItemCollectionViewController ()
-@property CGFloat collectionViewOldOffset;
-@property NSMutableArray * itemCellLists;
+@property (nonatomic, assign) CGFloat collectionViewOldOffset;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+// [view]item cell
+@property (nonatomic, strong) NSMutableArray *itemCellLists;
+@property (nonatomic, strong) ItemEntity *itemCellEntity;
+@property (nonatomic, strong) ItemCollectionViewCell *itemCell;
+// [data] download movie
+@property (nonatomic, strong) NSArray *downloadMovieDataLists;
+@property (nonatomic, strong) DownLoadMovieCoreDataManager *downLoadMovieCoreDataManager;
+@property (nonatomic, strong) DownLoadMovie *downloadMovieEntity;
+
 @end
 
 @implementation ItemCollectionViewController
@@ -23,7 +30,6 @@
 {
     [super viewDidLoad];
     [self setBackGroundImage:@"subtle_stripes"];
-    [self setCellLists];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -55,12 +61,10 @@
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    ItemCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:
-                                    CONST_ITEM_CELL_IDENTIFIRE
-                                                                             forIndexPath:
-                                    indexPath];
-    [cell updateView:_itemCellLists indexPath:indexPath];
-    return cell;
+    _itemCell = [collectionView dequeueReusableCellWithReuseIdentifier:CONST_ITEM_CELL_IDENTIFIRE
+                                                          forIndexPath:indexPath];
+    [_itemCell updateView:_itemCellLists indexPath:indexPath];
+    return _itemCell;
 }
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView
@@ -73,25 +77,26 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     _itemCellLists = @[].mutableCopy;
     
-    DownLoadMovieCoreDataManager *downLoadMovieCoreDataManager = [DownLoadMovieCoreDataManager new];
-    NSArray *downloadMovieDataLists = [downLoadMovieCoreDataManager fetchWithPredicate:nil];
-    if (downloadMovieDataLists.count == 0)
+    _downLoadMovieCoreDataManager = [DownLoadMovieCoreDataManager new];
+    _downloadMovieDataLists = [_downLoadMovieCoreDataManager fetchWithPredicate:nil];
+    if (_downloadMovieDataLists.count == 0)
     {
-        ItemCellEntity *entity = [ItemCellEntity setCellEntity:normalCellType
-                                                  progressRait:0.0f
-                                                thumbnailImage:[UIImage imageNamed:@"mario.png"]
-                                                   titleString:@"mario"];
-        [_itemCellLists addObject:entity];
+        // TODO:Itemデータを作成未実装なので仮置き
+        _itemCellEntity = [ItemEntity setEntity:normalCellType
+                                   progressRait:0.0f
+                                 thumbnailImage:[UIImage imageNamed:@"mario.png"]
+                                    titleString:@"mario"];
+        [_itemCellLists addObject:_itemCellEntity];
         return;
     }
     
-    for (DownLoadMovie *downloadMovieEntity in downloadMovieDataLists)
+    for (_downloadMovieEntity in _downloadMovieDataLists)
     {
-        ItemCellEntity *entity = [ItemCellEntity setCellEntity:normalCellType
-                                                  progressRait:downloadMovieEntity.downloadRait
-                                                thumbnailImage:[UIImage imageNamed:@"mario.png"]
-                                                   titleString:@"mario"];
-        [_itemCellLists addObject:entity];
+        _itemCellEntity = [ItemEntity setEntity:normalCellType
+                                   progressRait:_downloadMovieEntity.downloadRait
+                                 thumbnailImage:[UIImage imageNamed:@"mario.png"]
+                                        titleString:@"mario"];
+        [_itemCellLists addObject:_itemCellEntity];
     }
 }
 @end

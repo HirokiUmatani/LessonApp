@@ -7,14 +7,13 @@
 //
 
 #import "SignupTableViewCell.h"
-#import "SignupCellEntity.h"
 
 @implementation SignupTableViewCell
 NSString * const CONST_SIGNUP_CELL_IDENTIFIRE = @"SignupTableViewCell";
 - (void)setView:(NSArray *)cellLists
       indexPath:(NSIndexPath *)indexPath
 {
-    SignupCellEntity *signupCellEntity = [SignupCellEntity new];
+    SignupEntity *signupCellEntity = [SignupEntity new];
     signupCellEntity = cellLists[indexPath.row];
     _titleLabel.text = signupCellEntity.title;
     _textField.text = signupCellEntity.textField;

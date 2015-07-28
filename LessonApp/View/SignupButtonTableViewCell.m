@@ -11,4 +11,10 @@
 @implementation SignupButtonTableViewCell
 
 NSString * const CONST_SIGNUP_BUTTON_CELL_IDENTIFIRE = @"SignupButtonTableViewCell";
+
+- (void)setView:(NSArray *)cellLists
+      indexPath:(NSIndexPath *)indexPath
+{
+    
+}
 @end

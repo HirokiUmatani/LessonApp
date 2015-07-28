@@ -8,12 +8,16 @@
 
 #import "MenuTableViewController.h"
 #import "MenuTableViewCell.h"
-#import "MenuCellEntity.h"
+#import "MenuPropertyManager.h"
 
 @interface MenuTableViewController ()
-@property NSMutableArray * menuCellLists;
-@property CGFloat tableViewOldOffset;
+@property (nonatomic, assign)CGFloat tableViewOldOffset;
+@property (nonatomic, strong)NSMutableArray *menuCellLists;
+@property (nonatomic, strong)MenuPropertyManager *menuPropertyManager;
+@property (nonatomic, strong)MenuEntity *menuEntity;
+@property (nonatomic, strong)MenuTableViewCell *menuCell;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation MenuTableViewController
@@ -24,6 +28,7 @@
     [self setBackGroundImage:@"subtle_stripes"];
     [self setMenuCellLists];
 }
+
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
                   willDecelerate:(BOOL)decelerate
@@ -41,7 +46,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [_delegate didSelectMenuTableViewIndexPath:indexPath];
 }
 #pragma mark - UITableViewDataSource
-// required
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
@@ -49,30 +53,30 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     cellCount = _menuCellLists.count;
     return cellCount;
 }
-// required
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *resultCell = [UITableViewCell new];
-    MenuCellEntity *menuCellEntity = [MenuCellEntity new];
-    menuCellEntity = _menuCellLists[indexPath.row];
-    switch (menuCellEntity.cellType)
+    UITableViewCell *cell = [UITableViewCell new];
+    _menuEntity = [MenuEntity new];
+    _menuEntity = _menuCellLists[indexPath.row];
+    switch (_menuEntity.cellType)
     {
         case titleCellType:
         {
-            MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CONST_MENU_CELL_IDENTIFIRE
+            _menuCell = [tableView dequeueReusableCellWithIdentifier:CONST_MENU_CELL_IDENTIFIRE
                                                                       forIndexPath:indexPath];
-            [cell updateView:_menuCellLists indexPath:indexPath];
-            resultCell = cell;
+            [_menuCell updateView:_menuCellLists indexPath:indexPath];
+            cell = _menuCell;
             break;
         }
     }
-    return resultCell;
+    return cell;
 }
 #pragma mark - Private
 - (void)setMenuCellLists
 {
-    _menuCellLists = [MenuCellEntity setCellLists].mutableCopy;
+    _menuPropertyManager = [MenuPropertyManager new];
+    _menuCellLists = [_menuPropertyManager fetchMenuListWithPlist:@"MenuCellPropertyList"].mutableCopy;
 }
 
 @end

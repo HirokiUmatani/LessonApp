@@ -1,12 +1,12 @@
 //
-//  SignupCellEntity.h
+//  SignupEntity.h
 //  LessonApp
 //
 //  Created by hirokiumatani on 2015/06/11.
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-@interface SignupCellEntity : NSObject
+@interface SignupEntity : NSObject
 
 typedef NS_ENUM(NSInteger, cellType)
 {
@@ -19,9 +19,8 @@ typedef NS_ENUM(NSInteger, cellType)
 @property (nonatomic,strong) NSString * title;
 @property (nonatomic,strong) NSString * textField;
 
-+ (SignupCellEntity *)setCellEntity:(cellType)cellType
-                            title:(NSString *)title
-                        textField:(NSString *)textField;
-+ (NSArray *)setCellLists;
++ (SignupEntity *)setEntity:(cellType)cellType
+                      title:(NSString *)title
+                  textField:(NSString *)textField;
 
 @end

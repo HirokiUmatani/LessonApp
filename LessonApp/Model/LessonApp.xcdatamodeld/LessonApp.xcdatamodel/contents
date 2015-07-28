@@ -8,15 +8,7 @@
         <attribute name="moviePlayDirPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="update" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="User" representedClassName="User" syncable="YES">
-        <attribute name="create" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="device_id" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="mail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="update" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <elements>
-        <element name="User" positionX="-4428" positionY="-531" width="128" height="120"/>
         <element name="DownLoadMovie" positionX="-4428" positionY="-495" width="128" height="135"/>
     </elements>
 </model>

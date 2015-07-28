@@ -7,7 +7,7 @@
 //
 
 #import "MenuTableViewCell.h"
-#import "MenuCellEntity.h"
+#import "MenuEntity.h"
 @interface MenuTableViewCell()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @end
@@ -17,7 +17,7 @@ NSString * const CONST_MENU_CELL_IDENTIFIRE = @"MenuTableViewCell";
 - (void)updateView:(NSArray *)cellLists
          indexPath:(NSIndexPath *)indexPath
 {
-    MenuCellEntity *menuCellEntity = [MenuCellEntity new];
+    MenuEntity *menuCellEntity = [MenuEntity new];
     menuCellEntity = cellLists[indexPath.row];
     _titleLabel.text = menuCellEntity.title;
 }

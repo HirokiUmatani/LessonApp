@@ -7,7 +7,7 @@
 //
 
 #import "ItemCollectionViewCell.h"
-#import "ItemCellEntity.h"
+
 @interface ItemCollectionViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
 @property (weak, nonatomic) IBOutlet UIProgressView *downloadBar;
@@ -38,7 +38,7 @@ NSString * const CONST_ITEM_CELL_IDENTIFIRE = @"ItemCollectionViewCell";
 - (void)updateView:(NSArray *)cellLists
          indexPath:(NSIndexPath *)indexPath
 {
-    ItemCellEntity *itemCellEntity = [ItemCellEntity new];
+    ItemEntity *itemCellEntity = [ItemEntity new];
     itemCellEntity = cellLists[indexPath.row];
     _thumbnailView.image = itemCellEntity.thumbnailImage;
     if (itemCellEntity.progressRait == 1.0f)

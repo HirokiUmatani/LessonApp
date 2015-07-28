@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-@interface MenuCellEntity : NSObject
+@interface MenuEntity : NSObject
 
 typedef NS_ENUM(NSInteger, cellType)
 {
@@ -16,7 +16,6 @@ typedef NS_ENUM(NSInteger, cellType)
 @property (nonatomic,assign) NSInteger cellType;
 @property (nonatomic,strong) NSString * title;
 
-+ (MenuCellEntity *)setCellEntity:(cellType)cellType
-                            title:(NSString *)title;
-+ (NSArray *)setCellLists;
++ (MenuEntity *)setEntity:(cellType)cellType
+                    title:(NSString *)title;
 @end
