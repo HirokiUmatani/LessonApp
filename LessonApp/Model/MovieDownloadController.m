@@ -17,7 +17,9 @@
     urlEntity = [URLParser urlParse:url];
     
     __SERIAL_THREAD_START__
+    // m3u8 Download
     [self m3u8Download:urlEntity];
+    // movie Download
     [self movieDownload:urlEntity];
     __THREAD_END__
 }
@@ -80,28 +82,31 @@
     
     for (NSInteger i = 0; i < downloadLists.count; i++)
     {
-        // check movie file
-        if ([DirectoryFileManager checkFileWithDirPath:urlEntity.path filePath:downloadLists[i]])continue;
-        
-        NSString *urlString = [NSString stringWithFormat:@"http://%@/%@/%@",urlEntity.host,urlEntity.path,downloadLists[i]];
-        
-        // download movie data
-        [[MovieDownloadFetcher new] movieFetchingWithURL:urlString success:^(NSData *movieBinary)
+        @autoreleasepool
         {
-            // movie data AES128 encode
-            NSData *enMovieBinary = [movieBinary AES128EncryptWithKey:nil iv:nil];
+            // check movie file
+            if ([DirectoryFileManager checkFileWithDirPath:urlEntity.path filePath:downloadLists[i]])continue;
             
-            // create movie file
-            [DirectoryFileManager createFile:enMovieBinary dirPath:urlEntity.path filePath:downloadLists[i] permisson:@0755];
+            NSString *urlString = [NSString stringWithFormat:@"http://%@/%@/%@",urlEntity.host,urlEntity.path,downloadLists[i]];
             
-            // update download progressbar
-            NSInteger j = i+1;
-            CGFloat downloadPercent = (CGFloat)j / (CGFloat)downloadLists.count;
-            [_delegate updateDownloadProgressBar:downloadPercent];
-            
-            // *** CoreData movie download count update
-            [downloadMovieCoreDataManager updateWithPredicate:predicate downloadURLList:downloadData downloadCount:@(i) downloadRait:downloadPercent];
-         }failed:^{}];
+            // download movie data
+            [[MovieDownloadFetcher new] movieFetchingWithURL:urlString success:^(NSData *movieBinary)
+             {
+                 // movie data AES128 encode
+                 NSData *enMovieBinary = [movieBinary AES128EncryptWithKey:nil iv:nil];
+                 
+                 // create movie file
+                 [DirectoryFileManager createFile:enMovieBinary dirPath:urlEntity.path filePath:downloadLists[i] permisson:@0755];
+                 
+                 // update download progressbar
+                 NSInteger j = i+1;
+                 CGFloat downloadPercent = (CGFloat)j / (CGFloat)downloadLists.count;
+                 [_delegate updateDownloadProgressBar:downloadPercent];
+                 
+                 // *** CoreData movie download count update
+                 [downloadMovieCoreDataManager updateWithPredicate:predicate downloadURLList:downloadData downloadCount:@(i) downloadRait:downloadPercent];
+             }failed:^{}];
+        }
     }
 }
 @end
