@@ -19,8 +19,8 @@ typedef NS_ENUM(NSInteger, cellType)
 @property (nonatomic,strong) NSString * title;
 @property (nonatomic,strong) NSString * textField;
 
-+ (SignupEntity *)setEntity:(cellType)cellType
-                      title:(NSString *)title
-                  textField:(NSString *)textField;
++ (SignupEntity *)setEntityWithCellType:(cellType)cellType
+                                  title:(NSString *)title
+                              textField:(NSString *)textField;
 
 @end

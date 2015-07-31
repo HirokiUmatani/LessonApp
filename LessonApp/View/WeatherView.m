@@ -6,18 +6,18 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "OpenWeatherMapView.h"
-#import "OpenWeatherMapFetcher.h"
+#import "WeatherView.h"
+#import "WeatherFetcher.h"
 
-@interface OpenWeatherMapView()
-@property OpenWeatherMapFetcher *iconFetcher;
+@interface WeatherView()
+@property WeatherFetcher *iconFetcher;
 @end
 
-@implementation OpenWeatherMapView
+@implementation WeatherView
 static NSString *degressCentigrade = @"%@℃";
-- (void)setView:(OpenWeatherMapEntity *)entity
+- (void)updateView:(WeatherEntity *)entity
 {
-    _iconImage.image = entity.weather.image;
+    _iconImage.image = entity.image;
     _tempLabel.text = [NSString stringWithFormat:degressCentigrade,entity.temp];
 }
 @end

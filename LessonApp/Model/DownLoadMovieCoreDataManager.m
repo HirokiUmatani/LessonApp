@@ -22,7 +22,7 @@
         return;
     }
     
-    DownLoadMovie *entity = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([DownLoadMovie class])
+    DownLoadMovieCoreDataEntity *entity = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([DownLoadMovieCoreDataEntity class])
                                          inManagedObjectContext:managedObjectContext];
     
     NSString * update           = [NSString stringFromDate:[NSDate date]];
@@ -50,7 +50,7 @@
     }
     
     NSString *update = [NSString stringFromDate:[NSDate date]];
-    for (DownLoadMovie *entity in fetchDataLists)
+    for (DownLoadMovieCoreDataEntity *entity in fetchDataLists)
     {
         @autoreleasepool
         {
@@ -86,7 +86,7 @@
         return;
     }
     
-    for (DownLoadMovie *entity in fetchDataLists)
+    for (DownLoadMovieCoreDataEntity *entity in fetchDataLists)
     {
         @autoreleasepool
         {
@@ -110,7 +110,7 @@
 {
     NSManagedObjectContext *managedObjectContext = [CoreDataManager sharedInstance].managedObjectContext;
     NSFetchRequest *request = [NSFetchRequest new];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:NSStringFromClass([DownLoadMovie class])
+    NSEntityDescription *entity = [NSEntityDescription entityForName:NSStringFromClass([DownLoadMovieCoreDataEntity class])
                          inManagedObjectContext:managedObjectContext];
     [request setEntity:entity];
     

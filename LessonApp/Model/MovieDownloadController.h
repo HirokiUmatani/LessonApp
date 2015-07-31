@@ -16,5 +16,5 @@
 
 @property (nonatomic,assign) id<MovieDownloadControllerDelegate>delegate;
 
-- (void)startMovieDownload:(NSString *)url;
+- (void)downloadMovieWithUrl:(NSString *)url;
 @end

@@ -9,21 +9,21 @@
 #import "MenuPropertyManager.h"
 
 @implementation MenuPropertyManager
-- (NSArray *)fetchMenuListWithPlist:(NSString *)plist
+- (NSArray *)fetchMenuEntityList
 {
-    NSArray *menuPlists = [self fetchPropertyListWithPlist:plist];
-    return [self convertMenuEntityFromPlists:menuPlists];
+    NSArray *propertyLists = [self fetchPropertyListWithPlist:@"MenuPropertyList"];
+    return [self convertMenuEntityListFromPlists:propertyLists];
 }
 
-- (NSArray *)convertMenuEntityFromPlists:(NSArray *)plists
+- (NSArray *)convertMenuEntityListFromPlists:(NSArray *)plists
 {
     
     NSMutableArray *results =@[].mutableCopy;
     for (NSDictionary *propertyDict in plists)
     {
         MenuEntity *entity = [MenuEntity new];
-        entity = [MenuEntity setEntity:[propertyDict[@"cellType"] integerValue]
-                                 title: propertyDict[@"title"]];
+        entity = [MenuEntity setEntityWithCellType:[propertyDict[@"cellType"] integerValue]
+                                             title: propertyDict[@"title"]];
         [results addObject:entity];
     }
     return results;

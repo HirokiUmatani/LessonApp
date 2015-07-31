@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, ChildViewController)
 {
     MenuChildViewController,
     SignupChildViewController,
-    ItemChildViewController,
+    MovieChildViewController,
     WeatherChildViewController,
 };
 @property (nonatomic,assign) BOOL isSideMenu;
@@ -27,20 +27,39 @@ typedef NS_ENUM(NSInteger, ChildViewController)
 
 @implementation TopViewController
 #pragma mark - Life Cycle
+- (void)loadView
+{
+    [super loadView];
+    [self setBackGroundImage:@"subtle_stripes"];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setBackGroundImage:@"subtle_stripes"];
-    [self setDelegate];
+    [self setDelegates];
 }
 
-#pragma mark - IBAction
+#pragma mark - Button Action
 - (IBAction)tapSideMenuButton:(UIBarButtonItem *)sender
 {
     if (_isSideMenu)
         [self hideMenuView];
     else
         [self showMenuView];
+}
+- (void)showMenuView
+{
+    _isSideMenu = YES;
+    [AnimationView transformMove:_mainView
+                           moveX:[NSString screenWidth] * 2/ 5
+                           moveY:CONST_ANIMATION_NONE
+                      completion:^(BOOL finished){}];
+}
+
+- (void)hideMenuView
+{
+    _isSideMenu = NO;
+    [AnimationView transformInit:_mainView
+                      completion:^(BOOL finished){}];
 }
 
 #pragma mark - MenuTableViewControllerDelegate
@@ -62,9 +81,9 @@ typedef NS_ENUM(NSInteger, ChildViewController)
         case MenuSelectHome:
         case MenuSelectLicenses:
         {
-            [_mainView addSubview:[self.childViewControllers[ItemChildViewController] view]];
+            [_mainView addSubview:[self.childViewControllers[MovieChildViewController] view]];
             self.navigationItem.title = @"Home";
-            [AnimationView transformAlpha:[self.childViewControllers[ItemChildViewController] view]
+            [AnimationView transformAlpha:[self.childViewControllers[MovieChildViewController] view]
                                     alpha:1.0f
                                completion:^(BOOL finished){}];
             return;
@@ -88,35 +107,15 @@ typedef NS_ENUM(NSInteger, ChildViewController)
 }
 
 #pragma mark - private
-- (void)showMenuView
-{
-    [AnimationView transformMove:_mainView
-                           moveX:[NSString screenWidth] * 2/ 5
-                           moveY:CONST_ANIMATION_NONE
-                      completion:^(BOOL finished)
-    {
-        _isSideMenu = YES;
-    }];
-}
-
-- (void)hideMenuView
-{
-    [AnimationView transformInit:_mainView
-                      completion:^(BOOL finished)
-    {
-        _isSideMenu = NO;
-    }];
-    
-}
 - (void)removeViews
 {
     [[self.childViewControllers[SignupChildViewController] view] removeFromSuperview];
-    [[self.childViewControllers[ItemChildViewController  ] view] removeFromSuperview];
+    [[self.childViewControllers[MovieChildViewController ] view] removeFromSuperview];
 }
-- (void)setDelegate
+- (void)setDelegates
 {
-    [self.childViewControllers[MenuChildViewController] setDelegate:self];
-    [self.childViewControllers[ItemChildViewController] setDelegate:self];
+    [self.childViewControllers[MenuChildViewController ] setDelegate:self];
+    [self.childViewControllers[MovieChildViewController] setDelegate:self];
 }
 
 @end

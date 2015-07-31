@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface DownLoadMovie : NSManagedObject
+@interface DownLoadMovieCoreDataEntity : NSManagedObject
 
 @property (nonatomic, retain) NSString * create;
 @property (nonatomic, retain) NSString * update;

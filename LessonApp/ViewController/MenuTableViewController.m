@@ -12,23 +12,38 @@
 
 @interface MenuTableViewController ()
 @property (nonatomic, assign)CGFloat tableViewOldOffset;
-@property (nonatomic, strong)NSMutableArray *menuCellLists;
+@property (nonatomic, strong)NSMutableArray *cellLists;
 @property (nonatomic, strong)MenuPropertyManager *menuPropertyManager;
 @property (nonatomic, strong)MenuEntity *menuEntity;
-@property (nonatomic, strong)MenuTableViewCell *menuCell;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation MenuTableViewController
 #pragma mark - Life Cycle
+- (void)loadView
+{
+    [super loadView];
+    [self setBackGroundImage:@"subtle_stripes"];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setBackGroundImage:@"subtle_stripes"];
-    [self setMenuCellLists];
+    [self setCellLists];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    _delegate = nil;
+    [super viewWillDisappear:animated];
+}
+- (void)dealloc
+{
+    _cellLists = nil;
+    _menuPropertyManager = nil;
+    _menuEntity = nil;
+    _tableView = nil;
+}
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
                   willDecelerate:(BOOL)decelerate
@@ -49,34 +64,32 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger cellCount = 0;
-    cellCount = _menuCellLists.count;
-    return cellCount;
+    return _cellLists.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [UITableViewCell new];
     _menuEntity = [MenuEntity new];
-    _menuEntity = _menuCellLists[indexPath.row];
+    _menuEntity = _cellLists[indexPath.row];
     switch (_menuEntity.cellType)
     {
         case titleCellType:
         {
-            _menuCell = [tableView dequeueReusableCellWithIdentifier:CONST_MENU_CELL_IDENTIFIRE
+            MenuTableViewCell *menuCell = [tableView dequeueReusableCellWithIdentifier:CONST_MENU_CELL_IDENTIFIRE
                                                                       forIndexPath:indexPath];
-            [_menuCell updateView:_menuCellLists indexPath:indexPath];
-            cell = _menuCell;
+            [menuCell updateView:_cellLists indexPath:indexPath];
+            cell = menuCell;
             break;
         }
     }
     return cell;
 }
 #pragma mark - Private
-- (void)setMenuCellLists
+- (void)setCellLists
 {
     _menuPropertyManager = [MenuPropertyManager new];
-    _menuCellLists = [_menuPropertyManager fetchMenuListWithPlist:@"MenuCellPropertyList"].mutableCopy;
+    _cellLists = [_menuPropertyManager fetchMenuEntityList].mutableCopy;
 }
 
 @end

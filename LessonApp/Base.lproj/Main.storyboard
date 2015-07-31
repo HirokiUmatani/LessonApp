@@ -165,7 +165,7 @@
         <!--Home-->
         <scene sceneID="aFP-e5-Hyf">
             <objects>
-                <viewController title="Home" automaticallyAdjustsScrollViewInsets="NO" id="c0v-lH-8Q8" customClass="ItemCollectionViewController" sceneMemberID="viewController">
+                <viewController title="Home" automaticallyAdjustsScrollViewInsets="NO" id="c0v-lH-8Q8" customClass="MovieCollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UZG-tx-IZa"/>
                         <viewControllerLayoutGuide type="bottom" id="LC7-bo-ScI"/>
@@ -184,7 +184,7 @@
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCollectionViewCell" id="0Rq-8k-aaM" customClass="ItemCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionViewCell" id="0Rq-8k-aaM" customClass="MovieCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="145" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -328,15 +328,15 @@
             </objects>
             <point key="canvasLocation" x="1748" y="1232"/>
         </scene>
-        <!--Open Weather Map Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="WpN-9u-8Qf">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="1dL-5u-f0p" customClass="OpenWeatherMapController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="1dL-5u-f0p" customClass="WeatherViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3de-P1-DVu"/>
                         <viewControllerLayoutGuide type="bottom" id="nUP-if-5uu"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="plY-VJ-xug" customClass="OpenWeatherMapView">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="plY-VJ-xug" customClass="WeatherView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

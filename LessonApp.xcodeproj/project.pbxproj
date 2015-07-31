@@ -12,7 +12,7 @@
 		F40D442E1B646916005A2029 /* M3U8Serializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D442D1B646916005A2029 /* M3U8Serializer.m */; };
 		F40D44311B6472EE005A2029 /* URLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D44301B6472EE005A2029 /* URLParser.m */; };
 		F40D44341B647375005A2029 /* URLEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D44331B647375005A2029 /* URLEntity.m */; };
-		F40D443A1B6490AE005A2029 /* DownLoadMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D44391B6490AE005A2029 /* DownLoadMovie.m */; };
+		F40D443A1B6490AE005A2029 /* DownLoadMovieCoreDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D44391B6490AE005A2029 /* DownLoadMovieCoreDataEntity.m */; };
 		F40D443D1B6490FD005A2029 /* DownLoadMovieCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D443C1B6490FD005A2029 /* DownLoadMovieCoreDataManager.m */; };
 		F412EC0B1B5D0CC9007FEDD7 /* MovieDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F412EC0A1B5D0CC9007FEDD7 /* MovieDownloadController.m */; };
 		F42719031B4E9E1400B6521A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = F42719021B4E9E1400B6521A /* Logger.m */; };
@@ -20,7 +20,7 @@
 		F44B0F441B5C8C7C00A6B939 /* KeyChainData.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F431B5C8C7C00A6B939 /* KeyChainData.m */; };
 		F44B0F471B5C9F6E00A6B939 /* MovieDownloadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */; };
 		F44B0F4A1B5CB92100A6B939 /* DirectoryFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */; };
-		F45915361B3E80C20041AAF9 /* MoviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45915351B3E80C20041AAF9 /* MoviewViewController.m */; };
+		F45915361B3E80C20041AAF9 /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45915351B3E80C20041AAF9 /* MoviePlayerViewController.m */; };
 		F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45962471B3E539900BFFFD2 /* DetailViewController.m */; };
 		F46853DA1B3AF62E00AF461D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853A61B3AF62E00AF461D /* AppDelegate.m */; };
 		F46853DB1B3AF62E00AF461D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853A81B3AF62E00AF461D /* LaunchScreen.xib */; };
@@ -29,19 +29,18 @@
 		F46853DF1B3AF62E00AF461D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853AE1B3AF62E00AF461D /* main.m */; };
 		F46853E01B3AF62E00AF461D /* WebAPIConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B11B3AF62E00AF461D /* WebAPIConst.m */; };
 		F46853E11B3AF62E00AF461D /* MenuEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B31B3AF62E00AF461D /* MenuEntity.m */; };
-		F46853E21B3AF62E00AF461D /* OpenWeatherMapEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B51B3AF62E00AF461D /* OpenWeatherMapEntity.m */; };
-		F46853E31B3AF62E00AF461D /* OpenWeatherMapFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B71B3AF62E00AF461D /* OpenWeatherMapFetcher.m */; };
-		F46853E41B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B91B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m */; };
+		F46853E21B3AF62E00AF461D /* WeatherEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B51B3AF62E00AF461D /* WeatherEntity.m */; };
+		F46853E31B3AF62E00AF461D /* WeatherFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853B71B3AF62E00AF461D /* WeatherFetcher.m */; };
 		F46853E51B3AF62E00AF461D /* SignupEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853BB1B3AF62E00AF461D /* SignupEntity.m */; };
-		F46853E81B3AF62E00AF461D /* ItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */; };
+		F46853E81B3AF62E00AF461D /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C11B3AF62E00AF461D /* MovieCollectionViewCell.m */; };
 		F46853EA1B3AF62E00AF461D /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C41B3AF62E00AF461D /* MenuTableViewCell.m */; };
-		F46853EC1B3AF62E00AF461D /* OpenWeatherMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C71B3AF62E00AF461D /* OpenWeatherMapView.m */; };
+		F46853EC1B3AF62E00AF461D /* WeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853C71B3AF62E00AF461D /* WeatherView.m */; };
 		F46853EE1B3AF62E00AF461D /* SignupButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853CA1B3AF62E00AF461D /* SignupButtonTableViewCell.m */; };
 		F46853F01B3AF62E00AF461D /* SignupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853CD1B3AF62E00AF461D /* SignupTableViewCell.m */; };
 		F46853F11B3AF62E00AF461D /* SignupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853CE1B3AF62E00AF461D /* SignupTableViewCell.xib */; };
-		F46853F21B3AF62E00AF461D /* ItemCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D11B3AF62E00AF461D /* ItemCollectionViewController.m */; };
+		F46853F21B3AF62E00AF461D /* MovieCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D11B3AF62E00AF461D /* MovieCollectionViewController.m */; };
 		F46853F31B3AF62E00AF461D /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D31B3AF62E00AF461D /* MenuTableViewController.m */; };
-		F46853F41B3AF62E00AF461D /* OpenWeatherMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D51B3AF62E00AF461D /* OpenWeatherMapController.m */; };
+		F46853F41B3AF62E00AF461D /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D51B3AF62E00AF461D /* WeatherViewController.m */; };
 		F46853F51B3AF62E00AF461D /* SignupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D71B3AF62E00AF461D /* SignupTableViewController.m */; };
 		F46853F61B3AF62E00AF461D /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D91B3AF62E00AF461D /* TopViewController.m */; };
 		F468540A1B3AF69D00AF461D /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853F91B3AF69D00AF461D /* AnimationView.m */; };
@@ -63,9 +62,9 @@
 		F477557E1B63FCE40056FEBA /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = F477557D1B63FCE40056FEBA /* mario.png */; };
 		F489F81B1B1EA1860077BCFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489F81A1B1EA1860077BCFB /* CoreLocation.framework */; };
 		F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B1A5BD1B47BCC20000CC47 /* Thread.m */; };
-		F4B52F241B63633C008D3799 /* ItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B52F231B63633C008D3799 /* ItemEntity.m */; };
-		F4B52F261B636B43008D3799 /* MenuCellPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4B52F251B636B43008D3799 /* MenuCellPropertyList.plist */; };
-		F4B52F281B636E5C008D3799 /* SignupCellPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4B52F271B636E5C008D3799 /* SignupCellPropertyList.plist */; };
+		F4B52F241B63633C008D3799 /* MovieEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B52F231B63633C008D3799 /* MovieEntity.m */; };
+		F4B52F261B636B43008D3799 /* MenuPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4B52F251B636B43008D3799 /* MenuPropertyList.plist */; };
+		F4B52F281B636E5C008D3799 /* SignupPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4B52F271B636E5C008D3799 /* SignupPropertyList.plist */; };
 		F4C81B7A1B482A2F00337B31 /* UIViewController+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C81B791B482A2F00337B31 /* UIViewController+extention.m */; };
 		F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */; };
 		F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */; };
@@ -83,8 +82,8 @@
 		F40D44301B6472EE005A2029 /* URLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLParser.m; path = library/URLParser.m; sourceTree = SOURCE_ROOT; };
 		F40D44321B647375005A2029 /* URLEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLEntity.h; path = ../LessonApp/Model/URLEntity.h; sourceTree = "<group>"; };
 		F40D44331B647375005A2029 /* URLEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLEntity.m; path = ../LessonApp/Model/URLEntity.m; sourceTree = "<group>"; };
-		F40D44381B6490AE005A2029 /* DownLoadMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadMovie.h; sourceTree = "<group>"; };
-		F40D44391B6490AE005A2029 /* DownLoadMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadMovie.m; sourceTree = "<group>"; };
+		F40D44381B6490AE005A2029 /* DownLoadMovieCoreDataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadMovieCoreDataEntity.h; sourceTree = "<group>"; };
+		F40D44391B6490AE005A2029 /* DownLoadMovieCoreDataEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadMovieCoreDataEntity.m; sourceTree = "<group>"; };
 		F40D443B1B6490FD005A2029 /* DownLoadMovieCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadMovieCoreDataManager.h; sourceTree = "<group>"; };
 		F40D443C1B6490FD005A2029 /* DownLoadMovieCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadMovieCoreDataManager.m; sourceTree = "<group>"; };
 		F412EC091B5D0CC9007FEDD7 /* MovieDownloadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieDownloadController.h; path = ../Model/MovieDownloadController.h; sourceTree = "<group>"; };
@@ -99,8 +98,8 @@
 		F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDownloadFetcher.m; sourceTree = "<group>"; };
 		F44B0F481B5CB92100A6B939 /* DirectoryFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryFileManager.h; sourceTree = "<group>"; };
 		F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryFileManager.m; sourceTree = "<group>"; };
-		F45915341B3E80C20041AAF9 /* MoviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviewViewController.h; sourceTree = "<group>"; };
-		F45915351B3E80C20041AAF9 /* MoviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviewViewController.m; sourceTree = "<group>"; };
+		F45915341B3E80C20041AAF9 /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
+		F45915351B3E80C20041AAF9 /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		F45962461B3E539900BFFFD2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F45962471B3E539900BFFFD2 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F46853A51B3AF62E00AF461D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = LessonApp/AppDelegate.h; sourceTree = "<group>"; };
@@ -114,31 +113,29 @@
 		F46853B11B3AF62E00AF461D /* WebAPIConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebAPIConst.m; sourceTree = "<group>"; };
 		F46853B21B3AF62E00AF461D /* MenuEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuEntity.h; path = LessonApp/Model/MenuEntity.h; sourceTree = "<group>"; };
 		F46853B31B3AF62E00AF461D /* MenuEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuEntity.m; path = LessonApp/Model/MenuEntity.m; sourceTree = "<group>"; };
-		F46853B41B3AF62E00AF461D /* OpenWeatherMapEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWeatherMapEntity.h; path = ../Model/OpenWeatherMapEntity.h; sourceTree = "<group>"; };
-		F46853B51B3AF62E00AF461D /* OpenWeatherMapEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWeatherMapEntity.m; path = ../Model/OpenWeatherMapEntity.m; sourceTree = "<group>"; };
-		F46853B61B3AF62E00AF461D /* OpenWeatherMapFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWeatherMapFetcher.h; path = ../Model/OpenWeatherMapFetcher.h; sourceTree = "<group>"; };
-		F46853B71B3AF62E00AF461D /* OpenWeatherMapFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWeatherMapFetcher.m; path = ../Model/OpenWeatherMapFetcher.m; sourceTree = "<group>"; };
-		F46853B81B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWeatherMapWeatherEntity.h; path = ../Model/OpenWeatherMapWeatherEntity.h; sourceTree = "<group>"; };
-		F46853B91B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWeatherMapWeatherEntity.m; path = ../Model/OpenWeatherMapWeatherEntity.m; sourceTree = "<group>"; };
+		F46853B41B3AF62E00AF461D /* WeatherEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherEntity.h; path = ../Model/WeatherEntity.h; sourceTree = "<group>"; };
+		F46853B51B3AF62E00AF461D /* WeatherEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherEntity.m; path = ../Model/WeatherEntity.m; sourceTree = "<group>"; };
+		F46853B61B3AF62E00AF461D /* WeatherFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherFetcher.h; path = ../Model/WeatherFetcher.h; sourceTree = "<group>"; };
+		F46853B71B3AF62E00AF461D /* WeatherFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherFetcher.m; path = ../Model/WeatherFetcher.m; sourceTree = "<group>"; };
 		F46853BA1B3AF62E00AF461D /* SignupEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupEntity.h; path = LessonApp/Model/SignupEntity.h; sourceTree = "<group>"; };
 		F46853BB1B3AF62E00AF461D /* SignupEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupEntity.m; path = LessonApp/Model/SignupEntity.m; sourceTree = "<group>"; };
-		F46853C01B3AF62E00AF461D /* ItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemCollectionViewCell.h; path = ../View/ItemCollectionViewCell.h; sourceTree = "<group>"; };
-		F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemCollectionViewCell.m; path = ../View/ItemCollectionViewCell.m; sourceTree = "<group>"; };
+		F46853C01B3AF62E00AF461D /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieCollectionViewCell.h; path = ../View/MovieCollectionViewCell.h; sourceTree = "<group>"; };
+		F46853C11B3AF62E00AF461D /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieCollectionViewCell.m; path = ../View/MovieCollectionViewCell.m; sourceTree = "<group>"; };
 		F46853C31B3AF62E00AF461D /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewCell.h; path = ../View/MenuTableViewCell.h; sourceTree = "<group>"; };
 		F46853C41B3AF62E00AF461D /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewCell.m; path = ../View/MenuTableViewCell.m; sourceTree = "<group>"; };
-		F46853C61B3AF62E00AF461D /* OpenWeatherMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWeatherMapView.h; path = ../View/OpenWeatherMapView.h; sourceTree = "<group>"; };
-		F46853C71B3AF62E00AF461D /* OpenWeatherMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWeatherMapView.m; path = ../View/OpenWeatherMapView.m; sourceTree = "<group>"; };
+		F46853C61B3AF62E00AF461D /* WeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherView.h; path = ../View/WeatherView.h; sourceTree = "<group>"; };
+		F46853C71B3AF62E00AF461D /* WeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherView.m; path = ../View/WeatherView.m; sourceTree = "<group>"; };
 		F46853C91B3AF62E00AF461D /* SignupButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupButtonTableViewCell.h; path = ../View/SignupButtonTableViewCell.h; sourceTree = "<group>"; };
 		F46853CA1B3AF62E00AF461D /* SignupButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupButtonTableViewCell.m; path = ../View/SignupButtonTableViewCell.m; sourceTree = "<group>"; };
 		F46853CC1B3AF62E00AF461D /* SignupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupTableViewCell.h; path = ../View/SignupTableViewCell.h; sourceTree = "<group>"; };
 		F46853CD1B3AF62E00AF461D /* SignupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupTableViewCell.m; path = ../View/SignupTableViewCell.m; sourceTree = "<group>"; };
 		F46853CE1B3AF62E00AF461D /* SignupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignupTableViewCell.xib; path = ../View/SignupTableViewCell.xib; sourceTree = "<group>"; };
-		F46853D01B3AF62E00AF461D /* ItemCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCollectionViewController.h; sourceTree = "<group>"; };
-		F46853D11B3AF62E00AF461D /* ItemCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCollectionViewController.m; sourceTree = "<group>"; };
+		F46853D01B3AF62E00AF461D /* MovieCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewController.h; sourceTree = "<group>"; };
+		F46853D11B3AF62E00AF461D /* MovieCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewController.m; sourceTree = "<group>"; };
 		F46853D21B3AF62E00AF461D /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		F46853D31B3AF62E00AF461D /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
-		F46853D41B3AF62E00AF461D /* OpenWeatherMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWeatherMapController.h; sourceTree = "<group>"; };
-		F46853D51B3AF62E00AF461D /* OpenWeatherMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWeatherMapController.m; sourceTree = "<group>"; };
+		F46853D41B3AF62E00AF461D /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		F46853D51B3AF62E00AF461D /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
 		F46853D61B3AF62E00AF461D /* SignupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupTableViewController.h; sourceTree = "<group>"; };
 		F46853D71B3AF62E00AF461D /* SignupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupTableViewController.m; sourceTree = "<group>"; };
 		F46853D81B3AF62E00AF461D /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
@@ -178,10 +175,10 @@
 		F489F81A1B1EA1860077BCFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F4B1A5BC1B47BCC20000CC47 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
 		F4B1A5BD1B47BCC20000CC47 /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thread.m; sourceTree = "<group>"; };
-		F4B52F221B63633C008D3799 /* ItemEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemEntity.h; path = LessonApp/Model/ItemEntity.h; sourceTree = SOURCE_ROOT; };
-		F4B52F231B63633C008D3799 /* ItemEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemEntity.m; path = LessonApp/Model/ItemEntity.m; sourceTree = SOURCE_ROOT; };
-		F4B52F251B636B43008D3799 /* MenuCellPropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MenuCellPropertyList.plist; path = LessonApp/Model/MenuCellPropertyList.plist; sourceTree = SOURCE_ROOT; };
-		F4B52F271B636E5C008D3799 /* SignupCellPropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SignupCellPropertyList.plist; path = LessonApp/Model/SignupCellPropertyList.plist; sourceTree = SOURCE_ROOT; };
+		F4B52F221B63633C008D3799 /* MovieEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieEntity.h; path = LessonApp/Model/MovieEntity.h; sourceTree = SOURCE_ROOT; };
+		F4B52F231B63633C008D3799 /* MovieEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieEntity.m; path = LessonApp/Model/MovieEntity.m; sourceTree = SOURCE_ROOT; };
+		F4B52F251B636B43008D3799 /* MenuPropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MenuPropertyList.plist; path = LessonApp/Model/MenuPropertyList.plist; sourceTree = SOURCE_ROOT; };
+		F4B52F271B636E5C008D3799 /* SignupPropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SignupPropertyList.plist; path = LessonApp/Model/SignupPropertyList.plist; sourceTree = SOURCE_ROOT; };
 		F4B6D0631B4C04C300F1D4DC /* LessonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C81B781B482A2F00337B31 /* UIViewController+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+extention.h"; path = "../LessonApp/ViewController/UIViewController+extention.h"; sourceTree = "<group>"; };
 		F4C81B791B482A2F00337B31 /* UIViewController+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+extention.m"; path = "../LessonApp/ViewController/UIViewController+extention.m"; sourceTree = "<group>"; };
@@ -275,7 +272,7 @@
 			children = (
 				F46853B01B3AF62E00AF461D /* WebAPIConst.h */,
 				F46853B11B3AF62E00AF461D /* WebAPIConst.m */,
-				F4B52F171B63481A008D3799 /* OpenWeatherMap */,
+				F4B52F171B63481A008D3799 /* Weather */,
 				F469ED361B5A10E300CD78C6 /* MovieDownload */,
 			);
 			name = WebAPI;
@@ -327,8 +324,8 @@
 			children = (
 				F412EC091B5D0CC9007FEDD7 /* MovieDownloadController.h */,
 				F412EC0A1B5D0CC9007FEDD7 /* MovieDownloadController.m */,
-				F46853D01B3AF62E00AF461D /* ItemCollectionViewController.h */,
-				F46853D11B3AF62E00AF461D /* ItemCollectionViewController.m */,
+				F46853D01B3AF62E00AF461D /* MovieCollectionViewController.h */,
+				F46853D11B3AF62E00AF461D /* MovieCollectionViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -336,8 +333,8 @@
 		F46FE0711B6835AF0083891A /* view */ = {
 			isa = PBXGroup;
 			children = (
-				F46853C01B3AF62E00AF461D /* ItemCollectionViewCell.h */,
-				F46853C11B3AF62E00AF461D /* ItemCollectionViewCell.m */,
+				F46853C01B3AF62E00AF461D /* MovieCollectionViewCell.h */,
+				F46853C11B3AF62E00AF461D /* MovieCollectionViewCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -345,8 +342,8 @@
 		F46FE0731B6836130083891A /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				F46853D41B3AF62E00AF461D /* OpenWeatherMapController.h */,
-				F46853D51B3AF62E00AF461D /* OpenWeatherMapController.m */,
+				F46853D41B3AF62E00AF461D /* WeatherViewController.h */,
+				F46853D51B3AF62E00AF461D /* WeatherViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -354,8 +351,8 @@
 		F46FE0741B68361E0083891A /* view */ = {
 			isa = PBXGroup;
 			children = (
-				F46853C61B3AF62E00AF461D /* OpenWeatherMapView.h */,
-				F46853C71B3AF62E00AF461D /* OpenWeatherMapView.m */,
+				F46853C61B3AF62E00AF461D /* WeatherView.h */,
+				F46853C71B3AF62E00AF461D /* WeatherView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -364,7 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				F46FE07A1B6838F90083891A /* Menu */,
-				F46FE0791B6838AE0083891A /* Item */,
+				F46FE0791B6838AE0083891A /* Movie */,
 				F46FE0781B6838760083891A /* Signup */,
 			);
 			name = PropertyList;
@@ -373,8 +370,8 @@
 		F46FE0771B6837AA0083891A /* DownLoadMovie */ = {
 			isa = PBXGroup;
 			children = (
-				F40D44381B6490AE005A2029 /* DownLoadMovie.h */,
-				F40D44391B6490AE005A2029 /* DownLoadMovie.m */,
+				F40D44381B6490AE005A2029 /* DownLoadMovieCoreDataEntity.h */,
+				F40D44391B6490AE005A2029 /* DownLoadMovieCoreDataEntity.m */,
 				F40D443B1B6490FD005A2029 /* DownLoadMovieCoreDataManager.h */,
 				F40D443C1B6490FD005A2029 /* DownLoadMovieCoreDataManager.m */,
 			);
@@ -388,18 +385,18 @@
 				F46FE06B1B682CAB0083891A /* SignupPropertyManager.m */,
 				F46853BA1B3AF62E00AF461D /* SignupEntity.h */,
 				F46853BB1B3AF62E00AF461D /* SignupEntity.m */,
-				F4B52F271B636E5C008D3799 /* SignupCellPropertyList.plist */,
+				F4B52F271B636E5C008D3799 /* SignupPropertyList.plist */,
 			);
 			name = Signup;
 			sourceTree = "<group>";
 		};
-		F46FE0791B6838AE0083891A /* Item */ = {
+		F46FE0791B6838AE0083891A /* Movie */ = {
 			isa = PBXGroup;
 			children = (
-				F4B52F221B63633C008D3799 /* ItemEntity.h */,
-				F4B52F231B63633C008D3799 /* ItemEntity.m */,
+				F4B52F221B63633C008D3799 /* MovieEntity.h */,
+				F4B52F231B63633C008D3799 /* MovieEntity.m */,
 			);
-			name = Item;
+			name = Movie;
 			sourceTree = "<group>";
 		};
 		F46FE07A1B6838F90083891A /* Menu */ = {
@@ -409,7 +406,7 @@
 				F46853B31B3AF62E00AF461D /* MenuEntity.m */,
 				F46FE0801B683A330083891A /* MenuPropertyManager.h */,
 				F46FE0811B683A330083891A /* MenuPropertyManager.m */,
-				F4B52F251B636B43008D3799 /* MenuCellPropertyList.plist */,
+				F4B52F251B636B43008D3799 /* MenuPropertyList.plist */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -442,14 +439,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		F46FE0841B683EF50083891A /* ViewController */ = {
+		F46FE0841B683EF50083891A /* View/Controller */ = {
 			isa = PBXGroup;
 			children = (
 				F4B52F1E1B635FBF008D3799 /* Storyboard_Image */,
 				F4B52F091B63433E008D3799 /* DetailView */,
 				F4B52F081B63432E008D3799 /* TopView */,
 			);
-			name = ViewController;
+			name = View/Controller;
 			sourceTree = "<group>";
 		};
 		F489F7D61B1D4EF60077BCFB = {
@@ -468,7 +465,7 @@
 			children = (
 				F4B52F181B634829008D3799 /* WeatherVIew */,
 				F4B52F111B6343DB008D3799 /* SignupView */,
-				F4B52F0E1B6343A2008D3799 /* ItemView */,
+				F4B52F0E1B6343A2008D3799 /* MovieView */,
 				F4B52F0A1B634358008D3799 /* MenuView */,
 				F46853D81B3AF62E00AF461D /* TopViewController.h */,
 				F46853D91B3AF62E00AF461D /* TopViewController.m */,
@@ -497,13 +494,13 @@
 			name = MenuView;
 			sourceTree = "<group>";
 		};
-		F4B52F0E1B6343A2008D3799 /* ItemView */ = {
+		F4B52F0E1B6343A2008D3799 /* MovieView */ = {
 			isa = PBXGroup;
 			children = (
 				F46FE0711B6835AF0083891A /* view */,
 				F46FE0701B6835A40083891A /* controller */,
 			);
-			name = ItemView;
+			name = MovieView;
 			sourceTree = "<group>";
 		};
 		F4B52F111B6343DB008D3799 /* SignupView */ = {
@@ -515,17 +512,15 @@
 			name = SignupView;
 			sourceTree = "<group>";
 		};
-		F4B52F171B63481A008D3799 /* OpenWeatherMap */ = {
+		F4B52F171B63481A008D3799 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				F46853B41B3AF62E00AF461D /* OpenWeatherMapEntity.h */,
-				F46853B51B3AF62E00AF461D /* OpenWeatherMapEntity.m */,
-				F46853B81B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.h */,
-				F46853B91B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m */,
-				F46853B61B3AF62E00AF461D /* OpenWeatherMapFetcher.h */,
-				F46853B71B3AF62E00AF461D /* OpenWeatherMapFetcher.m */,
+				F46853B41B3AF62E00AF461D /* WeatherEntity.h */,
+				F46853B51B3AF62E00AF461D /* WeatherEntity.m */,
+				F46853B61B3AF62E00AF461D /* WeatherFetcher.h */,
+				F46853B71B3AF62E00AF461D /* WeatherFetcher.m */,
 			);
-			name = OpenWeatherMap;
+			name = Weather;
 			path = ../ViewController;
 			sourceTree = "<group>";
 		};
@@ -543,8 +538,8 @@
 			children = (
 				F46854021B3AF69D00AF461D /* LocalServer.h */,
 				F46854031B3AF69D00AF461D /* LocalServer.m */,
-				F45915341B3E80C20041AAF9 /* MoviewViewController.h */,
-				F45915351B3E80C20041AAF9 /* MoviewViewController.m */,
+				F45915341B3E80C20041AAF9 /* MoviePlayerViewController.h */,
+				F45915351B3E80C20041AAF9 /* MoviePlayerViewController.m */,
 			);
 			name = MovieView;
 			sourceTree = "<group>";
@@ -585,7 +580,7 @@
 		F4B52F211B6360F6008D3799 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				F46FE0841B683EF50083891A /* ViewController */,
+				F46FE0841B683EF50083891A /* View/Controller */,
 				F46FE0831B683ECF0083891A /* Model */,
 			);
 			name = App;
@@ -664,8 +659,8 @@
 				F46853F11B3AF62E00AF461D /* SignupTableViewCell.xib in Resources */,
 				F40560731B3C2F24000B595A /* podfile in Resources */,
 				F46853DD1B3AF62E00AF461D /* Images.xcassets in Resources */,
-				F4B52F261B636B43008D3799 /* MenuCellPropertyList.plist in Resources */,
-				F4B52F281B636E5C008D3799 /* SignupCellPropertyList.plist in Resources */,
+				F4B52F261B636B43008D3799 /* MenuPropertyList.plist in Resources */,
+				F4B52F281B636E5C008D3799 /* SignupPropertyList.plist in Resources */,
 				F46853DB1B3AF62E00AF461D /* LaunchScreen.xib in Resources */,
 				F46853DC1B3AF62E00AF461D /* Main.storyboard in Resources */,
 			);
@@ -718,7 +713,7 @@
 				F46854111B3AF69D00AF461D /* Notification.m in Sources */,
 				F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */,
 				F468540D1B3AF69D00AF461D /* HttpFetcher.m in Sources */,
-				F4B52F241B63633C008D3799 /* ItemEntity.m in Sources */,
+				F4B52F241B63633C008D3799 /* MovieEntity.m in Sources */,
 				F46853F51B3AF62E00AF461D /* SignupTableViewController.m in Sources */,
 				F468540F1B3AF69D00AF461D /* LocalServer.m in Sources */,
 				F46853E11B3AF62E00AF461D /* MenuEntity.m in Sources */,
@@ -727,19 +722,18 @@
 				F412EC0B1B5D0CC9007FEDD7 /* MovieDownloadController.m in Sources */,
 				F44B0F441B5C8C7C00A6B939 /* KeyChainData.m in Sources */,
 				F46FE0821B683A330083891A /* MenuPropertyManager.m in Sources */,
-				F46853F21B3AF62E00AF461D /* ItemCollectionViewController.m in Sources */,
+				F46853F21B3AF62E00AF461D /* MovieCollectionViewController.m in Sources */,
 				F40D442E1B646916005A2029 /* M3U8Serializer.m in Sources */,
 				F42719031B4E9E1400B6521A /* Logger.m in Sources */,
 				F468540C1B3AF69D00AF461D /* NSString+Device.m in Sources */,
-				F46853E41B3AF62E00AF461D /* OpenWeatherMapWeatherEntity.m in Sources */,
 				F46853F01B3AF62E00AF461D /* SignupTableViewCell.m in Sources */,
 				F468540B1B3AF69D00AF461D /* AutoLayout.m in Sources */,
 				F468540E1B3AF69D00AF461D /* NSJSONSerialization+Serialize.m in Sources */,
 				F468540A1B3AF69D00AF461D /* AnimationView.m in Sources */,
-				F46853E81B3AF62E00AF461D /* ItemCollectionViewCell.m in Sources */,
+				F46853E81B3AF62E00AF461D /* MovieCollectionViewCell.m in Sources */,
 				F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */,
 				F44B0F4A1B5CB92100A6B939 /* DirectoryFileManager.m in Sources */,
-				F46853EC1B3AF62E00AF461D /* OpenWeatherMapView.m in Sources */,
+				F46853EC1B3AF62E00AF461D /* WeatherView.m in Sources */,
 				F46853F61B3AF62E00AF461D /* TopViewController.m in Sources */,
 				F4C81B7A1B482A2F00337B31 /* UIViewController+extention.m in Sources */,
 				F46853DF1B3AF62E00AF461D /* main.m in Sources */,
@@ -747,20 +741,20 @@
 				F46FE0691B6829DF0083891A /* PropertyListManager.m in Sources */,
 				F42775381B5204D2008082F8 /* RegularExpression.m in Sources */,
 				F46853EA1B3AF62E00AF461D /* MenuTableViewCell.m in Sources */,
-				F40D443A1B6490AE005A2029 /* DownLoadMovie.m in Sources */,
-				F46853E31B3AF62E00AF461D /* OpenWeatherMapFetcher.m in Sources */,
+				F40D443A1B6490AE005A2029 /* DownLoadMovieCoreDataEntity.m in Sources */,
+				F46853E31B3AF62E00AF461D /* WeatherFetcher.m in Sources */,
 				F46FE0661B67BB960083891A /* Connection.m in Sources */,
 				F44B0F471B5C9F6E00A6B939 /* MovieDownloadFetcher.m in Sources */,
 				F46FE06C1B682CAB0083891A /* SignupPropertyManager.m in Sources */,
-				F46853F41B3AF62E00AF461D /* OpenWeatherMapController.m in Sources */,
+				F46853F41B3AF62E00AF461D /* WeatherViewController.m in Sources */,
 				F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */,
 				F40D44311B6472EE005A2029 /* URLParser.m in Sources */,
 				F40D44341B647375005A2029 /* URLEntity.m in Sources */,
 				F46B37931B48F35E0051EB8E /* LessonApp.xcdatamodeld in Sources */,
 				F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */,
 				F46853EE1B3AF62E00AF461D /* SignupButtonTableViewCell.m in Sources */,
-				F45915361B3E80C20041AAF9 /* MoviewViewController.m in Sources */,
-				F46853E21B3AF62E00AF461D /* OpenWeatherMapEntity.m in Sources */,
+				F45915361B3E80C20041AAF9 /* MoviePlayerViewController.m in Sources */,
+				F46853E21B3AF62E00AF461D /* WeatherEntity.m in Sources */,
 				F46853DA1B3AF62E00AF461D /* AppDelegate.m in Sources */,
 				F46B37811B48AC0E0051EB8E /* CoreDataManager.m in Sources */,
 			);

@@ -6,25 +6,25 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "ItemCollectionViewController.h"
-#import "ItemCollectionViewCell.h"
+#import "MovieCollectionViewController.h"
+#import "MovieCollectionViewCell.h"
 #import "DownLoadMovieCoreDataManager.h"
 
-@interface ItemCollectionViewController ()
+@interface MovieCollectionViewController ()
 @property (nonatomic, assign) CGFloat collectionViewOldOffset;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 // [view]item cell
 @property (nonatomic, strong) NSMutableArray *itemCellLists;
-@property (nonatomic, strong) ItemEntity *itemCellEntity;
-@property (nonatomic, strong) ItemCollectionViewCell *itemCell;
+@property (nonatomic, strong) MovieEntity *itemCellEntity;
+
 // [data] download movie
 @property (nonatomic, strong) NSArray *downloadMovieDataLists;
 @property (nonatomic, strong) DownLoadMovieCoreDataManager *downLoadMovieCoreDataManager;
-@property (nonatomic, strong) DownLoadMovie *downloadMovieEntity;
+@property (nonatomic, strong) DownLoadMovieCoreDataEntity *downloadMovieEntity;
 
 @end
 
-@implementation ItemCollectionViewController
+@implementation MovieCollectionViewController
 #pragma mark - Life Cycle
 - (void)viewDidLoad
 {
@@ -61,10 +61,10 @@
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    _itemCell = [collectionView dequeueReusableCellWithReuseIdentifier:CONST_ITEM_CELL_IDENTIFIRE
+    MovieCollectionViewCell *movieCell = [collectionView dequeueReusableCellWithReuseIdentifier:CONST_MOVIE_CELL_IDENTIFIRE
                                                           forIndexPath:indexPath];
-    [_itemCell updateView:_itemCellLists indexPath:indexPath];
-    return _itemCell;
+    [movieCell updateView:_itemCellLists indexPath:indexPath];
+    return movieCell;
 }
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView
@@ -82,20 +82,20 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
     if (_downloadMovieDataLists.count == 0)
     {
         // TODO:Itemデータを作成未実装なので仮置き
-        _itemCellEntity = [ItemEntity setEntity:normalCellType
-                                   progressRait:0.0f
-                                 thumbnailImage:[UIImage imageNamed:@"mario.png"]
-                                    titleString:@"mario"];
+        _itemCellEntity = [MovieEntity setEntityWithCellType:normalCellType
+                                               progressRait:0.0f
+                                             thumbnailImage:[UIImage imageNamed:@"mario.png"]
+                                                titleString:@"mario"];
         [_itemCellLists addObject:_itemCellEntity];
         return;
     }
     
     for (_downloadMovieEntity in _downloadMovieDataLists)
     {
-        _itemCellEntity = [ItemEntity setEntity:normalCellType
-                                   progressRait:_downloadMovieEntity.downloadRait
-                                 thumbnailImage:[UIImage imageNamed:@"mario.png"]
-                                        titleString:@"mario"];
+        _itemCellEntity = [MovieEntity setEntityWithCellType:normalCellType
+                                               progressRait:_downloadMovieEntity.downloadRait
+                                             thumbnailImage:[UIImage imageNamed:@"mario.png"]
+                                                titleString:@"mario"];
         [_itemCellLists addObject:_itemCellEntity];
     }
 }

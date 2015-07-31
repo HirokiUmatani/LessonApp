@@ -9,22 +9,22 @@
 #import "SignupPropertyManager.h"
 
 @implementation SignupPropertyManager
-- (NSArray *)fetchSignupListWithPlist:(NSString *)plist
+- (NSArray *)fetchSignupEntityList
 {
-    NSArray *signupPlists = [self fetchPropertyListWithPlist:plist];
-    return [self convertSignupEntityFromPlists:signupPlists];
+    NSArray *propertyLists = [self fetchPropertyListWithPlist:@"SignupPropertyList"];
+    return [self convertSignupEntityListFromPlists:propertyLists];
 }
 
-- (NSArray *)convertSignupEntityFromPlists:(NSArray *)plists
+- (NSArray *)convertSignupEntityListFromPlists:(NSArray *)plists
 {
    
     NSMutableArray *results =@[].mutableCopy;
     for (NSDictionary *propertyDict in plists)
     {
         SignupEntity *entity = [SignupEntity new];
-        entity = [SignupEntity setEntity:[propertyDict[@"cellType"] integerValue]
-                                   title: propertyDict[@"title"]
-                               textField: propertyDict[@"textField"]];
+        entity = [SignupEntity setEntityWithCellType:[propertyDict[@"cellType"] integerValue]
+                                               title: propertyDict[@"title"]
+                                           textField: propertyDict[@"textField"]];
         [results addObject:entity];
     }
     return results;

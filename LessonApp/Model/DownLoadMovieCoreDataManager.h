@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "DownLoadMovie.h"
+#import "DownLoadMovieCoreDataEntity.h"
 @interface DownLoadMovieCoreDataManager : NSObject
 - (void)insertWithPredicate:(NSPredicate *)predicate
            moviePlayDirPath:(NSString *)moviePlayDirPath;

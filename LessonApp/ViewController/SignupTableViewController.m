@@ -25,17 +25,21 @@
 
 @implementation SignupTableViewController
 #pragma mark - Life Cycle
+- (void)loadView
+{
+    [super loadView];
+    [self setBackGroundImage:@"subtle_stripes"];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setBackGroundImage:@"subtle_stripes"];
     [self setCellLists];
     [self setKeyBoardReciveNotification];
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [super viewWillDisappear:animated];
     [self removeKeyBoardNotification];
+    [super viewWillDisappear:animated];
 }
 #pragma mark - UITableViewDataSource
 
@@ -60,7 +64,6 @@
                                                                  xibName:CONST_SIGNUP_CELL_IDENTIFIRE
                                                           cellIdentifire:CONST_SIGNUP_CELL_IDENTIFIRE
                                                                indexPath:indexPath];
-            
             [_signupCell setView:_signupCellLists indexPath:indexPath];
             _signupCell.textField.delegate = self;
             cell = _signupCell;
@@ -68,7 +71,8 @@
         }
         case buttonCellType:
         {
-            _signupButtonCell = [tableView dequeueReusableCellWithIdentifier:CONST_SIGNUP_BUTTON_CELL_IDENTIFIRE forIndexPath:indexPath];
+            _signupButtonCell = [tableView dequeueReusableCellWithIdentifier:CONST_SIGNUP_BUTTON_CELL_IDENTIFIRE
+                                                                forIndexPath:indexPath];
             cell = _signupButtonCell;
             break;
         }
@@ -147,9 +151,9 @@
 #pragma mark - Private
 - (void)setCellLists
 {
-    SignupPropertyManager * signupFetcher = [SignupPropertyManager new];
+    SignupPropertyManager * signupPropertyManager = [SignupPropertyManager new];
     _signupCellLists = @[].mutableCopy;
-    _signupCellLists = [signupFetcher fetchSignupListWithPlist:@"SignupCellPropertyList"].mutableCopy;
+    _signupCellLists = [signupPropertyManager fetchSignupEntityList].mutableCopy;
 }
 
 @end

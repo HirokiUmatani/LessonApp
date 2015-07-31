@@ -9,8 +9,8 @@
 #import "MenuEntity.h"
 
 @implementation MenuEntity
-+ (MenuEntity *)setEntity:(cellType)cellType
-                            title:(NSString *)title
++ (MenuEntity *)setEntityWithCellType:(cellType)cellType
+                                title:(NSString *)title
 {
     MenuEntity *entity = [MenuEntity new];
     entity.cellType = cellType;

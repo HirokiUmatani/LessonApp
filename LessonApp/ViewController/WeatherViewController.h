@@ -6,6 +6,6 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "OpenWeatherMapView.h"
-@interface OpenWeatherMapController : UIViewController<LocationFetcherDelegate>
+#import "WeatherView.h"
+@interface WeatherViewController : UIViewController<LocationFetcherDelegate>
 @end

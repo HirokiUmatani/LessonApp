@@ -6,8 +6,7 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "OpenWeatherMapWeatherEntity.h"
-@interface OpenWeatherMapEntity : NSObject
+@interface WeatherEntity : NSObject
 @property(nonatomic,strong)NSNumber *humidity;
 @property(nonatomic,strong)NSNumber *pressure;
 @property(nonatomic,strong)NSNumber *temp;
@@ -21,11 +20,16 @@
 @property(nonatomic,strong)NSNumber *sunset;
 @property(nonatomic,strong)NSNumber *type;
 @property(nonatomic,strong)NSNumber *visibility;
-@property(nonatomic,strong)OpenWeatherMapWeatherEntity *weather;
+@property(nonatomic,strong)NSString *weather_description;
+@property(nonatomic,strong)NSString *icon;
+@property(nonatomic,strong)UIImage  *image;
+@property(nonatomic,strong)NSNumber *weather_id;
+@property(nonatomic,strong)NSString *main;
 @property(nonatomic,strong)NSNumber *deg;
 @property(nonatomic,strong)NSNumber *speed;
 
-+ (OpenWeatherMapEntity *)convertEntityFromDictionary:(NSDictionary *)dictionary;
-+ (OpenWeatherMapEntity *)addEntityItem:(OpenWeatherMapEntity *)entity
-                    wetherImageIconData:(NSData *)iconImageData;
++ (WeatherEntity *)convertEntityFromDictionary:(NSDictionary *)dictionary;
+
++ (WeatherEntity *)updateEntity:(WeatherEntity *)entity
+                       wetherImageIcon:(UIImage *)iconImage;
 @end

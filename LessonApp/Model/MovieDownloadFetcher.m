@@ -13,12 +13,12 @@
                     success:(FetchSuccess)success
                      failed:(FetchFailed)failed
 {
-    [self startSyncFetchingWithUrlString:url
-                                 success:^(NSData *responceData)
+    [self fetchSyncWithUrlString:url
+                         success:^(NSData *responceData)
     {
         success(responceData);
     }
-                                  failed:^(NSError *error)
+                          failed:^(NSError *error)
     {
         failed(error);
     }];
@@ -28,12 +28,12 @@
                      success:(FetchSuccess)success
                       failed:(FetchFailed)failed
 {
-    [self startSyncFetchingWithUrlString:url
-                                 success:^(NSData *responceData)
+    [self fetchSyncWithUrlString:url
+                         success:^(NSData *responceData)
     {
         success(responceData);
     }
-                                  failed:^(NSError *error)
+                          failed:^(NSError *error)
     {
         failed(error);
     }];

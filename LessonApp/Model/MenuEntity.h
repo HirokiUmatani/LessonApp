@@ -15,7 +15,8 @@ typedef NS_ENUM(NSInteger, cellType)
 
 @property (nonatomic,assign) NSInteger cellType;
 @property (nonatomic,strong) NSString * title;
+@property (nonatomic,assign) BOOL isSelect;
 
-+ (MenuEntity *)setEntity:(cellType)cellType
-                    title:(NSString *)title;
++ (MenuEntity *)setEntityWithCellType:(cellType)cellType
+                                title:(NSString *)title;
 @end

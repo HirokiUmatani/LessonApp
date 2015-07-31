@@ -6,11 +6,11 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "OpenWeatherMapEntity.h"
-@implementation OpenWeatherMapEntity
-+ (OpenWeatherMapEntity *)convertEntityFromDictionary:(NSDictionary *)dictionary
+#import "WeatherEntity.h"
+@implementation WeatherEntity
++ (WeatherEntity *)convertEntityFromDictionary:(NSDictionary *)dictionary
 {
-    OpenWeatherMapEntity * entity = OpenWeatherMapEntity.new;
+    WeatherEntity * entity = [WeatherEntity new];
     
     // main
     entity.humidity =   dictionary[@"main"][@"humidity"];
@@ -34,13 +34,12 @@
     entity.visibility = dictionary[@"visibility"];
     
     // weather
-    for (NSInteger i = 0; i < [dictionary[@"weather"] count]; i++)
+    for (NSInteger i = 0; i< [dictionary[@"weather"] count]; i++)
     {
-        entity.weather = OpenWeatherMapWeatherEntity.new;
-        entity.weather.weather_description = dictionary[@"weather"][i][@"description"];
-        entity.weather.icon = dictionary[@"weather"][i][@"icon"];
-        entity.weather.weather_id = dictionary[@"weather"][i][@"id"];
-        entity.weather.main = dictionary[@"weather"][i][@"main"];
+        entity.weather_description = dictionary[@"weather"][i][@"description"];
+        entity.icon = dictionary[@"weather"][i][@"icon"];
+        entity.weather_id = dictionary[@"weather"][i][@"id"];
+        entity.main = dictionary[@"weather"][i][@"main"];
     }
     
     // wind
@@ -50,11 +49,10 @@
     return entity;
 }
 
-+ (OpenWeatherMapEntity *)addEntityItem:(OpenWeatherMapEntity *)entity
-                    wetherImageIconData:(NSData *)iconImageData
++ (WeatherEntity *)updateEntity:(WeatherEntity *)entity
+                       wetherImageIcon:(UIImage *)iconImage
 {
-    UIImage *imageIcon = [UIImage imageWithData:iconImageData];
-    entity.weather.image = imageIcon;
+    entity.image = iconImage;
     return entity;
 }
 @end

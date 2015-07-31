@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="DownLoadMovie" representedClassName="DownLoadMovie" syncable="YES">
+    <entity name="DownLoadMovieCoreDataEntity" representedClassName="DownLoadMovieCoreDataEntity" syncable="YES">
         <attribute name="create" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="downloadCount" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
         <attribute name="downloadRait" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -9,6 +9,6 @@
         <attribute name="update" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DownLoadMovie" positionX="-4428" positionY="-495" width="128" height="135"/>
+        <element name="DownLoadMovieCoreDataEntity" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

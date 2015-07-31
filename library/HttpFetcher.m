@@ -14,9 +14,9 @@ static NSString * httpPost = @"POST";
 static NSInteger  httpTimeOut = 15;
 
 #pragma mark - Get Sync
-- (void)startSyncFetchingWithUrlString:(NSString *)urlString
-                               success:(FetchSuccess)success
-                                failed:(FetchFailed)failed
+- (void)fetchSyncWithUrlString:(NSString *)urlString
+                       success:(FetchSuccess)success
+                        failed:(FetchFailed)failed
 {
     NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
                                                         method:httpGet];
@@ -42,9 +42,9 @@ static NSInteger  httpTimeOut = 15;
 }
 
 #pragma mark - Get ASync
-- (void)startAsyncFetchingWithUrlString:(NSString *)urlString
-                                success:(FetchSuccess)success
-                                 failed:(FetchFailed)failed
+- (void)fetchAsyncWithUrlString:(NSString *)urlString
+                        success:(FetchSuccess)success
+                         failed:(FetchFailed)failed
 {
     NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
                                                         method:httpGet];
@@ -70,10 +70,10 @@ static NSInteger  httpTimeOut = 15;
 }
 
 #pragma mark - Post ASync
-- (void)startFetchingWithUrlString:(NSString *)urlString
-                         paramData:(NSData *)paramData
-                           success:(FetchSuccess)success
-                            failed:(FetchFailed)failed
+- (void)fetchAsyncWithUrlString:(NSString *)urlString
+                      paramData:(NSData *)paramData
+                        success:(FetchSuccess)success
+                         failed:(FetchFailed)failed
 {
     NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
                                                         method:httpPost];

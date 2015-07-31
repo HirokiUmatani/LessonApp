@@ -6,11 +6,11 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-@class OpenWeatherMapEntity;
-@interface OpenWeatherMapView : UIView
+@class WeatherEntity;
+@interface WeatherView : UIView
 
 @property (weak, nonatomic) IBOutlet UILabel *tempLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 
-- (void)setView:(OpenWeatherMapEntity *)entity;
+- (void)updateView:(WeatherEntity *)entity;
 @end

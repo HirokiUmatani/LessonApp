@@ -6,22 +6,22 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "ItemCollectionViewCell.h"
+#import "MovieCollectionViewCell.h"
 
-@interface ItemCollectionViewCell()
+@interface MovieCollectionViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
 @property (weak, nonatomic) IBOutlet UIProgressView *downloadBar;
 - (IBAction)tapDownloadButton:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *downloadButton;
 @end
 
-@implementation ItemCollectionViewCell
-NSString * const CONST_ITEM_CELL_IDENTIFIRE = @"ItemCollectionViewCell";
+@implementation MovieCollectionViewCell
+NSString * const CONST_MOVIE_CELL_IDENTIFIRE = @"MovieCollectionViewCell";
 - (IBAction)tapDownloadButton:(UIButton *)sender
 {
     MovieDownloadController *movieDownloadController = [MovieDownloadController new];
     movieDownloadController.delegate = self;
-    [movieDownloadController startMovieDownload:CONST_M3U8_DOWNLOAD_API];
+    [movieDownloadController downloadMovieWithUrl:CONST_M3U8_DOWNLOAD_API];
 }
 #pragma mark - MovieDownloadControllerDelegate
 - (void)updateDownloadProgressBar:(CGFloat)barFloat
@@ -38,7 +38,7 @@ NSString * const CONST_ITEM_CELL_IDENTIFIRE = @"ItemCollectionViewCell";
 - (void)updateView:(NSArray *)cellLists
          indexPath:(NSIndexPath *)indexPath
 {
-    ItemEntity *itemCellEntity = [ItemEntity new];
+    MovieEntity *itemCellEntity = [MovieEntity new];
     itemCellEntity = cellLists[indexPath.row];
     _thumbnailView.image = itemCellEntity.thumbnailImage;
     if (itemCellEntity.progressRait == 1.0f)

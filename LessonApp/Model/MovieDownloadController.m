@@ -10,7 +10,7 @@
 #import "MovieDownloadFetcher.h"
 #import "DownLoadMovieCoreDataManager.h"
 @implementation MovieDownloadController
-- (void)startMovieDownload:(NSString *)url
+- (void)downloadMovieWithUrl:(NSString *)url
 {
     //Parse URL
     URLEntity *urlEntity = [URLEntity new];
@@ -37,7 +37,8 @@
     }
     
     // download m3u8 data
-    [[MovieDownloadFetcher new] m3u8FetchingWithURL:urlEntity.url success:^(NSData *m3u8Binary)
+    [[MovieDownloadFetcher new] m3u8FetchingWithURL:urlEntity.url
+                                            success:^(NSData *m3u8Binary)
     {
         // m3u8 AES128 encode
         NSData *enM3U8Binary = [m3u8Binary AES128EncryptWithKey:nil iv:nil];
@@ -90,7 +91,8 @@
             NSString *urlString = [NSString stringWithFormat:@"http://%@/%@/%@",urlEntity.host,urlEntity.path,downloadLists[i]];
             
             // download movie data
-            [[MovieDownloadFetcher new] movieFetchingWithURL:urlString success:^(NSData *movieBinary)
+            [[MovieDownloadFetcher new] movieFetchingWithURL:urlString
+                                                     success:^(NSData *movieBinary)
              {
                  // movie data AES128 encode
                  NSData *enMovieBinary = [movieBinary AES128EncryptWithKey:nil iv:nil];

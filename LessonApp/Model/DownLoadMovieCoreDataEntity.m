@@ -6,10 +6,10 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "DownLoadMovie.h"
+#import "DownLoadMovieCoreDataEntity.h"
 
 
-@implementation DownLoadMovie
+@implementation DownLoadMovieCoreDataEntity
 
 @dynamic create;
 @dynamic update;

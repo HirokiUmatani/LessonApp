@@ -6,11 +6,11 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-@protocol ItemCollectionViewControllerDelegate <NSObject>
+@protocol MovieCollectionViewControllerDelegate <NSObject>
 - (void)hideWetherView;
 - (void)showWetherView;
 @end
 
-@interface ItemCollectionViewController : UIViewController
-@property (nonatomic, weak) id<ItemCollectionViewControllerDelegate> delegate;
+@interface MovieCollectionViewController : UIViewController
+@property (nonatomic, weak) id<MovieCollectionViewControllerDelegate> delegate;
 @end

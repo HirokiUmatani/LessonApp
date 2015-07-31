@@ -6,14 +6,13 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "MoviewViewController.h"
+#import "MoviePlayerViewController.h"
 
-@implementation MoviewViewController
+@implementation MoviePlayerViewController
 - (id)init
 {
     if (self != [super init])
         return self;
-    
     _player = [MPMoviePlayerController new];
     return self;
 }

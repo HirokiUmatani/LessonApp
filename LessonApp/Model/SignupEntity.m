@@ -9,9 +9,9 @@
 #import "SignupEntity.h"
 
 @implementation SignupEntity
-+ (SignupEntity *)setEntity:(cellType)cellType
-                      title:(NSString *)title
-                  textField:(NSString *)textField
++ (SignupEntity *)setEntityWithCellType:(cellType)cellType
+                                  title:(NSString *)title
+                              textField:(NSString *)textField
 {
     SignupEntity *entiry = [SignupEntity new];
     entiry.cellType = cellType;

@@ -7,5 +7,5 @@
 //
 #import "SignupEntity.h"
 @interface SignupPropertyManager : PropertyListManager
-- (NSArray *)fetchSignupListWithPlist:(NSString *)plist;
+- (NSArray *)fetchSignupEntityList;
 @end

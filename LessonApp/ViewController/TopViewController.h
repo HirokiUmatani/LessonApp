@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 #import "MenuTableViewController.h"
-#import "ItemCollectionViewController.h"
+#import "MovieCollectionViewController.h"
 
-@interface TopViewController : UIViewController<MenuTableViewControllerDelegate,ItemCollectionViewControllerDelegate>
+@interface TopViewController : UIViewController<MenuTableViewControllerDelegate,MovieCollectionViewControllerDelegate>
 @end

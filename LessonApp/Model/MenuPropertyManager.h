@@ -7,5 +7,5 @@
 //
 #import "MenuEntity.h"
 @interface MenuPropertyManager : PropertyListManager
-- (NSArray *)fetchMenuListWithPlist:(NSString *)plist;;
+- (NSArray *)fetchMenuEntityList;
 @end
