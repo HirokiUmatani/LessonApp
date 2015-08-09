@@ -8,5 +8,4 @@
 
 @interface UIViewController(extention)
 - (void)setBackGroundImage:(NSString *)imageName;
-
 @end

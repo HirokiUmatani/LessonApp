@@ -7,7 +7,6 @@
 //
 
 #import "UIView+extention.h"
-
 @implementation UIView(extention)
 - (id)initWithXibName:(NSString *)xibName
 {
@@ -15,4 +14,5 @@
                                         owner:nil
                                       options:0] firstObject];
 }
+
 @end

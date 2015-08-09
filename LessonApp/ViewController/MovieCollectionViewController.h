@@ -9,6 +9,7 @@
 @protocol MovieCollectionViewControllerDelegate <NSObject>
 - (void)hideWetherView;
 - (void)showWetherView;
+- (void)didSelectMovieCollectionViewIndexPath:(NSIndexPath *)indexPath;
 @end
 
 @interface MovieCollectionViewController : UIViewController

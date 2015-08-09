@@ -6,8 +6,7 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface BaseContainerviewController : UIViewController
-
+- (void)setViewController:(NSString *)identifire;
+- (void)removeContainerView;
 @end

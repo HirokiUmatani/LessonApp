@@ -11,7 +11,7 @@
 #import "DownLoadMovieCoreDataManager.h"
 
 @interface MovieCollectionViewController ()
-@property (nonatomic, assign) CGFloat collectionViewOldOffset;
+@property (nonatomic, assign) CGPoint collectionViewOldOffset;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 // [view]item cell
 @property (nonatomic, strong) NSMutableArray *itemCellLists;
@@ -39,16 +39,20 @@
 }
 
 #pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
-                  willDecelerate:(BOOL)decelerate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    if (_collectionViewOldOffset > scrollView.contentOffset.y)
+    _collectionViewOldOffset = [scrollView contentOffset];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGPoint currentPoint = [scrollView contentOffset];
+    if(_collectionViewOldOffset.y > currentPoint.y)
         [_delegate showWetherView];
     else
         [_delegate hideWetherView];
-    
-    _collectionViewOldOffset = scrollView.contentOffset.y;
 }
+
 #pragma mark - UICollectionViewDataSource
 // required
 - (NSInteger)collectionView:(UICollectionView *)collectionView
@@ -70,6 +74,7 @@
 - (void)collectionView:(UICollectionView *)collectionView
 didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.delegate didSelectMovieCollectionViewIndexPath:indexPath];
     [self performSegueWithIdentifier:@"DetailViewController" sender:self];
 }
 #pragma mark - private

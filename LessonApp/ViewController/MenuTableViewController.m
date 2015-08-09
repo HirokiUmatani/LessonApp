@@ -11,7 +11,7 @@
 #import "MenuPropertyManager.h"
 
 @interface MenuTableViewController ()
-@property (nonatomic, assign)CGFloat tableViewOldOffset;
+@property (nonatomic, assign)CGPoint tableViewOldOffset;
 @property (nonatomic, strong)NSMutableArray *cellLists;
 @property (nonatomic, strong)MenuPropertyManager *menuPropertyManager;
 @property (nonatomic, strong)MenuEntity *menuEntity;
@@ -45,15 +45,20 @@
     _tableView = nil;
 }
 #pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
-                  willDecelerate:(BOOL)decelerate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    if (_tableViewOldOffset > scrollView.contentOffset.y)
+    _tableViewOldOffset = [scrollView contentOffset];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGPoint currentPoint = [scrollView contentOffset];
+    if(_tableViewOldOffset.y > currentPoint.y)
         [_delegate showWetherView];
     else
         [_delegate hideWetherView];
-    _tableViewOldOffset = scrollView.contentOffset.y;
 }
+
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath

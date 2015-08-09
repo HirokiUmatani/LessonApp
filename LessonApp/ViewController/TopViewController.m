@@ -6,22 +6,32 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 #import "TopViewController.h"
+#import "BaseContainerviewController.h"
 @interface TopViewController ()
-typedef NS_ENUM(NSInteger, MenuSelectCell)
+// Enum
+typedef NS_ENUM(NSInteger,MenuSelectCell)
 {
     MenuSelectSignup,
     MenuSelectHome,
+    MenuSelectFavorite,
+    MenuSelectDownload,
     MenuSelectLicenses
 };
-typedef NS_ENUM(NSInteger, ChildViewController)
+typedef NS_ENUM(NSInteger,TopContainerViewIndex)
 {
-    MenuChildViewController,
-    SignupChildViewController,
-    MovieChildViewController,
-    WeatherChildViewController,
+    TopContainerMenuView,
+    TopContainerMainView
 };
-@property (nonatomic,assign) BOOL isSideMenu;
+// ViewController
+@property (nonatomic,strong) BaseContainerviewController *containerViewController;
+@property (nonatomic,strong) MenuTableViewController *menuTableViewController;
+@property (nonatomic,strong) MovieCollectionViewController *movieCollectionViewController;
+// Flagment
+@property (nonatomic,assign) BOOL isShowSideMenu;
+// IBOutlet
 @property (weak, nonatomic) IBOutlet UIView *mainView;
+@property (weak, nonatomic) IBOutlet UIView *weatherView;
+// IBAction
 - (IBAction)tapSideMenuButton:(UIBarButtonItem *)sender;
 @end
 
@@ -35,87 +45,113 @@ typedef NS_ENUM(NSInteger, ChildViewController)
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setDelegates];
 }
-
-#pragma mark - Button Action
-- (IBAction)tapSideMenuButton:(UIBarButtonItem *)sender
+- (void)viewWillAppear:(BOOL)animated
 {
-    if (_isSideMenu)
-        [self hideMenuView];
-    else
-        [self showMenuView];
-}
-- (void)showMenuView
-{
-    _isSideMenu = YES;
-    [AnimationView transformMove:_mainView
-                           moveX:[NSString screenWidth] * 2/ 5
-                           moveY:CONST_ANIMATION_NONE
-                      completion:^(BOOL finished){}];
-}
-
-- (void)hideMenuView
-{
-    _isSideMenu = NO;
-    [AnimationView transformInit:_mainView
-                      completion:^(BOOL finished){}];
+    [self setViewController];
+    [self setDelegate];
 }
 
 #pragma mark - MenuTableViewControllerDelegate
 - (void)didSelectMenuTableViewIndexPath:(NSIndexPath *)indexPath
 {
-    [self tapSideMenuButton:nil];
-    [self removeViews];
+    [self hideMenuView];
     switch (indexPath.row)
     {
         case MenuSelectSignup:
         {
-            [_mainView addSubview:[self.childViewControllers[SignupChildViewController] view]];
             self.navigationItem.title = @"Signup";
-            [AnimationView transformAlpha:[self.childViewControllers[SignupChildViewController] view]
-                                    alpha:1.0f
-                               completion:^(BOOL finished){}];
+            [_containerViewController setViewController:@"SignupTableViewController"];
             return;
         }
         case MenuSelectHome:
+        {
+            self.navigationItem.title = @"Home";
+            [_containerViewController setViewController:@"MovieCollectionViewController"];
+            return;
+        }
+        case MenuSelectFavorite:
+        {
+            self.navigationItem.title = @"Favorite";
+            [_containerViewController removeContainerView];
+            return;
+        }
+        case MenuSelectDownload:
+        {
+            self.navigationItem.title = @"Download";
+            [_containerViewController removeContainerView];
+            return;
+        }
         case MenuSelectLicenses:
         {
-            [_mainView addSubview:[self.childViewControllers[MovieChildViewController] view]];
-            self.navigationItem.title = @"Home";
-            [AnimationView transformAlpha:[self.childViewControllers[MovieChildViewController] view]
-                                    alpha:1.0f
-                               completion:^(BOOL finished){}];
+            self.navigationItem.title = @"Licenses";
+            [_containerViewController removeContainerView];
             return;
         }
     }
 }
 
 #pragma mark - MenuTableViewControllerDelegate
-#pragma mark ItemCollectionViewControllerDelegate
+#pragma mark MovieCollectionViewControllerDelegate
 - (void)showWetherView
 {
-    [AnimationView transformInit:[self.childViewControllers[WeatherChildViewController] view]
+    [AnimationView transformInit:_weatherView
                       completion:^(BOOL finished){}];
 }
 - (void)hideWetherView
 {
-    [AnimationView transformMove:[self.childViewControllers[WeatherChildViewController] view]
+    [AnimationView transformMove:_weatherView
                            moveX:CONST_ANIMATION_NONE
-                           moveY:[self.childViewControllers[WeatherChildViewController] view].frame.size.height
-                      completion:^(BOOL finished){}];
+                           moveY:_weatherView.frame.size.height
+                      completion:^(BOOL finished)
+     {
+         _isShowSideMenu = YES;
+     }];
 }
 
-#pragma mark - private
-- (void)removeViews
+#pragma mark - MovieCollectionViewControllerDelegate
+- (void)didSelectMovieCollectionViewIndexPath:(NSIndexPath *)indexPath
 {
-    [[self.childViewControllers[SignupChildViewController] view] removeFromSuperview];
-    [[self.childViewControllers[MovieChildViewController ] view] removeFromSuperview];
-}
-- (void)setDelegates
-{
-    [self.childViewControllers[MenuChildViewController ] setDelegate:self];
-    [self.childViewControllers[MovieChildViewController] setDelegate:self];
+    [self hideMenuView];
 }
 
+#pragma mark - IBAction
+- (IBAction)tapSideMenuButton:(UIBarButtonItem *)sender
+{
+    if (_isShowSideMenu)
+        [self hideMenuView];
+    else
+        [self showMenuView];
+}
+
+#pragma mark - Private
+- (void)setViewController
+{
+    _menuTableViewController = self.childViewControllers[TopContainerMenuView];
+    _containerViewController = self.childViewControllers[TopContainerMainView];
+    _movieCollectionViewController = _containerViewController.childViewControllers[0];
+}
+- (void)setDelegate
+{
+    _menuTableViewController.delegate = self;
+    _movieCollectionViewController.delegate = self;
+}
+- (void)showMenuView
+{
+    [AnimationView transformMove:_mainView
+                           moveX:[NSString screenWidth] * 2/ 5
+                           moveY:CONST_ANIMATION_NONE
+                      completion:^(BOOL finished)
+     {
+         _isShowSideMenu = YES;
+     }];
+}
+- (void)hideMenuView
+{
+    [AnimationView transformInit:_mainView
+                      completion:^(BOOL finished)
+     {
+         _isShowSideMenu = NO;
+     }];
+}
 @end
