@@ -100,13 +100,7 @@
                  // create movie file
                  [DirectoryFileManager createFile:enMovieBinary dirPath:urlEntity.path filePath:downloadLists[i] permisson:@0755];
                  
-                 // update download progressbar
-                 NSInteger j = i+1;
-                 CGFloat downloadPercent = (CGFloat)j / (CGFloat)downloadLists.count;
-                 [_delegate updateDownloadProgressBar:downloadPercent];
-                 
-                 // *** CoreData movie download count update
-                 [downloadMovieCoreDataManager updateWithPredicate:predicate downloadURLList:downloadData downloadCount:@(i) downloadRait:downloadPercent];
+                
              }failed:^{}];
         }
     }

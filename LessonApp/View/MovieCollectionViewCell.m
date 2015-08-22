@@ -7,23 +7,18 @@
 //
 
 #import "MovieCollectionViewCell.h"
-
+#import "MovieDownloadController.h"
 @interface MovieCollectionViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UIButton *downloadButton;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+- (IBAction)tapFavoraiteButton:(UIButton *)sender;
+- (IBAction)tapDownloadButton:(UIButton *)sender;
 @end
 
 @implementation MovieCollectionViewCell
 NSString * const CONST_MOVIE_CELL_IDENTIFIRE = @"MovieCollectionViewCell";
-#pragma mark - MovieDownloadControllerDelegate
-- (void)updateDownloadProgressBar:(CGFloat)barFloat
-{
-    __MAIN_THREAD_START__
-    if (barFloat == 1.0f)
-    {
-        
-    }
-    __THREAD_END__
-}
 
 - (void)updateView:(NSArray *)cellLists
          indexPath:(NSIndexPath *)indexPath
@@ -35,5 +30,15 @@ NSString * const CONST_MOVIE_CELL_IDENTIFIRE = @"MovieCollectionViewCell";
     {
         return;
     }    
+}
+- (IBAction)tapFavoraiteButton:(UIButton *)sender
+{
+    
+}
+
+- (IBAction)tapDownloadButton:(UIButton *)sender
+{
+    MovieDownloadController *movieDownloadController = [MovieDownloadController new];
+    [movieDownloadController downloadMovieWithUrl:@"http://49.212.39.17/mario/high_15.m3u8"];
 }
 @end

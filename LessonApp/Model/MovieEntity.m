@@ -7,18 +7,21 @@
 //
 
 #import "MovieEntity.h"
-
 @implementation MovieEntity
 + (MovieEntity *)setEntityWithCellType:(cellType)cellType
-                         progressRait:(CGFloat)progressRait
-                       thumbnailImage:(UIImage *)thumbnailImage
-                          titleString:(NSString *)titleString
+                          progressRait:(CGFloat)progressRait
+                        thumbnailImage:(UIImage *)thumbnailImage
+                                 title:(NSString *)title
+                            isDownload:(BOOL)isDownload
+                            isFavorite:(BOOL)isFavorite
 {
     MovieEntity *entity = [MovieEntity new];
     entity.cellType = cellType;
     entity.progressRait = progressRait;
     entity.thumbnailImage = thumbnailImage;
-    entity.titleString = titleString;
+    entity.title = title;
+    entity.isDownload = isDownload;
+    entity.isFavorite = isFavorite;
     return entity;
 }
 @end

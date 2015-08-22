@@ -50,9 +50,9 @@
     return nil;
   }
   
-  if ((self = [super init])) {
+  if ((self = [super init]))
+  {
     _data = data;
-    
     self.contentType = type;
     self.contentLength = data.length;
   }

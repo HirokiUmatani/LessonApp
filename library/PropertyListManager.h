@@ -8,4 +8,6 @@
 
 @interface PropertyListManager : NSObject
 - (NSArray *)fetchPropertyListWithPlist:(NSString *)plist;
+- (BOOL)updatePropertyListWithPlist:(NSString *)plist
+                          predicate:(NSDictionary *)predicate;
 @end

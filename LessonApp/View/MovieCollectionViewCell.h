@@ -6,9 +6,8 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "MovieDownloadController.h"
 #import "MovieEntity.h"
-@interface MovieCollectionViewCell : UICollectionViewCell<MovieDownloadControllerDelegate>
+@interface MovieCollectionViewCell : UICollectionViewCell
 extern NSString * const CONST_MOVIE_CELL_IDENTIFIRE;
 
 - (void)updateView:(NSArray *)cellLists

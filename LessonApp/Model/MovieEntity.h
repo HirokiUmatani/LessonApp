@@ -14,12 +14,16 @@ typedef NS_ENUM(NSInteger, cellType)
 };
 
 @property (nonatomic,assign)NSInteger   cellType;
-@property (nonatomic,assign)CGFloat     progressRait;
 @property (nonatomic,strong)UIImage *   thumbnailImage;
-@property (nonatomic,strong)NSString *  titleString;
+@property (nonatomic,strong)NSString *  title;
+@property (nonatomic,assign)CGFloat     progressRait;
+@property (nonatomic,assign)BOOL        isDownload;
+@property (nonatomic,assign)BOOL        isFavorite;
 
 + (MovieEntity *)setEntityWithCellType:(cellType)cellType
-                         progressRait:(CGFloat)progressRait
-                       thumbnailImage:(UIImage *)thumbnailImage
-                          titleString:(NSString *)titleString;
+                          progressRait:(CGFloat)progressRait
+                        thumbnailImage:(UIImage *)thumbnailImage
+                                 title:(NSString *)title
+                            isDownload:(BOOL)isDownload
+                            isFavorite:(BOOL)isFavorite;
 @end

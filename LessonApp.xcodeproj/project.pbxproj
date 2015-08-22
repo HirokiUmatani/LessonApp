@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		073552FB7613ED4EC433BE4A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2EF1F18A8D2AF9FD8F8D1B /* libPods.a */; };
 		F40560731B3C2F24000B595A /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = F40560721B3C2F24000B595A /* podfile */; };
+		F4061C491B88396E00318F8D /* MoviePropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4061C481B88396E00318F8D /* MoviePropertyList.plist */; };
+		F4061C4C1B883AA000318F8D /* MoviePropertyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4061C4B1B883AA000318F8D /* MoviePropertyManager.m */; };
 		F40D442E1B646916005A2029 /* M3U8Serializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D442D1B646916005A2029 /* M3U8Serializer.m */; };
 		F40D44311B6472EE005A2029 /* URLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D44301B6472EE005A2029 /* URLParser.m */; };
 		F40D44341B647375005A2029 /* URLEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D44331B647375005A2029 /* URLEntity.m */; };
@@ -77,6 +79,9 @@
 		605C897D4917DA12EE58A282 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AFAFD21AE9F87D19562F14C9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F40560721B3C2F24000B595A /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F4061C481B88396E00318F8D /* MoviePropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MoviePropertyList.plist; path = LessonApp/Model/MoviePropertyList.plist; sourceTree = "<group>"; };
+		F4061C4A1B883AA000318F8D /* MoviePropertyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviePropertyManager.h; path = LessonApp/Model/MoviePropertyManager.h; sourceTree = "<group>"; };
+		F4061C4B1B883AA000318F8D /* MoviePropertyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviePropertyManager.m; path = LessonApp/Model/MoviePropertyManager.m; sourceTree = "<group>"; };
 		F40D442C1B646916005A2029 /* M3U8Serializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M3U8Serializer.h; path = library/M3U8Serializer.h; sourceTree = SOURCE_ROOT; };
 		F40D442D1B646916005A2029 /* M3U8Serializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M3U8Serializer.m; path = library/M3U8Serializer.m; sourceTree = SOURCE_ROOT; };
 		F40D442F1B6472EE005A2029 /* URLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLParser.h; path = library/URLParser.h; sourceTree = SOURCE_ROOT; };
@@ -400,6 +405,9 @@
 			children = (
 				F4B52F221B63633C008D3799 /* MovieEntity.h */,
 				F4B52F231B63633C008D3799 /* MovieEntity.m */,
+				F4061C481B88396E00318F8D /* MoviePropertyList.plist */,
+				F4061C4A1B883AA000318F8D /* MoviePropertyManager.h */,
+				F4061C4B1B883AA000318F8D /* MoviePropertyManager.m */,
 			);
 			name = Movie;
 			sourceTree = "<group>";
@@ -662,6 +670,7 @@
 			files = (
 				F477557E1B63FCE40056FEBA /* mario.png in Resources */,
 				F46853F11B3AF62E00AF461D /* SignupTableViewCell.xib in Resources */,
+				F4061C491B88396E00318F8D /* MoviePropertyList.plist in Resources */,
 				F40560731B3C2F24000B595A /* podfile in Resources */,
 				F46853DD1B3AF62E00AF461D /* Images.xcassets in Resources */,
 				F4B52F261B636B43008D3799 /* MenuPropertyList.plist in Resources */,
@@ -730,6 +739,7 @@
 				F46FE0821B683A330083891A /* MenuPropertyManager.m in Sources */,
 				F46853F21B3AF62E00AF461D /* MovieCollectionViewController.m in Sources */,
 				F40D442E1B646916005A2029 /* M3U8Serializer.m in Sources */,
+				F4061C4C1B883AA000318F8D /* MoviePropertyManager.m in Sources */,
 				F42719031B4E9E1400B6521A /* Logger.m in Sources */,
 				F468540C1B3AF69D00AF461D /* NSString+Device.m in Sources */,
 				F46853F01B3AF62E00AF461D /* SignupTableViewCell.m in Sources */,
