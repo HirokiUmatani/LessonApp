@@ -1,3 +1,12 @@
+#--------
+# OSX
 .DS_Store
-
-LessonApp.xcworkspace/xcuserdata/hirokiumatani.xcuserdatad/UserInterfaceState.xcuserstate
+#--------
+# Xcode Workspace
+*.xcworkspace/*
+!*.xcworkspace/contents.xcworkspacedata
+#--------
+# Xcode Project
+**/*.xcodeproj/*
+!**/*.xcodeproj/project.pbxproj
+!**/*.xcodeproj/default.*
