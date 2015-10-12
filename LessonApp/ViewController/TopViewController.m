@@ -131,11 +131,13 @@ typedef NS_ENUM(NSInteger,TopContainerViewIndex)
     _containerViewController = self.childViewControllers[TopContainerMainView];
     _movieCollectionViewController = _containerViewController.childViewControllers[0];
 }
+
 - (void)setDelegate
 {
     _menuTableViewController.delegate = self;
     _movieCollectionViewController.delegate = self;
 }
+
 - (void)showMenuView
 {
     [AnimationView transformMove:_mainView
