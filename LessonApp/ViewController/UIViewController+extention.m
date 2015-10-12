@@ -13,6 +13,6 @@
 - (void)setBackGroundImage:(NSString *)imageName
 {
     UIImage *backGroundImage = [UIImage imageNamed:imageName];
-    self.view.backgroundColor=[UIColor colorWithPatternImage:backGroundImage];
+    self.view.backgroundColor = [UIColor colorWithImage:backGroundImage];
 }
 @end

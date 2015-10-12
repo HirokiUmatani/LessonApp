@@ -22,6 +22,7 @@
 		F44B0F441B5C8C7C00A6B939 /* KeyChainData.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F431B5C8C7C00A6B939 /* KeyChainData.m */; };
 		F44B0F471B5C9F6E00A6B939 /* MovieDownloadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */; };
 		F44B0F4A1B5CB92100A6B939 /* DirectoryFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */; };
+		F454A3A31BCB4A3E008F37CF /* UIColor+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F454A3A21BCB4A3E008F37CF /* UIColor+extention.m */; };
 		F45915361B3E80C20041AAF9 /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45915351B3E80C20041AAF9 /* MoviePlayerViewController.m */; };
 		F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45962471B3E539900BFFFD2 /* DetailViewController.m */; };
 		F46167E11B775CBB0066C556 /* BaseContainerviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46167E01B775CBB0066C556 /* BaseContainerviewController.m */; };
@@ -104,6 +105,8 @@
 		F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDownloadFetcher.m; sourceTree = "<group>"; };
 		F44B0F481B5CB92100A6B939 /* DirectoryFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryFileManager.h; sourceTree = "<group>"; };
 		F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryFileManager.m; sourceTree = "<group>"; };
+		F454A3A11BCB4A3E008F37CF /* UIColor+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+extention.h"; sourceTree = "<group>"; };
+		F454A3A21BCB4A3E008F37CF /* UIColor+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+extention.m"; sourceTree = "<group>"; };
 		F45915341B3E80C20041AAF9 /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
 		F45915351B3E80C20041AAF9 /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		F45962461B3E539900BFFFD2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				F46FE0681B6829DF0083891A /* PropertyListManager.m */,
 				F46167DF1B775CBB0066C556 /* BaseContainerviewController.h */,
 				F46167E01B775CBB0066C556 /* BaseContainerviewController.m */,
+				F454A3A11BCB4A3E008F37CF /* UIColor+extention.h */,
+				F454A3A21BCB4A3E008F37CF /* UIColor+extention.m */,
 			);
 			name = Library;
 			path = library;
@@ -730,6 +735,7 @@
 				F468540D1B3AF69D00AF461D /* HttpFetcher.m in Sources */,
 				F4B52F241B63633C008D3799 /* MovieEntity.m in Sources */,
 				F46853F51B3AF62E00AF461D /* SignupTableViewController.m in Sources */,
+				F454A3A31BCB4A3E008F37CF /* UIColor+extention.m in Sources */,
 				F468540F1B3AF69D00AF461D /* LocalServer.m in Sources */,
 				F46853E11B3AF62E00AF461D /* MenuEntity.m in Sources */,
 				F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */,

@@ -32,6 +32,7 @@
     #import "URLParser.h"
     #import "NSData+extention.h"
     #import "PropertyListManager.h"
+    #import "UIColor+extention.h"
 #define LessonApp_LessonAppPrefixHeader_pch
 
 #endif
