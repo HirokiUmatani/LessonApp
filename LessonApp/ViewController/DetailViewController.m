@@ -15,11 +15,7 @@
 @end
 
 @implementation DetailViewController
-- (void)loadView
-{
-    [super loadView];
-    [self setBackGroundImage:@"subtle_stripes"];
-}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

@@ -11,10 +11,9 @@
 #import "MoviePropertyManager.h"
 @interface MovieCollectionViewController ()
 @property (nonatomic, assign) CGPoint collectionViewOldOffset;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *itemCellLists;
 @property (nonatomic, strong) MovieEntity *itemCellEntity;
-
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation MovieCollectionViewController
@@ -22,7 +21,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setBackGroundImage:@"subtle_stripes"];
 }
 - (void)viewWillAppear:(BOOL)animated
 {

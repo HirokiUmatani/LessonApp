@@ -12,7 +12,7 @@
 @implementation MovieDownloadController
 - (void)downloadMovieWithUrl:(NSString *)url
 {
-    //Parse URL
+    // Parse URL
     URLEntity *urlEntity = [URLEntity new];
     urlEntity = [URLParser urlParse:url];
     
@@ -27,7 +27,8 @@
 - (void)m3u8Download:(URLEntity *)urlEntity
 {
     // check m3u8 file
-    if([DirectoryFileManager checkFileWithDirPath:urlEntity.path filePath:urlEntity.lastPath])return;
+    if([DirectoryFileManager checkFileWithDirPath:urlEntity.path filePath:urlEntity.lastPath])
+        return;
     
     // check save directory
     if (![DirectoryFileManager checkDirectory:urlEntity.path])
@@ -50,7 +51,8 @@
         DownLoadMovieCoreDataManager * downloadMovieCoreDataManager = [DownLoadMovieCoreDataManager new];
         NSString * moviePlayDirPath = [NSString stringWithFormat:@"%@/%@",urlEntity.path,urlEntity.lastPath];
         NSPredicate *predicate = [downloadMovieCoreDataManager setPredicateWithSearchKey:@"moviePlayDirPath" searchValue:moviePlayDirPath];
-        [downloadMovieCoreDataManager insertWithPredicate:predicate moviePlayDirPath:moviePlayDirPath];
+        [downloadMovieCoreDataManager insertWithPredicate:predicate
+                                         moviePlayDirPath:moviePlayDirPath];
     }failed:^{}];
 }
 
@@ -99,8 +101,6 @@
                  
                  // create movie file
                  [DirectoryFileManager createFile:enMovieBinary dirPath:urlEntity.path filePath:downloadLists[i] permisson:@0755];
-                 
-                
              }failed:^{}];
         }
     }

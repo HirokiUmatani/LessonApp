@@ -13,6 +13,6 @@
 - (void)didSelectMenuTableViewIndexPath:(NSIndexPath *)indexPath;
 @end
 
-@interface MenuTableViewController : UIViewController
+@interface MenuTableViewController : BaseViewController
 @property (nonatomic, weak) id<MenuTableViewControllerDelegate> delegate;
 @end

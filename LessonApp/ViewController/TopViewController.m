@@ -37,11 +37,6 @@ typedef NS_ENUM(NSInteger,TopContainerViewIndex)
 
 @implementation TopViewController
 #pragma mark - Life Cycle
-- (void)loadView
-{
-    [super loadView];
-    [self setBackGroundImage:@"subtle_stripes"];
-}
 - (void)viewDidLoad
 {
     [super viewDidLoad];

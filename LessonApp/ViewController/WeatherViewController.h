@@ -7,5 +7,5 @@
 //
 
 #import "WeatherView.h"
-@interface WeatherViewController : UIViewController<LocationFetcherDelegate>
+@interface WeatherViewController : BaseViewController<LocationFetcherDelegate>
 @end

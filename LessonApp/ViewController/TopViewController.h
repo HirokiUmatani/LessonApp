@@ -8,5 +8,5 @@
 #import "MenuTableViewController.h"
 #import "MovieCollectionViewController.h"
 
-@interface TopViewController : UIViewController<MenuTableViewControllerDelegate,MovieCollectionViewControllerDelegate>
+@interface TopViewController : BaseViewController<MenuTableViewControllerDelegate,MovieCollectionViewControllerDelegate>
 @end

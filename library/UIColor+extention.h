@@ -9,5 +9,5 @@
 @interface UIColor(extention)
 + (UIColor *)colorWithColorCode:(NSString *)colorCode alpha:(CGFloat)alpha;
 
-+ (UIColor *)colorWithImage:(UIImage *)image;
++ (UIColor *)colorWithImageName:(NSString *)imageName;
 @end

@@ -33,6 +33,11 @@
     #import "NSData+extention.h"
     #import "PropertyListManager.h"
     #import "UIColor+extention.h"
+    #import "BaseConst.h"
+
+    #import "BaseViewController.h"
+    #import "BaseTableView.h"
+    #import "BaseNavigationController.h"
 #define LessonApp_LessonAppPrefixHeader_pch
 
 #endif

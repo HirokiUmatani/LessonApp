@@ -6,6 +6,6 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-@interface SignupTableViewController : UIViewController<UITextFieldDelegate>
+@interface SignupTableViewController : BaseViewController<UITextFieldDelegate>
 
 @end

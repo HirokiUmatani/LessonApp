@@ -56,8 +56,9 @@
     return [UIColor colorWithRed:red / 255.0 green:green / 255.0 blue:blue / 255.0 alpha:alpha];
 }
 
-+ (UIColor *)colorWithImage:(UIImage *)image
++ (UIColor *)colorWithImageName:(NSString *)imageName
 {
+    UIImage *image = [UIImage imageNamed:imageName];
     return [UIColor colorWithPatternImage:image];
 }
 @end

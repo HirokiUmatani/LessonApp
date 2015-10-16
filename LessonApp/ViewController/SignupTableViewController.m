@@ -14,22 +14,18 @@
 @interface SignupTableViewController ()
 @property (nonatomic,strong) Notification *keyboardNotification;
 @property (nonatomic,assign) CGFloat defaultTableViewheight;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableView_bottomConstraint;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray * signupCellLists;
 @property (nonatomic, strong) SignupPropertyManager * signupFetcher;
 @property (nonatomic, strong) SignupEntity *signupEntity;
 @property (nonatomic, strong) SignupTableViewCell *signupCell;
 @property (nonatomic, strong) SignupButtonTableViewCell *signupButtonCell;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableView_bottomConstraint;
+@property (weak, nonatomic) IBOutlet BaseTableView *tableView;
 @end
 
 @implementation SignupTableViewController
 #pragma mark - Life Cycle
-- (void)loadView
-{
-    [super loadView];
-    [self setBackGroundImage:@"subtle_stripes"];
-}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -46,8 +42,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger cellCount = _signupCellLists.count;
-    return cellCount;
+    return _signupCellLists.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView

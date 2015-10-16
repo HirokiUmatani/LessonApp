@@ -10,9 +10,4 @@
 
 @implementation UIViewController(extention)
 
-- (void)setBackGroundImage:(NSString *)imageName
-{
-    UIImage *backGroundImage = [UIImage imageNamed:imageName];
-    self.view.backgroundColor = [UIColor colorWithImage:backGroundImage];
-}
 @end

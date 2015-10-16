@@ -12,6 +12,6 @@
 - (void)didSelectMovieCollectionViewIndexPath:(NSIndexPath *)indexPath;
 @end
 
-@interface MovieCollectionViewController : UIViewController
+@interface MovieCollectionViewController : BaseViewController
 @property (nonatomic, weak) id<MovieCollectionViewControllerDelegate> delegate;
 @end

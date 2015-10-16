@@ -17,7 +17,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setBackGroundImage:@"subtle_stripes"];
     [self setViewController:@"MovieCollectionViewController"];
 }
 

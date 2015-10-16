@@ -73,6 +73,11 @@
 		F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA03041B40247E00E11F93 /* UITableViewCell+extention.m */; };
 		F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */; };
 		F4DA030B1B40269200E11F93 /* UIView+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DA030A1B40269200E11F93 /* UIView+extention.m */; };
+		F4E0684F1BCE77F700D100FB /* BaseConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E0684E1BCE77F700D100FB /* BaseConst.m */; };
+		F4E068521BD07D2200D100FB /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E068511BD07D2200D100FB /* BaseViewController.m */; };
+		F4E068561BD0801800D100FB /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E068551BD0801800D100FB /* BaseNavigationController.m */; };
+		F4E068591BD0805C00D100FB /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E068581BD0805C00D100FB /* BaseTabBarController.m */; };
+		F4E0685F1BD085E300D100FB /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E0685E1BD085E300D100FB /* BaseTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -199,6 +204,16 @@
 		F4DA03071B4025FF00E11F93 /* UICollectionViewCell+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+extention.m"; sourceTree = "<group>"; };
 		F4DA03091B40269200E11F93 /* UIView+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+extention.h"; sourceTree = "<group>"; };
 		F4DA030A1B40269200E11F93 /* UIView+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+extention.m"; sourceTree = "<group>"; };
+		F4E0684D1BCE77F700D100FB /* BaseConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseConst.h; path = library/BaseConst.h; sourceTree = "<group>"; };
+		F4E0684E1BCE77F700D100FB /* BaseConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseConst.m; path = library/BaseConst.m; sourceTree = "<group>"; };
+		F4E068501BD07D2200D100FB /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = LessonApp/ViewController/BaseViewController.h; sourceTree = "<group>"; };
+		F4E068511BD07D2200D100FB /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = LessonApp/ViewController/BaseViewController.m; sourceTree = "<group>"; };
+		F4E068541BD0801800D100FB /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseNavigationController.h; path = LessonApp/ViewController/BaseNavigationController.h; sourceTree = "<group>"; };
+		F4E068551BD0801800D100FB /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseNavigationController.m; path = LessonApp/ViewController/BaseNavigationController.m; sourceTree = "<group>"; };
+		F4E068571BD0805C00D100FB /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTabBarController.h; path = LessonApp/ViewController/BaseTabBarController.h; sourceTree = "<group>"; };
+		F4E068581BD0805C00D100FB /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTabBarController.m; path = LessonApp/ViewController/BaseTabBarController.m; sourceTree = "<group>"; };
+		F4E0685D1BD085E300D100FB /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableView.h; path = LessonApp/View/BaseTableView.h; sourceTree = "<group>"; };
+		F4E0685E1BD085E300D100FB /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableView.m; path = LessonApp/View/BaseTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -598,10 +613,28 @@
 		F4B52F211B6360F6008D3799 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F4E068531BD07FB700D100FB /* Base */,
 				F46FE0841B683EF50083891A /* View/Controller */,
 				F46FE0831B683ECF0083891A /* Model */,
 			);
 			name = App;
+			sourceTree = "<group>";
+		};
+		F4E068531BD07FB700D100FB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F4E0684D1BCE77F700D100FB /* BaseConst.h */,
+				F4E0684E1BCE77F700D100FB /* BaseConst.m */,
+				F4E068501BD07D2200D100FB /* BaseViewController.h */,
+				F4E068511BD07D2200D100FB /* BaseViewController.m */,
+				F4E068541BD0801800D100FB /* BaseNavigationController.h */,
+				F4E068551BD0801800D100FB /* BaseNavigationController.m */,
+				F4E068571BD0805C00D100FB /* BaseTabBarController.h */,
+				F4E068581BD0805C00D100FB /* BaseTabBarController.m */,
+				F4E0685D1BD085E300D100FB /* BaseTableView.h */,
+				F4E0685E1BD085E300D100FB /* BaseTableView.m */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		F6C816BAB14CA12561B0581E /* Frameworks */ = {
@@ -750,6 +783,8 @@
 				F468540C1B3AF69D00AF461D /* NSString+Device.m in Sources */,
 				F46853F01B3AF62E00AF461D /* SignupTableViewCell.m in Sources */,
 				F468540B1B3AF69D00AF461D /* AutoLayout.m in Sources */,
+				F4E0685F1BD085E300D100FB /* BaseTableView.m in Sources */,
+				F4E0684F1BCE77F700D100FB /* BaseConst.m in Sources */,
 				F468540E1B3AF69D00AF461D /* NSJSONSerialization+Serialize.m in Sources */,
 				F468540A1B3AF69D00AF461D /* AnimationView.m in Sources */,
 				F46853E81B3AF62E00AF461D /* MovieCollectionViewCell.m in Sources */,
@@ -757,6 +792,7 @@
 				F44B0F4A1B5CB92100A6B939 /* DirectoryFileManager.m in Sources */,
 				F46853EC1B3AF62E00AF461D /* WeatherView.m in Sources */,
 				F46853F61B3AF62E00AF461D /* TopViewController.m in Sources */,
+				F4E068521BD07D2200D100FB /* BaseViewController.m in Sources */,
 				F4C81B7A1B482A2F00337B31 /* UIViewController+extention.m in Sources */,
 				F46853DF1B3AF62E00AF461D /* main.m in Sources */,
 				F46E703A1B6501F200CF0FB5 /* NSData+extention.m in Sources */,
@@ -767,6 +803,7 @@
 				F46853E31B3AF62E00AF461D /* WeatherFetcher.m in Sources */,
 				F46FE0661B67BB960083891A /* Connection.m in Sources */,
 				F44B0F471B5C9F6E00A6B939 /* MovieDownloadFetcher.m in Sources */,
+				F4E068561BD0801800D100FB /* BaseNavigationController.m in Sources */,
 				F46FE06C1B682CAB0083891A /* SignupPropertyManager.m in Sources */,
 				F46853F41B3AF62E00AF461D /* WeatherViewController.m in Sources */,
 				F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */,
@@ -778,6 +815,7 @@
 				F45915361B3E80C20041AAF9 /* MoviePlayerViewController.m in Sources */,
 				F46853E21B3AF62E00AF461D /* WeatherEntity.m in Sources */,
 				F46853DA1B3AF62E00AF461D /* AppDelegate.m in Sources */,
+				F4E068591BD0805C00D100FB /* BaseTabBarController.m in Sources */,
 				F46B37811B48AC0E0051EB8E /* CoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
