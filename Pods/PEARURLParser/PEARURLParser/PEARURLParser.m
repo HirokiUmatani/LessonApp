@@ -16,26 +16,12 @@
     urlEntity.url = urlString;
     urlEntity.scheme = [url scheme];
     urlEntity.host = [url host];
-    
-    NSArray *tmpPath = [url pathComponents];
-    
-    NSMutableArray *pathsTmp = @[].mutableCopy;
-    for (NSString *path in tmpPath)
+    if (![[url lastPathComponent] isEqualToString:@""])
     {
-        if (![path isEqualToString:@"/"])
+        if (![[url lastPathComponent] isEqualToString:@"/"])
         {
-            [pathsTmp addObject:path];
+            urlEntity.lastPath = [url lastPathComponent];
         }
-    }
-    if (pathsTmp.count > 0)
-    {
-        urlEntity.paths = pathsTmp;
-    }
-    
-
-    if (pathsTmp.count > 0)
-    {
-        urlEntity.lastPath = [url lastPathComponent];
     }
     if (![[urlEntity.lastPath pathExtension] isEqualToString:@""])
     {
@@ -45,6 +31,55 @@
     {
         urlEntity.extention = [urlEntity.lastPath pathExtension];
     }
+    
+    NSArray *tmpPath = [url pathComponents];
+    
+    NSMutableArray *pathsTmp = @[].mutableCopy;
+    for (NSString *path in tmpPath)
+    {
+        if (![path isEqualToString:@"/"])
+        {
+            if(![[url lastPathComponent] isEqualToString:path])
+            {
+                [pathsTmp addObject:path];
+            }
+            
+        }
+    }
+    if (pathsTmp.count > 0)
+    {
+        urlEntity.paths = pathsTmp;
+    }
+    
+    NSString *dirpath=@"";
+    
+    for (NSInteger i = 0; i < urlEntity.paths.count; i++)
+    {
+        NSString *tmp = urlEntity.paths[i];
+        if (i == 0)
+        {
+            dirpath = tmp;
+        }
+        else
+        {
+            dirpath = [NSString stringWithFormat:@"%@/%@",dirpath,tmp];
+        }
+    }
+    
+    if (urlEntity.paths.count == 1)
+    {
+        urlEntity.path = dirpath;
+        
+    }
+    else if (urlEntity.paths.count > 1)
+    {
+        urlEntity.path = [dirpath stringByDeletingLastPathComponent];
+    }
+    
+    
+    
+
+    
     
     return urlEntity;
 }
