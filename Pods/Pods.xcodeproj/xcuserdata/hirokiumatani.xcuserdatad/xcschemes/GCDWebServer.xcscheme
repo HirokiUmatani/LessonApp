@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '546AD87A1CBECC46FB5E9863'
+               BlueprintIdentifier = 'DA11DFA1ED778C9951214894'
                BlueprintName = 'GCDWebServer'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libGCDWebServer.a'>

@@ -14,7 +14,7 @@
 {
     // Parse URL
     URLEntity *urlEntity = [URLEntity new];
-    urlEntity = [URLParser urlParse:url];
+    urlEntity = [PEARURLParser urlParse:url];
     
     __SERIAL_THREAD_START__
     // m3u8 Download

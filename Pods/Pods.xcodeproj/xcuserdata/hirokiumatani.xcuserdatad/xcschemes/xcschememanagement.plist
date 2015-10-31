@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PEARURLParser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6F92D290FA20A42D52FFE28477D2A496</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>93381B68B4ECADD76DC3A8D03A12616A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9628CAED136D2033F69A5F98EBBDD17</key>
+		<key>B7B629E1659467E63C4B2892D60B0246</key>
 		<dict>
 			<key>primary</key>
 			<true/>

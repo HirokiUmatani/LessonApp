@@ -14,7 +14,7 @@
      */
     #import "PEARHttpFetcher.h"
     #import "PEARFileManager.h"
-
+    #import "PEARURLParser.h"
     /*
      extention
      */
@@ -40,7 +40,7 @@
     #import "RegularExpression.h"
     #import "KeyChainData.h"
     #import "M3U8Serializer.h"
-    #import "URLParser.h"
+
     #import "PropertyListManager.h"
 
     /*

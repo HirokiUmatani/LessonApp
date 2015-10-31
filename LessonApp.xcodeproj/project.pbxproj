@@ -12,8 +12,6 @@
 		F4061C491B88396E00318F8D /* MoviePropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4061C481B88396E00318F8D /* MoviePropertyList.plist */; };
 		F4061C4C1B883AA000318F8D /* MoviePropertyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4061C4B1B883AA000318F8D /* MoviePropertyManager.m */; };
 		F40D442E1B646916005A2029 /* M3U8Serializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D442D1B646916005A2029 /* M3U8Serializer.m */; };
-		F40D44311B6472EE005A2029 /* URLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D44301B6472EE005A2029 /* URLParser.m */; };
-		F40D44341B647375005A2029 /* URLEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D44331B647375005A2029 /* URLEntity.m */; };
 		F40D443A1B6490AE005A2029 /* DownLoadMovieCoreDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D44391B6490AE005A2029 /* DownLoadMovieCoreDataEntity.m */; };
 		F40D443D1B6490FD005A2029 /* DownLoadMovieCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D443C1B6490FD005A2029 /* DownLoadMovieCoreDataManager.m */; };
 		F412EC0B1B5D0CC9007FEDD7 /* MovieDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F412EC0A1B5D0CC9007FEDD7 /* MovieDownloadController.m */; };
@@ -88,10 +86,6 @@
 		F4061C4B1B883AA000318F8D /* MoviePropertyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoviePropertyManager.m; path = LessonApp/Model/MoviePropertyManager.m; sourceTree = "<group>"; };
 		F40D442C1B646916005A2029 /* M3U8Serializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M3U8Serializer.h; path = library/M3U8Serializer.h; sourceTree = SOURCE_ROOT; };
 		F40D442D1B646916005A2029 /* M3U8Serializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M3U8Serializer.m; path = library/M3U8Serializer.m; sourceTree = SOURCE_ROOT; };
-		F40D442F1B6472EE005A2029 /* URLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLParser.h; path = library/URLParser.h; sourceTree = SOURCE_ROOT; };
-		F40D44301B6472EE005A2029 /* URLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLParser.m; path = library/URLParser.m; sourceTree = SOURCE_ROOT; };
-		F40D44321B647375005A2029 /* URLEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLEntity.h; path = ../LessonApp/Model/URLEntity.h; sourceTree = "<group>"; };
-		F40D44331B647375005A2029 /* URLEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLEntity.m; path = ../LessonApp/Model/URLEntity.m; sourceTree = "<group>"; };
 		F40D44381B6490AE005A2029 /* DownLoadMovieCoreDataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadMovieCoreDataEntity.h; sourceTree = "<group>"; };
 		F40D44391B6490AE005A2029 /* DownLoadMovieCoreDataEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadMovieCoreDataEntity.m; sourceTree = "<group>"; };
 		F40D443B1B6490FD005A2029 /* DownLoadMovieCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadMovieCoreDataManager.h; sourceTree = "<group>"; };
@@ -236,10 +230,6 @@
 		F46853F71B3AF69D00AF461D /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				F40D442F1B6472EE005A2029 /* URLParser.h */,
-				F40D44301B6472EE005A2029 /* URLParser.m */,
-				F40D44321B647375005A2029 /* URLEntity.h */,
-				F40D44331B647375005A2029 /* URLEntity.m */,
 				F40D442C1B646916005A2029 /* M3U8Serializer.h */,
 				F40D442D1B646916005A2029 /* M3U8Serializer.m */,
 				F42775361B5204D2008082F8 /* RegularExpression.h */,
@@ -811,8 +801,6 @@
 				F46FE06C1B682CAB0083891A /* SignupPropertyManager.m in Sources */,
 				F46853F41B3AF62E00AF461D /* WeatherViewController.m in Sources */,
 				F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */,
-				F40D44311B6472EE005A2029 /* URLParser.m in Sources */,
-				F40D44341B647375005A2029 /* URLEntity.m in Sources */,
 				F46B37931B48F35E0051EB8E /* LessonApp.xcdatamodeld in Sources */,
 				F4B1A5BE1B47BCC20000CC47 /* Thread.m in Sources */,
 				F46853EE1B3AF62E00AF461D /* SignupButtonTableViewCell.m in Sources */,
