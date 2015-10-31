@@ -1,15 +1,21 @@
 PODS:
-  - GCDWebServer/Core (3.2.5)
-  - GCDWebServer/WebDAV (3.2.5):
+  - GCDWebServer/Core (3.2.7)
+  - GCDWebServer/WebDAV (3.2.7):
     - GCDWebServer/Core
-  - LUKeychainAccess (1.2.4)
+  - LUKeychainAccess (1.2.5)
+  - PEARFileManager (0.0.1)
+  - PEARHttpFetcher (0.0.2)
 
 DEPENDENCIES:
   - GCDWebServer/WebDAV (~> 3.0)
   - LUKeychainAccess (~> 1.2.4)
+  - PEARFileManager (~> 0.0.1)
+  - PEARHttpFetcher (~> 0.0.1)
 
 SPEC CHECKSUMS:
-  GCDWebServer: d0e1b23785e3dfd6c87601323d0f7cae059aab18
-  LUKeychainAccess: 6479edb12cf06e11ff3336f796959eedbc58f714
+  GCDWebServer: 76a9540371d5f12f850b32ec7f555dd2d266e543
+  LUKeychainAccess: d22fc00b33ad92c7532962b86daa94c14b85ecbe
+  PEARFileManager: 1be6d9ec1a4df0bb303fcf6a904c5053b57bdc81
+  PEARHttpFetcher: a4b5d060ebebb7c1a7c110588871f1acb4af562a
 
-COCOAPODS: 0.38.0.beta.1
+COCOAPODS: 0.39.0

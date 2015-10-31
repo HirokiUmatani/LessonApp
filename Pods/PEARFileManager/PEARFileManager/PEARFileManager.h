@@ -1,13 +1,14 @@
 //
-//  DirectoryFileManager.h
-//  LessonApp
+//  PEARFileManager.h
+//  FileManager
 //
-//  Created by hirokiumatani on 2015/07/20.
+//  Created by hirokiumatani on 2015/10/31.
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 
-@interface DirectoryFileManager : NSObject
+@interface PEARFileManager : NSObject
 + (NSArray *)getDirectory:(NSString *)dirPath;
 
 + (NSData *)getFileWithDirPath:(NSString *)dirPath

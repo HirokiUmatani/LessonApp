@@ -58,12 +58,19 @@ pod "GCDWebServer/WebDAV", "~> 3.0"
 
 And finally run `$ pod install`.
 
-You can also use [Carthage](https://github.com/Carthage/Carthage) by adding this line to your Cartfile:
+You can also use [Carthage](https://github.com/Carthage/Carthage) by adding this line to your Cartfile (3.2.5 is the first release with Carthage support):
 ```
-github "swisspol/GCDWebServer" "master"
+github "swisspol/GCDWebServer" ~> 3.2.5
 ```
 
 Then run `$ carthage update` and add the generated frameworks to your Xcode projects (see [Carthage instructions](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application)).
+
+Help & Support
+==============
+
+For help with using GCDWebServer, it's best to ask your question on Stack Overflow with the [`gcdwebserver`](http://stackoverflow.com/questions/tagged/gcdwebserver) tag. Be sure to read this entire README first though!
+
+For bug reports or enhancement requests, please use [GitHub issues](https://github.com/swisspol/GCDWebServer/issues) instead.
 
 Hello World
 ===========
@@ -143,22 +150,27 @@ int main(int argc, const char* argv[]) {
 ***webServer.swift***
 ```swift
 import Foundation
+import GCDWebServers
 
-let webServer = GCDWebServer()
+func initWebServer() {
 
-webServer.addDefaultHandlerForMethod("GET", requestClass: GCDWebServerRequest.self, processBlock: {request in
+    let webServer = GCDWebServer()
+
+    webServer.addDefaultHandlerForMethod("GET", requestClass: GCDWebServerRequest.self, processBlock: {request in
     return GCDWebServerDataResponse(HTML:"<html><body><p>Hello World</p></body></html>")
+        
+    })
+    
+    webServer.runWithPort(8080, bonjourName: "GCD Web Server")
+    
+    print("Visit \(webServer.serverURL) in your web browser")
 }
-
-webServer.runWithPort(8080, bonjourName: nil)
-
-println("Visit \(webServer.serverURL) in your web browser")
 ```
 
 ***WebServer-Bridging-Header.h***
 ```objectivec
-#import "GCDWebServer.h"
-#import "GCDWebServerDataResponse.h"
+#import <GCDWebServers/GCDWebServer.h>
+#import <GCDWebServers/GCDWebServerDataResponse.h>
 ```
 
 Web Based Uploads in iOS Apps

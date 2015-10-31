@@ -12,7 +12,7 @@
 @implementation WeatherFetcher
 - (void)fetchDataWithLatitude:(NSString *)latitude
                     longitude:(NSString *)longitude
-                      success:(FetchSuccess)success
+                      success:(FetchSuccessWetherEntity)success
                        failed:(FetchFailed)failed
 {
     // request URL
@@ -38,7 +38,7 @@
 }
 
 - (void)fetchIconImageWithEntity:(WeatherEntity *)entity
-                         success:(FetchSuccess)success
+                         success:(FetchSuccessImage)success
                           failed:(FetchFailed)failed
 {
     // request URL

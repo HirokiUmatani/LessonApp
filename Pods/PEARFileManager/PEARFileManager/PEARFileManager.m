@@ -1,14 +1,14 @@
 //
-//  DirectoryFileManager.m
-//  LessonApp
+//  PEARFileManager.m
+//  FileManager
 //
-//  Created by hirokiumatani on 2015/07/20.
+//  Created by hirokiumatani on 2015/10/31.
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "DirectoryFileManager.h"
+#import "PEARFileManager.h"
 
-@implementation DirectoryFileManager
+@implementation PEARFileManager
 + (NSArray *)getDirectory:(NSString *)dirPath
 {
     if ([self checkDirectory:dirPath])
@@ -18,7 +18,7 @@
     return @[].copy;
 }
 + (NSData *)getFileWithDirPath:(NSString *)dirPath
-                  filePath:(NSString *)filePath
+                      filePath:(NSString *)filePath
 {
     if ([self checkFileWithDirPath:dirPath filePath:filePath])
     {

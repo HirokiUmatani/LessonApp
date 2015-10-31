@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-@interface MovieDownloadFetcher : HttpFetcher
+@interface MovieDownloadFetcher : PEARHttpFetcher
 
 - (void)m3u8FetchingWithURL:(NSString *)url
                     success:(FetchSuccess)success

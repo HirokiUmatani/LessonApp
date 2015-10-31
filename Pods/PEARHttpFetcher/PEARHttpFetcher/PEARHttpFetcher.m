@@ -6,12 +6,12 @@
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
 
-#import "HttpFetcher.h"
-static NSString * httpGet  = @"GET";
-static NSString * httpPost = @"POST";
-
-@implementation HttpFetcher
+#import "PEARHttpFetcher.h"
+static NSString * httpGet     = @"GET";
+static NSString * httpPost    = @"POST";
 static NSInteger  httpTimeOut = 15;
+
+@implementation PEARHttpFetcher
 
 #pragma mark - Get Sync
 - (void)fetchSyncWithUrlString:(NSString *)urlString
@@ -29,16 +29,16 @@ static NSInteger  httpTimeOut = 15;
                                                  returningResponse:&response
                                                              error:&error];
     
+    [self stopNetworkIndicator];
     if (error)
     {
-        [self connectError:error];
-        failed();
+        failed(error);
     }
     else
     {
         success(responseData);
     }
-    [self stopNetworkIndicator];
+    
 }
 
 #pragma mark - Get ASync
@@ -56,17 +56,45 @@ static NSInteger  httpTimeOut = 15;
                                                NSData *responceData,
                                                NSError *error)
      {
+         [self stopNetworkIndicator];
          if (error)
          {
-             [self connectError:error];
-             failed();
+             failed(error);
          }
          else
          {
              success(responceData);
          }
-         [self stopNetworkIndicator];
+         
      }];
+}
+
+#pragma mark - Post Sync
+- (void)fetchSyncWithUrlString:(NSString *)urlString
+                     paramData:(NSData *)paramData
+                       success:(FetchSuccess)success
+                        failed:(FetchFailed)failed
+{
+    NSMutableURLRequest *request = [self setHttpRequestWithURL:urlString
+                                                        method:httpPost];
+    request.HTTPBody = paramData;
+    [self restartNetworkIndicator];
+    NSURLResponse *response;
+    NSError *error;
+    
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request
+                                                 returningResponse:&response
+                                                             error:&error];
+    [self stopNetworkIndicator];
+    if (error)
+    {
+        failed(error);
+    }
+    else
+    {
+        success(responseData);
+    }
+    
 }
 
 #pragma mark - Post ASync
@@ -88,8 +116,7 @@ static NSInteger  httpTimeOut = 15;
          [self stopNetworkIndicator];
          if (error)
          {
-             [self connectError:error];
-             failed();
+             failed(error);
          }
          else
          {
@@ -142,16 +169,6 @@ static NSInteger  httpTimeOut = 15;
     request.timeoutInterval = httpTimeOut;
 
     return request;
-}
-
-#pragma mark - Error
-- (NSError *)connectError:(NSError *)error
-{
-    [Logger debugLogWithCategory:CONST_CONNECT_ERROR
-                         message:error
-                        Function:__PRETTY_FUNCTION__
-                            line:__LINE__];
-    return error;
 }
 
 #pragma mark - Indicator

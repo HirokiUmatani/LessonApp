@@ -27,14 +27,14 @@
 - (void)m3u8Download:(URLEntity *)urlEntity
 {
     // check m3u8 file
-    if([DirectoryFileManager checkFileWithDirPath:urlEntity.path filePath:urlEntity.lastPath])
+    if([PEARFileManager checkFileWithDirPath:urlEntity.path filePath:urlEntity.lastPath])
         return;
     
     // check save directory
-    if (![DirectoryFileManager checkDirectory:urlEntity.path])
+    if (![PEARFileManager checkDirectory:urlEntity.path])
     {
         // create save directory
-        [DirectoryFileManager createDirectory:urlEntity.path permisson:@0755];
+        [PEARFileManager createDirectory:urlEntity.path permisson:@0755];
     }
     
     // download m3u8 data
@@ -45,7 +45,7 @@
         NSData *enM3U8Binary = [m3u8Binary AES128EncryptWithKey:nil iv:nil];
         
         // create m3u8 file
-        [DirectoryFileManager createFile:enM3U8Binary dirPath:urlEntity.path filePath:urlEntity.lastPath permisson:@0755];
+        [PEARFileManager createFile:enM3U8Binary dirPath:urlEntity.path filePath:urlEntity.lastPath permisson:@0755];
         
         // CoreData m3u8 file path insert
         DownLoadMovieCoreDataManager * downloadMovieCoreDataManager = [DownLoadMovieCoreDataManager new];
@@ -53,20 +53,20 @@
         NSPredicate *predicate = [downloadMovieCoreDataManager setPredicateWithSearchKey:@"moviePlayDirPath" searchValue:moviePlayDirPath];
         [downloadMovieCoreDataManager insertWithPredicate:predicate
                                          moviePlayDirPath:moviePlayDirPath];
-    }failed:^{}];
+    }failed:^(NSError *error){}];
 }
 
 - (void)movieDownload:(URLEntity *)urlEntity
 {
     // check m3u8 file
-    if (![DirectoryFileManager checkFileWithDirPath:urlEntity.path filePath:urlEntity.lastPath])
+    if (![PEARFileManager checkFileWithDirPath:urlEntity.path filePath:urlEntity.lastPath])
     {
         // download m3u8 data
         [self m3u8Download:urlEntity];
     }
     
     // get m3u8 data
-    NSData *m3u8Binary = [DirectoryFileManager getFileWithDirPath:urlEntity.path filePath:urlEntity.lastPath];
+    NSData *m3u8Binary = [PEARFileManager getFileWithDirPath:urlEntity.path filePath:urlEntity.lastPath];
     
     // m3u8 data AES128 decode
     NSData *deM3U8Binary = [m3u8Binary AES128DecryptWithKey:nil iv:nil];
@@ -88,7 +88,7 @@
         @autoreleasepool
         {
             // check movie file
-            if ([DirectoryFileManager checkFileWithDirPath:urlEntity.path filePath:downloadLists[i]])continue;
+            if ([PEARFileManager checkFileWithDirPath:urlEntity.path filePath:downloadLists[i]])continue;
             
             NSString *urlString = [NSString stringWithFormat:@"http://%@/%@/%@",urlEntity.host,urlEntity.path,downloadLists[i]];
             
@@ -100,8 +100,8 @@
                  NSData *enMovieBinary = [movieBinary AES128EncryptWithKey:nil iv:nil];
                  
                  // create movie file
-                 [DirectoryFileManager createFile:enMovieBinary dirPath:urlEntity.path filePath:downloadLists[i] permisson:@0755];
-             }failed:^{}];
+                 [PEARFileManager createFile:enMovieBinary dirPath:urlEntity.path filePath:downloadLists[i] permisson:@0755];
+             }failed:^(NSError *error){}];
         }
     }
 }

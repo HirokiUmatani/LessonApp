@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PEARFileManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PEARHttpFetcher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3122D9CADEF5799E3ABEB4FA</key>
+		<key>25E39AA060CB32A93235213D15691F47</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>62F47C06F6713FC0D9D9D782</key>
+		<key>35688256C1EA997336E734EAC5D9D02F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C125C0EF95769B1237B05458</key>
+		<key>5B4892A650264FE0BAE78DCE50F237C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93381B68B4ECADD76DC3A8D03A12616A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C9628CAED136D2033F69A5F98EBBDD17</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,20 +1,21 @@
 //
-//  HttpFercher.h
-//  LessonApp
+//  PEARHttpFercher.h
+//  HttpFetcher
 //
 //  Created by hirokiumatani on 2015/06/02.
 //  Copyright (c) 2015年 hirokiumatani. All rights reserved.
 //
+#import <UIKit/UIKit.h>
 
 /*** request success blocks */
-typedef void (^FetchSuccess)();
+typedef void (^FetchSuccess)(NSData *responceData);
 
 /*** request failed blocks */
-typedef void (^FetchFailed)();
+typedef void (^FetchFailed)(NSError *error);
 
 
 /*** @class fetcher web api class */
-@interface HttpFetcher : NSObject
+@interface PEARHttpFetcher : NSObject
 
 #pragma mark Method
 /*** sync fetcher get method */
@@ -25,6 +26,12 @@ typedef void (^FetchFailed)();
 - (void)fetchAsyncWithUrlString:(NSString *)urlString
                         success:(FetchSuccess)success
                          failed:(FetchFailed)failed;
+
+/*** sync fetcher post method */
+- (void)fetchSyncWithUrlString:(NSString *)urlString
+                     paramData:(NSData *)paramData
+                       success:(FetchSuccess)success
+                        failed:(FetchFailed)failed;
 
 /*** async fetcher post method */
 - (void)fetchAsyncWithUrlString:(NSString *)urlString

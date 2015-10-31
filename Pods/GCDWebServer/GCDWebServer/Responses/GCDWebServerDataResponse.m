@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2012-2014, Pierre-Olivier Latour
+ Copyright (c) 2012-2015, Pierre-Olivier Latour
  All rights reserved.
  
  Redistribution and use in source and binary forms, with or without
@@ -50,9 +50,9 @@
     return nil;
   }
   
-  if ((self = [super init]))
-  {
+  if ((self = [super init])) {
     _data = data;
+    
     self.contentType = type;
     self.contentLength = data.length;
   }

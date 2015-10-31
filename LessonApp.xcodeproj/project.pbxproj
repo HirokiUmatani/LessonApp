@@ -21,7 +21,6 @@
 		F42775381B5204D2008082F8 /* RegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = F42775371B5204D2008082F8 /* RegularExpression.m */; };
 		F44B0F441B5C8C7C00A6B939 /* KeyChainData.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F431B5C8C7C00A6B939 /* KeyChainData.m */; };
 		F44B0F471B5C9F6E00A6B939 /* MovieDownloadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */; };
-		F44B0F4A1B5CB92100A6B939 /* DirectoryFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */; };
 		F454A3A31BCB4A3E008F37CF /* UIColor+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F454A3A21BCB4A3E008F37CF /* UIColor+extention.m */; };
 		F45915361B3E80C20041AAF9 /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45915351B3E80C20041AAF9 /* MoviePlayerViewController.m */; };
 		F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45962471B3E539900BFFFD2 /* DetailViewController.m */; };
@@ -50,7 +49,6 @@
 		F468540A1B3AF69D00AF461D /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853F91B3AF69D00AF461D /* AnimationView.m */; };
 		F468540B1B3AF69D00AF461D /* AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853FB1B3AF69D00AF461D /* AutoLayout.m */; };
 		F468540C1B3AF69D00AF461D /* NSString+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853FD1B3AF69D00AF461D /* NSString+Device.m */; };
-		F468540D1B3AF69D00AF461D /* HttpFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853FF1B3AF69D00AF461D /* HttpFetcher.m */; };
 		F468540E1B3AF69D00AF461D /* NSJSONSerialization+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854011B3AF69D00AF461D /* NSJSONSerialization+Serialize.m */; };
 		F468540F1B3AF69D00AF461D /* LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854031B3AF69D00AF461D /* LocalServer.m */; };
 		F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854051B3AF69D00AF461D /* LocationFetcher.m */; };
@@ -108,8 +106,6 @@
 		F44B0F431B5C8C7C00A6B939 /* KeyChainData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainData.m; sourceTree = "<group>"; };
 		F44B0F451B5C9F6E00A6B939 /* MovieDownloadFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDownloadFetcher.h; sourceTree = "<group>"; };
 		F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDownloadFetcher.m; sourceTree = "<group>"; };
-		F44B0F481B5CB92100A6B939 /* DirectoryFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryFileManager.h; sourceTree = "<group>"; };
-		F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryFileManager.m; sourceTree = "<group>"; };
 		F454A3A11BCB4A3E008F37CF /* UIColor+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+extention.h"; sourceTree = "<group>"; };
 		F454A3A21BCB4A3E008F37CF /* UIColor+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+extention.m"; sourceTree = "<group>"; };
 		F45915341B3E80C20041AAF9 /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
@@ -162,8 +158,6 @@
 		F46853FB1B3AF69D00AF461D /* AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayout.m; sourceTree = "<group>"; };
 		F46853FC1B3AF69D00AF461D /* NSString+Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Device.h"; sourceTree = "<group>"; };
 		F46853FD1B3AF69D00AF461D /* NSString+Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Device.m"; sourceTree = "<group>"; };
-		F46853FE1B3AF69D00AF461D /* HttpFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpFetcher.h; sourceTree = "<group>"; };
-		F46853FF1B3AF69D00AF461D /* HttpFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpFetcher.m; sourceTree = "<group>"; };
 		F46854001B3AF69D00AF461D /* NSJSONSerialization+Serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+Serialize.h"; sourceTree = "<group>"; };
 		F46854011B3AF69D00AF461D /* NSJSONSerialization+Serialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+Serialize.m"; sourceTree = "<group>"; };
 		F46854021B3AF69D00AF461D /* LocalServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalServer.h; path = ../../library/LocalServer.h; sourceTree = "<group>"; };
@@ -248,12 +242,8 @@
 				F40D44331B647375005A2029 /* URLEntity.m */,
 				F40D442C1B646916005A2029 /* M3U8Serializer.h */,
 				F40D442D1B646916005A2029 /* M3U8Serializer.m */,
-				F44B0F481B5CB92100A6B939 /* DirectoryFileManager.h */,
-				F44B0F491B5CB92100A6B939 /* DirectoryFileManager.m */,
 				F42775361B5204D2008082F8 /* RegularExpression.h */,
 				F42775371B5204D2008082F8 /* RegularExpression.m */,
-				F46853FE1B3AF69D00AF461D /* HttpFetcher.h */,
-				F46853FF1B3AF69D00AF461D /* HttpFetcher.m */,
 				F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */,
 				F46B37801B48AC0E0051EB8E /* CoreDataManager.m */,
 				F46853F81B3AF69D00AF461D /* AnimationView.h */,
@@ -485,7 +475,6 @@
 		F489F7D61B1D4EF60077BCFB = {
 			isa = PBXGroup;
 			children = (
-				F477557D1B63FCE40056FEBA /* mario.png */,
 				F4B52F211B6360F6008D3799 /* App */,
 				F46853F71B3AF69D00AF461D /* Library */,
 				F4B52F201B63608A008D3799 /* etc */,
@@ -605,6 +594,7 @@
 				F46853AE1B3AF62E00AF461D /* main.m */,
 				F46853A51B3AF62E00AF461D /* AppDelegate.h */,
 				F46853A61B3AF62E00AF461D /* AppDelegate.m */,
+				F477557D1B63FCE40056FEBA /* mario.png */,
 				F40560721B3C2F24000B595A /* podfile */,
 			);
 			name = etc;
@@ -659,6 +649,7 @@
 				F489F7DC1B1D4EF70077BCFB /* Frameworks */,
 				F489F7DD1B1D4EF70077BCFB /* Resources */,
 				0DA481B6F120C1F427C42732 /* Copy Pods Resources */,
+				E5A2DB17CA3944CA7A43275F /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -751,6 +742,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		E5A2DB17CA3944CA7A43275F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -765,7 +771,6 @@
 				F46854111B3AF69D00AF461D /* Notification.m in Sources */,
 				F46167E11B775CBB0066C556 /* BaseContainerviewController.m in Sources */,
 				F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */,
-				F468540D1B3AF69D00AF461D /* HttpFetcher.m in Sources */,
 				F4B52F241B63633C008D3799 /* MovieEntity.m in Sources */,
 				F46853F51B3AF62E00AF461D /* SignupTableViewController.m in Sources */,
 				F454A3A31BCB4A3E008F37CF /* UIColor+extention.m in Sources */,
@@ -789,7 +794,6 @@
 				F468540A1B3AF69D00AF461D /* AnimationView.m in Sources */,
 				F46853E81B3AF62E00AF461D /* MovieCollectionViewCell.m in Sources */,
 				F4DA03081B4025FF00E11F93 /* UICollectionViewCell+extention.m in Sources */,
-				F44B0F4A1B5CB92100A6B939 /* DirectoryFileManager.m in Sources */,
 				F46853EC1B3AF62E00AF461D /* WeatherView.m in Sources */,
 				F46853F61B3AF62E00AF461D /* TopViewController.m in Sources */,
 				F4E068521BD07D2200D100FB /* BaseViewController.m in Sources */,

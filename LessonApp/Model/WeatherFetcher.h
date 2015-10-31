@@ -7,15 +7,16 @@
 //
 
 #import "WeatherEntity.h"
-
-@interface WeatherFetcher : HttpFetcher
+typedef void (^FetchSuccessWetherEntity)(WeatherEntity *wetherEntity);
+typedef void (^FetchSuccessImage)(UIImage *image);
+@interface WeatherFetcher : PEARHttpFetcher
 
 - (void)fetchDataWithLatitude:(NSString *)latitude
                     longitude:(NSString *)longitude
-                      success:(FetchSuccess)success
+                      success:(FetchSuccessWetherEntity)success
                        failed:(FetchFailed)failed;
 
 - (void)fetchIconImageWithEntity:(WeatherEntity *)entity
-                         success:(FetchSuccess)success
+                         success:(FetchSuccessImage)success
                           failed:(FetchFailed)failed;
 @end

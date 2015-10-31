@@ -1,1 +1,5 @@
-GCDWEBSERVER_OTHER_LDFLAGS = -l"xml2" -l"z" -framework "CFNetwork" -framework "MobileCoreServices"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/GCDWebServer" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GCDWebServer" "${PODS_ROOT}/Headers/Public/LUKeychainAccess" "${PODS_ROOT}/Headers/Public/PEARFileManager" "${PODS_ROOT}/Headers/Public/PEARHttpFetcher"
+OTHER_LDFLAGS = -l"xml2" -l"z" -framework "CFNetwork" -framework "MobileCoreServices"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES
