@@ -18,9 +18,9 @@
     
     __SERIAL_THREAD_START__
     // m3u8 Download
-    [self m3u8Download:urlEntity];
+//    [self m3u8Download:urlEntity];
     // movie Download
-    [self movieDownload:urlEntity];
+//    [self movieDownload:urlEntity];
     __THREAD_END__
 }
 
@@ -53,7 +53,9 @@
         NSPredicate *predicate = [downloadMovieCoreDataManager setPredicateWithSearchKey:@"moviePlayDirPath" searchValue:moviePlayDirPath];
         [downloadMovieCoreDataManager insertWithPredicate:predicate
                                          moviePlayDirPath:moviePlayDirPath];
-    }failed:^(NSError *error){}];
+    }failed:^(NSError *error){
+        
+    }];
 }
 
 - (void)movieDownload:(URLEntity *)urlEntity

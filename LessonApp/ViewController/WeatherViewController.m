@@ -89,7 +89,7 @@
              WeatherEntity *updateEnity = [WeatherEntity updateEntity:openWeatherMapEntity
                                                                     wetherImageIcon:iconImage];
              [_weatherView updateView:updateEnity];
-             [_locationFetcher stopLocation];
+//             [_locationFetcher stopLocation];
          }
                                                 failed:^(NSError *error)
          {
