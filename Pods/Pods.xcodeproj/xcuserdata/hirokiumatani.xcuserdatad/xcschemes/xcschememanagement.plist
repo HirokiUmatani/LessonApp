@@ -14,7 +14,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PEARFileManager.xcscheme</key>
+		<key>PEAR-BlocksKit-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PEAR-FileManager-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,22 +52,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>54D1296F57870678FA98073A182A8351</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5B4892A650264FE0BAE78DCE50F237C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F92D290FA20A42D52FFE28477D2A496</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>93381B68B4ECADD76DC3A8D03A12616A</key>
+		<key>91BCC048D6FA116732267A60BCAA70F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B7B629E1659467E63C4B2892D60B0246</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0F475CFFA77F9B0DFDD2127CD4FAFC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

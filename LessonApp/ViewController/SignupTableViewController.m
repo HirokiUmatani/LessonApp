@@ -131,16 +131,14 @@
                             objectForKey:UIKeyboardFrameEndUserInfoKey]
                            CGRectValue];
     CGFloat keyboardHeight = keyboardRect.size.height;
-    _tableView_bottomConstraint.constant -= keyboardHeight;
+    _tableView_bottomConstraint.constant = keyboardHeight + 64;
+    [_tableView layoutIfNeeded];
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification
 {
-    CGRect keyboardRect = [[[notification userInfo]
-                            objectForKey:UIKeyboardFrameEndUserInfoKey]
-                           CGRectValue];
-    CGFloat keyboardHeight = keyboardRect.size.height;
-    _tableView_bottomConstraint.constant += keyboardHeight;
+    _tableView_bottomConstraint.constant = 0;
+    [_tableView layoutIfNeeded];
 }
 
 #pragma mark - Private

@@ -53,9 +53,6 @@
 + (void)createDirectory:(NSString *)dirPath
               permisson:(NSNumber *)permission
 {
-    if ([self checkDirectory:dirPath])
-        return;
-    
     [[NSFileManager new] createDirectoryAtPath:[NSString stringWithFormat:
                                                 @"%@/%@",
                                                 NSHomeDirectory(),
@@ -72,17 +69,16 @@
           filePath:(NSString *)filePath
          permisson:(NSNumber *)permission
 {
-    
-    if ([self checkFileWithDirPath:dirPath filePath:filePath])
-        return;
-    
-    [[NSFileManager new] createFileAtPath:[NSString stringWithFormat:
-                                           @"%@/%@/%@",
-                                           NSHomeDirectory(),
-                                           dirPath,
-                                           filePath]
-                                 contents:fileData
-                               attributes:@{NSFilePosixPermissions: permission}];
+    NSFileManager *fileManager = [NSFileManager new];
+    NSString *filesPath = [NSString stringWithFormat:
+                           @"%@/%@/%@",
+                           NSHomeDirectory(),
+                           dirPath,
+                           filePath];
+
+    [fileManager createFileAtPath:filesPath
+                                     contents:fileData
+                                   attributes:@{NSFilePosixPermissions: permission}];
 }
 
 + (void)deleteDirectory:(NSString *)dirPath

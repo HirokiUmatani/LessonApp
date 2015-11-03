@@ -15,6 +15,7 @@
     #import "PEARHttpFetcher.h"
     #import "PEARFileManager.h"
     #import "PEARURLParser.h"
+    #import "PEARBlocksKit.h"
     /*
      extention
      */

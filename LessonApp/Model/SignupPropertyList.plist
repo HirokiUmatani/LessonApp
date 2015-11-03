@@ -30,11 +30,58 @@
 		<key>cellType</key>
 		<integer>0</integer>
 		<key>title</key>
-		<string>Password
-(Confirm)</string>
+		<string>Password</string>
 		<key>textField</key>
 		<string></string>
 	</dict>
+    <dict>
+        <key>cellType</key>
+        <integer>0</integer>
+        <key>title</key>
+        <string>Password</string>
+        <key>textField</key>
+        <string></string>
+    </dict>
+    <dict>
+        <key>cellType</key>
+        <integer>0</integer>
+        <key>title</key>
+        <string>Password</string>
+        <key>textField</key>
+        <string></string>
+    </dict>
+    <dict>
+        <key>cellType</key>
+        <integer>0</integer>
+        <key>title</key>
+        <string>Password</string>
+        <key>textField</key>
+        <string></string>
+    </dict>
+    <dict>
+        <key>cellType</key>
+        <integer>0</integer>
+        <key>title</key>
+        <string>Password</string>
+        <key>textField</key>
+        <string></string>
+    </dict>
+    <dict>
+        <key>cellType</key>
+        <integer>0</integer>
+        <key>title</key>
+        <string>Password</string>
+        <key>textField</key>
+        <string></string>
+    </dict>
+    <dict>
+        <key>cellType</key>
+        <integer>0</integer>
+        <key>title</key>
+        <string>Password</string>
+        <key>textField</key>
+        <string></string>
+    </dict>
 	<dict>
 		<key>cellType</key>
 		<integer>1</integer>
