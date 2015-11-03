@@ -656,7 +656,7 @@
 		F489F7D71B1D4EF60077BCFB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = hirokiumatani;
 				TargetAttributes = {
 					F489F7DE1B1D4EF70077BCFB = {
@@ -858,6 +858,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -933,6 +934,7 @@
 					"$(PROJECT_DIR)/LessonApp",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "kari.jp.co.hirokiumatani.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = LessonApp;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -954,6 +956,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/LessonApp",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kari.jp.co.hirokiumatani.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = LessonApp;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

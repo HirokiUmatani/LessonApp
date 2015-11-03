@@ -24,12 +24,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PEAR-URLParser-iOS.xcscheme</key>
+		<key>PEAR-HttpFetcher-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PEARHttpFetcher.xcscheme</key>
+		<key>PEAR-URLParser-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,11 +42,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>25E39AA060CB32A93235213D15691F47</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>35688256C1EA997336E734EAC5D9D02F</key>
 		<dict>
 			<key>primary</key>
@@ -57,17 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>84687477D3DBB1A21F9D9D81860F0ED1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>91BCC048D6FA116732267A60BCAA70F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F104A16802F649A7F507054256C668B</key>
+		<key>C773F535F95161B93C7419BD2AB64752</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C773F535F95161B93C7419BD2AB64752</key>
+		<key>DB666F1D4733C1E55E7394F47C496CD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
