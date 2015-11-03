@@ -12,8 +12,7 @@
 #import "SignupPropertyManager.h"
 
 @interface SignupTableViewController ()
-@property (nonatomic,strong) Notification *keyboardNotification;
-@property (nonatomic,assign) CGFloat defaultTableViewheight;
+@property (nonatomic,strong) PEAR_KeyboardNotification_iOS *keyboardNotification;
 @property (nonatomic, strong) NSMutableArray * signupCellLists;
 @property (nonatomic, strong) SignupPropertyManager * signupFetcher;
 @property (nonatomic, strong) SignupEntity *signupEntity;
@@ -30,7 +29,12 @@
 {
     [super viewDidLoad];
     [self setCellLists];
-    [self setKeyBoardReciveNotification];
+    
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setKeyBoardNotification];
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -101,44 +105,18 @@
     return YES;
 }
 #pragma mark - KeyboardNotification
-- (void)setKeyBoardReciveNotification
+- (void)setKeyBoardNotification
 {
-    _keyboardNotification = [Notification new];
-    [_keyboardNotification setReciveNotificationObserver:self
-                                                selector:@selector(keyboardWillShow:)
-                                                    name:UIKeyboardWillShowNotification
-                                                  object:nil];
-    
-    [_keyboardNotification setReciveNotificationObserver:self
-                                                selector:@selector(keyboardWillHide:)
-                                                    name:UIKeyboardWillHideNotification
-                                                  object:nil];
-    
+    _keyboardNotification = [PEAR_KeyboardNotification_iOS sharedInstance];
+    [_keyboardNotification setKeyBoardReciveNotification];
+    _keyboardNotification.bottomConstraint = _tableView_bottomConstraint;
+    _keyboardNotification.updateView = self.view;
+    _keyboardNotification.offset = 64;
 }
 
 - (void)removeKeyBoardNotification
 {
-    [_keyboardNotification removeNotificationWithObserver:self
-                                                     Name:UIKeyboardWillShowNotification
-                                                   object:nil];
-    [_keyboardNotification removeNotificationWithObserver:self
-                                                     Name:UIKeyboardWillHideNotification
-                                                   object:nil];
-}
-- (void)keyboardWillShow:(NSNotification *)notification
-{
-    CGRect keyboardRect = [[[notification userInfo]
-                            objectForKey:UIKeyboardFrameEndUserInfoKey]
-                           CGRectValue];
-    CGFloat keyboardHeight = keyboardRect.size.height;
-    _tableView_bottomConstraint.constant = keyboardHeight + 64;
-    [_tableView layoutIfNeeded];
-}
-
-- (void)keyboardWillHide:(NSNotification *)notification
-{
-    _tableView_bottomConstraint.constant = 0;
-    [_tableView layoutIfNeeded];
+    [_keyboardNotification removeKeyBoardNotification];
 }
 
 #pragma mark - Private

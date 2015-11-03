@@ -11,7 +11,7 @@
 @implementation SignupPropertyManager
 - (NSArray *)fetchSignupEntityList
 {
-    NSArray *propertyLists = [self fetchPropertyListWithPlist:@"SignupPropertyList"];
+    NSArray *propertyLists = [[self class] fetchArrayWithPlist:@"SignupPropertyList"];
     return [self convertSignupEntityListFromPlists:propertyLists];
 }
 

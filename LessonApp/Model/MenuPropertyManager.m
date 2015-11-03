@@ -11,7 +11,7 @@
 @implementation MenuPropertyManager
 - (NSArray *)fetchMenuEntityList
 {
-    NSArray *propertyLists = [self fetchPropertyListWithPlist:@"MenuPropertyList"];
+    NSArray *propertyLists = [[self class] fetchArrayWithPlist:@"MenuPropertyList"];
     return [self convertMenuEntityListFromPlists:propertyLists];
 }
 

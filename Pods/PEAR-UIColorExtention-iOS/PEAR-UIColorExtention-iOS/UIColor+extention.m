@@ -1,9 +1,9 @@
 //
 //  UIColor+extention.m
-//  LessonApp
+//  UIColorExtention
 //
-//  Created by hirokiumatani on 2015/10/12.
-//  Copyright (c) 2015年 hirokiumatani. All rights reserved.
+//  Created by hirokiumatani on 2015/11/03.
+//  Copyright © 2015年 hirokiumatani. All rights reserved.
 //
 
 #import "UIColor+extention.h"
@@ -16,10 +16,12 @@
         colorCode = [colorCode substringWithRange:NSMakeRange(1, colorCode.length - 1)];
     }
     
-    if ([colorCode length] == 3) {
+    if ([colorCode length] == 3)
+    {
         NSMutableString *_colorCode = [[NSMutableString alloc] init];
         
-        for (NSInteger i = 0; i < colorCode.length; i++) {
+        for (NSInteger i = 0; i < colorCode.length; i++)
+        {
             [_colorCode appendString:[colorCode substringWithRange:NSMakeRange(i, 1)]];
             [_colorCode appendString:[colorCode substringWithRange:NSMakeRange(i, 1)]];
         }
@@ -32,11 +34,13 @@
     char *endptr;
     CGFloat red = 0.0, green = 0.0, blue = 0.0;
     
-    for (NSInteger i = 0; i < 3; i++) {
+    for (NSInteger i = 0; i < 3; i++)
+    {
         hexCodeStr = [NSString stringWithFormat:@"+0x%@", [colorCode substringWithRange:NSMakeRange(i * 2, 2)]];
         hexCode    = [hexCodeStr cStringUsingEncoding:NSASCIIStringEncoding];
         
-        switch (i) {
+        switch (i)
+        {
             case 0:
                 red   = strtol(hexCode, &endptr, 16);
                 break;

@@ -19,7 +19,6 @@
 		F42775381B5204D2008082F8 /* RegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = F42775371B5204D2008082F8 /* RegularExpression.m */; };
 		F44B0F441B5C8C7C00A6B939 /* KeyChainData.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F431B5C8C7C00A6B939 /* KeyChainData.m */; };
 		F44B0F471B5C9F6E00A6B939 /* MovieDownloadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */; };
-		F454A3A31BCB4A3E008F37CF /* UIColor+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F454A3A21BCB4A3E008F37CF /* UIColor+extention.m */; };
 		F45915361B3E80C20041AAF9 /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45915351B3E80C20041AAF9 /* MoviePlayerViewController.m */; };
 		F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45962471B3E539900BFFFD2 /* DetailViewController.m */; };
 		F46167E11B775CBB0066C556 /* BaseContainerviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46167E01B775CBB0066C556 /* BaseContainerviewController.m */; };
@@ -50,13 +49,11 @@
 		F468540E1B3AF69D00AF461D /* NSJSONSerialization+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854011B3AF69D00AF461D /* NSJSONSerialization+Serialize.m */; };
 		F468540F1B3AF69D00AF461D /* LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854031B3AF69D00AF461D /* LocalServer.m */; };
 		F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854051B3AF69D00AF461D /* LocationFetcher.m */; };
-		F46854111B3AF69D00AF461D /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854071B3AF69D00AF461D /* Notification.m */; };
 		F46B37811B48AC0E0051EB8E /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B37801B48AC0E0051EB8E /* CoreDataManager.m */; };
 		F46B37861B48B2C40051EB8E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46B37851B48B2C40051EB8E /* CoreData.framework */; };
 		F46B37931B48F35E0051EB8E /* LessonApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F46B37911B48F35E0051EB8E /* LessonApp.xcdatamodeld */; };
 		F46E703A1B6501F200CF0FB5 /* NSData+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F46E70391B6501F200CF0FB5 /* NSData+extention.m */; };
 		F46FE0661B67BB960083891A /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = F46FE0651B67BB960083891A /* Connection.m */; };
-		F46FE0691B6829DF0083891A /* PropertyListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F46FE0681B6829DF0083891A /* PropertyListManager.m */; };
 		F46FE06C1B682CAB0083891A /* SignupPropertyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F46FE06B1B682CAB0083891A /* SignupPropertyManager.m */; };
 		F46FE0821B683A330083891A /* MenuPropertyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F46FE0811B683A330083891A /* MenuPropertyManager.m */; };
 		F477557E1B63FCE40056FEBA /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = F477557D1B63FCE40056FEBA /* mario.png */; };
@@ -100,8 +97,6 @@
 		F44B0F431B5C8C7C00A6B939 /* KeyChainData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainData.m; sourceTree = "<group>"; };
 		F44B0F451B5C9F6E00A6B939 /* MovieDownloadFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDownloadFetcher.h; sourceTree = "<group>"; };
 		F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDownloadFetcher.m; sourceTree = "<group>"; };
-		F454A3A11BCB4A3E008F37CF /* UIColor+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+extention.h"; sourceTree = "<group>"; };
-		F454A3A21BCB4A3E008F37CF /* UIColor+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+extention.m"; sourceTree = "<group>"; };
 		F45915341B3E80C20041AAF9 /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
 		F45915351B3E80C20041AAF9 /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		F45962461B3E539900BFFFD2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -158,8 +153,6 @@
 		F46854031B3AF69D00AF461D /* LocalServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalServer.m; path = ../../library/LocalServer.m; sourceTree = "<group>"; };
 		F46854041B3AF69D00AF461D /* LocationFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationFetcher.h; sourceTree = "<group>"; };
 		F46854051B3AF69D00AF461D /* LocationFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationFetcher.m; sourceTree = "<group>"; };
-		F46854061B3AF69D00AF461D /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
-		F46854071B3AF69D00AF461D /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 		F46854161B3C1FBE00AF461D /* LessonAppPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LessonAppPrefixHeader.pch; path = LessonApp/LessonAppPrefixHeader.pch; sourceTree = "<group>"; };
 		F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = ../LessonApp/Model/CoreDataManager.h; sourceTree = "<group>"; };
 		F46B37801B48AC0E0051EB8E /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = ../LessonApp/Model/CoreDataManager.m; sourceTree = "<group>"; };
@@ -169,8 +162,6 @@
 		F46E70391B6501F200CF0FB5 /* NSData+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+extention.m"; sourceTree = "<group>"; };
 		F46FE0641B67BB960083891A /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
 		F46FE0651B67BB960083891A /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
-		F46FE0671B6829DF0083891A /* PropertyListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyListManager.h; sourceTree = "<group>"; };
-		F46FE0681B6829DF0083891A /* PropertyListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyListManager.m; sourceTree = "<group>"; };
 		F46FE06A1B682CAB0083891A /* SignupPropertyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupPropertyManager.h; path = LessonApp/Model/SignupPropertyManager.h; sourceTree = SOURCE_ROOT; };
 		F46FE06B1B682CAB0083891A /* SignupPropertyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupPropertyManager.m; path = LessonApp/Model/SignupPropertyManager.m; sourceTree = SOURCE_ROOT; };
 		F46FE0801B683A330083891A /* MenuPropertyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuPropertyManager.h; path = LessonApp/Model/MenuPropertyManager.h; sourceTree = "<group>"; };
@@ -242,8 +233,6 @@
 				F46853FB1B3AF69D00AF461D /* AutoLayout.m */,
 				F46854041B3AF69D00AF461D /* LocationFetcher.h */,
 				F46854051B3AF69D00AF461D /* LocationFetcher.m */,
-				F46854061B3AF69D00AF461D /* Notification.h */,
-				F46854071B3AF69D00AF461D /* Notification.m */,
 				F4B1A5BC1B47BCC20000CC47 /* Thread.h */,
 				F4B1A5BD1B47BCC20000CC47 /* Thread.m */,
 				F42719011B4E9E1400B6521A /* Logger.h */,
@@ -266,12 +255,8 @@
 				F46E70391B6501F200CF0FB5 /* NSData+extention.m */,
 				F46FE0641B67BB960083891A /* Connection.h */,
 				F46FE0651B67BB960083891A /* Connection.m */,
-				F46FE0671B6829DF0083891A /* PropertyListManager.h */,
-				F46FE0681B6829DF0083891A /* PropertyListManager.m */,
 				F46167DF1B775CBB0066C556 /* BaseContainerviewController.h */,
 				F46167E01B775CBB0066C556 /* BaseContainerviewController.m */,
-				F454A3A11BCB4A3E008F37CF /* UIColor+extention.h */,
-				F454A3A21BCB4A3E008F37CF /* UIColor+extention.m */,
 			);
 			name = Library;
 			path = library;
@@ -759,12 +744,10 @@
 				F46853E51B3AF62E00AF461D /* SignupEntity.m in Sources */,
 				F40D443D1B6490FD005A2029 /* DownLoadMovieCoreDataManager.m in Sources */,
 				F46853E01B3AF62E00AF461D /* WebAPIConst.m in Sources */,
-				F46854111B3AF69D00AF461D /* Notification.m in Sources */,
 				F46167E11B775CBB0066C556 /* BaseContainerviewController.m in Sources */,
 				F4DA03051B40247E00E11F93 /* UITableViewCell+extention.m in Sources */,
 				F4B52F241B63633C008D3799 /* MovieEntity.m in Sources */,
 				F46853F51B3AF62E00AF461D /* SignupTableViewController.m in Sources */,
-				F454A3A31BCB4A3E008F37CF /* UIColor+extention.m in Sources */,
 				F468540F1B3AF69D00AF461D /* LocalServer.m in Sources */,
 				F46853E11B3AF62E00AF461D /* MenuEntity.m in Sources */,
 				F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */,
@@ -791,7 +774,6 @@
 				F4C81B7A1B482A2F00337B31 /* UIViewController+extention.m in Sources */,
 				F46853DF1B3AF62E00AF461D /* main.m in Sources */,
 				F46E703A1B6501F200CF0FB5 /* NSData+extention.m in Sources */,
-				F46FE0691B6829DF0083891A /* PropertyListManager.m in Sources */,
 				F42775381B5204D2008082F8 /* RegularExpression.m in Sources */,
 				F46853EA1B3AF62E00AF461D /* MenuTableViewCell.m in Sources */,
 				F40D443A1B6490AE005A2029 /* DownLoadMovieCoreDataEntity.m in Sources */,

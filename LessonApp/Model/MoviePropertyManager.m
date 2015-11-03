@@ -11,7 +11,7 @@
 @implementation MoviePropertyManager
 - (NSArray *)fetchMovieEntityList
 {
-    NSArray *propertyLists = [self fetchPropertyListWithPlist:@"MoviePropertyList"];
+    NSArray *propertyLists = [[self class] fetchArrayWithPlist:@"MoviePropertyList"];
     return [self convertMovieEntityListFromPlists:propertyLists];
 }
 

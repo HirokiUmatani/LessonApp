@@ -29,6 +29,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PEAR-KeyboardNotification-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PEAR-PropertyListManager-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PEAR-UIColorExtention-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PEAR-URLParser-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,17 +62,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>45BB276A2AD94A6F57C1291610BD0EE1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5B4892A650264FE0BAE78DCE50F237C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84687477D3DBB1A21F9D9D81860F0ED1</key>
+		<key>7DFAA203158356430E972811BBA697D6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7E9AF0F701F193E9DD3E8D1BADE92724</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>91BCC048D6FA116732267A60BCAA70F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4C5313F3D76285457B663B77023AD49</key>
 		<dict>
 			<key>primary</key>
 			<true/>

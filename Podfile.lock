@@ -6,6 +6,9 @@ PODS:
   - PEAR-BlocksKit-iOS (0.0.3)
   - PEAR-FileManager-iOS (0.1.0)
   - PEAR-HttpFetcher-iOS (0.0.3)
+  - PEAR-KeyboardNotification-iOS (0.0.1)
+  - PEAR-PropertyListManager-iOS (0.0.1)
+  - PEAR-UIColorExtention-iOS (0.0.1)
   - PEAR-URLParser-iOS (0.0.5)
 
 DEPENDENCIES:
@@ -14,6 +17,9 @@ DEPENDENCIES:
   - PEAR-BlocksKit-iOS
   - PEAR-FileManager-iOS
   - PEAR-HttpFetcher-iOS
+  - PEAR-KeyboardNotification-iOS
+  - PEAR-PropertyListManager-iOS
+  - PEAR-UIColorExtention-iOS
   - PEAR-URLParser-iOS
 
 SPEC CHECKSUMS:
@@ -22,6 +28,9 @@ SPEC CHECKSUMS:
   PEAR-BlocksKit-iOS: b4ce27954767d91c9991c563cccd0c5039dff770
   PEAR-FileManager-iOS: c6df535a881320c026b1c15d0a9d8f4b371eeae8
   PEAR-HttpFetcher-iOS: a0b88644300315ed2bbdfff4498226d2d5704c74
+  PEAR-KeyboardNotification-iOS: 48c6c0c22e5349b4398cd93e6aba52621f5fdb22
+  PEAR-PropertyListManager-iOS: a84391164ddfe814e2376ecbe581d00eb299f341
+  PEAR-UIColorExtention-iOS: f0fafe86582e1b3bb3a6bd707034028762179806
   PEAR-URLParser-iOS: 7a8b71703dfa2d797238bb2aaee2723418f67a7b
 
 COCOAPODS: 0.39.0

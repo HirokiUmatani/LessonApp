@@ -20,7 +20,7 @@ static NSString * coreDatamanageObjectModel = @"LessonApp";
 static NSString * coreDataSqlite = @"LessonApp.sqlite";
 static CoreDataManager* sharedInstance = nil;
 
-#pragma mark -Life Cycle
+#pragma mark - Life Cycle
 + (CoreDataManager *)sharedInstance
 {
     if(sharedInstance)
