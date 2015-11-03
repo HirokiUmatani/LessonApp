@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '35D6DBDD931C12DF73173ACE'
+               BlueprintIdentifier = 'C2067B2675FD7232F33B9256'
                BlueprintName = 'LUKeychainAccess'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libLUKeychainAccess.a'>

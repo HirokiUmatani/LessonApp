@@ -24,12 +24,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PEARHttpFetcher.xcscheme</key>
+		<key>PEAR-URLParser-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PEARURLParser.xcscheme</key>
+		<key>PEARHttpFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,11 +52,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54D1296F57870678FA98073A182A8351</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>5B4892A650264FE0BAE78DCE50F237C8</key>
 		<dict>
 			<key>primary</key>
@@ -67,7 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7B629E1659467E63C4B2892D60B0246</key>
+		<key>9F104A16802F649A7F507054256C668B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C773F535F95161B93C7419BD2AB64752</key>
 		<dict>
 			<key>primary</key>
 			<true/>

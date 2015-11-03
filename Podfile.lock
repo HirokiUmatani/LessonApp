@@ -5,23 +5,23 @@ PODS:
   - LUKeychainAccess (1.2.5)
   - PEAR-BlocksKit-iOS (0.0.3)
   - PEAR-FileManager-iOS (0.1.0)
+  - PEAR-URLParser-iOS (0.0.5)
   - PEARHttpFetcher (0.0.2)
-  - PEARURLParser (0.0.4)
 
 DEPENDENCIES:
   - GCDWebServer/WebDAV (~> 3.0)
   - LUKeychainAccess (~> 1.2.4)
   - PEAR-BlocksKit-iOS
   - PEAR-FileManager-iOS
+  - PEAR-URLParser-iOS
   - PEARHttpFetcher
-  - PEARURLParser
 
 SPEC CHECKSUMS:
   GCDWebServer: 76a9540371d5f12f850b32ec7f555dd2d266e543
   LUKeychainAccess: d22fc00b33ad92c7532962b86daa94c14b85ecbe
   PEAR-BlocksKit-iOS: b4ce27954767d91c9991c563cccd0c5039dff770
   PEAR-FileManager-iOS: c6df535a881320c026b1c15d0a9d8f4b371eeae8
+  PEAR-URLParser-iOS: 7a8b71703dfa2d797238bb2aaee2723418f67a7b
   PEARHttpFetcher: a4b5d060ebebb7c1a7c110588871f1acb4af562a
-  PEARURLParser: c95cc1c2944d2c8713b445714d04814b3368f788
 
 COCOAPODS: 0.39.0
