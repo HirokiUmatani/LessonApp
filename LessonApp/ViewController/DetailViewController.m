@@ -39,14 +39,18 @@
 {
     _movieViewController = [MoviePlayerViewController new];
     [_movieViewController setMovieURLString:@"http://127.0.0.1:8080/mario/high_15.m3u8"];
-    [_movieView addSubview:_movieViewController.player.view];
     [self initMovieViewAutoLayout];
+    
+    
     [_movieViewController movieStart];
     
 }
 - (void)initMovieViewAutoLayout
 {
-    [AutoLayout addConstraintView:_movieViewController.player.view targetView:_movieView];
+    AutoLayout *movieAutoLayout =[AutoLayout baseView:_movieView addSubView:_movieViewController.player.view];
+    
+    [movieAutoLayout part:BOTTOM_CONSTRAINT margin:0];
+    [_movieView layoutIfNeeded];
 }
 
 - (void)startLocalServer

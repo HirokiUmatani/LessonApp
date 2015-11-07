@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PEAR-AutoLayout-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PEAR-BlocksKit-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,12 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7DFAA203158356430E972811BBA697D6</key>
+		<key>7E9AF0F701F193E9DD3E8D1BADE92724</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E9AF0F701F193E9DD3E8D1BADE92724</key>
+		<key>8BDEC79578E9B07DC7033400EF5B4219</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -103,6 +108,11 @@
 			<true/>
 		</dict>
 		<key>F0F475CFFA77F9B0DFDD2127CD4FAFC2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F37127C6407560126024AFE35BC40F00</key>
 		<dict>
 			<key>primary</key>
 			<true/>

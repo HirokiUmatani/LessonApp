@@ -19,7 +19,7 @@
     #import "PropertyListManager.h"
     #import "UIColor+extention.h"
     #import "PEAR-KeyboardNotification-iOS.h"
-
+    #import "AutoLayout.h"
     /*
      extention
      */
@@ -29,10 +29,7 @@
     #import "UIView+extention.h"
     #import "NSJSONSerialization+Serialize.h"
     #import "NSData+extention.h"
-
-
     #import "AnimationView.h"
-    #import "AutoLayout.h"
     #import "WebAPIConst.h"
     #import "LocalServer.h"
     #import "LocationFetcher.h"

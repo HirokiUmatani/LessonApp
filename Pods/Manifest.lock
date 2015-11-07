@@ -3,17 +3,19 @@ PODS:
   - GCDWebServer/WebDAV (3.2.7):
     - GCDWebServer/Core
   - LUKeychainAccess (1.2.5)
-  - PEAR-BlocksKit-iOS (0.0.3)
-  - PEAR-FileManager-iOS (0.1.0)
-  - PEAR-HttpFetcher-iOS (0.0.3)
-  - PEAR-KeyboardNotification-iOS (0.0.1)
-  - PEAR-PropertyListManager-iOS (0.0.1)
-  - PEAR-UIColorExtention-iOS (0.0.1)
-  - PEAR-URLParser-iOS (0.0.5)
+  - PEAR-AutoLayout-iOS (0.0.2)
+  - PEAR-BlocksKit-iOS (0.0.4)
+  - PEAR-FileManager-iOS (0.1.1)
+  - PEAR-HttpFetcher-iOS (0.0.4)
+  - PEAR-KeyboardNotification-iOS (0.0.2)
+  - PEAR-PropertyListManager-iOS (0.0.2)
+  - PEAR-UIColorExtention-iOS (0.0.2)
+  - PEAR-URLParser-iOS (0.0.6)
 
 DEPENDENCIES:
   - GCDWebServer/WebDAV (~> 3.0)
   - LUKeychainAccess (~> 1.2.4)
+  - PEAR-AutoLayout-iOS
   - PEAR-BlocksKit-iOS
   - PEAR-FileManager-iOS
   - PEAR-HttpFetcher-iOS
@@ -25,12 +27,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   GCDWebServer: 76a9540371d5f12f850b32ec7f555dd2d266e543
   LUKeychainAccess: d22fc00b33ad92c7532962b86daa94c14b85ecbe
-  PEAR-BlocksKit-iOS: b4ce27954767d91c9991c563cccd0c5039dff770
-  PEAR-FileManager-iOS: c6df535a881320c026b1c15d0a9d8f4b371eeae8
-  PEAR-HttpFetcher-iOS: a0b88644300315ed2bbdfff4498226d2d5704c74
-  PEAR-KeyboardNotification-iOS: 48c6c0c22e5349b4398cd93e6aba52621f5fdb22
-  PEAR-PropertyListManager-iOS: a84391164ddfe814e2376ecbe581d00eb299f341
-  PEAR-UIColorExtention-iOS: f0fafe86582e1b3bb3a6bd707034028762179806
-  PEAR-URLParser-iOS: 7a8b71703dfa2d797238bb2aaee2723418f67a7b
+  PEAR-AutoLayout-iOS: 5eb5039b6b742310e09ef3877edd103f0ea29ee0
+  PEAR-BlocksKit-iOS: 1760b5cae4519000b9ffa0280f8732d9766a7c4d
+  PEAR-FileManager-iOS: 667a50f21d3932ba1dc1fa7c6d4bb03efb691c06
+  PEAR-HttpFetcher-iOS: ac08cfa77c5cbbb74d0c565ceb31b8b766aa3c99
+  PEAR-KeyboardNotification-iOS: b652b0b4e956bb4f1040ce2591eef02b9a19cf2e
+  PEAR-PropertyListManager-iOS: 1d2eae1a7bc64721de860149906b01496ecc5c4f
+  PEAR-UIColorExtention-iOS: c989fb889feb6bd901e3b744adf30c8f654729a1
+  PEAR-URLParser-iOS: cacf10907f2ccffcad837422a0782c3a1ee9bbb3
 
 COCOAPODS: 0.39.0

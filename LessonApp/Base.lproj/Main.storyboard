@@ -19,18 +19,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDa-LZ-McP" userLabel="movieVIew">
-                                <rect key="frame" x="8" y="28" width="584" height="325"/>
+                                <rect key="frame" x="8" y="28" width="584" height="564"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="325" id="Vf8-Lf-QHN"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Vf8-Lf-QHN"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Xuf-qz-zSG" firstAttribute="top" secondItem="nDa-LZ-McP" secondAttribute="bottom" constant="8" id="8G1-Gk-Hka"/>
                             <constraint firstItem="nDa-LZ-McP" firstAttribute="top" secondItem="JxT-Hs-NMR" secondAttribute="bottom" constant="8" id="EAK-FQ-cZF"/>
                             <constraint firstAttribute="trailing" secondItem="nDa-LZ-McP" secondAttribute="trailing" constant="8" id="isX-a2-jU5"/>
                             <constraint firstItem="nDa-LZ-McP" firstAttribute="leading" secondItem="Lsh-rA-6TG" secondAttribute="leading" constant="8" id="t7p-XB-QGA"/>

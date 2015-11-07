@@ -44,7 +44,6 @@
 		F46853F51B3AF62E00AF461D /* SignupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D71B3AF62E00AF461D /* SignupTableViewController.m */; };
 		F46853F61B3AF62E00AF461D /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853D91B3AF62E00AF461D /* TopViewController.m */; };
 		F468540A1B3AF69D00AF461D /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853F91B3AF69D00AF461D /* AnimationView.m */; };
-		F468540B1B3AF69D00AF461D /* AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853FB1B3AF69D00AF461D /* AutoLayout.m */; };
 		F468540C1B3AF69D00AF461D /* NSString+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853FD1B3AF69D00AF461D /* NSString+Device.m */; };
 		F468540E1B3AF69D00AF461D /* NSJSONSerialization+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854011B3AF69D00AF461D /* NSJSONSerialization+Serialize.m */; };
 		F468540F1B3AF69D00AF461D /* LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854031B3AF69D00AF461D /* LocalServer.m */; };
@@ -143,8 +142,6 @@
 		F46853D91B3AF62E00AF461D /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
 		F46853F81B3AF69D00AF461D /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
 		F46853F91B3AF69D00AF461D /* AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationView.m; sourceTree = "<group>"; };
-		F46853FA1B3AF69D00AF461D /* AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayout.h; sourceTree = "<group>"; };
-		F46853FB1B3AF69D00AF461D /* AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayout.m; sourceTree = "<group>"; };
 		F46853FC1B3AF69D00AF461D /* NSString+Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Device.h"; sourceTree = "<group>"; };
 		F46853FD1B3AF69D00AF461D /* NSString+Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Device.m"; sourceTree = "<group>"; };
 		F46854001B3AF69D00AF461D /* NSJSONSerialization+Serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+Serialize.h"; sourceTree = "<group>"; };
@@ -229,8 +226,6 @@
 				F46B37801B48AC0E0051EB8E /* CoreDataManager.m */,
 				F46853F81B3AF69D00AF461D /* AnimationView.h */,
 				F46853F91B3AF69D00AF461D /* AnimationView.m */,
-				F46853FA1B3AF69D00AF461D /* AutoLayout.h */,
-				F46853FB1B3AF69D00AF461D /* AutoLayout.m */,
 				F46854041B3AF69D00AF461D /* LocationFetcher.h */,
 				F46854051B3AF69D00AF461D /* LocationFetcher.m */,
 				F4B1A5BC1B47BCC20000CC47 /* Thread.h */,
@@ -761,7 +756,6 @@
 				F42719031B4E9E1400B6521A /* Logger.m in Sources */,
 				F468540C1B3AF69D00AF461D /* NSString+Device.m in Sources */,
 				F46853F01B3AF62E00AF461D /* SignupTableViewCell.m in Sources */,
-				F468540B1B3AF69D00AF461D /* AutoLayout.m in Sources */,
 				F4E0685F1BD085E300D100FB /* BaseTableView.m in Sources */,
 				F4E0684F1BCE77F700D100FB /* BaseConst.m in Sources */,
 				F468540E1B3AF69D00AF461D /* NSJSONSerialization+Serialize.m in Sources */,
