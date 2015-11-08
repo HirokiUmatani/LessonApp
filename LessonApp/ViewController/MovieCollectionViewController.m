@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSMutableArray *itemCellLists;
 @property (nonatomic, strong) MovieEntity *itemCellEntity;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic,strong) IndicatorView *indicator;
 @end
 
 @implementation MovieCollectionViewController
@@ -21,12 +22,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+}
+- (void)indicatorStop
+{
+    [_indicator stop];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self setCellLists];
     [_collectionView reloadData];
+    
+    _indicator= [[IndicatorView alloc]initWithTarget:self.navigationController.view
+                                             message:nil
+                                     backgroundColor:[UIColor blackColor] fontColor:[UIColor whiteColor]];
+    [_indicator start];
+    [self performSelector:@selector(indicatorStop)
+               withObject:nil afterDelay:5.0f];
 }
 
 #pragma mark - UIScrollViewDelegate

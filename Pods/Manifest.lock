@@ -3,10 +3,11 @@ PODS:
   - GCDWebServer/WebDAV (3.2.7):
     - GCDWebServer/Core
   - LUKeychainAccess (1.2.5)
-  - PEAR-AutoLayout-iOS (0.0.2)
+  - PEAR-AutoLayout-iOS (0.0.3)
   - PEAR-BlocksKit-iOS (0.0.4)
   - PEAR-FileManager-iOS (0.1.1)
   - PEAR-HttpFetcher-iOS (0.0.4)
+  - PEAR-Indicator-iOS (0.0.7)
   - PEAR-KeyboardNotification-iOS (0.0.2)
   - PEAR-PropertyListManager-iOS (0.0.2)
   - PEAR-UIColorExtention-iOS (0.0.2)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - PEAR-BlocksKit-iOS
   - PEAR-FileManager-iOS
   - PEAR-HttpFetcher-iOS
+  - PEAR-Indicator-iOS
   - PEAR-KeyboardNotification-iOS
   - PEAR-PropertyListManager-iOS
   - PEAR-UIColorExtention-iOS
@@ -27,10 +29,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   GCDWebServer: 76a9540371d5f12f850b32ec7f555dd2d266e543
   LUKeychainAccess: d22fc00b33ad92c7532962b86daa94c14b85ecbe
-  PEAR-AutoLayout-iOS: 5eb5039b6b742310e09ef3877edd103f0ea29ee0
+  PEAR-AutoLayout-iOS: 5486f08f5b918b43b48f5a6dd364a2f00e514c00
   PEAR-BlocksKit-iOS: 1760b5cae4519000b9ffa0280f8732d9766a7c4d
   PEAR-FileManager-iOS: 667a50f21d3932ba1dc1fa7c6d4bb03efb691c06
   PEAR-HttpFetcher-iOS: ac08cfa77c5cbbb74d0c565ceb31b8b766aa3c99
+  PEAR-Indicator-iOS: 1978a5acff4c6ea76dd3266d6ca1f9654887c19a
   PEAR-KeyboardNotification-iOS: b652b0b4e956bb4f1040ce2591eef02b9a19cf2e
   PEAR-PropertyListManager-iOS: 1d2eae1a7bc64721de860149906b01496ecc5c4f
   PEAR-UIColorExtention-iOS: c989fb889feb6bd901e3b744adf30c8f654729a1

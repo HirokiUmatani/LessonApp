@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PEAR-Indicator-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PEAR-KeyboardNotification-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,6 +67,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>15B020A0B9CF37F4316FD2297C4C9CD0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>35688256C1EA997336E734EAC5D9D02F</key>
 		<dict>
 			<key>primary</key>
@@ -82,12 +92,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8BDEC79578E9B07DC7033400EF5B4219</key>
+		<key>91BCC048D6FA116732267A60BCAA70F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>91BCC048D6FA116732267A60BCAA70F3</key>
+		<key>A4D06602BB5B81461802BC183D03A442</key>
 		<dict>
 			<key>primary</key>
 			<true/>

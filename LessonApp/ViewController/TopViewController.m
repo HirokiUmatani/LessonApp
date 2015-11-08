@@ -31,6 +31,7 @@ typedef NS_ENUM(NSInteger,TopContainerViewIndex)
 // IBOutlet
 @property (weak, nonatomic) IBOutlet UIView *mainView;
 @property (weak, nonatomic) IBOutlet UIView *weatherView;
+
 // IBAction
 - (IBAction)tapSideMenuButton:(UIBarButtonItem *)sender;
 @end
@@ -40,11 +41,15 @@ typedef NS_ENUM(NSInteger,TopContainerViewIndex)
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 }
+
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [self setViewController];
     [self setDelegate];
+    
 }
 
 #pragma mark - MenuTableViewControllerDelegate

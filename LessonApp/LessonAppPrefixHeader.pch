@@ -20,6 +20,7 @@
     #import "UIColor+extention.h"
     #import "PEAR-KeyboardNotification-iOS.h"
     #import "AutoLayout.h"
+    #import "IndicatorView.h"
     /*
      extention
      */

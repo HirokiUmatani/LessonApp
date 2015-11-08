@@ -13,6 +13,7 @@
                     success:(FetchSuccess)success
                      failed:(FetchFailed)failed
 {
+    
     [self fetchSyncWithUrlString:url
                          success:^(NSData *responceData)
     {
