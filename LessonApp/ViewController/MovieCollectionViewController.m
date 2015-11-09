@@ -35,11 +35,12 @@
     [_collectionView reloadData];
     
     _indicator= [[IndicatorView alloc]initWithTarget:self.navigationController.view
+                                          userEnable:YES
                                              message:nil
                                      backgroundColor:[UIColor blackColor] fontColor:[UIColor whiteColor]];
     [_indicator start];
     [self performSelector:@selector(indicatorStop)
-               withObject:nil afterDelay:5.0f];
+               withObject:nil afterDelay:2.0f];
 }
 
 #pragma mark - UIScrollViewDelegate

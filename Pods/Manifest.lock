@@ -7,7 +7,7 @@ PODS:
   - PEAR-BlocksKit-iOS (0.0.4)
   - PEAR-FileManager-iOS (0.1.1)
   - PEAR-HttpFetcher-iOS (0.0.4)
-  - PEAR-Indicator-iOS (0.0.7)
+  - PEAR-Indicator-iOS (0.1.0)
   - PEAR-KeyboardNotification-iOS (0.0.2)
   - PEAR-PropertyListManager-iOS (0.0.2)
   - PEAR-UIColorExtention-iOS (0.0.2)
@@ -33,7 +33,7 @@ SPEC CHECKSUMS:
   PEAR-BlocksKit-iOS: 1760b5cae4519000b9ffa0280f8732d9766a7c4d
   PEAR-FileManager-iOS: 667a50f21d3932ba1dc1fa7c6d4bb03efb691c06
   PEAR-HttpFetcher-iOS: ac08cfa77c5cbbb74d0c565ceb31b8b766aa3c99
-  PEAR-Indicator-iOS: 1978a5acff4c6ea76dd3266d6ca1f9654887c19a
+  PEAR-Indicator-iOS: b584851c99a16041db50c6369ee35a300dc70425
   PEAR-KeyboardNotification-iOS: b652b0b4e956bb4f1040ce2591eef02b9a19cf2e
   PEAR-PropertyListManager-iOS: 1d2eae1a7bc64721de860149906b01496ecc5c4f
   PEAR-UIColorExtention-iOS: c989fb889feb6bd901e3b744adf30c8f654729a1
