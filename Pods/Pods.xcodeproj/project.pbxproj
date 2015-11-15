@@ -8,286 +8,303 @@
 
 /* Begin PBXBuildFile section */
 		013938DE19E93289CAD366F5A5D69115 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
-		01B0B82BB8975220B6D14CFEA6C0C885 /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 489C9493A9E60E86C5E9576911CD3FCA /* GCDWebServerFileRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0305C0EB2C344F38DDE2641949FCE934 /* GCDWebServerDataResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8005E76A805C0F9659EAE9910A6E6248 /* GCDWebServerDataResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0901747109181A4736BE43B0195F94BF /* PEAR-KeyboardNotification-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4D30089C2D386F8EF6246CA58883F5 /* PEAR-KeyboardNotification-iOS-dummy.m */; };
-		09A088EA52BAACAFCAE8C9551B82817E /* GCDWebServerErrorResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = DE976FF870123A991EC211AE12ABA09A /* GCDWebServerErrorResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A762A8873A7471D27B742CD0AEB9ECE /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B29B5BE866CCBE41879D36DE4D8474F /* GCDWebServerConnection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		01B0B82BB8975220B6D14CFEA6C0C885 /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB712980B6D66780CE7B6B6ACE2A1B8 /* GCDWebServerFileRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0305C0EB2C344F38DDE2641949FCE934 /* GCDWebServerDataResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = DF597588EF6337D4C53F25CBD20D32FB /* GCDWebServerDataResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0901747109181A4736BE43B0195F94BF /* PEAR-KeyboardNotification-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC49DD913B8E0D60C64C23A5D0810C08 /* PEAR-KeyboardNotification-iOS-dummy.m */; };
+		09A088EA52BAACAFCAE8C9551B82817E /* GCDWebServerErrorResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E83390B354D6DA7FE3BCE189FFF74FA /* GCDWebServerErrorResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A762A8873A7471D27B742CD0AEB9ECE /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = EA083F18C55C8B31FB5E318B7199D220 /* GCDWebServerConnection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		0C1978055E0B5A8BE2B9FECDCE2F6615 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
-		0CDFC232592FEBC49B3BDC26275B12A3 /* GCDWebServerURLEncodedFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6EE0DC25AEF0647EC07BC1B17F3792 /* GCDWebServerURLEncodedFormRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0FD60B5AFE43C570D4A3EF3177F30F94 /* GCDWebServerResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C7D3A588F1D74089CA2631DB7BC6F /* GCDWebServerResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		119C7CF05366A8D4A7C6A650F869066A /* URLEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EF1979D8BEC4FCBCEE425CA2C75B9D /* URLEntity.m */; };
-		185F43B9DACC4D4821D6D6026737BE5E /* PEARURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B87D0EA321C248C3DE2E7FC31E2AFA /* PEARURLParser.m */; };
-		188048FF48D742183539E654E5349C55 /* PEARHttpFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D11AFA41873F128816967AC16D692F8 /* PEARHttpFetcher.m */; };
+		0CDFC232592FEBC49B3BDC26275B12A3 /* GCDWebServerURLEncodedFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECFC2ED38907C531CF6889BA6A55AD7 /* GCDWebServerURLEncodedFormRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0FD60B5AFE43C570D4A3EF3177F30F94 /* GCDWebServerResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 714CD5093200E068477FED748AEF3BFC /* GCDWebServerResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		119C7CF05366A8D4A7C6A650F869066A /* URLEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 662DE421BCE9D48B9600E231422072A6 /* URLEntity.m */; };
+		13C79A8493F29CBA9892925A34B434D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
+		185F43B9DACC4D4821D6D6026737BE5E /* PEARURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD641F9CA8A79378C0AE04AE0BA125C /* PEARURLParser.m */; };
+		188048FF48D742183539E654E5349C55 /* PEARHttpFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3998942CF9548C52D61A89B2002E9B /* PEARHttpFetcher.m */; };
+		1B04EBAFBEB318E11B1069BF7F80A9F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
 		1D3C4DF6C2CF705F1701D3F4F2B0BD6E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B09B0C55514F0E4A1DBE335DBD37E /* MobileCoreServices.framework */; };
 		21161A327447C9EA5344ED9223D9B8DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
-		2B01106C17FE6B23194562B25FBDCD94 /* UIColor+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B4FA8C3DE7AE8219FC0CDA51F3E7A5 /* UIColor+extention.m */; };
-		3F9514DE42A4CE81F4E414755BFF0E3B /* GCDWebServer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DD083A1FAA79E02F7DED8EC404D587 /* GCDWebServer-dummy.m */; };
-		4247A2DE4B98130231CFD0B81E97D05F /* GCDWebServerPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5437B67A567F6D1E1B694C88A137A2CC /* GCDWebServerPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		43F9D542589B934E3766EF707CD8C983 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
+		2B01106C17FE6B23194562B25FBDCD94 /* UIColor+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B22EEBEE4E85416080445C89C30399F /* UIColor+extention.m */; };
+		3B6A536371C485645BF7B06752EBB993 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
+		3F9514DE42A4CE81F4E414755BFF0E3B /* GCDWebServer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C50FD21BA9ED6F02153971CAF5AD604E /* GCDWebServer-dummy.m */; };
+		4247A2DE4B98130231CFD0B81E97D05F /* GCDWebServerPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 56D2D52D376D19095B85669F26866B0B /* GCDWebServerPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4912624556C42E2F461F2D451DE54016 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
-		4B22B08615801F70437A61A5E3DD1B96 /* GCDWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EF9F2E6AEFB55379741FBFFF14E955 /* GCDWebServerRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4BC43DABBF3BB3953D37512795E27FBC /* AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A7EDE269365BEA35CC231935BF36BC /* AutoLayout.m */; };
-		4BF65DA4E82C962782936D560826AB72 /* GCDWebServerURLEncodedFormRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = BAC0ACFDF0F8BBEB6D4313BFDCFB5788 /* GCDWebServerURLEncodedFormRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4DFF03A761E2854B21B9C2C8A853C1B5 /* IndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B19FAB13784E70B6260F2E917DEE2 /* IndicatorView.m */; };
-		5E291F537ABAF55EA550606DE06353B4 /* PEAR-PropertyListManager-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D46EA05C915DACDCF8D17EEC5467E9EA /* PEAR-PropertyListManager-iOS-dummy.m */; };
-		66871701871EB0211834E799A623C66A /* LUKeychainAccess-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E2FCDA6AC3546485363F5F0ADB5544 /* LUKeychainAccess-dummy.m */; };
-		66A3C863AF55F15BEC6D4381F2A65162 /* PEAR-KeyboardNotification-iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDDA1314C90601CD57228466B78F9F8 /* PEAR-KeyboardNotification-iOS.m */; };
-		675DAE84C285AB1EFB125ECA876B1B0B /* PEAR-AutoLayout-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C7DB4F046535AD31288148291C652 /* PEAR-AutoLayout-iOS-dummy.m */; };
-		773DD167C4741D561DE257BA5B4D9F95 /* GCDWebServerConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 47427870354AA0E51D9EEBA6D905BDB1 /* GCDWebServerConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C7A66FDC5DD1B46B587F239D5176C8B /* URLEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = F82EDD4C4601A842AD3C5A4979FD77EB /* URLEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		87A5074EE8DCBB6E2123C11850B89531 /* PEAR-HttpFetcher-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DDDE93DD22FE9FAD36810223C14931 /* PEAR-HttpFetcher-iOS-dummy.m */; };
-		87BB712C1A9DA9537CB7DF947E458B4E /* GCDWebServerDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FDCC54DB7C34D8DC32373563BE62AA92 /* GCDWebServerDataResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		89B079D8598BA1C313FC1F1B4D7C2C3A /* PEARFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BFC1D23AEC324BED2A9B54FB6A0A3E78 /* PEARFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E94FEA9F624C2E2FF445A8EFFA1FEB0 /* GCDWebServerStreamedResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 51152D07DB56A27BEE529B916CD6320B /* GCDWebServerStreamedResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9953114A7EA68E95C57E0A59595DE749 /* UIColor+extention.h in Headers */ = {isa = PBXBuildFile; fileRef = F28329110B45F6D2B13B976D51E1F955 /* UIColor+extention.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99C1EE21B9C7977D1EC2774862ADF103 /* GCDWebServer.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A7F70D3A9A1506F3BBB86BF15EBA28 /* GCDWebServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B388AE29B7354471D5C959ED5627134 /* LUKeychainServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 321C793573EA2BEB5778AA1CCE5EC2D5 /* LUKeychainServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BECB333EAD3FCB52A4B18519514F2D0 /* GCDWebServerMultiPartFormRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A0ECDAC6904ED61C289C1D6573E19D2 /* GCDWebServerMultiPartFormRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C37608294F27AE7103C25F02AAC80ED /* PEARBlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C07F6591577A43D36A7C8683C3C384 /* PEARBlocksKit.m */; };
-		9E363B004839CCBC3FA3DA5F2F32CE47 /* GCDWebDAVServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CCF5DA2F33316049E58DF324A33413 /* GCDWebDAVServer.m */; settings = {COMPILER_FLAGS = "-I$(SDKROOT)/usr/include/libxml2 -DOS_OBJECT_USE_OBJC=0"; }; };
-		A15A4705E9FA0471CA429F978A408B0F /* LUKeychainAccessAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 0753A3614071F7239CB54AC45B575118 /* LUKeychainAccessAccessibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B22B08615801F70437A61A5E3DD1B96 /* GCDWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B860D7B7EED6DFA00072A293FBF4128 /* GCDWebServerRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4BC43DABBF3BB3953D37512795E27FBC /* AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8536F2D6D1F33B5DE269137F03E4D194 /* AutoLayout.m */; };
+		4BF65DA4E82C962782936D560826AB72 /* GCDWebServerURLEncodedFormRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EAEC415A0E8C192D16C447FF54812AF /* GCDWebServerURLEncodedFormRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DFF03A761E2854B21B9C2C8A853C1B5 /* IndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C83EF0D3A6808EC38499D6333B3CBBC6 /* IndicatorView.m */; };
+		5E291F537ABAF55EA550606DE06353B4 /* PEAR-PropertyListManager-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E7E0DB814B27D65693607B0CB53C9 /* PEAR-PropertyListManager-iOS-dummy.m */; };
+		66871701871EB0211834E799A623C66A /* LUKeychainAccess-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 114F9FE7069AD960893CCF4B27828183 /* LUKeychainAccess-dummy.m */; };
+		66A3C863AF55F15BEC6D4381F2A65162 /* PEAR-KeyboardNotification-iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DE97266041D716DE767643A76F5BF7 /* PEAR-KeyboardNotification-iOS.m */; };
+		675DAE84C285AB1EFB125ECA876B1B0B /* PEAR-AutoLayout-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E0A31AF9DF4715EEA2BACCD8F985C4 /* PEAR-AutoLayout-iOS-dummy.m */; };
+		7128648A849AA3D5DD29C710317EC480 /* PEAR-CoreDataManager-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E0B296B8DD9DC5F6BC162F336DFB05 /* PEAR-CoreDataManager-iOS-dummy.m */; };
+		773DD167C4741D561DE257BA5B4D9F95 /* GCDWebServerConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = D3304FFF03772A1ECD67F7534D25AA69 /* GCDWebServerConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C7A66FDC5DD1B46B587F239D5176C8B /* URLEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 229669EB1D3F1535A2B22A8152497913 /* URLEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87A5074EE8DCBB6E2123C11850B89531 /* PEAR-HttpFetcher-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42065C7AF2026A18A14951C12BD9600D /* PEAR-HttpFetcher-iOS-dummy.m */; };
+		87BB712C1A9DA9537CB7DF947E458B4E /* GCDWebServerDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4D1196C16D468BD85177942153EF2E /* GCDWebServerDataResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		89B079D8598BA1C313FC1F1B4D7C2C3A /* PEARFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA8CAA60F9FBF34880625826C5EF790 /* PEARFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E94FEA9F624C2E2FF445A8EFFA1FEB0 /* GCDWebServerStreamedResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AD2B5B3FCECCC1F9D003F0D631D7F582 /* GCDWebServerStreamedResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9953114A7EA68E95C57E0A59595DE749 /* UIColor+extention.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D690471A8A4D450709F4F93E8FDA761 /* UIColor+extention.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99C1EE21B9C7977D1EC2774862ADF103 /* GCDWebServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8344AD6AF740115052B5DD866A2F5D /* GCDWebServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B388AE29B7354471D5C959ED5627134 /* LUKeychainServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E1C12B5C7E7B55A0BC414AEAE7AA06 /* LUKeychainServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BECB333EAD3FCB52A4B18519514F2D0 /* GCDWebServerMultiPartFormRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FE98E98B59132A10CB6E71927A30213 /* GCDWebServerMultiPartFormRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C37608294F27AE7103C25F02AAC80ED /* PEARBlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 09325439F7C5B09067C1D65A00808C6F /* PEARBlocksKit.m */; };
+		9E363B004839CCBC3FA3DA5F2F32CE47 /* GCDWebDAVServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 297ABC35B717168CD4D3C86A15D97219 /* GCDWebDAVServer.m */; settings = {COMPILER_FLAGS = "-I$(SDKROOT)/usr/include/libxml2 -DOS_OBJECT_USE_OBJC=0"; }; };
+		A15A4705E9FA0471CA429F978A408B0F /* LUKeychainAccessAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CFB859F3A687FBEEE491314E914498F /* LUKeychainAccessAccessibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3DB5D34FFC66EF48DCC91C57D6E7654 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D84E283A1E63669623F501E4822252 /* CoreDataManager.m */; };
 		A69D6BFE97B135C5AE9CA8B7DFBB04B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
 		A88EE1F6FAEE2FF301828F6BC97E1829 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2541E28EBA9E98CBFB4B5B50B3A41F0F /* CFNetwork.framework */; };
-		A92CC0DFC54A88E320019F3ED22850B9 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
-		A9C9A9DD5BD5842A41C3A2C249C6A5E3 /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F30E0D6574B68281DE3A5AE54E3B2EAA /* GCDWebServerFileResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A9C9A9DD5BD5842A41C3A2C249C6A5E3 /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9160F8691F8D80C37B5663806AA21C /* GCDWebServerFileResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		ADC35A45A975FCEE40A7BC0EAB009395 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
-		AF1DEC3355028D2585053669A511ED6A /* GCDWebServerErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2128C9D317D9DD707DEC8BFB55143760 /* GCDWebServerErrorResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B397C998736AE5791A83248C9454947A /* GCDWebServerMultiPartFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D81476AECB85917D5AB48167B90B0566 /* GCDWebServerMultiPartFormRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B3ADDD5E6FCDB0B1B02E062094B91645 /* PEARURLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C9D6DF81A57143F439ADB8F98C497284 /* PEARURLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5DC183A27F817B1F068F0A52C8FD568 /* AutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A45A7380BD5F13327E839AAD9D7037B /* AutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B70B77D76BCD2807F392F29DDA9A3F6A /* PEAR-UIColorExtention-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A85D1ACFDE3C393A1EA72657B35CA /* PEAR-UIColorExtention-iOS-dummy.m */; };
-		B809BF83174582936A27E21C64ADD579 /* GCDWebServerFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 593D5C87C9A53774022F2CA51B8AFB1B /* GCDWebServerFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9FA99163B3D677F65812E503178731D /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6B406B8C39D200B0DCB754E636700 /* GCDWebServer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		BF234E93A7B6A4F070F8346111005C43 /* LUKeychainErrorHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = A57A78468A5A5DF36CAB9B36929D887A /* LUKeychainErrorHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C225E57E10017128FA24FB9AF87E6F37 /* PEARBlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ECB5826495B3CF3FC7BCC7426F40449 /* PEARBlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C261AD72E58FA5AEC540528BE5860F07 /* GCDWebServerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB45B06863E7467051ED052C9FD9573 /* GCDWebServerFunctions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AF1DEC3355028D2585053669A511ED6A /* GCDWebServerErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 08026F5E2B0DB1CC1101AADA32BA95F2 /* GCDWebServerErrorResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B397C998736AE5791A83248C9454947A /* GCDWebServerMultiPartFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6213BCE099E4F0247B2DFA9F0D7F1 /* GCDWebServerMultiPartFormRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B3ADDD5E6FCDB0B1B02E062094B91645 /* PEARURLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 34B315AA8ED425252C9C5DBFE4722226 /* PEARURLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5DC183A27F817B1F068F0A52C8FD568 /* AutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D0CDB51852BC90F7A2BB2A81C941BC /* AutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B70B77D76BCD2807F392F29DDA9A3F6A /* PEAR-UIColorExtention-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D11BE1BA223546409FA3FA3A11F8B47C /* PEAR-UIColorExtention-iOS-dummy.m */; };
+		B809BF83174582936A27E21C64ADD579 /* GCDWebServerFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5B38C1036557A004177C7AA17D461E /* GCDWebServerFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9FA99163B3D677F65812E503178731D /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7C3D0D2E9B15D3E2CD0D529692F439 /* GCDWebServer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BF234E93A7B6A4F070F8346111005C43 /* LUKeychainErrorHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = A5BBD23AB5DF3FA852D7DFA0218E121E /* LUKeychainErrorHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C225E57E10017128FA24FB9AF87E6F37 /* PEARBlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A807E5696BF9C34E8ACD6473779EE27 /* PEARBlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C261AD72E58FA5AEC540528BE5860F07 /* GCDWebServerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D590D287DF64FCE53027AFCA35BAB42 /* GCDWebServerFunctions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		C7D69F16D236BE188BA84E0A03507731 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
-		C91605884DE071B5B417E08800FCCCA4 /* PropertyListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0432C19123C872819C203362924CE4 /* PropertyListManager.m */; };
-		C9F4FF6298CB6EDB1F01DB53C09F1836 /* PEAR-KeyboardNotification-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 5366A58575A85BE4F4DB90EC25B73718 /* PEAR-KeyboardNotification-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA039742BA66E3E9B7172651E2F9177A /* LUKeychainServices.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A59C252347C43530D9CEE83D714A51 /* LUKeychainServices.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CA6155C1A2D5848961830B86F1BC1509 /* PEARHttpFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D49DBCBD37C1C92603E86E211C7AAA1B /* PEARHttpFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD2B49D4180C52B018584EC45493E79B /* GCDWebServerFileResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = A211DEB8649B908B8ED746EFD06C136A /* GCDWebServerFileResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0A8791896BB2903010C39D36F0B5D25 /* IndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = EEFE0B1AE018AED65C164A81CFEB7AED /* IndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2E6C451ED941527B0F747FA812042AA /* PropertyListManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C95B4D0B5BFAB0DFAB4B4CAA749AB99C /* PropertyListManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3CDDA25122E24B62B6FDA70CBA6E725 /* PEARFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CDA4B85C9E7FAF95F1F6B72BCA7E7B /* PEARFileManager.m */; };
-		D7095AC23C6FF267D363A72A08CEE02C /* PEAR-BlocksKit-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E04AAF8553420096CE58BA5CC409C5 /* PEAR-BlocksKit-iOS-dummy.m */; };
-		DB0DAE50A787AB43D798DB1933A7B109 /* GCDWebServerFileRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4619A9D213708FE6ABADF3A60196E431 /* GCDWebServerFileRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF79F5B3EC342C43E84ABAE87FA8BA05 /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BAABD14EE5F944B6E100E10DE23E9FAA /* GCDWebServerStreamedResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C91605884DE071B5B417E08800FCCCA4 /* PropertyListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AB7D12EC6B7729A1C1E920A03B5F43 /* PropertyListManager.m */; };
+		C9F4FF6298CB6EDB1F01DB53C09F1836 /* PEAR-KeyboardNotification-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = ADDB45808B1B9D15C75E2BB304DDE21E /* PEAR-KeyboardNotification-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA039742BA66E3E9B7172651E2F9177A /* LUKeychainServices.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AB3497D95DF25C058D4A4286E755F /* LUKeychainServices.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CA6155C1A2D5848961830B86F1BC1509 /* PEARHttpFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 5458EBD86704B1D5BA4233FF8CAD760F /* PEARHttpFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD2B49D4180C52B018584EC45493E79B /* GCDWebServerFileResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE6945FB3E4B3DF7DC7B22C4A367C73 /* GCDWebServerFileResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0A8791896BB2903010C39D36F0B5D25 /* IndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E3267B03EDC1868D95A6ED55EC27FCC /* IndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2E6C451ED941527B0F747FA812042AA /* PropertyListManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 788E31F0E53157D88A9FBE2DB04B748D /* PropertyListManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3CDDA25122E24B62B6FDA70CBA6E725 /* PEARFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 41796F09FECC4D9387F0B33638C0DAB4 /* PEARFileManager.m */; };
+		D7095AC23C6FF267D363A72A08CEE02C /* PEAR-BlocksKit-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 100D83A3AF53247745F019698D4542A4 /* PEAR-BlocksKit-iOS-dummy.m */; };
+		DB0DAE50A787AB43D798DB1933A7B109 /* GCDWebServerFileRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6E5D7E198E6F00A7AB57427A4DF19B /* GCDWebServerFileRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF79F5B3EC342C43E84ABAE87FA8BA05 /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 836175C91EA9997DDF5D9D6691D31B30 /* GCDWebServerStreamedResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		E15CBDAD890514C377B61734B0105457 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
-		E1B4CFEBCB94F48D2F1BE88867F9E787 /* LUKeychainAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = D423BBEF08B5E28D81DA21FEAA7268BA /* LUKeychainAccess.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E476292EF26D832A7EF7A834C011EC7B /* LUKeychainAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EB4F1EDA0FE1C32838326B667BB1FD7 /* LUKeychainAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E981C7404F1198C20B007B57B797131E /* PEAR-FileManager-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5441795E03587B76C85E0FAE653804E /* PEAR-FileManager-iOS-dummy.m */; };
-		E9BA341401FEF6C0F22B327FE6544BA2 /* PEAR-URLParser-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 510CB01E514D616E598B95EE6F298DDA /* PEAR-URLParser-iOS-dummy.m */; };
+		E1B4CFEBCB94F48D2F1BE88867F9E787 /* LUKeychainAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2F12AE4346E14C3CF836504FAE7C01 /* LUKeychainAccess.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E476292EF26D832A7EF7A834C011EC7B /* LUKeychainAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 69BDA37675F1742EDF188F8BEC930B6A /* LUKeychainAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E981C7404F1198C20B007B57B797131E /* PEAR-FileManager-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8F343057CD648BD80A52EEC668964A /* PEAR-FileManager-iOS-dummy.m */; };
+		E9BA341401FEF6C0F22B327FE6544BA2 /* PEAR-URLParser-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BC793668ED9D8A2CCD0538D24693F6 /* PEAR-URLParser-iOS-dummy.m */; };
 		EC78D492914696B1F555E29239696DFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
-		ECB6F365D89700C5F6D30F95983681E4 /* GCDWebServerRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A7DDAE2741B98C47030D4F750496F0 /* GCDWebServerRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEF14643A0CD39B15E6B6CFB9810E58F /* GCDWebServerDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3062440C035456C9391AEA0410E87849 /* GCDWebServerDataRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF539DA4F5CF8B2C52681A2C115CC551 /* PEAR-Indicator-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB222C74491C8D1376568CCB84F07387 /* PEAR-Indicator-iOS-dummy.m */; };
-		EF62D64475912206AA14B60D388EE567 /* GCDWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A938F504F927BE10BBA78404844B1D /* GCDWebServerResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ECB6F365D89700C5F6D30F95983681E4 /* GCDWebServerRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C68DD7B871B5A6C3FE7D745460C757D6 /* GCDWebServerRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEF14643A0CD39B15E6B6CFB9810E58F /* GCDWebServerDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D6080975AB65A695D62B308224EAB94C /* GCDWebServerDataRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF539DA4F5CF8B2C52681A2C115CC551 /* PEAR-Indicator-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE597C5EC332F433D2AD9473B3ACC6B /* PEAR-Indicator-iOS-dummy.m */; };
+		EF62D64475912206AA14B60D388EE567 /* GCDWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4684D8E3487BE062F5164765B71EF0A4 /* GCDWebServerResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		EFFF57ADBFA0C31D2E1D1571808EBD4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
-		F2C302EFF6596221036E8CEB19CC9F98 /* GCDWebDAVServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0442542F5E9E4B7D51750663B43513C5 /* GCDWebDAVServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F51B3ADB4EEB97C2C01F10B2514523EC /* GCDWebServerDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3ADB2099C2468AC14C9499FA4DE0E9 /* GCDWebServerDataRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F2C302EFF6596221036E8CEB19CC9F98 /* GCDWebDAVServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E6FB9F980D5524C591AD53F821E96FB /* GCDWebDAVServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F51B3ADB4EEB97C2C01F10B2514523EC /* GCDWebServerDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D501F5C50546D50DE2DE8B179E9931 /* GCDWebServerDataRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		F93CE4ED7FCE42BB3CB3C12E5F9CE00D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34CE952001BA4219D89871A6B0E5FCA8 /* Security.framework */; };
-		FA2AD377D57772DE62A22FA524FD6AD7 /* GCDWebServerHTTPStatusCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 26BAD6A4BD912687FB7D5A38E0C79A2B /* GCDWebServerHTTPStatusCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA2AD377D57772DE62A22FA524FD6AD7 /* GCDWebServerHTTPStatusCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5192503679CBFAD42C2EE59109FF026F /* GCDWebServerHTTPStatusCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAC39AFBC66596063F0DA426576B5819 /* CoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 03EF6FAD08B27650B6CE4240468EE9D1 /* CoreDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFA0AEBD5C8FCB870E0E6C612D80566C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		313ED0A63084B1EE453B7F8FBBCDB46B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C773F535F95161B93C7419BD2AB64752;
-			remoteInfo = "PEAR-URLParser-iOS";
-		};
-		591B385552C6A1D04061DC12E34656B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C4C5313F3D76285457B663B77023AD49;
-			remoteInfo = "PEAR-PropertyListManager-iOS";
-		};
-		5E8E91398FD234FAACC47CCB06FEB4A8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 45BB276A2AD94A6F57C1291610BD0EE1;
-			remoteInfo = "PEAR-UIColorExtention-iOS";
-		};
-		79E48B50F0AB4DBAF50A7A008B9B49A2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 15B020A0B9CF37F4316FD2297C4C9CD0;
-			remoteInfo = "PEAR-Indicator-iOS";
-		};
-		8AA446DF082EC00D3BB8C7E004DABFE3 /* PBXContainerItemProxy */ = {
+		051FC8B8EFDF2FE63451156AC65DB389 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F0F475CFFA77F9B0DFDD2127CD4FAFC2;
 			remoteInfo = "PEAR-FileManager-iOS";
 		};
-		931931CFF189D196144009F272675D45 /* PBXContainerItemProxy */ = {
+		12DAC8946DF5A1D334ADFDB0C6FEAB75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4C5313F3D76285457B663B77023AD49;
+			remoteInfo = "PEAR-PropertyListManager-iOS";
+		};
+		1C8E7090EBAE7D6C24D8502B1DAB3F29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45BB276A2AD94A6F57C1291610BD0EE1;
+			remoteInfo = "PEAR-UIColorExtention-iOS";
+		};
+		2821330A52F762C03917D7FFBCAB334D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C773F535F95161B93C7419BD2AB64752;
+			remoteInfo = "PEAR-URLParser-iOS";
+		};
+		3188B573E38E25E45FEF5AE713A240A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 91BCC048D6FA116732267A60BCAA70F3;
 			remoteInfo = "PEAR-BlocksKit-iOS";
 		};
-		9FE68FF260001820AA1CB7BCA984AA90 /* PBXContainerItemProxy */ = {
+		5DF94AF1295EF92EC9EAAA3DE591ACA2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DB666F1D4733C1E55E7394F47C496CD6;
-			remoteInfo = "PEAR-HttpFetcher-iOS";
+			remoteGlobalIDString = 0A9515ABC3A21F6955749538919C7916;
+			remoteInfo = "PEAR-CoreDataManager-iOS";
 		};
-		A1E7716242058340A9C74E75042945E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F37127C6407560126024AFE35BC40F00;
-			remoteInfo = "PEAR-AutoLayout-iOS";
-		};
-		C2F2F937651A416FF0DD76FC53732356 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7E9AF0F701F193E9DD3E8D1BADE92724;
-			remoteInfo = "PEAR-KeyboardNotification-iOS";
-		};
-		DE675F2E95CDA793163D352F5893103E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5B4892A650264FE0BAE78DCE50F237C8;
-			remoteInfo = GCDWebServer;
-		};
-		E6CF7D8EF2A7124189723B2EED8DF5ED /* PBXContainerItemProxy */ = {
+		7E0B1F9BD1B42243429C39E3D91F8D8E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 35688256C1EA997336E734EAC5D9D02F;
 			remoteInfo = LUKeychainAccess;
 		};
+		9A8D3CEC686A2FE9D776510A16C849CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E9AF0F701F193E9DD3E8D1BADE92724;
+			remoteInfo = "PEAR-KeyboardNotification-iOS";
+		};
+		BDE38EACE43233AF8B25EB2A3DA0AC7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB666F1D4733C1E55E7394F47C496CD6;
+			remoteInfo = "PEAR-HttpFetcher-iOS";
+		};
+		C8758AF0E584006D95EECC62A976C379 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F37127C6407560126024AFE35BC40F00;
+			remoteInfo = "PEAR-AutoLayout-iOS";
+		};
+		F37E5AEDC1DB5279F4BEA4B662D81D6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B4892A650264FE0BAE78DCE50F237C8;
+			remoteInfo = GCDWebServer;
+		};
+		F884CBF86F67F7933321F0459625EC27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15B020A0B9CF37F4316FD2297C4C9CD0;
+			remoteInfo = "PEAR-Indicator-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03B965FCBD1ACE38ACB6DC77AEC4E675 /* LUKeychainAccess.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LUKeychainAccess.xcconfig; sourceTree = "<group>"; };
-		03EF9F2E6AEFB55379741FBFFF14E955 /* GCDWebServerRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerRequest.m; path = GCDWebServer/Core/GCDWebServerRequest.m; sourceTree = "<group>"; };
-		0442542F5E9E4B7D51750663B43513C5 /* GCDWebDAVServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebDAVServer.h; path = GCDWebDAVServer/GCDWebDAVServer.h; sourceTree = "<group>"; };
-		0458908DBF73955B1E49B626B3D752EF /* libLUKeychainAccess.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLUKeychainAccess.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		04B87D0EA321C248C3DE2E7FC31E2AFA /* PEARURLParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PEARURLParser.m; path = "PEAR-URLParser-iOS/PEARURLParser.m"; sourceTree = "<group>"; };
-		0753A3614071F7239CB54AC45B575118 /* LUKeychainAccessAccessibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LUKeychainAccessAccessibility.h; path = LUKeychainAccess/LUKeychainAccessAccessibility.h; sourceTree = "<group>"; };
-		09FFAB4AF9BFE3086EAC993EDA210FA8 /* libPEAR-FileManager-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-FileManager-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02D3705288A19D9C5224BA3D3D479AC6 /* libPEAR-CoreDataManager-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-CoreDataManager-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03EF6FAD08B27650B6CE4240468EE9D1 /* CoreDataManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = "PEAR-CoreDataManager-iOS/CoreDataManager.h"; sourceTree = "<group>"; };
+		06FE286356B437CA7D32C506F5E2EB08 /* GCDWebServer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GCDWebServer-prefix.pch"; sourceTree = "<group>"; };
+		08026F5E2B0DB1CC1101AADA32BA95F2 /* GCDWebServerErrorResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerErrorResponse.m; path = GCDWebServer/Responses/GCDWebServerErrorResponse.m; sourceTree = "<group>"; };
+		08AA60FE4A306ACB5FC88F2CCC6935A6 /* LUKeychainAccess-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LUKeychainAccess-prefix.pch"; sourceTree = "<group>"; };
+		09325439F7C5B09067C1D65A00808C6F /* PEARBlocksKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PEARBlocksKit.m; path = "PEAR-BlocksKit-iOS/PEARBlocksKit.m"; sourceTree = "<group>"; };
+		098D4514D28F095818038C51BE581B66 /* PEAR-FileManager-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-FileManager-iOS.xcconfig"; sourceTree = "<group>"; };
+		0A8CD809488348889490AB9EE5A60D59 /* PEAR-UIColorExtention-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-UIColorExtention-iOS-prefix.pch"; sourceTree = "<group>"; };
+		0D0CB3979396D798D076CF9C42CF6C63 /* libLUKeychainAccess.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLUKeychainAccess.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D590D287DF64FCE53027AFCA35BAB42 /* GCDWebServerFunctions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFunctions.m; path = GCDWebServer/Core/GCDWebServerFunctions.m; sourceTree = "<group>"; };
+		100D83A3AF53247745F019698D4542A4 /* PEAR-BlocksKit-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-BlocksKit-iOS-dummy.m"; sourceTree = "<group>"; };
 		10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		12CCF5DA2F33316049E58DF324A33413 /* GCDWebDAVServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebDAVServer.m; path = GCDWebDAVServer/GCDWebDAVServer.m; sourceTree = "<group>"; };
-		1F6EE0DC25AEF0647EC07BC1B17F3792 /* GCDWebServerURLEncodedFormRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerURLEncodedFormRequest.m; path = GCDWebServer/Requests/GCDWebServerURLEncodedFormRequest.m; sourceTree = "<group>"; };
-		200E81E4552863F8DA20CB91515B54A6 /* PEAR-PropertyListManager-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-PropertyListManager-iOS.xcconfig"; sourceTree = "<group>"; };
-		2128C9D317D9DD707DEC8BFB55143760 /* GCDWebServerErrorResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerErrorResponse.m; path = GCDWebServer/Responses/GCDWebServerErrorResponse.m; sourceTree = "<group>"; };
-		23254B6FEA9A23F5E38A9568D838C186 /* PEAR-AutoLayout-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-AutoLayout-iOS.xcconfig"; sourceTree = "<group>"; };
-		252421E18A7A578FEC70E76940B9F5D4 /* PEAR-HttpFetcher-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-HttpFetcher-iOS-prefix.pch"; sourceTree = "<group>"; };
+		114F9FE7069AD960893CCF4B27828183 /* LUKeychainAccess-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LUKeychainAccess-dummy.m"; sourceTree = "<group>"; };
+		11E0A31AF9DF4715EEA2BACCD8F985C4 /* PEAR-AutoLayout-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-AutoLayout-iOS-dummy.m"; sourceTree = "<group>"; };
+		1E6E5D7E198E6F00A7AB57427A4DF19B /* GCDWebServerFileRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFileRequest.h; path = GCDWebServer/Requests/GCDWebServerFileRequest.h; sourceTree = "<group>"; };
+		1EAEC415A0E8C192D16C447FF54812AF /* GCDWebServerURLEncodedFormRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerURLEncodedFormRequest.h; path = GCDWebServer/Requests/GCDWebServerURLEncodedFormRequest.h; sourceTree = "<group>"; };
+		1ECFC2ED38907C531CF6889BA6A55AD7 /* GCDWebServerURLEncodedFormRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerURLEncodedFormRequest.m; path = GCDWebServer/Requests/GCDWebServerURLEncodedFormRequest.m; sourceTree = "<group>"; };
+		1F3998942CF9548C52D61A89B2002E9B /* PEARHttpFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PEARHttpFetcher.m; path = "PEAR-HttpFetcher-iOS/PEARHttpFetcher.m"; sourceTree = "<group>"; };
+		1FE98E98B59132A10CB6E71927A30213 /* GCDWebServerMultiPartFormRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerMultiPartFormRequest.h; path = GCDWebServer/Requests/GCDWebServerMultiPartFormRequest.h; sourceTree = "<group>"; };
+		219EEC646C4BB3252A971C3FA39B2CCA /* PEAR-CoreDataManager-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-CoreDataManager-iOS-prefix.pch"; sourceTree = "<group>"; };
+		229669EB1D3F1535A2B22A8152497913 /* URLEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = URLEntity.h; path = "PEAR-URLParser-iOS/URLEntity.h"; sourceTree = "<group>"; };
 		2541E28EBA9E98CBFB4B5B50B3A41F0F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		26BAD6A4BD912687FB7D5A38E0C79A2B /* GCDWebServerHTTPStatusCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerHTTPStatusCodes.h; path = GCDWebServer/Core/GCDWebServerHTTPStatusCodes.h; sourceTree = "<group>"; };
 		272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		28B4FA8C3DE7AE8219FC0CDA51F3E7A5 /* UIColor+extention.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+extention.m"; path = "PEAR-UIColorExtention-iOS/UIColor+extention.m"; sourceTree = "<group>"; };
-		2EB4F1EDA0FE1C32838326B667BB1FD7 /* LUKeychainAccess.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LUKeychainAccess.h; path = LUKeychainAccess/LUKeychainAccess.h; sourceTree = "<group>"; };
-		3062440C035456C9391AEA0410E87849 /* GCDWebServerDataRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerDataRequest.h; path = GCDWebServer/Requests/GCDWebServerDataRequest.h; sourceTree = "<group>"; };
-		321C793573EA2BEB5778AA1CCE5EC2D5 /* LUKeychainServices.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LUKeychainServices.h; path = LUKeychainAccess/LUKeychainServices.h; sourceTree = "<group>"; };
+		297ABC35B717168CD4D3C86A15D97219 /* GCDWebDAVServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebDAVServer.m; path = GCDWebDAVServer/GCDWebDAVServer.m; sourceTree = "<group>"; };
+		2D690471A8A4D450709F4F93E8FDA761 /* UIColor+extention.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+extention.h"; path = "PEAR-UIColorExtention-iOS/UIColor+extention.h"; sourceTree = "<group>"; };
+		3088694262B4F925BE527812240C9A4B /* IndicatorView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = IndicatorView.xib; path = "PEAR-Indicator-iOS/resource/IndicatorView.xib"; sourceTree = "<group>"; };
+		30F4DC7366C3A740D7371B58EEC2BF53 /* PEAR-FileManager-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-FileManager-iOS-prefix.pch"; sourceTree = "<group>"; };
+		31AB7D12EC6B7729A1C1E920A03B5F43 /* PropertyListManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PropertyListManager.m; path = "PEAR-PropertyListManager-iOS/PropertyListManager.m"; sourceTree = "<group>"; };
+		32E1C12B5C7E7B55A0BC414AEAE7AA06 /* LUKeychainServices.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LUKeychainServices.h; path = LUKeychainAccess/LUKeychainServices.h; sourceTree = "<group>"; };
+		33E2F2EE2BBDF74271A22C083CD892A3 /* PEAR-Indicator-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-Indicator-iOS.xcconfig"; sourceTree = "<group>"; };
+		34B315AA8ED425252C9C5DBFE4722226 /* PEARURLParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PEARURLParser.h; path = "PEAR-URLParser-iOS/PEARURLParser.h"; sourceTree = "<group>"; };
 		34CE952001BA4219D89871A6B0E5FCA8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		36BEA069500D72E980923A207EE1304F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		35E03D1824F24B83989D25625B9B2E08 /* libPEAR-AutoLayout-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-AutoLayout-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		364E251BB910ABF88F8D3C12F5E5E655 /* libPEAR-Indicator-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-Indicator-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3D11AFA41873F128816967AC16D692F8 /* PEARHttpFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PEARHttpFetcher.m; path = "PEAR-HttpFetcher-iOS/PEARHttpFetcher.m"; sourceTree = "<group>"; };
-		41C07F6591577A43D36A7C8683C3C384 /* PEARBlocksKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PEARBlocksKit.m; path = "PEAR-BlocksKit-iOS/PEARBlocksKit.m"; sourceTree = "<group>"; };
-		4619A9D213708FE6ABADF3A60196E431 /* GCDWebServerFileRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFileRequest.h; path = GCDWebServer/Requests/GCDWebServerFileRequest.h; sourceTree = "<group>"; };
-		4715683899525CB7649FCA8C1B009418 /* PEAR-KeyboardNotification-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-KeyboardNotification-iOS-prefix.pch"; sourceTree = "<group>"; };
-		47427870354AA0E51D9EEBA6D905BDB1 /* GCDWebServerConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerConnection.h; path = GCDWebServer/Core/GCDWebServerConnection.h; sourceTree = "<group>"; };
-		489C9493A9E60E86C5E9576911CD3FCA /* GCDWebServerFileRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFileRequest.m; path = GCDWebServer/Requests/GCDWebServerFileRequest.m; sourceTree = "<group>"; };
-		4A0ECDAC6904ED61C289C1D6573E19D2 /* GCDWebServerMultiPartFormRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerMultiPartFormRequest.h; path = GCDWebServer/Requests/GCDWebServerMultiPartFormRequest.h; sourceTree = "<group>"; };
-		4B29B5BE866CCBE41879D36DE4D8474F /* GCDWebServerConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerConnection.m; path = GCDWebServer/Core/GCDWebServerConnection.m; sourceTree = "<group>"; };
-		4C6A88AC1F399C63EBA0E706E487382C /* GCDWebServer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GCDWebServer-prefix.pch"; sourceTree = "<group>"; };
-		4D9A85D1ACFDE3C393A1EA72657B35CA /* PEAR-UIColorExtention-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-UIColorExtention-iOS-dummy.m"; sourceTree = "<group>"; };
+		396C533B34326FAA9057DD92CDB4FFA8 /* libPEAR-KeyboardNotification-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-KeyboardNotification-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A807E5696BF9C34E8ACD6473779EE27 /* PEARBlocksKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PEARBlocksKit.h; path = "PEAR-BlocksKit-iOS/PEARBlocksKit.h"; sourceTree = "<group>"; };
+		3B4D1196C16D468BD85177942153EF2E /* GCDWebServerDataResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerDataResponse.m; path = GCDWebServer/Responses/GCDWebServerDataResponse.m; sourceTree = "<group>"; };
+		3BD641F9CA8A79378C0AE04AE0BA125C /* PEARURLParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PEARURLParser.m; path = "PEAR-URLParser-iOS/PEARURLParser.m"; sourceTree = "<group>"; };
+		3F30B9B401720CA65482391CA29C8AB4 /* libGCDWebServer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGCDWebServer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		41611736C61E6CFAEF1C5E2BF8057A20 /* libPEAR-HttpFetcher-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-HttpFetcher-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41796F09FECC4D9387F0B33638C0DAB4 /* PEARFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PEARFileManager.m; path = "PEAR-FileManager-iOS/PEARFileManager.m"; sourceTree = "<group>"; };
+		42065C7AF2026A18A14951C12BD9600D /* PEAR-HttpFetcher-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-HttpFetcher-iOS-dummy.m"; sourceTree = "<group>"; };
+		4684D8E3487BE062F5164765B71EF0A4 /* GCDWebServerResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerResponse.m; path = GCDWebServer/Core/GCDWebServerResponse.m; sourceTree = "<group>"; };
+		4A2F12AE4346E14C3CF836504FAE7C01 /* LUKeychainAccess.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LUKeychainAccess.m; path = LUKeychainAccess/LUKeychainAccess.m; sourceTree = "<group>"; };
+		4A541A65773954DC236364E485209190 /* libPEAR-BlocksKit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-BlocksKit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B9160F8691F8D80C37B5663806AA21C /* GCDWebServerFileResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFileResponse.m; path = GCDWebServer/Responses/GCDWebServerFileResponse.m; sourceTree = "<group>"; };
+		4C8344AD6AF740115052B5DD866A2F5D /* GCDWebServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServer.h; path = GCDWebServer/Core/GCDWebServer.h; sourceTree = "<group>"; };
+		4CFB859F3A687FBEEE491314E914498F /* LUKeychainAccessAccessibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LUKeychainAccessAccessibility.h; path = LUKeychainAccess/LUKeychainAccessAccessibility.h; sourceTree = "<group>"; };
 		4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		510CB01E514D616E598B95EE6F298DDA /* PEAR-URLParser-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-URLParser-iOS-dummy.m"; sourceTree = "<group>"; };
-		51152D07DB56A27BEE529B916CD6320B /* GCDWebServerStreamedResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerStreamedResponse.h; path = GCDWebServer/Responses/GCDWebServerStreamedResponse.h; sourceTree = "<group>"; };
-		52AC1CDD47C75D568632F1A62C68A13D /* PEAR-BlocksKit-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-BlocksKit-iOS.xcconfig"; sourceTree = "<group>"; };
-		5366A58575A85BE4F4DB90EC25B73718 /* PEAR-KeyboardNotification-iOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PEAR-KeyboardNotification-iOS.h"; path = "PEAR-KeyboardNotification-iOS/PEAR-KeyboardNotification-iOS.h"; sourceTree = "<group>"; };
-		5437B67A567F6D1E1B694C88A137A2CC /* GCDWebServerPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerPrivate.h; path = GCDWebServer/Core/GCDWebServerPrivate.h; sourceTree = "<group>"; };
-		54A7DDAE2741B98C47030D4F750496F0 /* GCDWebServerRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerRequest.h; path = GCDWebServer/Core/GCDWebServerRequest.h; sourceTree = "<group>"; };
-		54CDA4B85C9E7FAF95F1F6B72BCA7E7B /* PEARFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PEARFileManager.m; path = "PEAR-FileManager-iOS/PEARFileManager.m"; sourceTree = "<group>"; };
-		5639896092DABB348DE40D7DE7E5F8B3 /* PEAR-Indicator-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-Indicator-iOS.xcconfig"; sourceTree = "<group>"; };
-		593D5C87C9A53774022F2CA51B8AFB1B /* GCDWebServerFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFunctions.h; path = GCDWebServer/Core/GCDWebServerFunctions.h; sourceTree = "<group>"; };
-		5AD4938E789C4DC109DCFBD80AA53A37 /* libPEAR-PropertyListManager-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-PropertyListManager-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C3EB03F010ABA24670EB51772C597FD /* IndicatorView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = IndicatorView.xib; path = "PEAR-Indicator-iOS/resource/IndicatorView.xib"; sourceTree = "<group>"; };
-		5C4AFE5B3A88EAABDD4443872BC24F82 /* LUKeychainAccess-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LUKeychainAccess-prefix.pch"; sourceTree = "<group>"; };
-		5E4B19FAB13784E70B6260F2E917DEE2 /* IndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IndicatorView.m; path = "PEAR-Indicator-iOS/IndicatorView.m"; sourceTree = "<group>"; };
+		5192503679CBFAD42C2EE59109FF026F /* GCDWebServerHTTPStatusCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerHTTPStatusCodes.h; path = GCDWebServer/Core/GCDWebServerHTTPStatusCodes.h; sourceTree = "<group>"; };
+		53BC793668ED9D8A2CCD0538D24693F6 /* PEAR-URLParser-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-URLParser-iOS-dummy.m"; sourceTree = "<group>"; };
+		5458EBD86704B1D5BA4233FF8CAD760F /* PEARHttpFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PEARHttpFetcher.h; path = "PEAR-HttpFetcher-iOS/PEARHttpFetcher.h"; sourceTree = "<group>"; };
+		56D2D52D376D19095B85669F26866B0B /* GCDWebServerPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerPrivate.h; path = GCDWebServer/Core/GCDWebServerPrivate.h; sourceTree = "<group>"; };
+		5B22EEBEE4E85416080445C89C30399F /* UIColor+extention.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+extention.m"; path = "PEAR-UIColorExtention-iOS/UIColor+extention.m"; sourceTree = "<group>"; };
+		5BCC34C682153885317E0303F00ACC23 /* PEAR-CoreDataManager-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-CoreDataManager-iOS.xcconfig"; sourceTree = "<group>"; };
+		5DB712980B6D66780CE7B6B6ACE2A1B8 /* GCDWebServerFileRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFileRequest.m; path = GCDWebServer/Requests/GCDWebServerFileRequest.m; sourceTree = "<group>"; };
+		5E6FB9F980D5524C591AD53F821E96FB /* GCDWebDAVServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebDAVServer.h; path = GCDWebDAVServer/GCDWebDAVServer.h; sourceTree = "<group>"; };
+		5F051086FAF01AACE94DD68C34E37BD6 /* PEAR-PropertyListManager-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-PropertyListManager-iOS.xcconfig"; sourceTree = "<group>"; };
+		5F1DD0132D3EA103927FFA156A0239D8 /* GCDWebServer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GCDWebServer.xcconfig; sourceTree = "<group>"; };
+		638B641B14F61530C2E99828469011EF /* PEAR-URLParser-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-URLParser-iOS.xcconfig"; sourceTree = "<group>"; };
+		662DE421BCE9D48B9600E231422072A6 /* URLEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = URLEntity.m; path = "PEAR-URLParser-iOS/URLEntity.m"; sourceTree = "<group>"; };
+		67D84E283A1E63669623F501E4822252 /* CoreDataManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = "PEAR-CoreDataManager-iOS/CoreDataManager.m"; sourceTree = "<group>"; };
 		6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		694D9B6FFDC475FD4B4E490CBED055FB /* loading.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = loading.png; path = "PEAR-Indicator-iOS/resource/loading.png"; sourceTree = "<group>"; };
-		6999D964FAD1D5D7D18CC54A31E17EAE /* libPEAR-KeyboardNotification-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-KeyboardNotification-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6ECB5826495B3CF3FC7BCC7426F40449 /* PEARBlocksKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PEARBlocksKit.h; path = "PEAR-BlocksKit-iOS/PEARBlocksKit.h"; sourceTree = "<group>"; };
-		6EDDA1314C90601CD57228466B78F9F8 /* PEAR-KeyboardNotification-iOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PEAR-KeyboardNotification-iOS.m"; path = "PEAR-KeyboardNotification-iOS/PEAR-KeyboardNotification-iOS.m"; sourceTree = "<group>"; };
-		70C26F3CD3DC9DE9673D8FB405BD1873 /* PEAR-FileManager-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-FileManager-iOS.xcconfig"; sourceTree = "<group>"; };
-		74C1A9C719024D320F598C12D9635C93 /* PEAR-BlocksKit-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-BlocksKit-iOS-prefix.pch"; sourceTree = "<group>"; };
-		78EF1979D8BEC4FCBCEE425CA2C75B9D /* URLEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = URLEntity.m; path = "PEAR-URLParser-iOS/URLEntity.m"; sourceTree = "<group>"; };
-		7A3ADB2099C2468AC14C9499FA4DE0E9 /* GCDWebServerDataRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerDataRequest.m; path = GCDWebServer/Requests/GCDWebServerDataRequest.m; sourceTree = "<group>"; };
-		7DE6B406B8C39D200B0DCB754E636700 /* GCDWebServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServer.m; path = GCDWebServer/Core/GCDWebServer.m; sourceTree = "<group>"; };
-		7E6A92A90A6316FED2C331AD3BD8FB73 /* libPEAR-BlocksKit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-BlocksKit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7ED402BEDFF705CF94495C40B657E01E /* PEAR-Indicator-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-Indicator-iOS-prefix.pch"; sourceTree = "<group>"; };
-		8005E76A805C0F9659EAE9910A6E6248 /* GCDWebServerDataResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerDataResponse.h; path = GCDWebServer/Responses/GCDWebServerDataResponse.h; sourceTree = "<group>"; };
-		860B7BDF35B5E41B15FD4CB85E7EF2FB /* GCDWebServer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GCDWebServer.xcconfig; sourceTree = "<group>"; };
-		91E04AAF8553420096CE58BA5CC409C5 /* PEAR-BlocksKit-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-BlocksKit-iOS-dummy.m"; sourceTree = "<group>"; };
-		95724A43EA3B771BC19334E599A856C9 /* libPEAR-HttpFetcher-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-HttpFetcher-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69BDA37675F1742EDF188F8BEC930B6A /* LUKeychainAccess.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LUKeychainAccess.h; path = LUKeychainAccess/LUKeychainAccess.h; sourceTree = "<group>"; };
+		6FE597C5EC332F433D2AD9473B3ACC6B /* PEAR-Indicator-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-Indicator-iOS-dummy.m"; sourceTree = "<group>"; };
+		714CD5093200E068477FED748AEF3BFC /* GCDWebServerResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerResponse.h; path = GCDWebServer/Core/GCDWebServerResponse.h; sourceTree = "<group>"; };
+		72841AD5258DB2E81602AB79C52DD083 /* PEAR-BlocksKit-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-BlocksKit-iOS.xcconfig"; sourceTree = "<group>"; };
+		72FBA21E199E59B0259BCC1F92E1A114 /* libPEAR-FileManager-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-FileManager-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		788E31F0E53157D88A9FBE2DB04B748D /* PropertyListManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PropertyListManager.h; path = "PEAR-PropertyListManager-iOS/PropertyListManager.h"; sourceTree = "<group>"; };
+		7C8F343057CD648BD80A52EEC668964A /* PEAR-FileManager-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-FileManager-iOS-dummy.m"; sourceTree = "<group>"; };
+		836175C91EA9997DDF5D9D6691D31B30 /* GCDWebServerStreamedResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerStreamedResponse.m; path = GCDWebServer/Responses/GCDWebServerStreamedResponse.m; sourceTree = "<group>"; };
+		8536F2D6D1F33B5DE269137F03E4D194 /* AutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AutoLayout.m; path = "PEAR-AutoLayout-iOS/AutoLayout.m"; sourceTree = "<group>"; };
+		87E0B296B8DD9DC5F6BC162F336DFB05 /* PEAR-CoreDataManager-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-CoreDataManager-iOS-dummy.m"; sourceTree = "<group>"; };
+		8ABA618666786B8433713EC6D88C5A6B /* PEAR-PropertyListManager-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-PropertyListManager-iOS-prefix.pch"; sourceTree = "<group>"; };
+		8B5B38C1036557A004177C7AA17D461E /* GCDWebServerFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFunctions.h; path = GCDWebServer/Core/GCDWebServerFunctions.h; sourceTree = "<group>"; };
+		8DA6213BCE099E4F0247B2DFA9F0D7F1 /* GCDWebServerMultiPartFormRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerMultiPartFormRequest.m; path = GCDWebServer/Requests/GCDWebServerMultiPartFormRequest.m; sourceTree = "<group>"; };
+		8E3267B03EDC1868D95A6ED55EC27FCC /* IndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IndicatorView.h; path = "PEAR-Indicator-iOS/IndicatorView.h"; sourceTree = "<group>"; };
+		915DE0A67D1690D0A0E15231FD23D5D9 /* libPEAR-UIColorExtention-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-UIColorExtention-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9197DECAE6B331CC4710EAC29F901AB4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9276CEB2A645D0024BC07070FBAABA8A /* PEAR-KeyboardNotification-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-KeyboardNotification-iOS-prefix.pch"; sourceTree = "<group>"; };
+		9296FCFFD214929F1CCB8C029E1F7335 /* PEAR-URLParser-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-URLParser-iOS-prefix.pch"; sourceTree = "<group>"; };
+		92D501F5C50546D50DE2DE8B179E9931 /* GCDWebServerDataRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerDataRequest.m; path = GCDWebServer/Requests/GCDWebServerDataRequest.m; sourceTree = "<group>"; };
 		98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		9A45A7380BD5F13327E839AAD9D7037B /* AutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AutoLayout.h; path = "PEAR-AutoLayout-iOS/AutoLayout.h"; sourceTree = "<group>"; };
-		9DB45B06863E7467051ED052C9FD9573 /* GCDWebServerFunctions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFunctions.m; path = GCDWebServer/Core/GCDWebServerFunctions.m; sourceTree = "<group>"; };
-		A0FCE0FD938C1EB56F2BCE52C7CC877C /* libPEAR-AutoLayout-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-AutoLayout-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B860D7B7EED6DFA00072A293FBF4128 /* GCDWebServerRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerRequest.m; path = GCDWebServer/Core/GCDWebServerRequest.m; sourceTree = "<group>"; };
+		9CA8CAA60F9FBF34880625826C5EF790 /* PEARFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PEARFileManager.h; path = "PEAR-FileManager-iOS/PEARFileManager.h"; sourceTree = "<group>"; };
+		9E83390B354D6DA7FE3BCE189FFF74FA /* GCDWebServerErrorResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerErrorResponse.h; path = GCDWebServer/Responses/GCDWebServerErrorResponse.h; sourceTree = "<group>"; };
 		A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		A211DEB8649B908B8ED746EFD06C136A /* GCDWebServerFileResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFileResponse.h; path = GCDWebServer/Responses/GCDWebServerFileResponse.h; sourceTree = "<group>"; };
+		A2DCF1ED5E6D7D7A66664E6549414F7C /* PEAR-HttpFetcher-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-HttpFetcher-iOS-prefix.pch"; sourceTree = "<group>"; };
 		A3750B4587E202587AB14A85C6BC8162 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A43521B391FEFD89CB3978F02B5B5A65 /* PEAR-URLParser-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-URLParser-iOS.xcconfig"; sourceTree = "<group>"; };
-		A57A78468A5A5DF36CAB9B36929D887A /* LUKeychainErrorHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LUKeychainErrorHandler.h; path = LUKeychainAccess/LUKeychainErrorHandler.h; sourceTree = "<group>"; };
-		A96FBC52FDA21F477DA8181EC574FFB5 /* libPEAR-UIColorExtention-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-UIColorExtention-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B14164C709A3E034F39E037E6C6F3F91 /* PEAR-FileManager-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-FileManager-iOS-prefix.pch"; sourceTree = "<group>"; };
-		B1DFF9C0F02465BE85B599B78A535068 /* libPEAR-URLParser-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-URLParser-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4A59C252347C43530D9CEE83D714A51 /* LUKeychainServices.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LUKeychainServices.m; path = LUKeychainAccess/LUKeychainServices.m; sourceTree = "<group>"; };
-		B9DDDE93DD22FE9FAD36810223C14931 /* PEAR-HttpFetcher-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-HttpFetcher-iOS-dummy.m"; sourceTree = "<group>"; };
+		A46E7E0DB814B27D65693607B0CB53C9 /* PEAR-PropertyListManager-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-PropertyListManager-iOS-dummy.m"; sourceTree = "<group>"; };
+		A5BBD23AB5DF3FA852D7DFA0218E121E /* LUKeychainErrorHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LUKeychainErrorHandler.h; path = LUKeychainAccess/LUKeychainErrorHandler.h; sourceTree = "<group>"; };
+		ACC9B981FDD6DE35F3921C10D3B57A98 /* PEAR-AutoLayout-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-AutoLayout-iOS-prefix.pch"; sourceTree = "<group>"; };
+		AD2B5B3FCECCC1F9D003F0D631D7F582 /* GCDWebServerStreamedResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerStreamedResponse.h; path = GCDWebServer/Responses/GCDWebServerStreamedResponse.h; sourceTree = "<group>"; };
+		ADDB45808B1B9D15C75E2BB304DDE21E /* PEAR-KeyboardNotification-iOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PEAR-KeyboardNotification-iOS.h"; path = "PEAR-KeyboardNotification-iOS/PEAR-KeyboardNotification-iOS.h"; sourceTree = "<group>"; };
+		B554023835F0377870321C8230B278AB /* PEAR-HttpFetcher-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-HttpFetcher-iOS.xcconfig"; sourceTree = "<group>"; };
+		B5D0CDB51852BC90F7A2BB2A81C941BC /* AutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AutoLayout.h; path = "PEAR-AutoLayout-iOS/AutoLayout.h"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BAABD14EE5F944B6E100E10DE23E9FAA /* GCDWebServerStreamedResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerStreamedResponse.m; path = GCDWebServer/Responses/GCDWebServerStreamedResponse.m; sourceTree = "<group>"; };
-		BAC0ACFDF0F8BBEB6D4313BFDCFB5788 /* GCDWebServerURLEncodedFormRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerURLEncodedFormRequest.h; path = GCDWebServer/Requests/GCDWebServerURLEncodedFormRequest.h; sourceTree = "<group>"; };
-		BC4C7DB4F046535AD31288148291C652 /* PEAR-AutoLayout-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-AutoLayout-iOS-dummy.m"; sourceTree = "<group>"; };
-		BFC1D23AEC324BED2A9B54FB6A0A3E78 /* PEARFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PEARFileManager.h; path = "PEAR-FileManager-iOS/PEARFileManager.h"; sourceTree = "<group>"; };
-		C4A7F70D3A9A1506F3BBB86BF15EBA28 /* GCDWebServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServer.h; path = GCDWebServer/Core/GCDWebServer.h; sourceTree = "<group>"; };
-		C95B4D0B5BFAB0DFAB4B4CAA749AB99C /* PropertyListManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PropertyListManager.h; path = "PEAR-PropertyListManager-iOS/PropertyListManager.h"; sourceTree = "<group>"; };
-		C9D6DF81A57143F439ADB8F98C497284 /* PEARURLParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PEARURLParser.h; path = "PEAR-URLParser-iOS/PEARURLParser.h"; sourceTree = "<group>"; };
-		CB222C74491C8D1376568CCB84F07387 /* PEAR-Indicator-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-Indicator-iOS-dummy.m"; sourceTree = "<group>"; };
-		CE9C7D3A588F1D74089CA2631DB7BC6F /* GCDWebServerResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerResponse.h; path = GCDWebServer/Core/GCDWebServerResponse.h; sourceTree = "<group>"; };
-		D2A938F504F927BE10BBA78404844B1D /* GCDWebServerResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerResponse.m; path = GCDWebServer/Core/GCDWebServerResponse.m; sourceTree = "<group>"; };
-		D423BBEF08B5E28D81DA21FEAA7268BA /* LUKeychainAccess.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LUKeychainAccess.m; path = LUKeychainAccess/LUKeychainAccess.m; sourceTree = "<group>"; };
-		D46EA05C915DACDCF8D17EEC5467E9EA /* PEAR-PropertyListManager-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-PropertyListManager-iOS-dummy.m"; sourceTree = "<group>"; };
-		D49DBCBD37C1C92603E86E211C7AAA1B /* PEARHttpFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PEARHttpFetcher.h; path = "PEAR-HttpFetcher-iOS/PEARHttpFetcher.h"; sourceTree = "<group>"; };
-		D5A7EDE269365BEA35CC231935BF36BC /* AutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AutoLayout.m; path = "PEAR-AutoLayout-iOS/AutoLayout.m"; sourceTree = "<group>"; };
-		D5FB4448D32CB71B288D10EA8CB53C5B /* PEAR-URLParser-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-URLParser-iOS-prefix.pch"; sourceTree = "<group>"; };
-		D70DC3B6FEBBE64E85D92B95890C3989 /* PEAR-PropertyListManager-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-PropertyListManager-iOS-prefix.pch"; sourceTree = "<group>"; };
-		D7DD083A1FAA79E02F7DED8EC404D587 /* GCDWebServer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GCDWebServer-dummy.m"; sourceTree = "<group>"; };
-		D81476AECB85917D5AB48167B90B0566 /* GCDWebServerMultiPartFormRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerMultiPartFormRequest.m; path = GCDWebServer/Requests/GCDWebServerMultiPartFormRequest.m; sourceTree = "<group>"; };
-		DA0432C19123C872819C203362924CE4 /* PropertyListManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PropertyListManager.m; path = "PEAR-PropertyListManager-iOS/PropertyListManager.m"; sourceTree = "<group>"; };
-		DBB49A51F745462EFC4B4A322AEFF8E0 /* PEAR-UIColorExtention-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-UIColorExtention-iOS.xcconfig"; sourceTree = "<group>"; };
-		DD4D30089C2D386F8EF6246CA58883F5 /* PEAR-KeyboardNotification-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-KeyboardNotification-iOS-dummy.m"; sourceTree = "<group>"; };
+		C50FD21BA9ED6F02153971CAF5AD604E /* GCDWebServer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GCDWebServer-dummy.m"; sourceTree = "<group>"; };
+		C68DD7B871B5A6C3FE7D745460C757D6 /* GCDWebServerRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerRequest.h; path = GCDWebServer/Core/GCDWebServerRequest.h; sourceTree = "<group>"; };
+		C83EF0D3A6808EC38499D6333B3CBBC6 /* IndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IndicatorView.m; path = "PEAR-Indicator-iOS/IndicatorView.m"; sourceTree = "<group>"; };
+		C86C905848B54AB47A2EB4E1FE632699 /* PEAR-KeyboardNotification-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-KeyboardNotification-iOS.xcconfig"; sourceTree = "<group>"; };
+		C8A5EC76FED3A51A02895C5BFF8EA3BA /* PEAR-UIColorExtention-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-UIColorExtention-iOS.xcconfig"; sourceTree = "<group>"; };
+		CBE81B08F75AA6E588A89E059E0F7B67 /* LUKeychainAccess.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LUKeychainAccess.xcconfig; sourceTree = "<group>"; };
+		CEE6945FB3E4B3DF7DC7B22C4A367C73 /* GCDWebServerFileResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFileResponse.h; path = GCDWebServer/Responses/GCDWebServerFileResponse.h; sourceTree = "<group>"; };
+		D04AB3497D95DF25C058D4A4286E755F /* LUKeychainServices.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LUKeychainServices.m; path = LUKeychainAccess/LUKeychainServices.m; sourceTree = "<group>"; };
+		D0DE97266041D716DE767643A76F5BF7 /* PEAR-KeyboardNotification-iOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PEAR-KeyboardNotification-iOS.m"; path = "PEAR-KeyboardNotification-iOS/PEAR-KeyboardNotification-iOS.m"; sourceTree = "<group>"; };
+		D11BE1BA223546409FA3FA3A11F8B47C /* PEAR-UIColorExtention-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-UIColorExtention-iOS-dummy.m"; sourceTree = "<group>"; };
+		D3304FFF03772A1ECD67F7534D25AA69 /* GCDWebServerConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerConnection.h; path = GCDWebServer/Core/GCDWebServerConnection.h; sourceTree = "<group>"; };
+		D6080975AB65A695D62B308224EAB94C /* GCDWebServerDataRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerDataRequest.h; path = GCDWebServer/Requests/GCDWebServerDataRequest.h; sourceTree = "<group>"; };
+		D9A25735BA32ACD30B77D26E75460013 /* loading.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = loading.png; path = "PEAR-Indicator-iOS/resource/loading.png"; sourceTree = "<group>"; };
+		DA972940FFBC0F57DCBF339DE57DE86C /* PEAR-AutoLayout-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-AutoLayout-iOS.xcconfig"; sourceTree = "<group>"; };
+		DC49DD913B8E0D60C64C23A5D0810C08 /* PEAR-KeyboardNotification-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-KeyboardNotification-iOS-dummy.m"; sourceTree = "<group>"; };
 		DE7B09B0C55514F0E4A1DBE335DBD37E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		DE976FF870123A991EC211AE12ABA09A /* GCDWebServerErrorResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerErrorResponse.h; path = GCDWebServer/Responses/GCDWebServerErrorResponse.h; sourceTree = "<group>"; };
-		E9E2FCDA6AC3546485363F5F0ADB5544 /* LUKeychainAccess-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LUKeychainAccess-dummy.m"; sourceTree = "<group>"; };
-		EC8FF90A4E76AA2CFF7337A6A140FCCD /* PEAR-KeyboardNotification-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-KeyboardNotification-iOS.xcconfig"; sourceTree = "<group>"; };
-		EEFE0B1AE018AED65C164A81CFEB7AED /* IndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IndicatorView.h; path = "PEAR-Indicator-iOS/IndicatorView.h"; sourceTree = "<group>"; };
-		F28329110B45F6D2B13B976D51E1F955 /* UIColor+extention.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+extention.h"; path = "PEAR-UIColorExtention-iOS/UIColor+extention.h"; sourceTree = "<group>"; };
-		F30D190A08076CC83A5B601BE4506277 /* libPEAR-Indicator-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-Indicator-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F30E0D6574B68281DE3A5AE54E3B2EAA /* GCDWebServerFileResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFileResponse.m; path = GCDWebServer/Responses/GCDWebServerFileResponse.m; sourceTree = "<group>"; };
-		F33F93537EED35BE17EAFE9562580D6C /* libGCDWebServer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGCDWebServer.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5441795E03587B76C85E0FAE653804E /* PEAR-FileManager-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PEAR-FileManager-iOS-dummy.m"; sourceTree = "<group>"; };
-		F7FCEFB207B71D072680DBD445ACF4F7 /* PEAR-UIColorExtention-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-UIColorExtention-iOS-prefix.pch"; sourceTree = "<group>"; };
-		F8023D842EB93664ED4B9D925D8F3F38 /* PEAR-HttpFetcher-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PEAR-HttpFetcher-iOS.xcconfig"; sourceTree = "<group>"; };
-		F82EDD4C4601A842AD3C5A4979FD77EB /* URLEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = URLEntity.h; path = "PEAR-URLParser-iOS/URLEntity.h"; sourceTree = "<group>"; };
-		FDCC54DB7C34D8DC32373563BE62AA92 /* GCDWebServerDataResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerDataResponse.m; path = GCDWebServer/Responses/GCDWebServerDataResponse.m; sourceTree = "<group>"; };
-		FE8994D9B3D2CEAE96C7D89B3344B2B9 /* PEAR-AutoLayout-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-AutoLayout-iOS-prefix.pch"; sourceTree = "<group>"; };
+		DF444473F6C3D4C9E47EF9C3DE334CA0 /* libPEAR-URLParser-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-URLParser-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF597588EF6337D4C53F25CBD20D32FB /* GCDWebServerDataResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerDataResponse.h; path = GCDWebServer/Responses/GCDWebServerDataResponse.h; sourceTree = "<group>"; };
+		EA083F18C55C8B31FB5E318B7199D220 /* GCDWebServerConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerConnection.m; path = GCDWebServer/Core/GCDWebServerConnection.m; sourceTree = "<group>"; };
+		EE5DFC8BDA2297848F3A745B9DF5FE40 /* PEAR-Indicator-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-Indicator-iOS-prefix.pch"; sourceTree = "<group>"; };
+		F18D728F4BFE1DFA231DA6B4799F1393 /* PEAR-BlocksKit-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PEAR-BlocksKit-iOS-prefix.pch"; sourceTree = "<group>"; };
+		FA245235C68B0DB18E1849CFDDFB59CA /* libPEAR-PropertyListManager-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPEAR-PropertyListManager-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7C3D0D2E9B15D3E2CD0D529692F439 /* GCDWebServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServer.m; path = GCDWebServer/Core/GCDWebServer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,19 +335,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FBFF0B1422E4DC38C1FCCEF0A65E4C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43F9D542589B934E3766EF707CD8C983 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4EC176382023B1E35ACB6BB41F30B3DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A69D6BFE97B135C5AE9CA8B7DFBB04B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AC51A03283BAB9821FB1C7940DF9442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B04EBAFBEB318E11B1069BF7F80A9F0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +391,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C69F89C666B70CB6FC9798EB021D196B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13C79A8493F29CBA9892925A34B434D3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E529797D548B2D7293AE3C954EF9EE0B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,17 +418,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		024377AF1E32052CD0051ED1A52A9358 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				860B7BDF35B5E41B15FD4CB85E7EF2FB /* GCDWebServer.xcconfig */,
-				D7DD083A1FAA79E02F7DED8EC404D587 /* GCDWebServer-dummy.m */,
-				4C6A88AC1F399C63EBA0E706E487382C /* GCDWebServer-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/GCDWebServer";
-			sourceTree = "<group>";
-		};
 		037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,25 +426,26 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		05121EF069AEB7BD1835AAC238A4B72A /* PEAR-HttpFetcher-iOS */ = {
+		09D36316E18FECEC3DBFABC1F618413F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D49DBCBD37C1C92603E86E211C7AAA1B /* PEARHttpFetcher.h */,
-				3D11AFA41873F128816967AC16D692F8 /* PEARHttpFetcher.m */,
-				53A9D10C73230C06746EAB3D02137F44 /* Support Files */,
-			);
-			path = "PEAR-HttpFetcher-iOS";
-			sourceTree = "<group>";
-		};
-		0955D523DD49309ABE16D19AAA482735 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				200E81E4552863F8DA20CB91515B54A6 /* PEAR-PropertyListManager-iOS.xcconfig */,
-				D46EA05C915DACDCF8D17EEC5467E9EA /* PEAR-PropertyListManager-iOS-dummy.m */,
-				D70DC3B6FEBBE64E85D92B95890C3989 /* PEAR-PropertyListManager-iOS-prefix.pch */,
+				098D4514D28F095818038C51BE581B66 /* PEAR-FileManager-iOS.xcconfig */,
+				7C8F343057CD648BD80A52EEC668964A /* PEAR-FileManager-iOS-dummy.m */,
+				30F4DC7366C3A740D7371B58EEC2BF53 /* PEAR-FileManager-iOS-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/PEAR-PropertyListManager-iOS";
+			path = "../Target Support Files/PEAR-FileManager-iOS";
+			sourceTree = "<group>";
+		};
+		0A86F3504D89EB0CDE239969B8B5D305 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8A5EC76FED3A51A02895C5BFF8EA3BA /* PEAR-UIColorExtention-iOS.xcconfig */,
+				D11BE1BA223546409FA3FA3A11F8B47C /* PEAR-UIColorExtention-iOS-dummy.m */,
+				0A8CD809488348889490AB9EE5A60D59 /* PEAR-UIColorExtention-iOS-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PEAR-UIColorExtention-iOS";
 			sourceTree = "<group>";
 		};
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
@@ -439,73 +454,6 @@
 				2263A1550236933E26602EBE64500077 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1B7FBB944E7C45E3FB02034AC182A571 /* PEAR-KeyboardNotification-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				5366A58575A85BE4F4DB90EC25B73718 /* PEAR-KeyboardNotification-iOS.h */,
-				6EDDA1314C90601CD57228466B78F9F8 /* PEAR-KeyboardNotification-iOS.m */,
-				3A425BC41B157BBF31503C7CA6AF257F /* Support Files */,
-			);
-			path = "PEAR-KeyboardNotification-iOS";
-			sourceTree = "<group>";
-		};
-		1C755ED6F438307C4D4352CC835AEA77 /* PEAR-AutoLayout-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				9A45A7380BD5F13327E839AAD9D7037B /* AutoLayout.h */,
-				D5A7EDE269365BEA35CC231935BF36BC /* AutoLayout.m */,
-				922D9C9E1F3A12D209B4AF4648253050 /* Support Files */,
-			);
-			path = "PEAR-AutoLayout-iOS";
-			sourceTree = "<group>";
-		};
-		1D62D5EC03059521C09680D1A4C3D07F /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				C4A7F70D3A9A1506F3BBB86BF15EBA28 /* GCDWebServer.h */,
-				7DE6B406B8C39D200B0DCB754E636700 /* GCDWebServer.m */,
-				47427870354AA0E51D9EEBA6D905BDB1 /* GCDWebServerConnection.h */,
-				4B29B5BE866CCBE41879D36DE4D8474F /* GCDWebServerConnection.m */,
-				3062440C035456C9391AEA0410E87849 /* GCDWebServerDataRequest.h */,
-				7A3ADB2099C2468AC14C9499FA4DE0E9 /* GCDWebServerDataRequest.m */,
-				8005E76A805C0F9659EAE9910A6E6248 /* GCDWebServerDataResponse.h */,
-				FDCC54DB7C34D8DC32373563BE62AA92 /* GCDWebServerDataResponse.m */,
-				DE976FF870123A991EC211AE12ABA09A /* GCDWebServerErrorResponse.h */,
-				2128C9D317D9DD707DEC8BFB55143760 /* GCDWebServerErrorResponse.m */,
-				4619A9D213708FE6ABADF3A60196E431 /* GCDWebServerFileRequest.h */,
-				489C9493A9E60E86C5E9576911CD3FCA /* GCDWebServerFileRequest.m */,
-				A211DEB8649B908B8ED746EFD06C136A /* GCDWebServerFileResponse.h */,
-				F30E0D6574B68281DE3A5AE54E3B2EAA /* GCDWebServerFileResponse.m */,
-				593D5C87C9A53774022F2CA51B8AFB1B /* GCDWebServerFunctions.h */,
-				9DB45B06863E7467051ED052C9FD9573 /* GCDWebServerFunctions.m */,
-				26BAD6A4BD912687FB7D5A38E0C79A2B /* GCDWebServerHTTPStatusCodes.h */,
-				4A0ECDAC6904ED61C289C1D6573E19D2 /* GCDWebServerMultiPartFormRequest.h */,
-				D81476AECB85917D5AB48167B90B0566 /* GCDWebServerMultiPartFormRequest.m */,
-				5437B67A567F6D1E1B694C88A137A2CC /* GCDWebServerPrivate.h */,
-				54A7DDAE2741B98C47030D4F750496F0 /* GCDWebServerRequest.h */,
-				03EF9F2E6AEFB55379741FBFFF14E955 /* GCDWebServerRequest.m */,
-				CE9C7D3A588F1D74089CA2631DB7BC6F /* GCDWebServerResponse.h */,
-				D2A938F504F927BE10BBA78404844B1D /* GCDWebServerResponse.m */,
-				51152D07DB56A27BEE529B916CD6320B /* GCDWebServerStreamedResponse.h */,
-				BAABD14EE5F944B6E100E10DE23E9FAA /* GCDWebServerStreamedResponse.m */,
-				BAC0ACFDF0F8BBEB6D4313BFDCFB5788 /* GCDWebServerURLEncodedFormRequest.h */,
-				1F6EE0DC25AEF0647EC07BC1B17F3792 /* GCDWebServerURLEncodedFormRequest.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		1E98AEC82B953254F13A5856B34A6966 /* PEAR-URLParser-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				C9D6DF81A57143F439ADB8F98C497284 /* PEARURLParser.h */,
-				04B87D0EA321C248C3DE2E7FC31E2AFA /* PEARURLParser.m */,
-				F82EDD4C4601A842AD3C5A4979FD77EB /* URLEntity.h */,
-				78EF1979D8BEC4FCBCEE425CA2C75B9D /* URLEntity.m */,
-				F40C3D11F8AD6D198F663079BBD01D8E /* Support Files */,
-			);
-			path = "PEAR-URLParser-iOS";
 			sourceTree = "<group>";
 		};
 		2263A1550236933E26602EBE64500077 /* iOS */ = {
@@ -519,87 +467,183 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		2DFB61AAC8FCE2BA01C8F331F76DC5C2 /* WebDAV */ = {
+		2CC383CB039730E1BC3B1EDD3D0B3C2F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0442542F5E9E4B7D51750663B43513C5 /* GCDWebDAVServer.h */,
-				12CCF5DA2F33316049E58DF324A33413 /* GCDWebDAVServer.m */,
-			);
-			name = WebDAV;
-			sourceTree = "<group>";
-		};
-		2E61885C1A69F45C100D7EC59E4659E3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				70C26F3CD3DC9DE9673D8FB405BD1873 /* PEAR-FileManager-iOS.xcconfig */,
-				F5441795E03587B76C85E0FAE653804E /* PEAR-FileManager-iOS-dummy.m */,
-				B14164C709A3E034F39E037E6C6F3F91 /* PEAR-FileManager-iOS-prefix.pch */,
+				33E2F2EE2BBDF74271A22C083CD892A3 /* PEAR-Indicator-iOS.xcconfig */,
+				6FE597C5EC332F433D2AD9473B3ACC6B /* PEAR-Indicator-iOS-dummy.m */,
+				EE5DFC8BDA2297848F3A745B9DF5FE40 /* PEAR-Indicator-iOS-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/PEAR-FileManager-iOS";
+			path = "../Target Support Files/PEAR-Indicator-iOS";
 			sourceTree = "<group>";
 		};
-		311A461C3BB71842F7A0E7F835522F97 /* Support Files */ = {
+		2F0F58733CDC8F95E473A00F63405DF7 /* PEAR-URLParser-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				03B965FCBD1ACE38ACB6DC77AEC4E675 /* LUKeychainAccess.xcconfig */,
-				E9E2FCDA6AC3546485363F5F0ADB5544 /* LUKeychainAccess-dummy.m */,
-				5C4AFE5B3A88EAABDD4443872BC24F82 /* LUKeychainAccess-prefix.pch */,
+				34B315AA8ED425252C9C5DBFE4722226 /* PEARURLParser.h */,
+				3BD641F9CA8A79378C0AE04AE0BA125C /* PEARURLParser.m */,
+				229669EB1D3F1535A2B22A8152497913 /* URLEntity.h */,
+				662DE421BCE9D48B9600E231422072A6 /* URLEntity.m */,
+				796F96BC7B10C9369E2E3CF6D729982F /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/LUKeychainAccess";
+			path = "PEAR-URLParser-iOS";
 			sourceTree = "<group>";
 		};
-		3A425BC41B157BBF31503C7CA6AF257F /* Support Files */ = {
+		30005D15C08219C500FEE7DF138732A2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				EC8FF90A4E76AA2CFF7337A6A140FCCD /* PEAR-KeyboardNotification-iOS.xcconfig */,
-				DD4D30089C2D386F8EF6246CA58883F5 /* PEAR-KeyboardNotification-iOS-dummy.m */,
-				4715683899525CB7649FCA8C1B009418 /* PEAR-KeyboardNotification-iOS-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PEAR-KeyboardNotification-iOS";
-			sourceTree = "<group>";
-		};
-		3CF479F5B00B4511848FF48621BBD250 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DBB49A51F745462EFC4B4A322AEFF8E0 /* PEAR-UIColorExtention-iOS.xcconfig */,
-				4D9A85D1ACFDE3C393A1EA72657B35CA /* PEAR-UIColorExtention-iOS-dummy.m */,
-				F7FCEFB207B71D072680DBD445ACF4F7 /* PEAR-UIColorExtention-iOS-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PEAR-UIColorExtention-iOS";
-			sourceTree = "<group>";
-		};
-		43FFF35507FEB3322C85387BD6BD2800 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5C3EB03F010ABA24670EB51772C597FD /* IndicatorView.xib */,
-				694D9B6FFDC475FD4B4E490CBED055FB /* loading.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		53A9D10C73230C06746EAB3D02137F44 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F8023D842EB93664ED4B9D925D8F3F38 /* PEAR-HttpFetcher-iOS.xcconfig */,
-				B9DDDE93DD22FE9FAD36810223C14931 /* PEAR-HttpFetcher-iOS-dummy.m */,
-				252421E18A7A578FEC70E76940B9F5D4 /* PEAR-HttpFetcher-iOS-prefix.pch */,
+				B554023835F0377870321C8230B278AB /* PEAR-HttpFetcher-iOS.xcconfig */,
+				42065C7AF2026A18A14951C12BD9600D /* PEAR-HttpFetcher-iOS-dummy.m */,
+				A2DCF1ED5E6D7D7A66664E6549414F7C /* PEAR-HttpFetcher-iOS-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/PEAR-HttpFetcher-iOS";
 			sourceTree = "<group>";
 		};
-		546C96A4AAE69A2AA843FB258BE22406 /* PEAR-BlocksKit-iOS */ = {
+		36759F03D0DE9F304FD957EFC6ECC4CB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6ECB5826495B3CF3FC7BCC7426F40449 /* PEARBlocksKit.h */,
-				41C07F6591577A43D36A7C8683C3C384 /* PEARBlocksKit.m */,
-				CD77CDA4689B053DFBA278E07558426C /* Support Files */,
+				5F051086FAF01AACE94DD68C34E37BD6 /* PEAR-PropertyListManager-iOS.xcconfig */,
+				A46E7E0DB814B27D65693607B0CB53C9 /* PEAR-PropertyListManager-iOS-dummy.m */,
+				8ABA618666786B8433713EC6D88C5A6B /* PEAR-PropertyListManager-iOS-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PEAR-PropertyListManager-iOS";
+			sourceTree = "<group>";
+		};
+		4383B4F75D265F5DE2EF05C98FFE5B99 /* PEAR-PropertyListManager-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				788E31F0E53157D88A9FBE2DB04B748D /* PropertyListManager.h */,
+				31AB7D12EC6B7729A1C1E920A03B5F43 /* PropertyListManager.m */,
+				36759F03D0DE9F304FD957EFC6ECC4CB /* Support Files */,
+			);
+			path = "PEAR-PropertyListManager-iOS";
+			sourceTree = "<group>";
+		};
+		4735662E2FFD0C29B896921DC00CF475 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4C8344AD6AF740115052B5DD866A2F5D /* GCDWebServer.h */,
+				FA7C3D0D2E9B15D3E2CD0D529692F439 /* GCDWebServer.m */,
+				D3304FFF03772A1ECD67F7534D25AA69 /* GCDWebServerConnection.h */,
+				EA083F18C55C8B31FB5E318B7199D220 /* GCDWebServerConnection.m */,
+				D6080975AB65A695D62B308224EAB94C /* GCDWebServerDataRequest.h */,
+				92D501F5C50546D50DE2DE8B179E9931 /* GCDWebServerDataRequest.m */,
+				DF597588EF6337D4C53F25CBD20D32FB /* GCDWebServerDataResponse.h */,
+				3B4D1196C16D468BD85177942153EF2E /* GCDWebServerDataResponse.m */,
+				9E83390B354D6DA7FE3BCE189FFF74FA /* GCDWebServerErrorResponse.h */,
+				08026F5E2B0DB1CC1101AADA32BA95F2 /* GCDWebServerErrorResponse.m */,
+				1E6E5D7E198E6F00A7AB57427A4DF19B /* GCDWebServerFileRequest.h */,
+				5DB712980B6D66780CE7B6B6ACE2A1B8 /* GCDWebServerFileRequest.m */,
+				CEE6945FB3E4B3DF7DC7B22C4A367C73 /* GCDWebServerFileResponse.h */,
+				4B9160F8691F8D80C37B5663806AA21C /* GCDWebServerFileResponse.m */,
+				8B5B38C1036557A004177C7AA17D461E /* GCDWebServerFunctions.h */,
+				0D590D287DF64FCE53027AFCA35BAB42 /* GCDWebServerFunctions.m */,
+				5192503679CBFAD42C2EE59109FF026F /* GCDWebServerHTTPStatusCodes.h */,
+				1FE98E98B59132A10CB6E71927A30213 /* GCDWebServerMultiPartFormRequest.h */,
+				8DA6213BCE099E4F0247B2DFA9F0D7F1 /* GCDWebServerMultiPartFormRequest.m */,
+				56D2D52D376D19095B85669F26866B0B /* GCDWebServerPrivate.h */,
+				C68DD7B871B5A6C3FE7D745460C757D6 /* GCDWebServerRequest.h */,
+				9B860D7B7EED6DFA00072A293FBF4128 /* GCDWebServerRequest.m */,
+				714CD5093200E068477FED748AEF3BFC /* GCDWebServerResponse.h */,
+				4684D8E3487BE062F5164765B71EF0A4 /* GCDWebServerResponse.m */,
+				AD2B5B3FCECCC1F9D003F0D631D7F582 /* GCDWebServerStreamedResponse.h */,
+				836175C91EA9997DDF5D9D6691D31B30 /* GCDWebServerStreamedResponse.m */,
+				1EAEC415A0E8C192D16C447FF54812AF /* GCDWebServerURLEncodedFormRequest.h */,
+				1ECFC2ED38907C531CF6889BA6A55AD7 /* GCDWebServerURLEncodedFormRequest.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		48BD4B2D764C2E4A812C33297781754D /* PEAR-BlocksKit-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3A807E5696BF9C34E8ACD6473779EE27 /* PEARBlocksKit.h */,
+				09325439F7C5B09067C1D65A00808C6F /* PEARBlocksKit.m */,
+				FF2D71DBFCC2C9B16A119F7B4B99A06A /* Support Files */,
 			);
 			path = "PEAR-BlocksKit-iOS";
+			sourceTree = "<group>";
+		};
+		4B9ED209EFC63DF1E1BF15278FEF6185 /* PEAR-HttpFetcher-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5458EBD86704B1D5BA4233FF8CAD760F /* PEARHttpFetcher.h */,
+				1F3998942CF9548C52D61A89B2002E9B /* PEARHttpFetcher.m */,
+				30005D15C08219C500FEE7DF138732A2 /* Support Files */,
+			);
+			path = "PEAR-HttpFetcher-iOS";
+			sourceTree = "<group>";
+		};
+		66C6935DB01128749651EF17C60396FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F30B9B401720CA65482391CA29C8AB4 /* libGCDWebServer.a */,
+				0D0CB3979396D798D076CF9C42CF6C63 /* libLUKeychainAccess.a */,
+				35E03D1824F24B83989D25625B9B2E08 /* libPEAR-AutoLayout-iOS.a */,
+				4A541A65773954DC236364E485209190 /* libPEAR-BlocksKit-iOS.a */,
+				02D3705288A19D9C5224BA3D3D479AC6 /* libPEAR-CoreDataManager-iOS.a */,
+				72FBA21E199E59B0259BCC1F92E1A114 /* libPEAR-FileManager-iOS.a */,
+				41611736C61E6CFAEF1C5E2BF8057A20 /* libPEAR-HttpFetcher-iOS.a */,
+				364E251BB910ABF88F8D3C12F5E5E655 /* libPEAR-Indicator-iOS.a */,
+				396C533B34326FAA9057DD92CDB4FFA8 /* libPEAR-KeyboardNotification-iOS.a */,
+				FA245235C68B0DB18E1849CFDDFB59CA /* libPEAR-PropertyListManager-iOS.a */,
+				915DE0A67D1690D0A0E15231FD23D5D9 /* libPEAR-UIColorExtention-iOS.a */,
+				DF444473F6C3D4C9E47EF9C3DE334CA0 /* libPEAR-URLParser-iOS.a */,
+				9197DECAE6B331CC4710EAC29F901AB4 /* libPods.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70B0DA05ABB89D705C1CE4326DDA6D79 /* WebDAV */ = {
+			isa = PBXGroup;
+			children = (
+				5E6FB9F980D5524C591AD53F821E96FB /* GCDWebDAVServer.h */,
+				297ABC35B717168CD4D3C86A15D97219 /* GCDWebDAVServer.m */,
+			);
+			name = WebDAV;
+			sourceTree = "<group>";
+		};
+		72BC039D9CEC0D22303AB6A433F7CFB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				953E613A50FEBAE46DFCFEEF33F641B6 /* GCDWebServer */,
+				A45ED51FEB49D4ABADF462F309C93971 /* LUKeychainAccess */,
+				F7346A5B989BFD6E56680C74A4586420 /* PEAR-AutoLayout-iOS */,
+				48BD4B2D764C2E4A812C33297781754D /* PEAR-BlocksKit-iOS */,
+				C6ED05CAC0A3AE0ECF6EA5BECCDCCAF3 /* PEAR-CoreDataManager-iOS */,
+				97AF22AB7F55847DBE29D25FFFB302E2 /* PEAR-FileManager-iOS */,
+				4B9ED209EFC63DF1E1BF15278FEF6185 /* PEAR-HttpFetcher-iOS */,
+				DDCEC3553F5A2D416500FEA1AD3DB6A9 /* PEAR-Indicator-iOS */,
+				C443A693E2D14E469CDC1C54274C6D90 /* PEAR-KeyboardNotification-iOS */,
+				4383B4F75D265F5DE2EF05C98FFE5B99 /* PEAR-PropertyListManager-iOS */,
+				7B206633EAF2B021D366F2F300B97D2D /* PEAR-UIColorExtention-iOS */,
+				2F0F58733CDC8F95E473A00F63405DF7 /* PEAR-URLParser-iOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		796F96BC7B10C9369E2E3CF6D729982F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				638B641B14F61530C2E99828469011EF /* PEAR-URLParser-iOS.xcconfig */,
+				53BC793668ED9D8A2CCD0538D24693F6 /* PEAR-URLParser-iOS-dummy.m */,
+				9296FCFFD214929F1CCB8C029E1F7335 /* PEAR-URLParser-iOS-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PEAR-URLParser-iOS";
+			sourceTree = "<group>";
+		};
+		7B206633EAF2B021D366F2F300B97D2D /* PEAR-UIColorExtention-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2D690471A8A4D450709F4F93E8FDA761 /* UIColor+extention.h */,
+				5B22EEBEE4E85416080445C89C30399F /* UIColor+extention.m */,
+				0A86F3504D89EB0CDE239969B8B5D305 /* Support Files */,
+			);
+			path = "PEAR-UIColorExtention-iOS";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -607,49 +651,66 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				B247B3BD2461CC5EB7C26AF60EF516B6 /* Pods */,
-				E89B5487E615AA778E7185990AFE39B2 /* Products */,
+				72BC039D9CEC0D22303AB6A433F7CFB7 /* Pods */,
+				66C6935DB01128749651EF17C60396FA /* Products */,
 				037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8B15FE1C92E2BD349D2696C33D41185D /* GCDWebServer */ = {
+		94591BAB8C7F512C5B6E7771EDD541DF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1D62D5EC03059521C09680D1A4C3D07F /* Core */,
-				024377AF1E32052CD0051ED1A52A9358 /* Support Files */,
-				2DFB61AAC8FCE2BA01C8F331F76DC5C2 /* WebDAV */,
+				5BCC34C682153885317E0303F00ACC23 /* PEAR-CoreDataManager-iOS.xcconfig */,
+				87E0B296B8DD9DC5F6BC162F336DFB05 /* PEAR-CoreDataManager-iOS-dummy.m */,
+				219EEC646C4BB3252A971C3FA39B2CCA /* PEAR-CoreDataManager-iOS-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PEAR-CoreDataManager-iOS";
+			sourceTree = "<group>";
+		};
+		953E613A50FEBAE46DFCFEEF33F641B6 /* GCDWebServer */ = {
+			isa = PBXGroup;
+			children = (
+				4735662E2FFD0C29B896921DC00CF475 /* Core */,
+				CF350796B93B3DEFB0216BF3B61DF421 /* Support Files */,
+				70B0DA05ABB89D705C1CE4326DDA6D79 /* WebDAV */,
 			);
 			path = GCDWebServer;
 			sourceTree = "<group>";
 		};
-		922D9C9E1F3A12D209B4AF4648253050 /* Support Files */ = {
+		97AF22AB7F55847DBE29D25FFFB302E2 /* PEAR-FileManager-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				23254B6FEA9A23F5E38A9568D838C186 /* PEAR-AutoLayout-iOS.xcconfig */,
-				BC4C7DB4F046535AD31288148291C652 /* PEAR-AutoLayout-iOS-dummy.m */,
-				FE8994D9B3D2CEAE96C7D89B3344B2B9 /* PEAR-AutoLayout-iOS-prefix.pch */,
+				9CA8CAA60F9FBF34880625826C5EF790 /* PEARFileManager.h */,
+				41796F09FECC4D9387F0B33638C0DAB4 /* PEARFileManager.m */,
+				09D36316E18FECEC3DBFABC1F618413F /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/PEAR-AutoLayout-iOS";
+			path = "PEAR-FileManager-iOS";
 			sourceTree = "<group>";
 		};
-		B247B3BD2461CC5EB7C26AF60EF516B6 /* Pods */ = {
+		9D9A4EEE59317A15B1068CD188D70092 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8B15FE1C92E2BD349D2696C33D41185D /* GCDWebServer */,
-				E6B8FDD18160F09F2B356BEC820CC7FA /* LUKeychainAccess */,
-				1C755ED6F438307C4D4352CC835AEA77 /* PEAR-AutoLayout-iOS */,
-				546C96A4AAE69A2AA843FB258BE22406 /* PEAR-BlocksKit-iOS */,
-				DF28C543B58672D4F033565ADBAD3628 /* PEAR-FileManager-iOS */,
-				05121EF069AEB7BD1835AAC238A4B72A /* PEAR-HttpFetcher-iOS */,
-				E35E302346EBED07B502C5B6D55FF0E8 /* PEAR-Indicator-iOS */,
-				1B7FBB944E7C45E3FB02034AC182A571 /* PEAR-KeyboardNotification-iOS */,
-				F5F45D317E3D6E6A4CC49EB27EA7A47B /* PEAR-PropertyListManager-iOS */,
-				BD6625FB75BF2D2C566C7D47C629C75D /* PEAR-UIColorExtention-iOS */,
-				1E98AEC82B953254F13A5856B34A6966 /* PEAR-URLParser-iOS */,
+				CBE81B08F75AA6E588A89E059E0F7B67 /* LUKeychainAccess.xcconfig */,
+				114F9FE7069AD960893CCF4B27828183 /* LUKeychainAccess-dummy.m */,
+				08AA60FE4A306ACB5FC88F2CCC6935A6 /* LUKeychainAccess-prefix.pch */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/LUKeychainAccess";
+			sourceTree = "<group>";
+		};
+		A45ED51FEB49D4ABADF462F309C93971 /* LUKeychainAccess */ = {
+			isa = PBXGroup;
+			children = (
+				69BDA37675F1742EDF188F8BEC930B6A /* LUKeychainAccess.h */,
+				4A2F12AE4346E14C3CF836504FAE7C01 /* LUKeychainAccess.m */,
+				4CFB859F3A687FBEEE491314E914498F /* LUKeychainAccessAccessibility.h */,
+				A5BBD23AB5DF3FA852D7DFA0218E121E /* LUKeychainErrorHandler.h */,
+				32E1C12B5C7E7B55A0BC414AEAE7AA06 /* LUKeychainServices.h */,
+				D04AB3497D95DF25C058D4A4286E755F /* LUKeychainServices.m */,
+				9D9A4EEE59317A15B1068CD188D70092 /* Support Files */,
+			);
+			path = LUKeychainAccess;
 			sourceTree = "<group>";
 		};
 		B3D1D13E0C6553800746CB8FD61CF946 /* Pods */ = {
@@ -667,111 +728,98 @@
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		BD6625FB75BF2D2C566C7D47C629C75D /* PEAR-UIColorExtention-iOS */ = {
+		C443A693E2D14E469CDC1C54274C6D90 /* PEAR-KeyboardNotification-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F28329110B45F6D2B13B976D51E1F955 /* UIColor+extention.h */,
-				28B4FA8C3DE7AE8219FC0CDA51F3E7A5 /* UIColor+extention.m */,
-				3CF479F5B00B4511848FF48621BBD250 /* Support Files */,
+				ADDB45808B1B9D15C75E2BB304DDE21E /* PEAR-KeyboardNotification-iOS.h */,
+				D0DE97266041D716DE767643A76F5BF7 /* PEAR-KeyboardNotification-iOS.m */,
+				D5CA2F28AF76C5B7948D10F3F4545669 /* Support Files */,
 			);
-			path = "PEAR-UIColorExtention-iOS";
+			path = "PEAR-KeyboardNotification-iOS";
 			sourceTree = "<group>";
 		};
-		C8B63954E1F05FECC13F10FCA2F4EB98 /* Support Files */ = {
+		C6ED05CAC0A3AE0ECF6EA5BECCDCCAF3 /* PEAR-CoreDataManager-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				5639896092DABB348DE40D7DE7E5F8B3 /* PEAR-Indicator-iOS.xcconfig */,
-				CB222C74491C8D1376568CCB84F07387 /* PEAR-Indicator-iOS-dummy.m */,
-				7ED402BEDFF705CF94495C40B657E01E /* PEAR-Indicator-iOS-prefix.pch */,
+				03EF6FAD08B27650B6CE4240468EE9D1 /* CoreDataManager.h */,
+				67D84E283A1E63669623F501E4822252 /* CoreDataManager.m */,
+				94591BAB8C7F512C5B6E7771EDD541DF /* Support Files */,
+			);
+			path = "PEAR-CoreDataManager-iOS";
+			sourceTree = "<group>";
+		};
+		CF350796B93B3DEFB0216BF3B61DF421 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F1DD0132D3EA103927FFA156A0239D8 /* GCDWebServer.xcconfig */,
+				C50FD21BA9ED6F02153971CAF5AD604E /* GCDWebServer-dummy.m */,
+				06FE286356B437CA7D32C506F5E2EB08 /* GCDWebServer-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/PEAR-Indicator-iOS";
+			path = "../Target Support Files/GCDWebServer";
 			sourceTree = "<group>";
 		};
-		CD77CDA4689B053DFBA278E07558426C /* Support Files */ = {
+		D091D8B80D378ACF372B85602DAF296D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				52AC1CDD47C75D568632F1A62C68A13D /* PEAR-BlocksKit-iOS.xcconfig */,
-				91E04AAF8553420096CE58BA5CC409C5 /* PEAR-BlocksKit-iOS-dummy.m */,
-				74C1A9C719024D320F598C12D9635C93 /* PEAR-BlocksKit-iOS-prefix.pch */,
+				DA972940FFBC0F57DCBF339DE57DE86C /* PEAR-AutoLayout-iOS.xcconfig */,
+				11E0A31AF9DF4715EEA2BACCD8F985C4 /* PEAR-AutoLayout-iOS-dummy.m */,
+				ACC9B981FDD6DE35F3921C10D3B57A98 /* PEAR-AutoLayout-iOS-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/PEAR-BlocksKit-iOS";
+			path = "../Target Support Files/PEAR-AutoLayout-iOS";
 			sourceTree = "<group>";
 		};
-		DF28C543B58672D4F033565ADBAD3628 /* PEAR-FileManager-iOS */ = {
+		D19DB7B22765701452D00BC006C84E45 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BFC1D23AEC324BED2A9B54FB6A0A3E78 /* PEARFileManager.h */,
-				54CDA4B85C9E7FAF95F1F6B72BCA7E7B /* PEARFileManager.m */,
-				2E61885C1A69F45C100D7EC59E4659E3 /* Support Files */,
+				3088694262B4F925BE527812240C9A4B /* IndicatorView.xib */,
+				D9A25735BA32ACD30B77D26E75460013 /* loading.png */,
 			);
-			path = "PEAR-FileManager-iOS";
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		E35E302346EBED07B502C5B6D55FF0E8 /* PEAR-Indicator-iOS */ = {
+		D5CA2F28AF76C5B7948D10F3F4545669 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				EEFE0B1AE018AED65C164A81CFEB7AED /* IndicatorView.h */,
-				5E4B19FAB13784E70B6260F2E917DEE2 /* IndicatorView.m */,
-				43FFF35507FEB3322C85387BD6BD2800 /* Resources */,
-				C8B63954E1F05FECC13F10FCA2F4EB98 /* Support Files */,
+				C86C905848B54AB47A2EB4E1FE632699 /* PEAR-KeyboardNotification-iOS.xcconfig */,
+				DC49DD913B8E0D60C64C23A5D0810C08 /* PEAR-KeyboardNotification-iOS-dummy.m */,
+				9276CEB2A645D0024BC07070FBAABA8A /* PEAR-KeyboardNotification-iOS-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PEAR-KeyboardNotification-iOS";
+			sourceTree = "<group>";
+		};
+		DDCEC3553F5A2D416500FEA1AD3DB6A9 /* PEAR-Indicator-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8E3267B03EDC1868D95A6ED55EC27FCC /* IndicatorView.h */,
+				C83EF0D3A6808EC38499D6333B3CBBC6 /* IndicatorView.m */,
+				D19DB7B22765701452D00BC006C84E45 /* Resources */,
+				2CC383CB039730E1BC3B1EDD3D0B3C2F /* Support Files */,
 			);
 			path = "PEAR-Indicator-iOS";
 			sourceTree = "<group>";
 		};
-		E6B8FDD18160F09F2B356BEC820CC7FA /* LUKeychainAccess */ = {
+		F7346A5B989BFD6E56680C74A4586420 /* PEAR-AutoLayout-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2EB4F1EDA0FE1C32838326B667BB1FD7 /* LUKeychainAccess.h */,
-				D423BBEF08B5E28D81DA21FEAA7268BA /* LUKeychainAccess.m */,
-				0753A3614071F7239CB54AC45B575118 /* LUKeychainAccessAccessibility.h */,
-				A57A78468A5A5DF36CAB9B36929D887A /* LUKeychainErrorHandler.h */,
-				321C793573EA2BEB5778AA1CCE5EC2D5 /* LUKeychainServices.h */,
-				B4A59C252347C43530D9CEE83D714A51 /* LUKeychainServices.m */,
-				311A461C3BB71842F7A0E7F835522F97 /* Support Files */,
+				B5D0CDB51852BC90F7A2BB2A81C941BC /* AutoLayout.h */,
+				8536F2D6D1F33B5DE269137F03E4D194 /* AutoLayout.m */,
+				D091D8B80D378ACF372B85602DAF296D /* Support Files */,
 			);
-			path = LUKeychainAccess;
+			path = "PEAR-AutoLayout-iOS";
 			sourceTree = "<group>";
 		};
-		E89B5487E615AA778E7185990AFE39B2 /* Products */ = {
+		FF2D71DBFCC2C9B16A119F7B4B99A06A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F33F93537EED35BE17EAFE9562580D6C /* libGCDWebServer.a */,
-				0458908DBF73955B1E49B626B3D752EF /* libLUKeychainAccess.a */,
-				A0FCE0FD938C1EB56F2BCE52C7CC877C /* libPEAR-AutoLayout-iOS.a */,
-				7E6A92A90A6316FED2C331AD3BD8FB73 /* libPEAR-BlocksKit-iOS.a */,
-				09FFAB4AF9BFE3086EAC993EDA210FA8 /* libPEAR-FileManager-iOS.a */,
-				95724A43EA3B771BC19334E599A856C9 /* libPEAR-HttpFetcher-iOS.a */,
-				F30D190A08076CC83A5B601BE4506277 /* libPEAR-Indicator-iOS.a */,
-				6999D964FAD1D5D7D18CC54A31E17EAE /* libPEAR-KeyboardNotification-iOS.a */,
-				5AD4938E789C4DC109DCFBD80AA53A37 /* libPEAR-PropertyListManager-iOS.a */,
-				A96FBC52FDA21F477DA8181EC574FFB5 /* libPEAR-UIColorExtention-iOS.a */,
-				B1DFF9C0F02465BE85B599B78A535068 /* libPEAR-URLParser-iOS.a */,
-				36BEA069500D72E980923A207EE1304F /* libPods.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F40C3D11F8AD6D198F663079BBD01D8E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A43521B391FEFD89CB3978F02B5B5A65 /* PEAR-URLParser-iOS.xcconfig */,
-				510CB01E514D616E598B95EE6F298DDA /* PEAR-URLParser-iOS-dummy.m */,
-				D5FB4448D32CB71B288D10EA8CB53C5B /* PEAR-URLParser-iOS-prefix.pch */,
+				72841AD5258DB2E81602AB79C52DD083 /* PEAR-BlocksKit-iOS.xcconfig */,
+				100D83A3AF53247745F019698D4542A4 /* PEAR-BlocksKit-iOS-dummy.m */,
+				F18D728F4BFE1DFA231DA6B4799F1393 /* PEAR-BlocksKit-iOS-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/PEAR-URLParser-iOS";
-			sourceTree = "<group>";
-		};
-		F5F45D317E3D6E6A4CC49EB27EA7A47B /* PEAR-PropertyListManager-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				C95B4D0B5BFAB0DFAB4B4CAA749AB99C /* PropertyListManager.h */,
-				DA0432C19123C872819C203362924CE4 /* PropertyListManager.m */,
-				0955D523DD49309ABE16D19AAA482735 /* Support Files */,
-			);
-			path = "PEAR-PropertyListManager-iOS";
+			path = "../Target Support Files/PEAR-BlocksKit-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -813,6 +861,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C225E57E10017128FA24FB9AF87E6F37 /* PEARBlocksKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		212D53DD4B1268EC3B6BA546F9A8707C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC39AFBC66596063F0DA426576B5819 /* CoreDataManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,6 +943,51 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0A807C56285AB0F17D9BBBB9E385AF11 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945829FDEBBA0AD2E6D02471EBCA76A1 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				D441F461AF6F720D33F7BAB551F828DE /* Sources */,
+				7AC51A03283BAB9821FB1C7940DF9442 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				132DC0C80E54DE8969418EA66726DE17 /* PBXTargetDependency */,
+				9923559175C135C4554CC44D0F126CFF /* PBXTargetDependency */,
+				7CFA211C1B4DBDE9A71CD8A61333312B /* PBXTargetDependency */,
+				F2422AEA71E7DEA02BF62485D1E0BB57 /* PBXTargetDependency */,
+				A4E983A9B6FE8B4071D82A006159A1D3 /* PBXTargetDependency */,
+				8EC83FF72D8B078462D5803454C2952A /* PBXTargetDependency */,
+				D4321C12D007B2F161D8C851C3D3CD16 /* PBXTargetDependency */,
+				DF71200F442404095FD467F2C60C045F /* PBXTargetDependency */,
+				7664F2FE5DBA972833068FE54E7CA9BD /* PBXTargetDependency */,
+				3731787BBFB833D8DA3B1BAC285473BA /* PBXTargetDependency */,
+				BBDD8A0DF6103FEFBF79A7824C75C83F /* PBXTargetDependency */,
+				DD8CF3BDCC2110DDA6D666A8B5B32FBF /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 9197DECAE6B331CC4710EAC29F901AB4 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0A9515ABC3A21F6955749538919C7916 /* PEAR-CoreDataManager-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D381785061C1DB55066A25712E5414F0 /* Build configuration list for PBXNativeTarget "PEAR-CoreDataManager-iOS" */;
+			buildPhases = (
+				40039AC11C734B5F000AB0E8134C537D /* Sources */,
+				C69F89C666B70CB6FC9798EB021D196B /* Frameworks */,
+				212D53DD4B1268EC3B6BA546F9A8707C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PEAR-CoreDataManager-iOS";
+			productName = "PEAR-CoreDataManager-iOS";
+			productReference = 02D3705288A19D9C5224BA3D3D479AC6 /* libPEAR-CoreDataManager-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		15B020A0B9CF37F4316FD2297C4C9CD0 /* PEAR-Indicator-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6190CEC3F4A37AED8AE046B2C9AD0655 /* Build configuration list for PBXNativeTarget "PEAR-Indicator-iOS" */;
@@ -901,7 +1002,7 @@
 			);
 			name = "PEAR-Indicator-iOS";
 			productName = "PEAR-Indicator-iOS";
-			productReference = F30D190A08076CC83A5B601BE4506277 /* libPEAR-Indicator-iOS.a */;
+			productReference = 364E251BB910ABF88F8D3C12F5E5E655 /* libPEAR-Indicator-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		35688256C1EA997336E734EAC5D9D02F /* LUKeychainAccess */ = {
@@ -918,7 +1019,7 @@
 			);
 			name = LUKeychainAccess;
 			productName = LUKeychainAccess;
-			productReference = 0458908DBF73955B1E49B626B3D752EF /* libLUKeychainAccess.a */;
+			productReference = 0D0CB3979396D798D076CF9C42CF6C63 /* libLUKeychainAccess.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		45BB276A2AD94A6F57C1291610BD0EE1 /* PEAR-UIColorExtention-iOS */ = {
@@ -935,7 +1036,7 @@
 			);
 			name = "PEAR-UIColorExtention-iOS";
 			productName = "PEAR-UIColorExtention-iOS";
-			productReference = A96FBC52FDA21F477DA8181EC574FFB5 /* libPEAR-UIColorExtention-iOS.a */;
+			productReference = 915DE0A67D1690D0A0E15231FD23D5D9 /* libPEAR-UIColorExtention-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		5B4892A650264FE0BAE78DCE50F237C8 /* GCDWebServer */ = {
@@ -952,7 +1053,7 @@
 			);
 			name = GCDWebServer;
 			productName = GCDWebServer;
-			productReference = F33F93537EED35BE17EAFE9562580D6C /* libGCDWebServer.a */;
+			productReference = 3F30B9B401720CA65482391CA29C8AB4 /* libGCDWebServer.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		7E9AF0F701F193E9DD3E8D1BADE92724 /* PEAR-KeyboardNotification-iOS */ = {
@@ -969,7 +1070,7 @@
 			);
 			name = "PEAR-KeyboardNotification-iOS";
 			productName = "PEAR-KeyboardNotification-iOS";
-			productReference = 6999D964FAD1D5D7D18CC54A31E17EAE /* libPEAR-KeyboardNotification-iOS.a */;
+			productReference = 396C533B34326FAA9057DD92CDB4FFA8 /* libPEAR-KeyboardNotification-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		91BCC048D6FA116732267A60BCAA70F3 /* PEAR-BlocksKit-iOS */ = {
@@ -986,34 +1087,7 @@
 			);
 			name = "PEAR-BlocksKit-iOS";
 			productName = "PEAR-BlocksKit-iOS";
-			productReference = 7E6A92A90A6316FED2C331AD3BD8FB73 /* libPEAR-BlocksKit-iOS.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		A4D06602BB5B81461802BC183D03A442 /* Pods */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ADB9D12C5B8E493752BD3423E433633E /* Build configuration list for PBXNativeTarget "Pods" */;
-			buildPhases = (
-				8EC6AA3B16B0F183A838909D99345224 /* Sources */,
-				3FBFF0B1422E4DC38C1FCCEF0A65E4C4 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DEDBE3505495A60DBEB7E7215A6F5A72 /* PBXTargetDependency */,
-				9BAA18520B8160DC5F4C35C37B9132EA /* PBXTargetDependency */,
-				CB5448DF5A3C588325E4734716468FA7 /* PBXTargetDependency */,
-				83DC907D09965643FE04A078ED5B6A63 /* PBXTargetDependency */,
-				1F72521450BAF71B4DA89EDA17D2BF65 /* PBXTargetDependency */,
-				D4452F80994A431EFEE10942ED46DC42 /* PBXTargetDependency */,
-				490C959119B3FBF8460E3883273821E1 /* PBXTargetDependency */,
-				921E7EFF087C8058E4888EC0C8332CD9 /* PBXTargetDependency */,
-				5C9E2D1751A8C68F359401E864171B40 /* PBXTargetDependency */,
-				6312D897B899C7A3EDD093EDF8BE5BA2 /* PBXTargetDependency */,
-				773D316ABDA0318DF7D132AC67CFB5D5 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = 36BEA069500D72E980923A207EE1304F /* libPods.a */;
+			productReference = 4A541A65773954DC236364E485209190 /* libPEAR-BlocksKit-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		C4C5313F3D76285457B663B77023AD49 /* PEAR-PropertyListManager-iOS */ = {
@@ -1030,7 +1104,7 @@
 			);
 			name = "PEAR-PropertyListManager-iOS";
 			productName = "PEAR-PropertyListManager-iOS";
-			productReference = 5AD4938E789C4DC109DCFBD80AA53A37 /* libPEAR-PropertyListManager-iOS.a */;
+			productReference = FA245235C68B0DB18E1849CFDDFB59CA /* libPEAR-PropertyListManager-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		C773F535F95161B93C7419BD2AB64752 /* PEAR-URLParser-iOS */ = {
@@ -1047,7 +1121,7 @@
 			);
 			name = "PEAR-URLParser-iOS";
 			productName = "PEAR-URLParser-iOS";
-			productReference = B1DFF9C0F02465BE85B599B78A535068 /* libPEAR-URLParser-iOS.a */;
+			productReference = DF444473F6C3D4C9E47EF9C3DE334CA0 /* libPEAR-URLParser-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		DB666F1D4733C1E55E7394F47C496CD6 /* PEAR-HttpFetcher-iOS */ = {
@@ -1064,7 +1138,7 @@
 			);
 			name = "PEAR-HttpFetcher-iOS";
 			productName = "PEAR-HttpFetcher-iOS";
-			productReference = 95724A43EA3B771BC19334E599A856C9 /* libPEAR-HttpFetcher-iOS.a */;
+			productReference = 41611736C61E6CFAEF1C5E2BF8057A20 /* libPEAR-HttpFetcher-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		F0F475CFFA77F9B0DFDD2127CD4FAFC2 /* PEAR-FileManager-iOS */ = {
@@ -1081,7 +1155,7 @@
 			);
 			name = "PEAR-FileManager-iOS";
 			productName = "PEAR-FileManager-iOS";
-			productReference = 09FFAB4AF9BFE3086EAC993EDA210FA8 /* libPEAR-FileManager-iOS.a */;
+			productReference = 72FBA21E199E59B0259BCC1F92E1A114 /* libPEAR-FileManager-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		F37127C6407560126024AFE35BC40F00 /* PEAR-AutoLayout-iOS */ = {
@@ -1098,7 +1172,7 @@
 			);
 			name = "PEAR-AutoLayout-iOS";
 			productName = "PEAR-AutoLayout-iOS";
-			productReference = A0FCE0FD938C1EB56F2BCE52C7CC877C /* libPEAR-AutoLayout-iOS.a */;
+			productReference = 35E03D1824F24B83989D25625B9B2E08 /* libPEAR-AutoLayout-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -1118,7 +1192,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = E89B5487E615AA778E7185990AFE39B2 /* Products */;
+			productRefGroup = 66C6935DB01128749651EF17C60396FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1126,6 +1200,7 @@
 				35688256C1EA997336E734EAC5D9D02F /* LUKeychainAccess */,
 				F37127C6407560126024AFE35BC40F00 /* PEAR-AutoLayout-iOS */,
 				91BCC048D6FA116732267A60BCAA70F3 /* PEAR-BlocksKit-iOS */,
+				0A9515ABC3A21F6955749538919C7916 /* PEAR-CoreDataManager-iOS */,
 				F0F475CFFA77F9B0DFDD2127CD4FAFC2 /* PEAR-FileManager-iOS */,
 				DB666F1D4733C1E55E7394F47C496CD6 /* PEAR-HttpFetcher-iOS */,
 				15B020A0B9CF37F4316FD2297C4C9CD0 /* PEAR-Indicator-iOS */,
@@ -1133,7 +1208,7 @@
 				C4C5313F3D76285457B663B77023AD49 /* PEAR-PropertyListManager-iOS */,
 				45BB276A2AD94A6F57C1291610BD0EE1 /* PEAR-UIColorExtention-iOS */,
 				C773F535F95161B93C7419BD2AB64752 /* PEAR-URLParser-iOS */,
-				A4D06602BB5B81461802BC183D03A442 /* Pods */,
+				0A807C56285AB0F17D9BBBB9E385AF11 /* Pods */,
 			);
 		};
 /* End PBXProject section */
@@ -1163,6 +1238,15 @@
 			files = (
 				4DFF03A761E2854B21B9C2C8A853C1B5 /* IndicatorView.m in Sources */,
 				EF539DA4F5CF8B2C52681A2C115CC551 /* PEAR-Indicator-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40039AC11C734B5F000AB0E8134C537D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DB5D34FFC66EF48DCC91C57D6E7654 /* CoreDataManager.m in Sources */,
+				7128648A849AA3D5DD29C710317EC480 /* PEAR-CoreDataManager-iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1215,14 +1299,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EC6AA3B16B0F183A838909D99345224 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A92CC0DFC54A88E320019F3ED22850B9 /* Pods-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C78C827162896F06563B77D37FBA8ACB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1240,6 +1316,14 @@
 				66871701871EB0211834E799A623C66A /* LUKeychainAccess-dummy.m in Sources */,
 				E1B4CFEBCB94F48D2F1BE88867F9E787 /* LUKeychainAccess.m in Sources */,
 				CA039742BA66E3E9B7172651E2F9177A /* LUKeychainServices.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D441F461AF6F720D33F7BAB551F828DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6A536371C485645BF7B06752EBB993 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1264,92 +1348,81 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1F72521450BAF71B4DA89EDA17D2BF65 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "PEAR-FileManager-iOS";
-			target = F0F475CFFA77F9B0DFDD2127CD4FAFC2 /* PEAR-FileManager-iOS */;
-			targetProxy = 8AA446DF082EC00D3BB8C7E004DABFE3 /* PBXContainerItemProxy */;
-		};
-		490C959119B3FBF8460E3883273821E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "PEAR-Indicator-iOS";
-			target = 15B020A0B9CF37F4316FD2297C4C9CD0 /* PEAR-Indicator-iOS */;
-			targetProxy = 79E48B50F0AB4DBAF50A7A008B9B49A2 /* PBXContainerItemProxy */;
-		};
-		5C9E2D1751A8C68F359401E864171B40 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "PEAR-PropertyListManager-iOS";
-			target = C4C5313F3D76285457B663B77023AD49 /* PEAR-PropertyListManager-iOS */;
-			targetProxy = 591B385552C6A1D04061DC12E34656B4 /* PBXContainerItemProxy */;
-		};
-		6312D897B899C7A3EDD093EDF8BE5BA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "PEAR-UIColorExtention-iOS";
-			target = 45BB276A2AD94A6F57C1291610BD0EE1 /* PEAR-UIColorExtention-iOS */;
-			targetProxy = 5E8E91398FD234FAACC47CCB06FEB4A8 /* PBXContainerItemProxy */;
-		};
-		773D316ABDA0318DF7D132AC67CFB5D5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "PEAR-URLParser-iOS";
-			target = C773F535F95161B93C7419BD2AB64752 /* PEAR-URLParser-iOS */;
-			targetProxy = 313ED0A63084B1EE453B7F8FBBCDB46B /* PBXContainerItemProxy */;
-		};
-		83DC907D09965643FE04A078ED5B6A63 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "PEAR-BlocksKit-iOS";
-			target = 91BCC048D6FA116732267A60BCAA70F3 /* PEAR-BlocksKit-iOS */;
-			targetProxy = 931931CFF189D196144009F272675D45 /* PBXContainerItemProxy */;
-		};
-		921E7EFF087C8058E4888EC0C8332CD9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "PEAR-KeyboardNotification-iOS";
-			target = 7E9AF0F701F193E9DD3E8D1BADE92724 /* PEAR-KeyboardNotification-iOS */;
-			targetProxy = C2F2F937651A416FF0DD76FC53732356 /* PBXContainerItemProxy */;
-		};
-		9BAA18520B8160DC5F4C35C37B9132EA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LUKeychainAccess;
-			target = 35688256C1EA997336E734EAC5D9D02F /* LUKeychainAccess */;
-			targetProxy = E6CF7D8EF2A7124189723B2EED8DF5ED /* PBXContainerItemProxy */;
-		};
-		CB5448DF5A3C588325E4734716468FA7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "PEAR-AutoLayout-iOS";
-			target = F37127C6407560126024AFE35BC40F00 /* PEAR-AutoLayout-iOS */;
-			targetProxy = A1E7716242058340A9C74E75042945E9 /* PBXContainerItemProxy */;
-		};
-		D4452F80994A431EFEE10942ED46DC42 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "PEAR-HttpFetcher-iOS";
-			target = DB666F1D4733C1E55E7394F47C496CD6 /* PEAR-HttpFetcher-iOS */;
-			targetProxy = 9FE68FF260001820AA1CB7BCA984AA90 /* PBXContainerItemProxy */;
-		};
-		DEDBE3505495A60DBEB7E7215A6F5A72 /* PBXTargetDependency */ = {
+		132DC0C80E54DE8969418EA66726DE17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GCDWebServer;
 			target = 5B4892A650264FE0BAE78DCE50F237C8 /* GCDWebServer */;
-			targetProxy = DE675F2E95CDA793163D352F5893103E /* PBXContainerItemProxy */;
+			targetProxy = F37E5AEDC1DB5279F4BEA4B662D81D6C /* PBXContainerItemProxy */;
+		};
+		3731787BBFB833D8DA3B1BAC285473BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PEAR-PropertyListManager-iOS";
+			target = C4C5313F3D76285457B663B77023AD49 /* PEAR-PropertyListManager-iOS */;
+			targetProxy = 12DAC8946DF5A1D334ADFDB0C6FEAB75 /* PBXContainerItemProxy */;
+		};
+		7664F2FE5DBA972833068FE54E7CA9BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PEAR-KeyboardNotification-iOS";
+			target = 7E9AF0F701F193E9DD3E8D1BADE92724 /* PEAR-KeyboardNotification-iOS */;
+			targetProxy = 9A8D3CEC686A2FE9D776510A16C849CD /* PBXContainerItemProxy */;
+		};
+		7CFA211C1B4DBDE9A71CD8A61333312B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PEAR-AutoLayout-iOS";
+			target = F37127C6407560126024AFE35BC40F00 /* PEAR-AutoLayout-iOS */;
+			targetProxy = C8758AF0E584006D95EECC62A976C379 /* PBXContainerItemProxy */;
+		};
+		8EC83FF72D8B078462D5803454C2952A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PEAR-FileManager-iOS";
+			target = F0F475CFFA77F9B0DFDD2127CD4FAFC2 /* PEAR-FileManager-iOS */;
+			targetProxy = 051FC8B8EFDF2FE63451156AC65DB389 /* PBXContainerItemProxy */;
+		};
+		9923559175C135C4554CC44D0F126CFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LUKeychainAccess;
+			target = 35688256C1EA997336E734EAC5D9D02F /* LUKeychainAccess */;
+			targetProxy = 7E0B1F9BD1B42243429C39E3D91F8D8E /* PBXContainerItemProxy */;
+		};
+		A4E983A9B6FE8B4071D82A006159A1D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PEAR-CoreDataManager-iOS";
+			target = 0A9515ABC3A21F6955749538919C7916 /* PEAR-CoreDataManager-iOS */;
+			targetProxy = 5DF94AF1295EF92EC9EAAA3DE591ACA2 /* PBXContainerItemProxy */;
+		};
+		BBDD8A0DF6103FEFBF79A7824C75C83F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PEAR-UIColorExtention-iOS";
+			target = 45BB276A2AD94A6F57C1291610BD0EE1 /* PEAR-UIColorExtention-iOS */;
+			targetProxy = 1C8E7090EBAE7D6C24D8502B1DAB3F29 /* PBXContainerItemProxy */;
+		};
+		D4321C12D007B2F161D8C851C3D3CD16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PEAR-HttpFetcher-iOS";
+			target = DB666F1D4733C1E55E7394F47C496CD6 /* PEAR-HttpFetcher-iOS */;
+			targetProxy = BDE38EACE43233AF8B25EB2A3DA0AC7E /* PBXContainerItemProxy */;
+		};
+		DD8CF3BDCC2110DDA6D666A8B5B32FBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PEAR-URLParser-iOS";
+			target = C773F535F95161B93C7419BD2AB64752 /* PEAR-URLParser-iOS */;
+			targetProxy = 2821330A52F762C03917D7FFBCAB334D /* PBXContainerItemProxy */;
+		};
+		DF71200F442404095FD467F2C60C045F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PEAR-Indicator-iOS";
+			target = 15B020A0B9CF37F4316FD2297C4C9CD0 /* PEAR-Indicator-iOS */;
+			targetProxy = F884CBF86F67F7933321F0459625EC27 /* PBXContainerItemProxy */;
+		};
+		F2422AEA71E7DEA02BF62485D1E0BB57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PEAR-BlocksKit-iOS";
+			target = 91BCC048D6FA116732267A60BCAA70F3 /* PEAR-BlocksKit-iOS */;
+			targetProxy = 3188B573E38E25E45FEF5AE713A240A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		00D1A432DEA96FE424BEC278F75581BB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		052A17875CB827423D627183396CEB60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1386,7 +1459,7 @@
 		};
 		10334754515C1103E9AEAAD24C5AA17D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03B965FCBD1ACE38ACB6DC77AEC4E675 /* LUKeychainAccess.xcconfig */;
+			baseConfigurationReference = CBE81B08F75AA6E588A89E059E0F7B67 /* LUKeychainAccess.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/LUKeychainAccess/LUKeychainAccess-prefix.pch";
@@ -1402,9 +1475,27 @@
 			};
 			name = Debug;
 		};
+		12876690E8652C63AE9C70A4AC80AFF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BCC34C682153885317E0303F00ACC23 /* PEAR-CoreDataManager-iOS.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PEAR-CoreDataManager-iOS/PEAR-CoreDataManager-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		143D526B8411256FC33F723C104E702F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A43521B391FEFD89CB3978F02B5B5A65 /* PEAR-URLParser-iOS.xcconfig */;
+			baseConfigurationReference = 638B641B14F61530C2E99828469011EF /* PEAR-URLParser-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-URLParser-iOS/PEAR-URLParser-iOS-prefix.pch";
@@ -1422,7 +1513,7 @@
 		};
 		14BC6918050F732407B830A9A9F1394A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 860B7BDF35B5E41B15FD4CB85E7EF2FB /* GCDWebServer.xcconfig */;
+			baseConfigurationReference = 5F1DD0132D3EA103927FFA156A0239D8 /* GCDWebServer.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/GCDWebServer/GCDWebServer-prefix.pch";
@@ -1438,9 +1529,26 @@
 			};
 			name = Debug;
 		};
+		1F44715368CEA8E630BBD8758A38E11A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		2798A9ACECA89EC3F2A65D6B0354EC01 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC8FF90A4E76AA2CFF7337A6A140FCCD /* PEAR-KeyboardNotification-iOS.xcconfig */;
+			baseConfigurationReference = C86C905848B54AB47A2EB4E1FE632699 /* PEAR-KeyboardNotification-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-KeyboardNotification-iOS/PEAR-KeyboardNotification-iOS-prefix.pch";
@@ -1458,7 +1566,7 @@
 		};
 		2BA4183BB45790BF8B32EEB4EE423A04 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 200E81E4552863F8DA20CB91515B54A6 /* PEAR-PropertyListManager-iOS.xcconfig */;
+			baseConfigurationReference = 5F051086FAF01AACE94DD68C34E37BD6 /* PEAR-PropertyListManager-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-PropertyListManager-iOS/PEAR-PropertyListManager-iOS-prefix.pch";
@@ -1476,7 +1584,7 @@
 		};
 		3B9E4A72C951BAD84D198E6A17EC3EFE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8023D842EB93664ED4B9D925D8F3F38 /* PEAR-HttpFetcher-iOS.xcconfig */;
+			baseConfigurationReference = B554023835F0377870321C8230B278AB /* PEAR-HttpFetcher-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-HttpFetcher-iOS/PEAR-HttpFetcher-iOS-prefix.pch";
@@ -1494,7 +1602,7 @@
 		};
 		3F3993C931E3EBEC1B9D52764B8E2AC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52AC1CDD47C75D568632F1A62C68A13D /* PEAR-BlocksKit-iOS.xcconfig */;
+			baseConfigurationReference = 72841AD5258DB2E81602AB79C52DD083 /* PEAR-BlocksKit-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-BlocksKit-iOS/PEAR-BlocksKit-iOS-prefix.pch";
@@ -1512,7 +1620,7 @@
 		};
 		5761464FE83063865B61ABF1E653B168 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52AC1CDD47C75D568632F1A62C68A13D /* PEAR-BlocksKit-iOS.xcconfig */;
+			baseConfigurationReference = 72841AD5258DB2E81602AB79C52DD083 /* PEAR-BlocksKit-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-BlocksKit-iOS/PEAR-BlocksKit-iOS-prefix.pch";
@@ -1530,7 +1638,7 @@
 		};
 		59B328FF2D65F23F64E94F414C95B3AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBB49A51F745462EFC4B4A322AEFF8E0 /* PEAR-UIColorExtention-iOS.xcconfig */;
+			baseConfigurationReference = C8A5EC76FED3A51A02895C5BFF8EA3BA /* PEAR-UIColorExtention-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-UIColorExtention-iOS/PEAR-UIColorExtention-iOS-prefix.pch";
@@ -1548,7 +1656,7 @@
 		};
 		5EDC836FB5D20FAC503E2618223B03C8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03B965FCBD1ACE38ACB6DC77AEC4E675 /* LUKeychainAccess.xcconfig */;
+			baseConfigurationReference = CBE81B08F75AA6E588A89E059E0F7B67 /* LUKeychainAccess.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/LUKeychainAccess/LUKeychainAccess-prefix.pch";
@@ -1566,7 +1674,7 @@
 		};
 		78FE610F60BFE8B777A3F733FB98A234 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5639896092DABB348DE40D7DE7E5F8B3 /* PEAR-Indicator-iOS.xcconfig */;
+			baseConfigurationReference = 33E2F2EE2BBDF74271A22C083CD892A3 /* PEAR-Indicator-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-Indicator-iOS/PEAR-Indicator-iOS-prefix.pch";
@@ -1584,7 +1692,7 @@
 		};
 		806BD7328C6A13D50346F622FB004A67 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBB49A51F745462EFC4B4A322AEFF8E0 /* PEAR-UIColorExtention-iOS.xcconfig */;
+			baseConfigurationReference = C8A5EC76FED3A51A02895C5BFF8EA3BA /* PEAR-UIColorExtention-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-UIColorExtention-iOS/PEAR-UIColorExtention-iOS-prefix.pch";
@@ -1600,9 +1708,27 @@
 			};
 			name = Release;
 		};
+		86937576604DE9F5DEDEE88AD1298DFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BCC34C682153885317E0303F00ACC23 /* PEAR-CoreDataManager-iOS.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PEAR-CoreDataManager-iOS/PEAR-CoreDataManager-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		8BF53123567398A281841D8A77EF275D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5639896092DABB348DE40D7DE7E5F8B3 /* PEAR-Indicator-iOS.xcconfig */;
+			baseConfigurationReference = 33E2F2EE2BBDF74271A22C083CD892A3 /* PEAR-Indicator-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-Indicator-iOS/PEAR-Indicator-iOS-prefix.pch";
@@ -1620,7 +1746,7 @@
 		};
 		8F7ABE76C86E2A158EA2ADDB4A9AF6B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70C26F3CD3DC9DE9673D8FB405BD1873 /* PEAR-FileManager-iOS.xcconfig */;
+			baseConfigurationReference = 098D4514D28F095818038C51BE581B66 /* PEAR-FileManager-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-FileManager-iOS/PEAR-FileManager-iOS-prefix.pch";
@@ -1638,7 +1764,7 @@
 		};
 		973196A2676FD9D68B1D1F527AE394C5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23254B6FEA9A23F5E38A9568D838C186 /* PEAR-AutoLayout-iOS.xcconfig */;
+			baseConfigurationReference = DA972940FFBC0F57DCBF339DE57DE86C /* PEAR-AutoLayout-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-AutoLayout-iOS/PEAR-AutoLayout-iOS-prefix.pch";
@@ -1654,9 +1780,26 @@
 			};
 			name = Release;
 		};
+		A71B3B36C22FE108C8C5FE8850F929D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		ABB2702A9033E9523B8A832BC5EFCC26 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 860B7BDF35B5E41B15FD4CB85E7EF2FB /* GCDWebServer.xcconfig */;
+			baseConfigurationReference = 5F1DD0132D3EA103927FFA156A0239D8 /* GCDWebServer.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/GCDWebServer/GCDWebServer-prefix.pch";
@@ -1713,7 +1856,7 @@
 		};
 		C5033128ED669F24AAAE6BDAA46E0860 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23254B6FEA9A23F5E38A9568D838C186 /* PEAR-AutoLayout-iOS.xcconfig */;
+			baseConfigurationReference = DA972940FFBC0F57DCBF339DE57DE86C /* PEAR-AutoLayout-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-AutoLayout-iOS/PEAR-AutoLayout-iOS-prefix.pch";
@@ -1731,7 +1874,7 @@
 		};
 		C6CFC5F632505D33F7F2B573DB0EAB27 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC8FF90A4E76AA2CFF7337A6A140FCCD /* PEAR-KeyboardNotification-iOS.xcconfig */;
+			baseConfigurationReference = C86C905848B54AB47A2EB4E1FE632699 /* PEAR-KeyboardNotification-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-KeyboardNotification-iOS/PEAR-KeyboardNotification-iOS-prefix.pch";
@@ -1749,7 +1892,7 @@
 		};
 		CD3F08E13D4B436156B270FEA52C462D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70C26F3CD3DC9DE9673D8FB405BD1873 /* PEAR-FileManager-iOS.xcconfig */;
+			baseConfigurationReference = 098D4514D28F095818038C51BE581B66 /* PEAR-FileManager-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-FileManager-iOS/PEAR-FileManager-iOS-prefix.pch";
@@ -1765,26 +1908,9 @@
 			};
 			name = Release;
 		};
-		D2D59ACA243054A3C983CCC011952A97 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		D366FF7E8EA4327F80D8455FAFC2526E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8023D842EB93664ED4B9D925D8F3F38 /* PEAR-HttpFetcher-iOS.xcconfig */;
+			baseConfigurationReference = B554023835F0377870321C8230B278AB /* PEAR-HttpFetcher-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-HttpFetcher-iOS/PEAR-HttpFetcher-iOS-prefix.pch";
@@ -1802,7 +1928,7 @@
 		};
 		FE102ED7031F5D1046578CA80F98C363 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 200E81E4552863F8DA20CB91515B54A6 /* PEAR-PropertyListManager-iOS.xcconfig */;
+			baseConfigurationReference = 5F051086FAF01AACE94DD68C34E37BD6 /* PEAR-PropertyListManager-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-PropertyListManager-iOS/PEAR-PropertyListManager-iOS-prefix.pch";
@@ -1820,7 +1946,7 @@
 		};
 		FE2D7881CBC91E30C874931F1ED0A16D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A43521B391FEFD89CB3978F02B5B5A65 /* PEAR-URLParser-iOS.xcconfig */;
+			baseConfigurationReference = 638B641B14F61530C2E99828469011EF /* PEAR-URLParser-iOS.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PEAR-URLParser-iOS/PEAR-URLParser-iOS-prefix.pch";
@@ -1884,6 +2010,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		945829FDEBBA0AD2E6D02471EBCA76A1 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F44715368CEA8E630BBD8758A38E11A /* Debug */,
+				A71B3B36C22FE108C8C5FE8850F929D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		94ABA87353DED7C9D6B6F19E49455AD5 /* Build configuration list for PBXNativeTarget "PEAR-FileManager-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1898,15 +2033,6 @@
 			buildConfigurations = (
 				2BA4183BB45790BF8B32EEB4EE423A04 /* Debug */,
 				FE102ED7031F5D1046578CA80F98C363 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ADB9D12C5B8E493752BD3423E433633E /* Build configuration list for PBXNativeTarget "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D2D59ACA243054A3C983CCC011952A97 /* Debug */,
-				00D1A432DEA96FE424BEC278F75581BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1934,6 +2060,15 @@
 			buildConfigurations = (
 				C5033128ED669F24AAAE6BDAA46E0860 /* Debug */,
 				973196A2676FD9D68B1D1F527AE394C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D381785061C1DB55066A25712E5414F0 /* Build configuration list for PBXNativeTarget "PEAR-CoreDataManager-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12876690E8652C63AE9C70A4AC80AFF1 /* Debug */,
+				86937576604DE9F5DEDEE88AD1298DFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

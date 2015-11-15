@@ -22,7 +22,7 @@ static NSString *password = nil;
 - (void)setServer
 {   password = [KeyChainData getUUID];
     [_webServer addHandlerForMethod:@"GET"
-                               path:@"/mario/high_15.m3u8"
+                               path:@"/movie/high_15.m3u8"
                        requestClass:[GCDWebServerURLEncodedFormRequest class]
                        processBlock:^GCDWebServerResponse *(GCDWebServerRequest* request)
      {
@@ -31,15 +31,15 @@ static NSString *password = nil;
          NSString *fileName = request.path;
          NSString *filePath = [NSString stringWithFormat:@"%@%@",homePath,fileName];
          NSData *data = [NSData dataWithContentsOfFile:filePath];
-         NSData *de_data = [data AES128DecryptWithKey:password iv:password];
-         return [GCDWebServerDataResponse responseWithData:de_data
+         
+         return [GCDWebServerDataResponse responseWithData:data
                                                contentType:CONST_M3U8_MIME_TYPE];
      }];
     
     // TODO need moviePathList
     for (NSInteger i = 1; i < 32; i++)
     {
-        NSString *path = [NSString stringWithFormat:@"/mario/high_15_%zd.ts",i];
+        NSString *path = [NSString stringWithFormat:@"/movie/high_15_%zd.ts",i];
         [_webServer addHandlerForMethod:@"GET"
                                    path:path
                            requestClass:[GCDWebServerURLEncodedFormRequest class]
@@ -50,17 +50,13 @@ static NSString *password = nil;
              NSString *fileName = request.path;
              NSString *filePath = [NSString stringWithFormat:@"%@%@",homePath,fileName];
              NSData *data = [NSData dataWithContentsOfFile:filePath];
-             NSData *de_data = [data AES128DecryptWithKey:password iv:password];
-             return [GCDWebServerDataResponse responseWithData:de_data
+             
+             return [GCDWebServerDataResponse responseWithData:data
                                                    contentType:CONST_TS_MIME_TYPE];
          }];
     }
     
     [_webServer startWithPort:8080 bonjourName:nil];
-    [Logger debugLogWithCategory:CONST_DEBUG
-                         message:_webServer.serverURL
-                        Function:__PRETTY_FUNCTION__
-                            line:__LINE__];
 }
 - (void)stop
 {

@@ -1,0 +1,1 @@
+../../../PEAR-CoreDataManager-iOS/PEAR-CoreDataManager-iOS/CoreDataManager.h

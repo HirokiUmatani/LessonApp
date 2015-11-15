@@ -38,7 +38,7 @@
 - (void)initMoviePlayerView
 {
     _movieViewController = [MoviePlayerViewController new];
-    [_movieViewController setMovieURLString:@"http://127.0.0.1:8080/mario/high_15.m3u8"];
+    [_movieViewController setMovieURLString:@"http://127.0.0.1:8080/movie/high_15.m3u8"];
     [self initMovieViewAutoLayout];
     
     

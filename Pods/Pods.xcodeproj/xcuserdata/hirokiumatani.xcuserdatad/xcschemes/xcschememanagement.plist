@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PEAR-CoreDataManager-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PEAR-FileManager-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,6 +72,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0A807C56285AB0F17D9BBBB9E385AF11</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0A9515ABC3A21F6955749538919C7916</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>15B020A0B9CF37F4316FD2297C4C9CD0</key>
 		<dict>
 			<key>primary</key>
@@ -93,11 +108,6 @@
 			<true/>
 		</dict>
 		<key>91BCC048D6FA116732267A60BCAA70F3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A4D06602BB5B81461802BC183D03A442</key>
 		<dict>
 			<key>primary</key>
 			<true/>

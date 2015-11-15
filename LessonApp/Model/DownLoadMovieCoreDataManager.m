@@ -18,7 +18,7 @@
     NSArray *fetchDataLists = [self fetchWithPredicate:predicate];
     if (fetchDataLists.count > 0)
     {
-        [self dataError];
+
         return;
     }
     
@@ -45,7 +45,7 @@
     NSArray *fetchDataLists = [self fetchWithPredicate:predicate];
     if (fetchDataLists.count == 0)
     {
-        [self dataError];
+
         return;
     }
     
@@ -82,7 +82,7 @@
     NSArray *fetchDataLists = [self fetchWithPredicate:predicate];
     if (fetchDataLists.count == 0)
     {
-        [self dataError];
+
         return;
     }
     
@@ -97,11 +97,11 @@
     }
 }
 
-#pragma mark -Predicate
+#pragma mark - Predicate
 - (NSPredicate *)setPredicateWithSearchKey:(NSString *)searchkey
                                searchValue:(id)searchValue
 {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:CONST_CORE_DATA_SEARCH,searchkey,searchValue];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K=%@",searchkey,searchValue];
     return predicate;
 }
 
@@ -131,7 +131,7 @@
     NSArray *fetchDataLists = [managedObjectContext executeFetchRequest:request error:&error];
     if (error)
     {
-        [self fetchError];
+        
     }
     return fetchDataLists;
 }
@@ -146,7 +146,6 @@
     {
         return;
     }
-    [self saveError];
     
 }
 
@@ -156,32 +155,4 @@
     [managedObjectContext reset];
 }
 
-#pragma mark - Error
-- (void)fetchError
-{
-    NSError *error = @{CONST_CORE_DATA_ERROR:CONST_CORE_DATA_FETCH_ERROR}.copy;
-    [Logger debugLogWithCategory:CONST_WARNING
-                         message:error
-                        Function:__PRETTY_FUNCTION__
-                            line:__LINE__];
-}
-
-- (void)saveError
-{
-    NSError *error = @{CONST_CORE_DATA_ERROR:CONST_CORE_DATA_SAVE_ERROR}.copy;
-    [Logger debugLogWithCategory:CONST_WARNING
-                         message:error
-                        Function:__PRETTY_FUNCTION__
-                            line:__LINE__];
-}
-
-- (void)dataError
-{
-    NSError *error = @{CONST_CORE_DATA_ERROR:CONST_CORE_DATA_FETCH_NO_DATA}.copy;
-    [Logger debugLogWithCategory:CONST_WARNING
-                         message:error
-                        Function:__PRETTY_FUNCTION__
-                            line:__LINE__];
-
-}
 @end

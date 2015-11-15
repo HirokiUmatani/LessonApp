@@ -5,9 +5,10 @@ PODS:
   - LUKeychainAccess (1.2.5)
   - PEAR-AutoLayout-iOS (0.0.3)
   - PEAR-BlocksKit-iOS (0.0.4)
+  - PEAR-CoreDataManager-iOS (0.0.3)
   - PEAR-FileManager-iOS (0.1.1)
   - PEAR-HttpFetcher-iOS (0.0.4)
-  - PEAR-Indicator-iOS (0.1.0)
+  - PEAR-Indicator-iOS (0.1.1)
   - PEAR-KeyboardNotification-iOS (0.0.2)
   - PEAR-PropertyListManager-iOS (0.0.2)
   - PEAR-UIColorExtention-iOS (0.0.2)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - LUKeychainAccess (~> 1.2.4)
   - PEAR-AutoLayout-iOS
   - PEAR-BlocksKit-iOS
+  - PEAR-CoreDataManager-iOS
   - PEAR-FileManager-iOS
   - PEAR-HttpFetcher-iOS
   - PEAR-Indicator-iOS
@@ -31,9 +33,10 @@ SPEC CHECKSUMS:
   LUKeychainAccess: d22fc00b33ad92c7532962b86daa94c14b85ecbe
   PEAR-AutoLayout-iOS: 5486f08f5b918b43b48f5a6dd364a2f00e514c00
   PEAR-BlocksKit-iOS: 1760b5cae4519000b9ffa0280f8732d9766a7c4d
+  PEAR-CoreDataManager-iOS: 11a1e6f0a61ac49c4ee18262950e35688f0e74ed
   PEAR-FileManager-iOS: 667a50f21d3932ba1dc1fa7c6d4bb03efb691c06
   PEAR-HttpFetcher-iOS: ac08cfa77c5cbbb74d0c565ceb31b8b766aa3c99
-  PEAR-Indicator-iOS: b584851c99a16041db50c6369ee35a300dc70425
+  PEAR-Indicator-iOS: 82de99cc08cdc661a8a0e3acf6518322652a5167
   PEAR-KeyboardNotification-iOS: b652b0b4e956bb4f1040ce2591eef02b9a19cf2e
   PEAR-PropertyListManager-iOS: 1d2eae1a7bc64721de860149906b01496ecc5c4f
   PEAR-UIColorExtention-iOS: c989fb889feb6bd901e3b744adf30c8f654729a1

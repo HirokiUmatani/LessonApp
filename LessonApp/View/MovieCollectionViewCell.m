@@ -40,6 +40,6 @@ NSString * const CONST_MOVIE_CELL_IDENTIFIRE = @"MovieCollectionViewCell";
 {
     
     MovieDownloadController *movieDownloadController = [MovieDownloadController new];
-    [movieDownloadController downloadMovieWithUrl:@"http://49.212.39.17/mario/high_15.m3u8"];
+    [movieDownloadController downloadMovieWithUrl:@"http://pear.chat/movie/high_15.m3u8"];
 }
 @end

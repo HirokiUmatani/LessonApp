@@ -48,7 +48,6 @@
 		F468540E1B3AF69D00AF461D /* NSJSONSerialization+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854011B3AF69D00AF461D /* NSJSONSerialization+Serialize.m */; };
 		F468540F1B3AF69D00AF461D /* LocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854031B3AF69D00AF461D /* LocalServer.m */; };
 		F46854101B3AF69D00AF461D /* LocationFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F46854051B3AF69D00AF461D /* LocationFetcher.m */; };
-		F46B37811B48AC0E0051EB8E /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B37801B48AC0E0051EB8E /* CoreDataManager.m */; };
 		F46B37861B48B2C40051EB8E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46B37851B48B2C40051EB8E /* CoreData.framework */; };
 		F46B37931B48F35E0051EB8E /* LessonApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F46B37911B48F35E0051EB8E /* LessonApp.xcdatamodeld */; };
 		F46E703A1B6501F200CF0FB5 /* NSData+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = F46E70391B6501F200CF0FB5 /* NSData+extention.m */; };
@@ -151,8 +150,6 @@
 		F46854041B3AF69D00AF461D /* LocationFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationFetcher.h; sourceTree = "<group>"; };
 		F46854051B3AF69D00AF461D /* LocationFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationFetcher.m; sourceTree = "<group>"; };
 		F46854161B3C1FBE00AF461D /* LessonAppPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LessonAppPrefixHeader.pch; path = LessonApp/LessonAppPrefixHeader.pch; sourceTree = "<group>"; };
-		F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = ../LessonApp/Model/CoreDataManager.h; sourceTree = "<group>"; };
-		F46B37801B48AC0E0051EB8E /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = ../LessonApp/Model/CoreDataManager.m; sourceTree = "<group>"; };
 		F46B37851B48B2C40051EB8E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F46B37921B48F35E0051EB8E /* LessonApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LessonApp.xcdatamodel; sourceTree = "<group>"; };
 		F46E70381B6501F200CF0FB5 /* NSData+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+extention.h"; sourceTree = "<group>"; };
@@ -222,8 +219,6 @@
 				F40D442D1B646916005A2029 /* M3U8Serializer.m */,
 				F42775361B5204D2008082F8 /* RegularExpression.h */,
 				F42775371B5204D2008082F8 /* RegularExpression.m */,
-				F46B377F1B48AC0E0051EB8E /* CoreDataManager.h */,
-				F46B37801B48AC0E0051EB8E /* CoreDataManager.m */,
 				F46853F81B3AF69D00AF461D /* AnimationView.h */,
 				F46853F91B3AF69D00AF461D /* AnimationView.m */,
 				F46854041B3AF69D00AF461D /* LocationFetcher.h */,
@@ -785,7 +780,6 @@
 				F46853E21B3AF62E00AF461D /* WeatherEntity.m in Sources */,
 				F46853DA1B3AF62E00AF461D /* AppDelegate.m in Sources */,
 				F4E068591BD0805C00D100FB /* BaseTabBarController.m in Sources */,
-				F46B37811B48AC0E0051EB8E /* CoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
