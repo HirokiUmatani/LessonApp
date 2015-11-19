@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PEAR-DateUnixTime-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PEAR-FileManager-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,12 +77,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A807C56285AB0F17D9BBBB9E385AF11</key>
+		<key>0A9515ABC3A21F6955749538919C7916</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0A9515ABC3A21F6955749538919C7916</key>
+		<key>0B336228F0971E09430567B22A21E85A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -93,6 +98,11 @@
 			<true/>
 		</dict>
 		<key>45BB276A2AD94A6F57C1291610BD0EE1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4BFD652C15F6C084D8E05FFA28EF035F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
