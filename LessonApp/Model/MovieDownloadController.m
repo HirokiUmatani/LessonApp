@@ -50,22 +50,21 @@
     
     // make movie download lists
     NSArray *downloadLists = [M3U8Serializer movieDownloadListsFromM3UList:m3u8Binary];
-    
+   
     for (NSInteger i = 0; i < downloadLists.count; i++)
     {
-        @autoreleasepool
-        {
+        
             
-            NSString *urlString = [NSString stringWithFormat:@"http://%@/%@/%@",urlEntity.host,urlEntity.path,downloadLists[i]];
-            
-            // download movie data
-            [[MovieDownloadFetcher new] movieFetchingWithURL:urlString
-                                                     success:^(NSData *movieBinary)
-             {
-                 // create movie file
-                 [PEARFileManager createFile:movieBinary dirPath:urlEntity.path filePath:downloadLists[i] permisson:@0755];
-             }failed:^(NSError *error){}];
-        }
+        NSString *urlString = [NSString stringWithFormat:@"http://%@/%@/%@",urlEntity.host,urlEntity.path,downloadLists[i]];
+        
+        // download movie data
+        [[MovieDownloadFetcher new] movieFetchingWithURL:urlString
+                                                 success:^(NSData *movieBinary)
+         {
+             // create movie file
+             [PEARFileManager createFile:movieBinary dirPath:urlEntity.path filePath:downloadLists[i] permisson:@0755];
+         }failed:^(NSError *error){}];
+        
     }
 }
 @end

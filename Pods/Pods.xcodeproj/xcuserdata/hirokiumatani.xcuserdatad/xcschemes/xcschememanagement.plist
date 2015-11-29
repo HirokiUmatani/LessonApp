@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PEAR-DataConvertor-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PEAR-DateUnixTime-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -87,6 +92,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>12DCAA0F5C5A9CA466F4ED5743BD5552</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>14018995F79E75678482A10B44388AA4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>15B020A0B9CF37F4316FD2297C4C9CD0</key>
 		<dict>
 			<key>primary</key>
@@ -98,11 +113,6 @@
 			<true/>
 		</dict>
 		<key>45BB276A2AD94A6F57C1291610BD0EE1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4BFD652C15F6C084D8E05FFA28EF035F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

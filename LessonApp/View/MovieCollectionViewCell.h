@@ -7,7 +7,8 @@
 //
 
 #import "MovieEntity.h"
-@interface MovieCollectionViewCell : UICollectionViewCell
+#import "MovieDownloadController.h"
+@interface MovieCollectionViewCell : UICollectionViewCell <MovieDownloadControllerDelegate>
 extern NSString * const CONST_MOVIE_CELL_IDENTIFIRE;
 
 - (void)updateView:(NSArray *)cellLists

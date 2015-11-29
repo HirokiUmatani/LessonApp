@@ -14,8 +14,6 @@
 + (CGFloat)screenWidth;
 + (CGFloat)screenHeight;
 
-+ (NSString *)stringFromDate:(NSDate *)date;
-+ (NSDate   *)dateFromString:(NSString *)string;
 - (NSString *)md5;
 - (NSString *)AES128Key:(NSString *)salt;
 - (NSString *)AES128iv:(NSString *)salt;

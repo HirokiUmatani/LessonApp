@@ -7,9 +7,10 @@
 //
 
 @protocol MovieDownloadControllerDelegate <NSObject>
-
+@optional
 - (void)updateDownloadProgressBar:(CGFloat)downloadRait;
-
+- (void)startDownLoad;
+- (void)finishDownLoad;
 @end
 
 @interface MovieDownloadController : NSObject

@@ -12,7 +12,8 @@
 + (NSArray *)movieDownloadListsFromM3UList:(NSData *)data
 {
     NSString *pattern = @"([\\w\\_-]+.ts)";
-    NSString *searchValue = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+    NSString *searchValue = [DataConvertor stringFromData:data];
     NSArray *result = [RegularExpression searchReqularExpressinWithPattern:pattern
                                                                searchValue:searchValue];
     NSMutableArray *downloadLists = @[].mutableCopy;
