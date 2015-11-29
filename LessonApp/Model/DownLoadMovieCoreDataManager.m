@@ -25,7 +25,7 @@
     DownLoadMovieCoreDataEntity *entity = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([DownLoadMovieCoreDataEntity class])
                                          inManagedObjectContext:managedObjectContext];
     
-    NSString * update           = [NSString stringFromDate:[NSDate date]];
+    NSString * update           = [DateUnixTime convertStringFromDate:[NSDate date] outputFormat:@"yyyy/MM/dd HH:mm:ss"];
     entity.moviePlayDirPath     = moviePlayDirPath;
     entity.create               = update;
     entity.update               = update;
@@ -49,7 +49,7 @@
         return;
     }
     
-    NSString *update = [NSString stringFromDate:[NSDate date]];
+    NSString *update = [DateUnixTime convertStringFromDate:[NSDate date] outputFormat:@"yyyy/MM/dd HH:mm:ss"];
     for (DownLoadMovieCoreDataEntity *entity in fetchDataLists)
     {
         @autoreleasepool

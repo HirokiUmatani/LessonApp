@@ -7,12 +7,15 @@
 //
 
 #import "MovieCollectionViewCell.h"
-#import "MovieDownloadController.h"
+
 @interface MovieCollectionViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UIButton *downloadButton;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (strong ,nonatomic) IndicatorView *indicator;
+@property (strong ,nonatomic) MovieDownloadController *movieDownloadController;
+@property (strong ,nonatomic) UIWindow *window;
 - (IBAction)tapFavoraiteButton:(UIButton *)sender;
 - (IBAction)tapDownloadButton:(UIButton *)sender;
 @end
@@ -39,7 +42,15 @@ NSString * const CONST_MOVIE_CELL_IDENTIFIRE = @"MovieCollectionViewCell";
 - (IBAction)tapDownloadButton:(UIButton *)sender
 {
     
-    MovieDownloadController *movieDownloadController = [MovieDownloadController new];
-    [movieDownloadController downloadMovieWithUrl:@"http://pear.chat/movie/high_15.m3u8"];
+    _movieDownloadController = [MovieDownloadController new];
+    _movieDownloadController.delegate = self;
+
+    [_movieDownloadController downloadMovieWithUrl:@"http://pear.chat/movie/high_15.m3u8"];
+}
+
+- (void)finishDownLoad
+{
+    
+
 }
 @end

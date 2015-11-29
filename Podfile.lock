@@ -6,9 +6,10 @@ PODS:
   - PEAR-AutoLayout-iOS (0.0.3)
   - PEAR-BlocksKit-iOS (0.0.4)
   - PEAR-CoreDataManager-iOS (0.0.3)
+  - PEAR-DataConvertor-iOS (1.0.0)
   - PEAR-DateUnixTime-iOS (1.0.0)
   - PEAR-FileManager-iOS (0.1.1)
-  - PEAR-HttpFetcher-iOS (0.0.5)
+  - PEAR-HttpFetcher-iOS (1.0.0)
   - PEAR-Indicator-iOS (0.1.1)
   - PEAR-KeyboardNotification-iOS (0.0.2)
   - PEAR-PropertyListManager-iOS (0.0.2)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - PEAR-AutoLayout-iOS
   - PEAR-BlocksKit-iOS
   - PEAR-CoreDataManager-iOS
+  - PEAR-DataConvertor-iOS
   - PEAR-DateUnixTime-iOS
   - PEAR-FileManager-iOS
   - PEAR-HttpFetcher-iOS
@@ -36,9 +38,10 @@ SPEC CHECKSUMS:
   PEAR-AutoLayout-iOS: 5486f08f5b918b43b48f5a6dd364a2f00e514c00
   PEAR-BlocksKit-iOS: 1760b5cae4519000b9ffa0280f8732d9766a7c4d
   PEAR-CoreDataManager-iOS: 11a1e6f0a61ac49c4ee18262950e35688f0e74ed
+  PEAR-DataConvertor-iOS: dfb421a3941bf73845faf91a2c6a78d3f5bba7e6
   PEAR-DateUnixTime-iOS: 36e1880ee21c67484f0740ee9bb189dc24ab71f1
   PEAR-FileManager-iOS: 667a50f21d3932ba1dc1fa7c6d4bb03efb691c06
-  PEAR-HttpFetcher-iOS: 6f7ce082abac43efd0f2b9a5417d387ab7c6ecb8
+  PEAR-HttpFetcher-iOS: b4fe91c26ca01125ab6adce971acaeedf15ab4c4
   PEAR-Indicator-iOS: 82de99cc08cdc661a8a0e3acf6518322652a5167
   PEAR-KeyboardNotification-iOS: b652b0b4e956bb4f1040ce2591eef02b9a19cf2e
   PEAR-PropertyListManager-iOS: 1d2eae1a7bc64721de860149906b01496ecc5c4f

@@ -49,7 +49,8 @@
     [self fetchAsyncWithUrlString:urlString
                           success:^(NSData *responceData)
      {
-         UIImage *imageIcon = [UIImage imageWithData:responceData];
+         
+         UIImage *imageIcon = [DataConvertor imageFromData:responceData];
          success(imageIcon);
      }
                                    failed:^(NSError *error)
