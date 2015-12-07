@@ -58,10 +58,16 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "PEAR-ImageSlideViewer-iOS/PEAR-ImageSlideViewer-iOS/resources/close_btn.png"
+  install_resource "PEAR-ImageSlideViewer-iOS/PEAR-ImageSlideViewer-iOS/resources/PEARSlideView.xib"
+  install_resource "PEAR-ImageSlideViewer-iOS/PEAR-ImageSlideViewer-iOS/resources/PEARZoomView.xib"
   install_resource "PEAR-Indicator-iOS/PEAR-Indicator-iOS/resource/IndicatorView.xib"
   install_resource "PEAR-Indicator-iOS/PEAR-Indicator-iOS/resource/loading.png"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "PEAR-ImageSlideViewer-iOS/PEAR-ImageSlideViewer-iOS/resources/close_btn.png"
+  install_resource "PEAR-ImageSlideViewer-iOS/PEAR-ImageSlideViewer-iOS/resources/PEARSlideView.xib"
+  install_resource "PEAR-ImageSlideViewer-iOS/PEAR-ImageSlideViewer-iOS/resources/PEARZoomView.xib"
   install_resource "PEAR-Indicator-iOS/PEAR-Indicator-iOS/resource/IndicatorView.xib"
   install_resource "PEAR-Indicator-iOS/PEAR-Indicator-iOS/resource/loading.png"
 fi

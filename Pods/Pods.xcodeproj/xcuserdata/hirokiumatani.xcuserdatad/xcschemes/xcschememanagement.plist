@@ -49,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PEAR-ImageSlideViewer-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PEAR-Indicator-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -97,11 +102,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>14018995F79E75678482A10B44388AA4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>15B020A0B9CF37F4316FD2297C4C9CD0</key>
 		<dict>
 			<key>primary</key>
@@ -117,11 +117,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4BFD652C15F6C084D8E05FFA28EF035F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>5B4892A650264FE0BAE78DCE50F237C8</key>
 		<dict>
 			<key>primary</key>
@@ -133,6 +128,11 @@
 			<true/>
 		</dict>
 		<key>91BCC048D6FA116732267A60BCAA70F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>91BE9552A1A1D9014D6886E07782FDA3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -158,6 +158,11 @@
 			<true/>
 		</dict>
 		<key>F37127C6407560126024AFE35BC40F00</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7CE8CF9991E4FF12A2923BC4B048EF0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
