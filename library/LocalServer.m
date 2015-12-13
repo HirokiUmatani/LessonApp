@@ -29,14 +29,13 @@ static NSString *password = nil;
          
          NSString *homePath = NSHomeDirectory();
          NSString *fileName = request.path;
-         NSString *filePath = [NSString stringWithFormat:@"%@%@",homePath,fileName];
+         NSString *filePath = [NSString stringWithFormat:@"%@/Library%@",homePath,fileName];
          NSData *data = [NSData dataWithContentsOfFile:filePath];
          
          return [GCDWebServerDataResponse responseWithData:data
                                                contentType:CONST_M3U8_MIME_TYPE];
      }];
     
-    // TODO need moviePathList
     for (NSInteger i = 1; i < 32; i++)
     {
         NSString *path = [NSString stringWithFormat:@"/movie/high_15_%zd.ts",i];
@@ -48,7 +47,7 @@ static NSString *password = nil;
              
              NSString *homePath = NSHomeDirectory();
              NSString *fileName = request.path;
-             NSString *filePath = [NSString stringWithFormat:@"%@%@",homePath,fileName];
+             NSString *filePath = [NSString stringWithFormat:@"%@/Library%@",homePath,fileName];
              NSData *data = [NSData dataWithContentsOfFile:filePath];
              
              return [GCDWebServerDataResponse responseWithData:data

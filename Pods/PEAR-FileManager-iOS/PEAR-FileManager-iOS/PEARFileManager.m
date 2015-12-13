@@ -8,95 +8,200 @@
 
 #import "PEARFileManager.h"
 
+@interface PEARFileManager ()
+
+@property (nonatomic,strong) NSString *rootPath;
+
+@end
+
 @implementation PEARFileManager
-+ (NSArray *)getDirectory:(NSString *)dirPath
+
+static PEARFileManager *_sharedInstatnce = nil;
+
+#pragma mark - initial
++ (PEARFileManager*)sharedInstatnce
 {
-    if ([self checkDirectory:dirPath])
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^
     {
-        return [[NSFileManager new] contentsOfDirectoryAtPath:dirPath error:nil];
-    }
-    return @[].copy;
+        _sharedInstatnce = [[PEARFileManager alloc] init];
+        [_sharedInstatnce setRootDirectory:k_ROOT_DIR_LIBRARY];
+    });
+    return _sharedInstatnce;
 }
-+ (NSData *)getFileWithDirPath:(NSString *)dirPath
-                      filePath:(NSString *)filePath
+
+- (id)init
 {
-    if ([self checkFileWithDirPath:dirPath filePath:filePath])
+    if (self == [super init])
     {
-        return [[NSFileManager new] contentsAtPath:[NSString stringWithFormat:
-                                                    @"%@/%@/%@",
-                                                    NSHomeDirectory(),
-                                                    dirPath,
-                                                    filePath]];
+        [self setRootDir:k_ROOT_DIR_LIBRARY];
     }
-    return @[].copy;
+    return self;
 }
-#pragma mark - check
-+ (BOOL)checkFileWithDirPath:(NSString *)dirPath
-                    filePath:(NSString *)filePath
+
+- (id)initWithRootPath:(ROOT_DIR_TYPE)rootType
 {
-    
-    return [[NSFileManager new] fileExistsAtPath:[NSString stringWithFormat:
-                                                  @"%@/%@/%@",
-                                                  NSHomeDirectory(),
-                                                  dirPath,
-                                                  filePath]];
+    if (self == [super init])
+    {
+        [self setRootDir:rootType];
+    }
+    return self;
 }
-+ (BOOL)checkDirectory:(NSString *)dirPath
+
+#pragma mark - set root directory
+- (void)setRootDirectory:(ROOT_DIR_TYPE)rootType
 {
-    
-    return [[NSFileManager new] fileExistsAtPath:[NSString stringWithFormat:
-                                                  @"%@/%@",
-                                                  NSHomeDirectory(),
-                                                  dirPath]];
+    switch (rootType)
+    {
+        case k_ROOT_DIR_DOCUMENTS:
+        {
+            _rootPath = [NSString stringWithFormat:@"%@/Documents",NSHomeDirectory()];
+            break;
+        }
+        case k_ROOT_DIR_LIBRARY:
+        {
+            _rootPath = [NSString stringWithFormat:@"%@/Library",NSHomeDirectory()];
+            break;
+        }
+        case k_ROOT_DIR_TMP:
+        {
+            _rootPath = [NSString stringWithFormat:@"%@/tmp",NSHomeDirectory()];
+            break;
+        }
+    }
 }
+
 #pragma mark - create
-+ (void)createDirectory:(NSString *)dirPath
+- (BOOL)createDirectory:(NSString *)dirPath
               permisson:(NSNumber *)permission
 {
-    [[NSFileManager new] createDirectoryAtPath:[NSString stringWithFormat:
-                                                @"%@/%@",
-                                                NSHomeDirectory(),
-                                                dirPath]
-                   withIntermediateDirectories:YES
-                                    attributes:@{NSFilePosixPermissions: permission}
-                                         error:nil];
+    if ([self checkPath:dirPath])
+    {
+        NSLog(@"The path already exists");
+        return NO;
+    }
     
+    return [[NSFileManager new] createDirectoryAtPath:[self joinFileName:dirPath inDirPath:_rootPath]
+                          withIntermediateDirectories:YES
+                                           attributes:@{NSFilePosixPermissions: permission}
+                                                error:nil];
+}
+
+- (BOOL)createFileWithData:(NSData *)fileData
+                  filePath:(NSString *)filePath
+                 permisson:(NSNumber *)permission
+{
+    if ([self checkPath:filePath])
+    {
+        NSLog(@"The path already exists");
+        return NO;
+    }
+    
+    NSString *filesPath = [self joinFileName:filePath inDirPath:_rootPath];
+    
+    return [[NSFileManager new] createFileAtPath:filesPath
+                                        contents:fileData
+                                      attributes:@{NSFilePosixPermissions:permission}];
+}
+
+#pragma mark - update
+- (BOOL)updateDirectory:(NSString *)dirPath
+              permisson:(NSNumber *)permission
+{
+    if (![self checkPath:dirPath])
+    {
+        NSLog(@"The path dose not exists");
+        return NO;
+    }
+    
+    return [[NSFileManager new] createDirectoryAtPath:[self joinFileName:dirPath inDirPath:_rootPath]
+                          withIntermediateDirectories:YES
+                                           attributes:@{NSFilePosixPermissions: permission}
+                                                error:nil];
+}
+
+- (BOOL)updateFileWithData:(NSData *)fileData
+                  filePath:(NSString *)filePath
+                 permisson:(NSNumber *)permission
+{
+    if (![self checkPath:filePath])
+    {
+        NSLog(@"The path dose not exists");
+        return NO;
+    }
+    
+    return [[NSFileManager new] createFileAtPath:[self joinFileName:filePath inDirPath:_rootPath]
+                                        contents:fileData
+                                      attributes:@{NSFilePosixPermissions:permission}];
     
 }
 
-+ (void)createFile:(NSData   *)fileData
-           dirPath:(NSString *)dirPath
-          filePath:(NSString *)filePath
-         permisson:(NSNumber *)permission
+#pragma mark - fetch
+- (NSData *)fetchFileDataWithPath:(NSString *)path
 {
-    NSFileManager *fileManager = [NSFileManager new];
-    NSString *filesPath = [NSString stringWithFormat:
-                           @"%@/%@/%@",
-                           NSHomeDirectory(),
-                           dirPath,
-                           filePath];
-
-    [fileManager createFileAtPath:filesPath
-                                     contents:fileData
-                                   attributes:@{NSFilePosixPermissions: permission}];
+    if (![self checkPath:path])
+    {
+        NSLog(@"The path dose not exists");
+        return nil;
+    }
+    return [[NSFileManager new] contentsAtPath:[self joinFileName:path inDirPath:_rootPath]];
 }
 
-+ (void)deleteDirectory:(NSString *)dirPath
+#pragma mark - check
+- (BOOL)checkPath:(NSString *)path
 {
-    [[NSFileManager new] removeItemAtPath:[NSString stringWithFormat:
-                                           @"%@/%@",
-                                           NSHomeDirectory(),
-                                           dirPath]
-                                    error:nil];
+    return [[NSFileManager new] fileExistsAtPath:[self joinFileName:path inDirPath:_rootPath]];
 }
-+ (void)deleteFileWithDirPath:(NSString *)dirPath
-                     filePath:(NSString *)filePath
+
+#pragma mark - delete
+- (BOOL)deletePath:(NSString *)path
 {
-    [[NSFileManager new] removeItemAtPath:[NSString stringWithFormat:
-                                           @"%@/%@/%@",
-                                           NSHomeDirectory(),
-                                           dirPath,
-                                           filePath]
-                                    error:nil];
+    if (![self checkPath:path])
+    {
+        NSLog(@"The path dose not exists");
+        return NO;
+    }
+    return [[NSFileManager new] removeItemAtPath:[self joinFileName:path inDirPath:_rootPath] error:nil];
+}
+
+#pragma mark - move
+- (BOOL)moveFromPath:(NSString *)fromPath toPath:(NSString *)toPath
+{
+    if (![self checkPath:fromPath])
+    {
+        NSLog(@"The path dose not exists");
+        return NO;
+    }
+    if ([self checkPath:toPath])
+    {
+        NSLog(@"The path already exists");
+    }
+
+    return [[NSFileManager new] moveItemAtPath:[self joinFileName:fromPath inDirPath:_rootPath]
+                                        toPath:[self joinFileName:toPath inDirPath:_rootPath] error:nil];
+}
+
+#pragma mark - copy
+- (BOOL)copyFrompath:(NSString *)fromPath toPath:(NSString *)toPath
+{
+    if (![self checkPath:fromPath])
+    {
+        NSLog(@"The path dose not exists");
+        return NO;
+    }
+    if ([self checkPath:toPath])
+    {
+        NSLog(@"The path already exists");
+    }
+    
+   return [[NSFileManager new] copyItemAtPath:[self joinFileName:fromPath inDirPath:_rootPath]
+                                       toPath:[self joinFileName:toPath inDirPath:_rootPath] error:nil];
+}
+
+#pragma mark - join
+- (NSString *)joinFileName:(NSString *)fileName
+                 inDirPath:(NSString *)dirPath
+{
+    return [NSString stringWithFormat:@"%@/%@",dirPath,fileName];
 }
 @end
