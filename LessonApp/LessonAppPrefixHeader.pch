@@ -24,6 +24,8 @@
     #import "CoreDataManager.h"
     #import "DateUnixTime.h"
     #import "DataConvertor.h"
+    #import "ZoomingView.h"
+    #import "LicenseViewController.h"
     /*
      extention
      */

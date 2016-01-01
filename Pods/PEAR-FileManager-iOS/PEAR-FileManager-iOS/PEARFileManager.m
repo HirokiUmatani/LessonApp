@@ -48,7 +48,7 @@ static PEARFileManager *_sharedInstatnce = nil;
     return self;
 }
 
-#pragma mark - set root directory
+#pragma mark - root directory
 - (void)setRootDirectory:(ROOT_DIR_TYPE)rootType
 {
     switch (rootType)
@@ -69,6 +69,11 @@ static PEARFileManager *_sharedInstatnce = nil;
             break;
         }
     }
+}
+
+- (NSString *)getRootDirectoryPath
+{
+    return _rootPath;
 }
 
 #pragma mark - create
@@ -147,6 +152,11 @@ static PEARFileManager *_sharedInstatnce = nil;
     return [[NSFileManager new] contentsAtPath:[self joinFileName:path inDirPath:_rootPath]];
 }
 
+- (NSArray *)fetchFileNameListsWithDirPath:(NSString *)dirPath
+{
+    return [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dirPath error:nil];
+}
+
 #pragma mark - check
 - (BOOL)checkPath:(NSString *)path
 {
@@ -175,6 +185,7 @@ static PEARFileManager *_sharedInstatnce = nil;
     if ([self checkPath:toPath])
     {
         NSLog(@"The path already exists");
+        return NO;
     }
 
     return [[NSFileManager new] moveItemAtPath:[self joinFileName:fromPath inDirPath:_rootPath]
@@ -192,6 +203,7 @@ static PEARFileManager *_sharedInstatnce = nil;
     if ([self checkPath:toPath])
     {
         NSLog(@"The path already exists");
+        return NO;
     }
     
    return [[NSFileManager new] copyItemAtPath:[self joinFileName:fromPath inDirPath:_rootPath]

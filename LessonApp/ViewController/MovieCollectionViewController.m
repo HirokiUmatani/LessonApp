@@ -69,6 +69,7 @@
 
     MovieCollectionViewCell *movieCell = [collectionView dequeueReusableCellWithReuseIdentifier:CONST_MOVIE_CELL_IDENTIFIRE
                                                           forIndexPath:indexPath];
+    
     [movieCell updateView:_itemCellLists indexPath:indexPath];
     return movieCell;
 }
@@ -78,6 +79,12 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.delegate didSelectMovieCollectionViewIndexPath:indexPath];
     [self performSegueWithIdentifier:@"DetailViewController" sender:self];
+}
+
+#pragma mark - ZoomingViewDelegate
+- (void)touchView:(UIView *)view
+{
+    
 }
 #pragma mark - private
 - (void)setCellLists

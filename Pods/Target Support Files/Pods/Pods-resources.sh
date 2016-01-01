@@ -63,6 +63,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "PEAR-ImageSlideViewer-iOS/PEAR-ImageSlideViewer-iOS/resources/PEARZoomView.xib"
   install_resource "PEAR-Indicator-iOS/PEAR-Indicator-iOS/resource/IndicatorView.xib"
   install_resource "PEAR-Indicator-iOS/PEAR-Indicator-iOS/resource/loading.png"
+  install_resource "Pear-LicenseView-iOS/Pear-LicenseView-iOS/resource/LicenceCellTableViewCell.xib"
+  install_resource "Pear-LicenseView-iOS/Pear-LicenseView-iOS/resource/LicenseViewController.xib"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "PEAR-ImageSlideViewer-iOS/PEAR-ImageSlideViewer-iOS/resources/close_btn.png"
@@ -70,6 +72,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "PEAR-ImageSlideViewer-iOS/PEAR-ImageSlideViewer-iOS/resources/PEARZoomView.xib"
   install_resource "PEAR-Indicator-iOS/PEAR-Indicator-iOS/resource/IndicatorView.xib"
   install_resource "PEAR-Indicator-iOS/PEAR-Indicator-iOS/resource/loading.png"
+  install_resource "Pear-LicenseView-iOS/Pear-LicenseView-iOS/resource/LicenceCellTableViewCell.xib"
+  install_resource "Pear-LicenseView-iOS/Pear-LicenseView-iOS/resource/LicenseViewController.xib"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

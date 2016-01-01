@@ -21,6 +21,8 @@
 		F44B0F471B5C9F6E00A6B939 /* MovieDownloadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B0F461B5C9F6E00A6B939 /* MovieDownloadFetcher.m */; };
 		F45915361B3E80C20041AAF9 /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45915351B3E80C20041AAF9 /* MoviePlayerViewController.m */; };
 		F45962481B3E539900BFFFD2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45962471B3E539900BFFFD2 /* DetailViewController.m */; };
+		F45E56251C363C6E00C8BEC0 /* LicensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45E56241C363C6E00C8BEC0 /* LicensesViewController.m */; };
+		F45E56291C363EF000C8BEC0 /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = F45E56281C363EF000C8BEC0 /* Pods-acknowledgements.plist */; };
 		F46167E11B775CBB0066C556 /* BaseContainerviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46167E01B775CBB0066C556 /* BaseContainerviewController.m */; };
 		F46853DA1B3AF62E00AF461D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F46853A61B3AF62E00AF461D /* AppDelegate.m */; };
 		F46853DB1B3AF62E00AF461D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46853A81B3AF62E00AF461D /* LaunchScreen.xib */; };
@@ -99,6 +101,9 @@
 		F45915351B3E80C20041AAF9 /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		F45962461B3E539900BFFFD2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F45962471B3E539900BFFFD2 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		F45E56231C363C6E00C8BEC0 /* LicensesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LicensesViewController.h; sourceTree = "<group>"; };
+		F45E56241C363C6E00C8BEC0 /* LicensesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LicensesViewController.m; sourceTree = "<group>"; };
+		F45E56281C363EF000C8BEC0 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		F46167DF1B775CBB0066C556 /* BaseContainerviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseContainerviewController.h; sourceTree = "<group>"; };
 		F46167E01B775CBB0066C556 /* BaseContainerviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseContainerviewController.m; sourceTree = "<group>"; };
 		F46853A51B3AF62E00AF461D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = LessonApp/AppDelegate.h; sourceTree = "<group>"; };
@@ -456,6 +461,8 @@
 				F4B52F0A1B634358008D3799 /* MenuView */,
 				F46853D81B3AF62E00AF461D /* TopViewController.h */,
 				F46853D91B3AF62E00AF461D /* TopViewController.m */,
+				F45E56231C363C6E00C8BEC0 /* LicensesViewController.h */,
+				F45E56241C363C6E00C8BEC0 /* LicensesViewController.m */,
 			);
 			name = TopView;
 			path = LessonApp/ViewController;
@@ -552,6 +559,7 @@
 		F4B52F201B63608A008D3799 /* etc */ = {
 			isa = PBXGroup;
 			children = (
+				F45E56281C363EF000C8BEC0 /* Pods-acknowledgements.plist */,
 				990C654DDF764BA12CE3D0EB /* Pods */,
 				F6C816BAB14CA12561B0581E /* Frameworks */,
 				F4B52F1F1B63603C008D3799 /* plist */,
@@ -666,6 +674,7 @@
 				F477557E1B63FCE40056FEBA /* mario.png in Resources */,
 				F46853F11B3AF62E00AF461D /* SignupTableViewCell.xib in Resources */,
 				F4061C491B88396E00318F8D /* MoviePropertyList.plist in Resources */,
+				F45E56291C363EF000C8BEC0 /* Pods-acknowledgements.plist in Resources */,
 				F40560731B3C2F24000B595A /* podfile in Resources */,
 				F46853DD1B3AF62E00AF461D /* Images.xcassets in Resources */,
 				F4B52F261B636B43008D3799 /* MenuPropertyList.plist in Resources */,
@@ -768,6 +777,7 @@
 				F40D443A1B6490AE005A2029 /* DownLoadMovieCoreDataEntity.m in Sources */,
 				F46853E31B3AF62E00AF461D /* WeatherFetcher.m in Sources */,
 				F46FE0661B67BB960083891A /* Connection.m in Sources */,
+				F45E56251C363C6E00C8BEC0 /* LicensesViewController.m in Sources */,
 				F44B0F471B5C9F6E00A6B939 /* MovieDownloadFetcher.m in Sources */,
 				F4E068561BD0801800D100FB /* BaseNavigationController.m in Sources */,
 				F46FE06C1B682CAB0083891A /* SignupPropertyManager.m in Sources */,

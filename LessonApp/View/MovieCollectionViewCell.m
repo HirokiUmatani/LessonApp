@@ -23,6 +23,7 @@
 @implementation MovieCollectionViewCell
 NSString * const CONST_MOVIE_CELL_IDENTIFIRE = @"MovieCollectionViewCell";
 
+
 - (void)updateView:(NSArray *)cellLists
          indexPath:(NSIndexPath *)indexPath
 {
@@ -53,4 +54,5 @@ NSString * const CONST_MOVIE_CELL_IDENTIFIRE = @"MovieCollectionViewCell";
     
 
 }
+
 @end

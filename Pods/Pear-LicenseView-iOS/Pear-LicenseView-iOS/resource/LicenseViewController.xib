@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LicenseViewController">
+            <connections>
+                <outlet property="tableView" destination="1ES-4q-RWm" id="VOx-Dl-8Hb"/>
+                <outlet property="view" destination="pgO-Zr-HpV" id="Pat-bI-xxl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="pgO-Zr-HpV">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1ES-4q-RWm">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="mxh-3p-xgv"/>
+                        <outlet property="delegate" destination="-1" id="alh-VC-gjD"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1ES-4q-RWm" firstAttribute="top" secondItem="pgO-Zr-HpV" secondAttribute="top" id="4l5-1h-kp0"/>
+                <constraint firstItem="1ES-4q-RWm" firstAttribute="leading" secondItem="pgO-Zr-HpV" secondAttribute="leading" id="A4g-83-lHV"/>
+                <constraint firstAttribute="trailing" secondItem="1ES-4q-RWm" secondAttribute="trailing" id="DEp-O5-tM0"/>
+                <constraint firstAttribute="trailing" secondItem="1ES-4q-RWm" secondAttribute="trailing" id="PNy-E5-huj"/>
+                <constraint firstItem="1ES-4q-RWm" firstAttribute="top" secondItem="pgO-Zr-HpV" secondAttribute="top" id="VDz-pL-smb"/>
+                <constraint firstItem="1ES-4q-RWm" firstAttribute="leading" secondItem="pgO-Zr-HpV" secondAttribute="leading" id="tLD-Al-Jp4"/>
+                <constraint firstAttribute="bottom" secondItem="1ES-4q-RWm" secondAttribute="bottom" id="ytl-bZ-EYg"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4l5-1h-kp0"/>
+                    <exclude reference="A4g-83-lHV"/>
+                    <exclude reference="PNy-E5-huj"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

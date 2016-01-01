@@ -85,7 +85,7 @@ typedef NS_ENUM(NSInteger,TopContainerViewIndex)
         case MenuSelectLicenses:
         {
             self.navigationItem.title = @"Licenses";
-            [_containerViewController removeContainerView];
+            [_containerViewController setViewController:@"LicensesViewController"];
             return;
         }
     }
@@ -130,6 +130,8 @@ typedef NS_ENUM(NSInteger,TopContainerViewIndex)
     _menuTableViewController = self.childViewControllers[TopContainerMenuView];
     _containerViewController = self.childViewControllers[TopContainerMainView];
     _movieCollectionViewController = _containerViewController.childViewControllers[0];
+    _containerViewController.view.layer.shadowOffset =CGSizeMake(-5, 0);
+    _containerViewController.view.layer.shadowOpacity = 0.8;
 }
 
 - (void)setDelegate

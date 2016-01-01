@@ -35,6 +35,11 @@ typedef NS_ENUM(NSInteger,ROOT_DIR_TYPE)
 - (void)setRootDirectory:(ROOT_DIR_TYPE)rootType;
 
 /**
+ get root directory path
+ */
+- (NSString *)getRootDirectoryPath;
+
+/**
  join file name in dir path
  */
 - (NSString *)joinFileName:(NSString *)fileName
@@ -57,6 +62,11 @@ typedef NS_ENUM(NSInteger,ROOT_DIR_TYPE)
  fetch data
  */
 - (NSData *)fetchFileDataWithPath:(NSString *)path;
+
+/**
+ fetch file Names
+ */
+- (NSArray *)fetchFileNameListsWithDirPath:(NSString *)dirPath;
 
 /**
  check file or directory

@@ -79,6 +79,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PEAR-ZoomingView-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pear-LicenseView-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -117,6 +127,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>535638A072630836D95C79B7A3E5E35B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5B4892A650264FE0BAE78DCE50F237C8</key>
 		<dict>
 			<key>primary</key>
@@ -137,7 +152,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C4C5313F3D76285457B663B77023AD49</key>
+		<key>ADF7CB1D0E78CC17E881480073DA6606</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,17 +167,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>E9150D1E1F4926DDB3A38993378057C9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0B19E39753032EFB792E437E45C37CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F0F475CFFA77F9B0DFDD2127CD4FAFC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F37127C6407560126024AFE35BC40F00</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F7CE8CF9991E4FF12A2923BC4B048EF0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
